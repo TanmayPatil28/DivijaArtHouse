@@ -40,7 +40,7 @@
     <ellipse cx="250" cy="275" rx="85" ry="25" fill="#4B3426"/>
     <ellipse cx="250" cy="272" rx="78" ry="20" fill="#664634"/>
 
-    <!-- Stems & Leaves -->
+    <!-- Stems &amp; Leaves -->
     <path d="M250 270 Q250 190 250 160" fill="none" stroke="url(#stemGreen)" stroke-width="8" stroke-linecap="round"/>
     <path d="M230 270 Q200 230 180 190" fill="none" stroke="url(#stemGreen)" stroke-width="7" stroke-linecap="round"/>
     <path d="M270 270 Q300 230 320 200" fill="none" stroke="url(#stemGreen)" stroke-width="7" stroke-linecap="round"/>

@@ -84,7 +84,7 @@
       <circle cx="0" cy="0" r="6" fill="#8C5E1E"/>
     </g>
 
-    <!-- Ribbon & Bow -->
+    <!-- Ribbon &amp; Bow -->
     <path d="M235 345 C215 330 200 355 220 370 C240 380 250 360 250 355 C250 360 260 380 280 370 C300 355 285 330 265 345 Z" fill="#A32D3B"/>
     <circle cx="250" cy="355" r="9" fill="#872430"/>
     <path d="M246 362 C240 395 225 415 215 425" fill="none" stroke="#A32D3B" stroke-width="5" stroke-linecap="round"/>

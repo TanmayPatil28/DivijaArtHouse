@@ -24,10 +24,10 @@
     <text x="0" y="24" font-family="'Poppins', sans-serif" font-size="12" fill="#666666" letter-spacing="0.5">Handcrafted Everlasting Blooms</text>
   </g>
 
-  <!-- Product Title & View Note -->
+  <!-- Product Title &amp; View Note -->
   <g transform="translate(60, 740)">
     <text x="0" y="0" font-family="'Poppins', sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">Vintage Floral Crochet Headband</text>
-    <text x="0" y="20" font-family="'Poppins', sans-serif" font-size="12" fill="#872430">Lace Border & Elastic Fit</text>
+    <text x="0" y="20" font-family="'Poppins', sans-serif" font-size="12" fill="#872430">Lace Border &amp; Elastic Fit</text>
   </g>
 
   <!-- Authentic Handcrafted Vector Artwork -->

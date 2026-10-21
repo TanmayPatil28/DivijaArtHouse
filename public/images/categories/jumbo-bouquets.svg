@@ -46,7 +46,7 @@
     <path d="M180 150 C160 90 220 70 240 120 Z" fill="url(#eucalyptus)" opacity="0.85"/>
     <path d="M320 150 C340 90 280 70 260 120 Z" fill="url(#eucalyptus)" opacity="0.85"/>
 
-    <!-- Luxe Triple-Folded Paper & Fabric Wrapping -->
+    <!-- Luxe Triple-Folded Paper &amp; Fabric Wrapping -->
     <path d="M250 440 L110 260 C110 260 180 290 250 290 C320 290 390 260 390 260 Z" fill="url(#goldWrap)"/>
     <path d="M110 260 L250 440 L280 288 C220 295 160 282 110 260 Z" fill="#997341" opacity="0.3"/>
     <!-- Black / Burgundy Inner Luxe Tissue Fold -->

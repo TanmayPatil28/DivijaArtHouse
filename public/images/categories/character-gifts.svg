@@ -57,7 +57,7 @@
 
     <!-- Bear Snout -->
     <ellipse cx="250" cy="235" rx="38" ry="28" fill="url(#snoutYarn)"/>
-    <!-- Embroidered Nose & Smile -->
+    <!-- Embroidered Nose &amp; Smile -->
     <ellipse cx="250" cy="222" rx="12" ry="8" fill="#3D2412"/>
     <path d="M250 230 L250 242 M240 242 Q250 250 260 242" fill="none" stroke="#3D2412" stroke-width="3" stroke-linecap="round"/>
 
