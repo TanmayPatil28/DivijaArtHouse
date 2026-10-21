@@ -23,34 +23,34 @@ export default async function HomePage() {
 
   return (
     <div className="w-full flex flex-col min-h-screen">
-      {/* 4. Editorial Hero section */}
-      <Hero />
-
-      {/* 4.5. Apple-style Featured Carousel Showcase */}
+      {/* 1. Apple-style Featured Carousel Showcase (very top of hero section) */}
       <HeroCarouselShowcase />
 
-      {/* 5. Trust / Value props strip */}
+      {/* 2. Editorial Hero section */}
+      <Hero />
+
+      {/* 3. Trust / Value props strip */}
       <ValueProps />
 
-      {/* 6. Shop by Collection (category reel with circular thumbnails) */}
+      {/* 4. Shop by Collection (category reel with circular thumbnails) */}
       <CollectionReel categories={categories} />
 
-      {/* 7. Bestsellers grid (data-driven product cards) */}
+      {/* 5. Bestsellers grid (data-driven product cards) */}
       <BestsellersGrid products={featuredProducts} />
 
-      {/* 8. Shop by Occasion */}
+      {/* 6. Shop by Occasion */}
       <OccasionSection />
 
-      {/* 9. Featured Collection (editorial spotlight) */}
+      {/* 7. Featured Collection (editorial spotlight) */}
       <FeaturedCollection />
 
-      {/* 10. Brand Story */}
+      {/* 8. Brand Story */}
       <BrandStory />
 
-      {/* 11. Customer Testimonials */}
+      {/* 9. Customer Testimonials */}
       <Testimonials />
 
-      {/* 12. Newsletter Subscription */}
+      {/* 10. Newsletter Subscription */}
       <NewsletterSection />
     </div>
   );
