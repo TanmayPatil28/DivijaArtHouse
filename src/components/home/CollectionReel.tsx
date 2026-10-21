@@ -84,6 +84,7 @@ export function CollectionReel({ categories }: CollectionReelProps) {
         {/* Horizontally Scrollable Reel */}
         <div
           ref={scrollContainerRef}
+          data-lenis-prevent
           className="flex items-start gap-4 sm:gap-6 overflow-x-auto pb-4 pt-1 scrollbar-none snap-x snap-mandatory scroll-smooth"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >

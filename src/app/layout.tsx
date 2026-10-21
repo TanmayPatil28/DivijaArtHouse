@@ -36,6 +36,7 @@ import { Footer } from '@/components/layout/Footer';
 import { CartDrawer } from '@/components/cart/CartDrawer';
 import { CartProvider } from '@/context/CartContext';
 import { WishlistProvider } from '@/context/WishlistContext';
+import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider';
 
 export default function RootLayout({
   children,
@@ -45,15 +46,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={manrope.variable}>
       <body className="min-h-screen bg-canvas text-text-main font-sans flex flex-col antialiased">
-        <WishlistProvider>
-          <CartProvider>
-            <AnnouncementBar />
-            <Header />
-            <main className="flex-1 w-full">{children}</main>
-            <Footer />
-            <CartDrawer />
-          </CartProvider>
-        </WishlistProvider>
+        <SmoothScrollProvider>
+          <WishlistProvider>
+            <CartProvider>
+              <AnnouncementBar />
+              <Header />
+              <main className="flex-1 w-full">{children}</main>
+              <Footer />
+              <CartDrawer />
+            </CartProvider>
+          </WishlistProvider>
+        </SmoothScrollProvider>
       </body>
     </html>
   );

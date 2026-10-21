@@ -16,12 +16,17 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
   useEffect(() => {
     if (isOpen) {
+      const origOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
       setTimeout(() => inputRef.current?.focus(), 50);
       const handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === 'Escape') onClose();
       };
       window.addEventListener('keydown', handleKeyDown);
-      return () => window.removeEventListener('keydown', handleKeyDown);
+      return () => {
+        document.body.style.overflow = origOverflow;
+        window.removeEventListener('keydown', handleKeyDown);
+      };
     }
   }, [isOpen, onClose]);
 
@@ -47,7 +52,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
     <div
       role="dialog"
       aria-modal="true"
-      aria-label="Search storefront products"
+      aria-label="Search storefront products" data-lenis-prevent
       className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-black/60 backdrop-blur-sm animate-fade-in"
       onClick={onClose}
     >

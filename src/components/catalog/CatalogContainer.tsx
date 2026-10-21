@@ -193,7 +193,7 @@ export function CatalogContainer({
         <div
           role="dialog"
           aria-modal="true"
-          aria-label="Filter catalog products"
+          aria-label="Filter catalog products" data-lenis-prevent
           className="fixed inset-0 z-50 flex lg:hidden bg-black/60 backdrop-blur-sm animate-fade-in"
           onClick={() => setIsMobileDrawerOpen(false)}
         >
@@ -217,7 +217,7 @@ export function CatalogContainer({
             </div>
 
             {/* Drawer Scrollable Content */}
-            <div className="flex-1 overflow-y-auto p-6">
+            <div className="flex-1 overflow-y-auto p-6" data-lenis-prevent>
               <CatalogFilterSidebar
                 categories={categories}
                 selectedCategory={currentParams.category}
