@@ -55,7 +55,7 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="inline-block">
               <span className="text-2xl font-semibold tracking-tight text-white hover:text-blush transition-colors">
-                DivijaArtHouse
+                Divija Art House
               </span>
             </Link>
             <p className="text-xs font-medium text-blush">

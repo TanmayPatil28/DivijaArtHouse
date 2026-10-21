@@ -127,7 +127,7 @@ export function MobileNavDrawer({
             onClick={onClose}
             className="text-xl font-semibold text-primary tracking-tight"
           >
-            DivijaArtHouse
+            Divija Art House
           </Link>
           <button
             ref={firstFocusableRef}

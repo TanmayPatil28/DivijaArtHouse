@@ -62,7 +62,7 @@ export function Header() {
                 className="group flex flex-col items-center md:items-start select-none"
               >
                 <span className="text-2xl sm:text-[26px] font-semibold tracking-tight text-text-main group-hover:text-primary transition-colors">
-                  DivijaArtHouse
+                  Divija Art House
                 </span>
                 <span className="hidden sm:block text-[10px] uppercase tracking-widest text-text-muted font-medium">
                   Handcrafted Everlasting Florals
