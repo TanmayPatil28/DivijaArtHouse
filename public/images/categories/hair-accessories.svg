@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgHair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCF3F6"/>
+      <stop offset="100%" stop-color="#FCE4EC"/>
+    </linearGradient>
+    <radialGradient id="hairGlow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#FFFDF9" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#FCE4EC" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tortoise" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DCA882"/>
+      <stop offset="50%" stop-color="#A56336"/>
+      <stop offset="100%" stop-color="#643615"/>
+    </linearGradient>
+    <linearGradient id="goldPin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCEBC7"/>
+      <stop offset="50%" stop-color="#DEB86D"/>
+      <stop offset="100%" stop-color="#A97E33"/>
+    </linearGradient>
+    <linearGradient id="strawberryYarn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F45B69"/>
+      <stop offset="100%" stop-color="#C82333"/>
+    </linearGradient>
+    <filter id="hairShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#732B3C" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <circle cx="250" cy="250" r="230" fill="url(#bgHair)"/>
+  <circle cx="250" cy="250" r="215" fill="none" stroke="#F8BBD0" stroke-width="2" stroke-dasharray="6,6"/>
+  <circle cx="250" cy="225" r="170" fill="url(#hairGlow)"/>
+
+  <!-- Composition: Hair Claw Clip + Bobby Pins + Crochet Strawberries / Blossoms -->
+  <g filter="url(#hairShadow)">
+    <!-- Arched Headband Background Arch -->
+    <path d="M120 340 C120 180 380 180 380 340" fill="none" stroke="#F0D7DE" stroke-width="12" stroke-linecap="round"/>
+    <path d="M120 340 C120 180 380 180 380 340" fill="none" stroke="#C94252" stroke-width="4" stroke-dasharray="8,8" stroke-linecap="round"/>
+
+    <!-- Large French Hair Claw Clip (Centerpiece) -->
+    <g transform="translate(250, 260)">
+      <!-- Clip Backbone -->
+      <path d="M-90 -10 C-90 -45 90 -45 90 -10 C85 20 -85 20 -90 -10 Z" fill="url(#tortoise)"/>
+      <!-- Spring Mechanism -->
+      <rect x="-15" y="-35" width="30" height="15" rx="4" fill="url(#goldPin)"/>
+      <circle cx="0" cy="-28" r="4" fill="#6B4D1B"/>
+
+      <!-- Claw Teeth Interlocking (Bottom) -->
+      <path d="M-75 10 L-75 35 M-50 10 L-50 35 M-25 10 L-25 35 M0 10 L0 35 M25 10 L25 35 M50 10 L50 35 M75 10 L75 35" stroke="url(#tortoise)" stroke-width="7" stroke-linecap="round"/>
+
+      <!-- Mounted Crochet Strawberry Blossom on Claw Clip -->
+      <g transform="translate(-35, -15)">
+        <!-- Strawberry Body -->
+        <path d="M0 -15 C15 -15 22 5 0 24 C-22 5 -15 -15 0 -15 Z" fill="url(#strawberryYarn)"/>
+        <!-- Strawberry Yarn Seeds -->
+        <circle cx="-5" cy="-2" r="1.5" fill="#FFFDF9"/>
+        <circle cx="5" cy="-2" r="1.5" fill="#FFFDF9"/>
+        <circle cx="0" cy="8" r="1.5" fill="#FFFDF9"/>
+        <!-- Green Calyx -->
+        <path d="M-12 -14 C-4 -10 0 -18 0 -18 C0 -18 4 -10 12 -14 C8 -8 0 -10 0 -10 C0 -10 -8 -8 -12 -14 Z" fill="#6DA653"/>
+      </g>
+
+      <!-- Mounted Crochet White Blossom (Next to Strawberry) -->
+      <g transform="translate(30, -15)">
+        <circle cx="0" cy="-12" r="8" fill="#FFFDF9" stroke="#F5D6D9" stroke-width="1.5"/>
+        <circle cx="11" cy="-4" r="8" fill="#FFFDF9" stroke="#F5D6D9" stroke-width="1.5"/>
+        <circle cx="7" cy="10" r="8" fill="#FFFDF9" stroke="#F5D6D9" stroke-width="1.5"/>
+        <circle cx="-7" cy="10" r="8" fill="#FFFDF9" stroke="#F5D6D9" stroke-width="1.5"/>
+        <circle cx="-11" cy="-4" r="8" fill="#FFFDF9" stroke="#F5D6D9" stroke-width="1.5"/>
+        <circle cx="0" cy="0" r="6" fill="#F4A261"/>
+      </g>
+    </g>
+
+    <!-- Pair of Gold Dainty Bobby Pins with Crochet Flowers (Top) -->
+    <!-- Pin 1 -->
+    <g transform="translate(170, 160) rotate(-15)">
+      <!-- Gold Hairpin Body -->
+      <rect x="0" y="-3" width="90" height="6" rx="3" fill="url(#goldPin)"/>
+      <path d="M0 -3 L85 -3 C92 -3 92 3 85 3 L0 3" fill="none" stroke="#9B7029" stroke-width="1"/>
+      <!-- Sakura Flower on Pin -->
+      <circle cx="0" cy="0" r="18" fill="#F8B4BD"/>
+      <circle cx="0" cy="0" r="12" fill="#FCEEEF"/>
+      <circle cx="0" cy="0" r="5" fill="#C94252"/>
+    </g>
+
+    <!-- Pin 2 -->
+    <g transform="translate(320, 150) rotate(15)">
+      <rect x="-90" y="-3" width="90" height="6" rx="3" fill="url(#goldPin)"/>
+      <circle cx="0" cy="0" r="18" fill="#CDE7B0"/>
+      <circle cx="0" cy="0" r="12" fill="#EAF5DC"/>
+      <circle cx="0" cy="0" r="5" fill="#5F883B"/>
+    </g>
+  </g>
+</svg>

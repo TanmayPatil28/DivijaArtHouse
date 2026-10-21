@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #A32D3B;
+  --color-primary-hover: #872430;
+  --color-soft-pink: #FCEEEF;
+  --color-blush: #F5D6D9;
+  --color-canvas: #FFFFFF;
+  --color-surface-warm: #FFFDF9;
+  --color-surface-banner: #F6EBE5;
+  --color-text-main: #1A1A1A;
+  --color-text-muted: #666666;
+  --color-border-subtle: #ECE7E1;
+  --color-footer-bg: #222222;
+  --color-status-success: #2E7D32;
+  --color-status-warning: #ED6C02;
+  --color-status-error: #D32F2F;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: var(--color-text-main);
+  background-color: var(--color-canvas);
+  font-family: var(--font-poppins), var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+/* Custom scrollbars for category reels & dialogs */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFDF9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ECE7E1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F5D6D9;
+}

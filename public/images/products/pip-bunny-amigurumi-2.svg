@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pip-the-bunny-with-strawberry-blossom-v2-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF8FC"/>
+      <stop offset="100%" stop-color="#EFEAF5"/>
+    </linearGradient>
+    <radialGradient id="pip-the-bunny-with-strawberry-blossom-v2-glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#EFEAF5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="pip-the-bunny-with-strawberry-blossom-v2-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#3D1A10" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Surface -->
+  <rect width="800" height="800" fill="url(#pip-the-bunny-with-strawberry-blossom-v2-bg)"/>
+  <circle cx="400" cy="400" r="350" fill="url(#pip-the-bunny-with-strawberry-blossom-v2-glow)"/>
+  <rect x="25" y="25" width="750" height="750" rx="20" fill="none" stroke="#F5D6D9" stroke-width="1.5" stroke-dasharray="8,8" opacity="0.6"/>
+
+  <!-- Brand Label Watermark -->
+  <g transform="translate(60, 70)">
+    <text x="0" y="0" font-family="'Playfair Display', Georgia, serif" font-size="20" font-weight="bold" fill="#A32D3B" letter-spacing="1.5">DIVIJA ART HOUSE</text>
+    <text x="0" y="24" font-family="'Poppins', sans-serif" font-size="12" fill="#666666" letter-spacing="0.5">Handcrafted Everlasting Blooms</text>
+  </g>
+
+  <!-- Product Title & View Note -->
+  <g transform="translate(60, 740)">
+    <text x="0" y="0" font-family="'Poppins', sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">Pip The Bunny With Strawberry Blossom</text>
+    <text x="0" y="20" font-family="'Poppins', sans-serif" font-size="12" fill="#872430">Long Floppy Ears & Embroidered Face</text>
+  </g>
+
+  <!-- Authentic Handcrafted Vector Artwork -->
+  <g filter="url(#pip-the-bunny-with-strawberry-blossom-v2-shadow)">
+    
+      <!-- Amigurumi Bunny Mascot Composition -->
+      <g transform="translate(400, 400)">
+        <!-- Long Floppy Bunny Ears -->
+        <g transform="translate(-65, -110) rotate(-15)">
+          <ellipse cx="0" cy="-70" rx="30" ry="85" fill="#F45B69"/>
+          <ellipse cx="0" cy="-70" rx="18" ry="65" fill="#FCEEEF"/>
+          <path d="M0 -130 L0 -20" stroke="#E27386" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+        </g>
+        <g transform="translate(65, -110) rotate(15)">
+          <ellipse cx="0" cy="-70" rx="30" ry="85" fill="#F45B69"/>
+          <ellipse cx="0" cy="-70" rx="18" ry="65" fill="#FCEEEF"/>
+          <path d="M0 -130 L0 -20" stroke="#E27386" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+        </g>
+
+        <!-- Bunny Body -->
+        <ellipse cx="0" cy="150" rx="110" ry="100" fill="#F45B69"/>
+        <ellipse cx="0" cy="155" rx="65" ry="60" fill="#FFFDF9"/>
+
+        <!-- Bunny Paws / Feet -->
+        <ellipse cx="-75" cy="235" rx="36" ry="26" fill="#F45B69"/>
+        <ellipse cx="75" cy="235" rx="36" ry="26" fill="#F45B69"/>
+
+        <!-- Bunny Head -->
+        <circle cx="0" cy="0" r="110" fill="#F45B69"/>
+        <circle cx="0" cy="0" r="98" fill="none" stroke="#D1D1D1" stroke-width="2" stroke-dasharray="4,4"/>
+
+        <!-- Embroidered Bunny Snout -->
+        <polygon points="-8,18 8,18 0,26" fill="#E27386"/>
+        <path d="M0 26 L0 36 M-10 36 Q0 44 10 36" fill="none" stroke="#4A3B32" stroke-width="3" stroke-linecap="round"/>
+
+        <!-- Eyes -->
+        <ellipse cx="-45" cy="0" rx="9" ry="12" fill="#1A110B"/>
+        <circle cx="-47" cy="-3" r="3.5" fill="#FFFFFF"/>
+        <ellipse cx="45" cy="0" rx="9" ry="12" fill="#1A110B"/>
+        <circle cx="43" cy="-3" r="3.5" fill="#FFFFFF"/>
+
+        <!-- Cheek Blush -->
+        <ellipse cx="-70" cy="20" rx="14" ry="8" fill="#F8B4BD" opacity="0.8"/>
+        <ellipse cx="70" cy="20" rx="14" ry="8" fill="#F8B4BD" opacity="0.8"/>
+
+        <!-- Mini Strawberry in Hand -->
+        <g transform="translate(45, 120)">
+          <path d="M0 -18 C18 -18 24 8 0 30 C-24 8 -18 -18 0 -18 Z" fill="#E8E8E8"/>
+          <circle cx="-6" cy="-3" r="2" fill="#FFFDF9"/>
+          <circle cx="6" cy="-3" r="2" fill="#FFFDF9"/>
+          <circle cx="0" cy="10" r="2" fill="#FFFDF9"/>
+          <path d="M-14 -16 C-4 -12 0 -22 0 -22 C0 -22 4 -12 14 -16 C10 -8 0 -12 0 -12 C0 -12 -10 -8 -14 -16 Z" fill="#6DA653"/>
+        </g>
+      </g>
+    
+  </g>
+</svg>
