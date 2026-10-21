@@ -19,20 +19,29 @@ export function ProductGallery({ product }: ProductGalleryProps) {
   const activeImage = images[activeIndex] || images[0] || '/images/products/blushing-peony-rose-1.svg';
   const discountPercent = calculateDiscount(product.price, product.compareAtPrice);
 
+  const isSvg = (src: string) => src.endsWith('.svg');
+
   return (
     <div className="w-full flex flex-col gap-4">
       {/* Primary Image Display */}
       <div className="relative w-full aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-surface-warm via-blush-soft/30 to-surface-warm border border-border-subtle shadow-sm group">
         <div className="relative w-full h-full p-6 sm:p-10 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
-          <Image
-            src={activeImage}
-            alt={`${product.name} - View ${activeIndex + 1}`}
-            fill
-            priority
-            unoptimized={activeImage.endsWith('.svg')}
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-contain p-4"
-          />
+          {isSvg(activeImage) ? (
+            <img
+              src={activeImage}
+              alt={`${product.name} - View ${activeIndex + 1}`}
+              className="w-full h-full object-contain p-4"
+            />
+          ) : (
+            <Image
+              src={activeImage}
+              alt={`${product.name} - View ${activeIndex + 1}`}
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-contain p-4"
+            />
+          )}
         </div>
 
         {/* Discount Badge */}
@@ -83,14 +92,21 @@ export function ProductGallery({ product }: ProductGalleryProps) {
                 aria-label={`View product image ${idx + 1}`}
                 aria-current={isSelected ? 'true' : 'false'}
               >
-                <Image
-                  src={img}
-                  alt={`${product.name} thumbnail ${idx + 1}`}
-                  fill
-                  unoptimized={img.endsWith('.svg')}
-                  sizes="96px"
-                  className="object-contain p-1"
-                />
+                {isSvg(img) ? (
+                  <img
+                    src={img}
+                    alt={`${product.name} thumbnail ${idx + 1}`}
+                    className="w-full h-full object-contain p-1"
+                  />
+                ) : (
+                  <Image
+                    src={img}
+                    alt={`${product.name} thumbnail ${idx + 1}`}
+                    fill
+                    sizes="96px"
+                    className="object-contain p-1"
+                  />
+                )}
               </button>
             );
           })}

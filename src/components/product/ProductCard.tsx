@@ -61,6 +61,8 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
     toggleWishlist(product.id);
   };
 
+  const isSvg = mainImage.endsWith('.svg');
+
   return (
     <div className="group relative flex flex-col bg-white rounded-2xl border border-border-subtle overflow-hidden hover:shadow-lg hover:border-blush transition-all duration-300">
       {/* Product Image Area */}
@@ -70,15 +72,22 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
       >
         {/* Main Image */}
         <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-105">
-          <Image
-            src={mainImage}
-            alt={product.name}
-            fill
-            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            priority={priority}
-            unoptimized={mainImage.endsWith('.svg')}
-            className="object-contain p-2 transition-transform duration-500 ease-out group-hover:scale-105"
-          />
+          {isSvg ? (
+            <img
+              src={mainImage}
+              alt={product.name}
+              className="absolute inset-0 w-full h-full object-contain p-2 transition-transform duration-500 ease-out group-hover:scale-105"
+            />
+          ) : (
+            <Image
+              src={mainImage}
+              alt={product.name}
+              fill
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              priority={priority}
+              className="object-contain p-2 transition-transform duration-500 ease-out group-hover:scale-105"
+            />
+          )}
         </div>
 
         {/* Discount Badge */}

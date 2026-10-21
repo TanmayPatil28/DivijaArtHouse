@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Sparkles, ArrowRight, Award, ShieldCheck, Heart } from 'lucide-react';
 
 export function FeaturedCollection() {
@@ -16,12 +15,10 @@ export function FeaturedCollection() {
             <div className="lg:col-span-6 bg-gradient-to-br from-surface-warm to-blush-soft/50 p-6 sm:p-12 flex items-center justify-center relative min-h-[340px] sm:min-h-[440px]">
               {/* Product Visual */}
               <div className="relative w-full h-72 sm:h-96 drop-shadow-xl transition-transform duration-500 hover:scale-105">
-                <Image
+                <img
                   src="/images/products/celestial-twilight-jumbo-1.svg"
                   alt="Celestial Twilight Jumbo Handcrafted Crochet Bouquet"
-                  fill
-                  unoptimized
-                  className="object-contain"
+                  className="w-full h-full object-contain"
                 />
               </div>
 
