@@ -74,7 +74,7 @@ export default function ContactPage() {
             <span>We&apos;re Here to Help</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-text-main tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-text-main tracking-tight">
             Get in Touch with Our Studio
           </h1>
 
@@ -92,7 +92,7 @@ export default function ContactPage() {
           {/* Info Side (Col 5) */}
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-surface-warm rounded-3xl p-6 sm:p-8 border border-border-subtle space-y-6 shadow-sm">
-              <h2 className="text-xl font-display font-bold text-text-main">
+              <h2 className="text-xl font-semibold tracking-tight text-text-main">
                 Studio Information
               </h2>
 
@@ -210,7 +210,7 @@ export default function ContactPage() {
               <HelpCircle className="w-4 h-4" />
               <span>Common Questions</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-display font-bold text-text-main">
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-text-main">
               Frequently Asked Questions
             </h2>
             <p className="text-sm text-text-muted">
@@ -224,7 +224,7 @@ export default function ContactPage() {
                 key={idx}
                 className="bg-white rounded-2xl p-6 border border-border-subtle shadow-xs space-y-2"
               >
-                <h3 className="text-base font-bold text-text-main font-display">
+                <h3 className="text-base font-bold text-text-main font-sans">
                   {faq.q}
                 </h3>
                 <p className="text-sm text-text-muted leading-relaxed">
@@ -258,3 +258,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

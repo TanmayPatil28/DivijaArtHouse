@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import prisma from '@/lib/prisma';
 import { OrdersManager } from '@/components/admin/OrdersManager';
 
@@ -18,7 +18,7 @@ export default async function AdminOrdersPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="font-display text-2xl sm:text-3xl font-bold text-stone-900">
+        <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-stone-900">
           Order Fulfillment & Dispatch
         </h1>
         <p className="text-xs sm:text-sm text-stone-500 mt-1">
@@ -30,3 +30,4 @@ export default async function AdminOrdersPage() {
     </div>
   );
 }
+

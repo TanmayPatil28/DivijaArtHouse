@@ -37,8 +37,8 @@ export function AdminSidebar({ user }: AdminSidebarProps) {
       {/* Admin Brand Wordmark */}
       <div className="p-6 border-b border-stone-800">
         <Link href="/admin" className="flex flex-col">
-          <span className="font-display text-xl font-bold tracking-tight text-white flex items-center gap-2">
-            <span className="text-primary font-serif">✿</span> DivijaArtHouse
+          <span className="text-xl font-semibold tracking-tight tracking-tight text-white flex items-center gap-2">
+            <span className="text-primary">✿</span> DivijaArtHouse
           </span>
           <div className="flex items-center gap-1.5 mt-1">
             <ShieldAlert className="w-3.5 h-3.5 text-amber-400" />

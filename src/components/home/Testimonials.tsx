@@ -41,7 +41,7 @@ export function Testimonials() {
             <Heart className="w-3.5 h-3.5 fill-primary" />
             <span>Community Impressions</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-text-main">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-text-main">
             Loved by Thoughtful Gifters
           </h2>
           <p className="text-sm sm:text-base text-text-muted mt-2">

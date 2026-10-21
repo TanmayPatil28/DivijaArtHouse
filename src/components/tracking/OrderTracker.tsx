@@ -352,7 +352,7 @@ export function OrderTracker({ initialOrderNumber = '' }: OrderTrackerProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Items Column (8) */}
             <div className="lg:col-span-8 bg-white rounded-3xl p-6 sm:p-8 border border-border-subtle shadow-xs space-y-6">
-              <h3 className="text-base font-bold text-text-main font-display flex items-center justify-between">
+              <h3 className="text-base font-semibold text-text-main tracking-tight flex items-center justify-between">
                 <span>Items in This Order</span>
                 <span className="text-xs font-sans text-text-muted font-normal">
                   {order.itemCount} item{order.itemCount > 1 ? 's' : ''}
@@ -409,7 +409,7 @@ export function OrderTracker({ initialOrderNumber = '' }: OrderTrackerProps) {
 
             {/* Financial Summary Column (4) */}
             <div className="lg:col-span-4 bg-white rounded-3xl p-6 sm:p-8 border border-border-subtle shadow-xs space-y-6 h-fit">
-              <h3 className="text-base font-bold text-text-main font-display">
+              <h3 className="text-base font-semibold text-text-main tracking-tight">
                 Payment Summary
               </h3>
 

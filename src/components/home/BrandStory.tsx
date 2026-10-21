@@ -47,14 +47,14 @@ export function BrandStory() {
               <span>The DivijaArtHouse Ethos</span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-text-main leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-text-main leading-tight tracking-tight">
               Crafted with Intention,{' '}
-              <span className="italic font-serif text-primary">
+              <span className="text-primary font-semibold">
                 Cherished for a Lifetime
               </span>
             </h2>
 
-            <p className="text-base sm:text-lg font-serif italic text-primary">
+            <p className="text-base sm:text-lg font-medium text-primary">
               &ldquo;Little Blooms, Lasting Feelings.&rdquo;
             </p>
 

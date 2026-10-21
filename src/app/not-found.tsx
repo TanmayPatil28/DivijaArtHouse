@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import { Flower2, Home, ShoppingBag } from 'lucide-react';
 
 export default function NotFound() {
@@ -9,10 +9,10 @@ export default function NotFound() {
       </div>
 
       <span className="text-sm font-semibold tracking-widest text-primary uppercase mb-2">
-        404 — Page Not Found
+        404 â€” Page Not Found
       </span>
 
-      <h1 className="text-3xl sm:text-4xl font-display font-bold text-text-main mb-4">
+      <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-text-main mb-4">
         This Bloom Seems to Have Wandered Off
       </h1>
 

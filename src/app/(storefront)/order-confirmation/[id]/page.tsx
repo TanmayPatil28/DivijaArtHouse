@@ -155,7 +155,7 @@ export default async function OrderConfirmationPage({
             <span className="text-xs font-semibold uppercase tracking-widest text-primary mb-2">
               Order Confirmed & Received
             </span>
-            <h1 className="font-display font-bold text-2xl sm:text-4xl text-text-main max-w-lg mb-3">
+            <h1 className="font-semibold tracking-tight text-2xl sm:text-4xl text-text-main max-w-lg mb-3">
               Thank you for your order, {order.customerName.split(' ')[0]}!
             </h1>
             <p className="text-xs sm:text-sm text-text-muted max-w-md mx-auto leading-relaxed">
@@ -226,7 +226,7 @@ export default async function OrderConfirmationPage({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Shipping Address Details (1 col) */}
           <div className="bg-canvas border border-border-subtle rounded-2xl p-6 shadow-xs space-y-4">
-            <h2 className="font-display font-bold text-base sm:text-lg text-text-main flex items-center gap-2">
+            <h2 className="font-semibold tracking-tight text-base sm:text-lg text-text-main flex items-center gap-2">
               <MapPin className="w-4 h-4 text-primary" />
               <span>Shipping Address</span>
             </h2>
@@ -267,7 +267,7 @@ export default async function OrderConfirmationPage({
 
           {/* Items & Payment Breakdown (2 cols) */}
           <div className="md:col-span-2 bg-canvas border border-border-subtle rounded-2xl p-6 shadow-xs space-y-6">
-            <h2 className="font-display font-bold text-base sm:text-lg text-text-main flex items-center justify-between">
+            <h2 className="font-semibold tracking-tight text-base sm:text-lg text-text-main flex items-center justify-between">
               <span className="flex items-center gap-2">
                 <Package className="w-4 h-4 text-primary" />
                 <span>Items in Order ({order.items.length})</span>
@@ -339,10 +339,10 @@ export default async function OrderConfirmationPage({
               </div>
 
               <div className="pt-3 border-t border-border-subtle flex justify-between items-baseline text-base sm:text-lg">
-                <span className="font-display font-bold text-text-main">
+                <span className="font-semibold tracking-tight text-text-main">
                   Total Order Amount
                 </span>
-                <span className="font-display font-bold text-primary text-xl">
+                <span className="font-semibold tracking-tight text-primary text-xl">
                   {formatINR(order.totalAmount)}
                 </span>
               </div>
@@ -372,3 +372,4 @@ export default async function OrderConfirmationPage({
     </div>
   );
 }
+

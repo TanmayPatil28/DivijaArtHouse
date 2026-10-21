@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 import prisma from '@/lib/prisma';
 import { formatINR, formatDate } from '@/lib/utils';
@@ -82,7 +82,7 @@ export default async function AdminDashboardPage() {
       {/* Top Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="font-display text-2xl sm:text-3xl font-bold text-stone-900">
+          <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-stone-900">
             Storefront Analytics
           </h1>
           <p className="text-xs sm:text-sm text-stone-500 mt-1">
@@ -119,7 +119,7 @@ export default async function AdminDashboardPage() {
               <IndianRupee className="w-5 h-5" />
             </div>
           </div>
-          <p className="font-display text-2xl sm:text-3xl font-bold text-stone-900 mt-3">
+          <p className="text-2xl sm:text-3xl font-semibold tracking-tight text-stone-900 mt-3">
             {formatINR(totalRevenuePaise)}
           </p>
           <div className="flex items-center gap-1.5 text-xs text-emerald-700 mt-2 font-medium">
@@ -138,7 +138,7 @@ export default async function AdminDashboardPage() {
               <ShoppingBag className="w-5 h-5" />
             </div>
           </div>
-          <p className="font-display text-2xl sm:text-3xl font-bold text-stone-900 mt-3">
+          <p className="text-2xl sm:text-3xl font-semibold tracking-tight text-stone-900 mt-3">
             {totalOrders}
           </p>
           <p className="text-xs text-stone-500 mt-2">
@@ -156,7 +156,7 @@ export default async function AdminDashboardPage() {
               <Flower2 className="w-5 h-5" />
             </div>
           </div>
-          <p className="font-display text-2xl sm:text-3xl font-bold text-stone-900 mt-3">
+          <p className="text-2xl sm:text-3xl font-semibold tracking-tight text-stone-900 mt-3">
             {totalProducts}
           </p>
           <p className="text-xs text-stone-500 mt-2">
@@ -181,7 +181,7 @@ export default async function AdminDashboardPage() {
             </div>
           </div>
           <p
-            className={`font-display text-2xl sm:text-3xl font-bold mt-3 ${
+            className={`text-2xl sm:text-3xl font-semibold tracking-tight mt-3 ${
               lowStockCount > 0 ? 'text-amber-800' : 'text-stone-900'
             }`}
           >
@@ -236,7 +236,7 @@ export default async function AdminDashboardPage() {
       <div className="bg-white rounded-2xl border border-stone-200/80 shadow-xs overflow-hidden">
         <div className="p-5 sm:p-6 border-b border-stone-200/80 flex items-center justify-between">
           <div>
-            <h2 className="font-display text-lg sm:text-xl font-bold text-stone-900">
+            <h2 className="font-sans text-lg sm:text-xl font-bold text-stone-900">
               Recent Orders
             </h2>
             <p className="text-xs text-stone-500 mt-0.5">
@@ -318,3 +318,4 @@ export default async function AdminDashboardPage() {
     </div>
   );
 }
+

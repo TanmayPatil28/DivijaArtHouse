@@ -92,7 +92,7 @@ export default function WishlistPage() {
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-6 border-b border-border-subtle">
             <div>
-              <h1 className="font-display font-bold text-3xl sm:text-4xl text-text-main">
+              <h1 className="font-semibold text-3xl sm:text-4xl tracking-tight text-text-main">
                 My Saved Blooms
               </h1>
               <p className="text-xs sm:text-sm text-text-muted mt-1">
@@ -133,7 +133,7 @@ export default function WishlistPage() {
               </div>
             </div>
 
-            <h2 className="font-display font-bold text-2xl text-text-main mb-2">
+            <h2 className="font-semibold text-2xl text-text-main tracking-tight mb-2">
               Your Wishlist is Empty
             </h2>
             <p className="text-xs sm:text-sm text-text-muted leading-relaxed mb-6">
@@ -214,7 +214,7 @@ export default function WishlistPage() {
                       {/* Title */}
                       <Link
                         href={`/products/${product.slug}`}
-                        className="block font-display font-bold text-sm sm:text-base text-text-main hover:text-primary transition-colors line-clamp-2 leading-snug mb-2"
+                        className="block font-medium text-[15px] sm:text-base tracking-tight text-text-main hover:text-primary transition-colors line-clamp-2 leading-snug mb-2"
                       >
                         {product.name}
                       </Link>
@@ -283,3 +283,4 @@ export default function WishlistPage() {
     </div>
   );
 }
+

@@ -51,7 +51,7 @@ export default function CartPage() {
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-6 border-b border-border-subtle">
             <div>
-              <h1 className="font-display font-bold text-3xl sm:text-4xl text-text-main">
+              <h1 className="font-semibold text-3xl sm:text-4xl tracking-tight text-text-main">
                 Your Floral Bag
               </h1>
               <p className="text-xs sm:text-sm text-text-muted mt-1">
@@ -80,7 +80,7 @@ export default function CartPage() {
               </div>
             </div>
 
-            <h2 className="font-display font-bold text-2xl text-text-main mb-2">
+            <h2 className="font-semibold text-2xl text-text-main tracking-tight mb-2">
               Your floral bag is empty
             </h2>
             <p className="text-xs sm:text-sm text-text-muted leading-relaxed mb-6">
@@ -137,7 +137,7 @@ export default function CartPage() {
                         <div className="space-y-1">
                           <Link
                             href={`/products/${item.slug}`}
-                            className="font-display font-medium text-sm sm:text-base text-text-main hover:text-primary transition-colors line-clamp-1"
+                            className="font-medium text-sm sm:text-base tracking-tight text-text-main hover:text-primary transition-colors line-clamp-1"
                           >
                             {item.name}
                           </Link>
@@ -230,7 +230,7 @@ export default function CartPage() {
             {/* Right 5/12: Order Summary Card */}
             <div className="lg:col-span-5 xl:col-span-4">
               <div className="bg-white rounded-2xl border border-border-subtle p-6 space-y-5 sticky top-28 shadow-sm">
-                <h2 className="font-display font-bold text-lg text-text-main border-b border-border-subtle pb-3">
+                <h2 className="font-semibold text-lg text-text-main tracking-tight border-b border-border-subtle pb-3">
                   Order Summary
                 </h2>
 
@@ -262,14 +262,14 @@ export default function CartPage() {
 
                   <div className="pt-3 border-t border-border-subtle flex items-baseline justify-between">
                     <div>
-                      <span className="font-display font-bold text-base text-text-main">
+                      <span className="font-semibold text-base text-text-main tracking-tight">
                         Total Amount
                       </span>
                       <p className="text-[11px] text-text-muted">
                         Inclusive of all taxes
                       </p>
                     </div>
-                    <span className="font-display font-bold text-2xl text-primary">
+                    <span className="font-semibold text-2xl text-primary tracking-tight">
                       {formatINR(summary.totalAmount)}
                     </span>
                   </div>

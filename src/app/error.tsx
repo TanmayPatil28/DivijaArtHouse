@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect } from 'react';
 import Link from 'next/link';
@@ -26,7 +26,7 @@ export default function GlobalError({
         Something Went Wrong
       </span>
 
-      <h1 className="text-2xl sm:text-3xl font-display font-bold text-text-main mb-3">
+      <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-text-main mb-3">
         We Hit an Unexpected Snag
       </h1>
 

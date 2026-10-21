@@ -56,7 +56,7 @@ export function NewsletterSection() {
             <span>Join the Divija Bloom Club</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-text-main">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-text-main">
             Little Blooms, Straight to Your Inbox
           </h2>
 

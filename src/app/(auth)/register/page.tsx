@@ -80,7 +80,7 @@ export default function RegisterPage() {
           <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-blush-soft text-primary mb-3 shadow-inner">
             <Flower2 className="w-6 h-6 animate-pulse" />
           </div>
-          <h1 className="font-display text-2xl sm:text-3xl font-bold text-text-main tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-semibold text-text-main tracking-tight">
             Create an Account
           </h1>
           <p className="text-xs sm:text-sm text-text-muted mt-1 font-sans">

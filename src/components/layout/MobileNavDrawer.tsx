@@ -125,7 +125,7 @@ export function MobileNavDrawer({
           <Link
             href="/"
             onClick={onClose}
-            className="text-xl font-display font-bold text-primary tracking-tight"
+            className="text-xl font-semibold text-primary tracking-tight"
           >
             DivijaArtHouse
           </Link>
@@ -142,7 +142,7 @@ export function MobileNavDrawer({
 
         {/* Brand Tagline Pill */}
         <div className="px-5 py-2.5 bg-blush-soft/60 border-b border-blush text-center">
-          <p className="text-xs font-serif italic text-primary">
+          <p className="text-xs font-medium text-primary">
             &ldquo;Little Blooms, Lasting Feelings.&rdquo;
           </p>
         </div>

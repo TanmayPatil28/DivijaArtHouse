@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import prisma from '@/lib/prisma';
 import { CategoriesManager } from '@/components/admin/CategoriesManager';
 
@@ -22,7 +22,7 @@ export default async function AdminCategoriesPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="font-display text-2xl sm:text-3xl font-bold text-stone-900">
+        <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-stone-900">
           Artisan Collections & Categories
         </h1>
         <p className="text-xs sm:text-sm text-stone-500 mt-1">
@@ -34,3 +34,4 @@ export default async function AdminCategoriesPage() {
     </div>
   );
 }
+

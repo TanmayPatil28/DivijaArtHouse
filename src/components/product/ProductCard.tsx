@@ -121,7 +121,7 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
           {/* Product Title */}
           <Link
             href={`/products/${product.slug}`}
-            className="block font-display font-bold text-sm sm:text-base text-text-main hover:text-primary transition-colors line-clamp-2 leading-snug mb-2"
+            className="block font-medium text-[15px] sm:text-base tracking-tight text-text-main hover:text-primary transition-colors line-clamp-2 leading-snug mb-2"
           >
             {product.name}
           </Link>
@@ -130,7 +130,7 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
         <div>
           {/* Price & MRP Row */}
           <div className="flex items-baseline gap-2 mb-3">
-            <span className="font-bold text-base sm:text-lg text-primary">
+            <span className="font-semibold text-base sm:text-[17px] text-primary tracking-tight">
               {formatINR(product.price)}
             </span>
             {product.compareAtPrice && product.compareAtPrice > product.price && (

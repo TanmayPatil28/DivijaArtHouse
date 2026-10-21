@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { auth } from '@/auth';
@@ -61,12 +61,12 @@ export default async function AccountPage() {
         {/* Welcome Header */}
         <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-border-subtle mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div className="flex items-center gap-4 sm:gap-5">
-            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-blush-soft text-primary font-display text-2xl sm:text-3xl font-bold flex items-center justify-center border border-blush shadow-inner">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-blush-soft text-primary text-2xl sm:text-3xl font-semibold tracking-tight flex items-center justify-center border border-blush shadow-inner">
               {user.name ? user.name.charAt(0).toUpperCase() : 'U'}
             </div>
             <div>
               <div className="flex items-center gap-2.5">
-                <h1 className="font-display text-2xl sm:text-3xl font-bold text-text-main">
+                <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-text-main">
                   {user.name || 'Dear Customer'}
                 </h1>
                 <span
@@ -106,7 +106,7 @@ export default async function AccountPage() {
                 <p className="text-xs font-semibold uppercase tracking-wider text-text-muted">
                   Total Orders
                 </p>
-                <p className="font-display text-3xl font-bold text-text-main mt-1">
+                <p className="font-sans text-3xl font-bold text-text-main mt-1">
                   {ordersCount}
                 </p>
               </div>
@@ -129,7 +129,7 @@ export default async function AccountPage() {
                 <p className="text-xs font-semibold uppercase tracking-wider text-text-muted">
                   Wishlist Items
                 </p>
-                <p className="font-display text-3xl font-bold text-text-main mt-1">
+                <p className="font-sans text-3xl font-bold text-text-main mt-1">
                   {wishlistCount}
                 </p>
               </div>
@@ -152,7 +152,7 @@ export default async function AccountPage() {
                 <p className="text-xs font-semibold uppercase tracking-wider text-text-muted">
                   Account Status
                 </p>
-                <p className="font-display text-2xl font-bold text-emerald-700 mt-1">
+                <p className="font-sans text-2xl font-bold text-emerald-700 mt-1">
                   Verified
                 </p>
               </div>
@@ -170,7 +170,7 @@ export default async function AccountPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Quick Action Navigation */}
           <div className="lg:col-span-2 space-y-4">
-            <h2 className="font-display text-xl font-bold text-text-main">
+            <h2 className="font-sans text-xl font-bold text-text-main">
               Account Hub
             </h2>
 
@@ -239,7 +239,7 @@ export default async function AccountPage() {
 
           {/* Profile Details Sidebar */}
           <div className="space-y-4">
-            <h2 className="font-display text-xl font-bold text-text-main">
+            <h2 className="font-sans text-xl font-bold text-text-main">
               Contact Details
             </h2>
 

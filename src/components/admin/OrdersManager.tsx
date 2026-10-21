@@ -160,7 +160,7 @@ export function OrdersManager({ initialOrders }: OrdersManagerProps) {
       {filteredOrders.length === 0 ? (
         <div className="bg-white rounded-2xl p-12 text-center border border-stone-200 shadow-xs">
           <Package className="w-10 h-10 text-stone-300 mx-auto mb-3" />
-          <h3 className="font-display text-lg font-bold text-stone-800">
+          <h3 className="text-lg font-semibold tracking-tight text-stone-800">
             No Orders Found
           </h3>
           <p className="text-xs text-stone-400 mt-1">
@@ -343,7 +343,7 @@ export function OrdersManager({ initialOrders }: OrdersManagerProps) {
                             <span>{formatINR(item.unitPrice)} each</span>
                           </div>
                           {item.personalizationText && (
-                            <p className="text-primary/90 italic font-serif mt-1">
+                            <p className="text-primary/90 italic mt-1">
                               &ldquo;{item.personalizationText}&rdquo;
                             </p>
                           )}

@@ -54,11 +54,11 @@ export function Footer() {
           {/* Column 1: Brand Summary */}
           <div className="space-y-4">
             <Link href="/" className="inline-block">
-              <span className="font-display text-2xl font-bold tracking-tight text-white hover:text-blush transition-colors">
+              <span className="text-2xl font-semibold tracking-tight text-white hover:text-blush transition-colors">
                 DivijaArtHouse
               </span>
             </Link>
-            <p className="text-xs font-serif italic text-blush">
+            <p className="text-xs font-medium text-blush">
               &ldquo;Little Blooms, Lasting Feelings.&rdquo;
             </p>
             <p className="text-sm text-gray-400 leading-relaxed">

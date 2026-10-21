@@ -99,7 +99,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
 
       {/* Catalog Title Banner */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
-        <h1 className="font-display font-bold text-3xl sm:text-4xl text-text-main">
+        <h1 className="font-semibold text-3xl sm:text-4xl tracking-tight text-text-main">
           Handcrafted Everlasting Bloom Catalog
         </h1>
         <p className="text-sm sm:text-base text-text-muted mt-2 max-w-2xl leading-relaxed">

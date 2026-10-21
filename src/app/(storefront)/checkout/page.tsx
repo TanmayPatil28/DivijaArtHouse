@@ -339,7 +339,7 @@ export default function CheckoutPage() {
           <div className="w-20 h-20 rounded-full bg-blush-soft border border-blush flex items-center justify-center mb-6">
             <ShoppingBag className="w-10 h-10 text-primary" />
           </div>
-          <h1 className="font-display font-bold text-2xl text-text-main mb-2">
+          <h1 className="font-semibold text-2xl text-text-main tracking-tight mb-2">
             Your shopping bag is empty
           </h1>
           <p className="text-xs sm:text-sm text-text-muted mb-6 leading-relaxed">
@@ -382,7 +382,7 @@ export default function CheckoutPage() {
 
         {/* Page Header */}
         <div className="mb-8">
-          <h1 className="font-display font-bold text-3xl sm:text-4xl text-text-main">
+          <h1 className="font-semibold text-3xl sm:text-4xl tracking-tight text-text-main">
             Secure Checkout
           </h1>
           <p className="text-xs sm:text-sm text-text-muted mt-1 flex items-center gap-2">
@@ -415,7 +415,7 @@ export default function CheckoutPage() {
                 <span className="w-6 h-6 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center">
                   1
                 </span>
-                <h2 className="font-display font-bold text-lg sm:text-xl text-text-main">
+                <h2 className="font-semibold text-lg sm:text-xl text-text-main tracking-tight">
                   Contact Information
                 </h2>
               </div>
@@ -525,7 +525,7 @@ export default function CheckoutPage() {
                 <span className="w-6 h-6 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center">
                   2
                 </span>
-                <h2 className="font-display font-bold text-lg sm:text-xl text-text-main">
+                <h2 className="font-semibold text-lg sm:text-xl text-text-main tracking-tight">
                   Shipping Address
                 </h2>
               </div>
@@ -707,7 +707,7 @@ export default function CheckoutPage() {
                 <span className="w-6 h-6 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center">
                   3
                 </span>
-                <h2 className="font-display font-bold text-lg sm:text-xl text-text-main">
+                <h2 className="font-semibold text-lg sm:text-xl text-text-main tracking-tight">
                   Payment Method
                 </h2>
               </div>
@@ -853,7 +853,7 @@ export default function CheckoutPage() {
           <aside className="lg:col-span-5">
             <div className="sticky top-24 bg-canvas border border-border-subtle rounded-2xl p-5 sm:p-6 shadow-xs space-y-6">
               <div className="flex items-center justify-between pb-3 border-b border-border-subtle">
-                <h2 className="font-display font-bold text-lg text-text-main flex items-center gap-2">
+                <h2 className="font-semibold text-lg text-text-main flex items-center gap-2 tracking-tight">
                   <ShoppingBag className="w-4 h-4 text-primary" />
                   <span>Order Summary</span>
                 </h2>
@@ -940,10 +940,10 @@ export default function CheckoutPage() {
                 )}
 
                 <div className="pt-3 border-t border-border-subtle flex justify-between items-baseline text-base sm:text-lg">
-                  <span className="font-display font-bold text-text-main">
+                  <span className="font-semibold text-text-main tracking-tight">
                     Total Payable
                   </span>
-                  <span className="font-display font-bold text-primary text-xl sm:text-2xl">
+                  <span className="font-semibold text-primary text-xl sm:text-2xl tracking-tight">
                     {formatINR(grandTotal)}
                   </span>
                 </div>

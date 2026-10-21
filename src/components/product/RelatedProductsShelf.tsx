@@ -19,7 +19,7 @@ export function RelatedProductsShelf({ products }: RelatedProductsShelfProps) {
           <Sparkles className="w-3.5 h-3.5" />
           Complementary Blooms
         </span>
-        <h2 className="font-display font-bold text-2xl sm:text-3xl text-text-main">
+        <h2 className="font-semibold text-2xl sm:text-3xl tracking-tight text-text-main">
           You May Also Cherish
         </h2>
         <p className="text-xs sm:text-sm text-text-muted mt-1 max-w-md">

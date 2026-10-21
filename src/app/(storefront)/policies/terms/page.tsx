@@ -86,7 +86,7 @@ export default function TermsPolicyPage() {
                 <FileCheck className="w-3.5 h-3.5" />
                 <span>Agreement & Terms</span>
               </div>
-              <h1 className="text-2xl sm:text-3xl font-display font-bold text-text-main">
+              <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-text-main">
                 Terms of Service
               </h1>
               <p className="text-xs text-text-muted">
@@ -100,7 +100,7 @@ export default function TermsPolicyPage() {
 
             {/* Section 1 */}
             <section className="space-y-3 text-sm text-text-muted leading-relaxed">
-              <h2 className="text-lg font-bold font-display text-text-main flex items-center gap-2">
+              <h2 className="text-lg font-bold font-sans text-text-main flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-primary" />
                 1. Handmade Craftsmanship & Botanical Artistic Variations
               </h2>
@@ -116,7 +116,7 @@ export default function TermsPolicyPage() {
 
             {/* Section 2 */}
             <section className="space-y-3 text-sm text-text-muted leading-relaxed">
-              <h2 className="text-lg font-bold font-display text-text-main flex items-center gap-2">
+              <h2 className="text-lg font-bold font-sans text-text-main flex items-center gap-2">
                 <IndianRupee className="w-4 h-4 text-primary" />
                 2. Pricing, Currencies & Payment Processing
               </h2>
@@ -138,7 +138,7 @@ export default function TermsPolicyPage() {
 
             {/* Section 3 */}
             <section className="space-y-3 text-sm text-text-muted leading-relaxed">
-              <h2 className="text-lg font-bold font-display text-text-main flex items-center gap-2">
+              <h2 className="text-lg font-bold font-sans text-text-main flex items-center gap-2">
                 <Scale className="w-4 h-4 text-primary" />
                 3. Order Acceptance & Right of Cancellation
               </h2>
@@ -158,7 +158,7 @@ export default function TermsPolicyPage() {
 
             {/* Section 4 */}
             <section className="space-y-3 text-sm text-text-muted leading-relaxed">
-              <h2 className="text-lg font-bold font-display text-text-main flex items-center gap-2">
+              <h2 className="text-lg font-bold font-sans text-text-main flex items-center gap-2">
                 <ShieldAlert className="w-4 h-4 text-primary" />
                 4. Intellectual Property & Brand Ownership
               </h2>
@@ -169,7 +169,7 @@ export default function TermsPolicyPage() {
 
             {/* Section 5 */}
             <section className="space-y-3 text-sm text-text-muted leading-relaxed">
-              <h2 className="text-lg font-bold font-display text-text-main flex items-center gap-2">
+              <h2 className="text-lg font-bold font-sans text-text-main flex items-center gap-2">
                 5. Governing Law & Jurisdiction
               </h2>
               <p>
@@ -182,3 +182,4 @@ export default function TermsPolicyPage() {
     </div>
   );
 }
+

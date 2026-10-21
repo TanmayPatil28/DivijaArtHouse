@@ -55,7 +55,7 @@ export default function TrackOrderPage({ searchParams }: TrackOrderPageProps) {
             <span>Real-Time Order Tracking</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl font-display font-bold text-text-main tracking-tight">
+          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-text-main tracking-tight">
             Follow Your Everlasting Blooms
           </h1>
 
@@ -73,3 +73,4 @@ export default function TrackOrderPage({ searchParams }: TrackOrderPageProps) {
     </div>
   );
 }
+

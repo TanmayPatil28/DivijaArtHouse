@@ -1,21 +1,13 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Sparkles, ShoppingBag, Heart } from 'lucide-react';
+import { ShoppingBag, ArrowRight, Sparkles, Heart } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-surface-warm via-blush-soft/30 to-white py-12 md:py-20 lg:py-24 border-b border-border-subtle">
-      {/* Decorative background glow circles */}
-      <div
-        className="absolute top-10 left-1/2 -translate-x-1/2 -z-10 w-[600px] h-[600px] bg-blush-soft/50 rounded-full blur-3xl pointer-events-none"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute -top-24 right-0 -z-10 w-80 h-80 bg-blush/30 rounded-full blur-2xl pointer-events-none"
-        aria-hidden="true"
-      />
-
+    <section className="relative overflow-hidden bg-gradient-to-b from-warm-surface via-canvas to-canvas py-12 md:py-20 lg:py-24 border-b border-border-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Column: Editorial Copy & CTAs */}
@@ -27,13 +19,13 @@ export function Hero() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-main leading-[1.15] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[62px] font-semibold text-text-main leading-[1.12] tracking-tight">
               Flowers That Keep Your Moments{' '}
-              <span className="text-primary italic font-serif">Blooming</span>
+              <span className="text-primary">Blooming</span>
             </h1>
 
             {/* Tagline */}
-            <p className="text-lg sm:text-xl font-serif italic text-primary">
+            <p className="text-lg sm:text-xl font-medium text-primary">
               &ldquo;Little Blooms, Lasting Feelings.&rdquo;
             </p>
 

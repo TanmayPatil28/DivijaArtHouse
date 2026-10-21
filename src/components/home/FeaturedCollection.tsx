@@ -43,7 +43,7 @@ export function FeaturedCollection() {
                 <span>Editorial Spotlight</span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-text-main leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-text-main leading-tight">
                 The Grand Heritage Jumbo Collection
               </h2>
 

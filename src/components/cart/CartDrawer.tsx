@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
@@ -96,7 +96,7 @@ export function CartDrawer() {
         <div className="flex items-center justify-between px-5 py-4 border-b border-border-subtle bg-white flex-shrink-0">
           <div className="flex items-center gap-2">
             <ShoppingBag className="w-5 h-5 text-primary" />
-            <h2 className="font-display font-bold text-lg text-text-main">
+            <h2 className="font-semibold tracking-tight text-lg text-text-main">
               Your Floral Bag
             </h2>
             <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-blush-soft text-primary">
@@ -135,7 +135,7 @@ export function CartDrawer() {
             </div>
 
             <div className="max-w-xs space-y-2">
-              <h3 className="font-display font-bold text-xl text-text-main">
+              <h3 className="font-semibold text-xl text-text-main tracking-tight">
                 Your floral bag is empty
               </h3>
               <p className="text-xs sm:text-sm text-text-muted leading-relaxed">
@@ -194,14 +194,14 @@ export function CartDrawer() {
 
               <div className="pt-2 border-t border-border-subtle flex items-baseline justify-between">
                 <div>
-                  <span className="font-display font-bold text-base text-text-main">
+                  <span className="font-semibold text-base text-text-main tracking-tight">
                     Estimated Total
                   </span>
                   <p className="text-[10px] text-text-muted">
                     Inclusive of all taxes
                   </p>
                 </div>
-                <span className="font-display font-bold text-xl text-primary">
+                <span className="font-semibold text-xl text-primary tracking-tight">
                   {formatINR(summary.totalAmount)}
                 </span>
               </div>
@@ -230,7 +230,7 @@ export function CartDrawer() {
             {/* Trust Micro-Copy */}
             <div className="pt-1 flex items-center justify-center gap-1.5 text-[11px] text-text-muted">
               <ShieldCheck className="w-3.5 h-3.5 text-primary" />
-              <span>Safe & Secure Checkout • Pan-India Express Delivery</span>
+              <span>Safe & Secure Checkout â€¢ Pan-India Express Delivery</span>
             </div>
           </div>
         )}

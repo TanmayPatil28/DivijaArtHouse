@@ -426,7 +426,7 @@ export function ProductsManager({ initialProducts, categories }: ProductsManager
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
           <div className="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-stone-200 my-8 relative">
             <div className="flex items-center justify-between pb-4 border-b border-stone-100 mb-6">
-              <h2 className="font-display text-xl font-bold text-stone-900 flex items-center gap-2">
+              <h2 className="text-xl font-semibold tracking-tight text-stone-900 flex items-center gap-2">
                 <Flower2 className="w-5 h-5 text-primary" />
                 <span>{editingProduct ? 'Edit Artisan Product' : 'Add New Product'}</span>
               </h2>
@@ -663,7 +663,7 @@ export function ProductsManager({ initialProducts, categories }: ProductsManager
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl max-w-sm w-full p-6 shadow-xl border border-stone-200 text-center">
             <Trash2 className="w-10 h-10 text-red-600 mx-auto mb-3" />
-            <h3 className="font-display text-lg font-bold text-stone-900">
+            <h3 className="text-lg font-semibold tracking-tight text-stone-900">
               Confirm Product Deletion
             </h3>
             <p className="text-xs text-stone-500 mt-1 leading-relaxed">

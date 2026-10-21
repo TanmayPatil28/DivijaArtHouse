@@ -159,13 +159,13 @@ export function ProductDetails({ product }: ProductDetailsProps) {
       </div>
 
       {/* Product Title */}
-      <h1 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-text-main leading-tight">
+      <h1 className="text-2xl sm:text-3xl lg:text-[34px] font-semibold text-text-main leading-tight tracking-tight">
         {product.name}
       </h1>
 
       {/* Pricing Row */}
       <div className="flex flex-wrap items-baseline gap-3 pb-4 border-b border-border-subtle">
-        <span className="font-display font-bold text-2xl sm:text-3xl text-primary">
+        <span className="text-2xl sm:text-3xl font-semibold text-primary tracking-tight">
           {formatINR(currentPrice)}
         </span>
         {currentCompareAt && currentCompareAt > currentPrice && (
@@ -446,7 +446,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
       {/* Rich Description & Craft Details */}
       <div className="space-y-4 pt-4 border-t border-border-subtle">
         <div>
-          <h2 className="font-display font-bold text-lg text-text-main mb-2">
+          <h2 className="font-semibold text-lg text-text-main tracking-tight mb-2">
             Description & Artisan Story
           </h2>
           <p className="text-sm text-text-muted leading-relaxed whitespace-pre-line">

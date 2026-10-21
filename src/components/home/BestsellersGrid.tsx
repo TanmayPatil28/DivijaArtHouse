@@ -22,7 +22,7 @@ export function BestsellersGrid({ products }: BestsellersGridProps) {
               <Sparkles className="w-3.5 h-3.5" />
               <span>Customer Favorites</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-text-main">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-text-main">
               Most Loved Bestsellers
             </h2>
             <p className="text-sm text-text-muted mt-1 max-w-xl">

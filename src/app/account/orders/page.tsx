@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
@@ -90,7 +90,7 @@ export default async function AccountOrdersPage() {
         {/* Page Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
           <div>
-            <h1 className="font-display text-2xl sm:text-3xl font-bold text-text-main">
+            <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-text-main">
               Order History
             </h1>
             <p className="text-xs sm:text-sm text-text-muted mt-1">
@@ -108,7 +108,7 @@ export default async function AccountOrdersPage() {
             <div className="w-16 h-16 rounded-2xl bg-blush-soft text-primary mx-auto flex items-center justify-center mb-4">
               <Package className="w-8 h-8" />
             </div>
-            <h2 className="font-display text-xl sm:text-2xl font-bold text-text-main">
+            <h2 className="font-sans text-xl sm:text-2xl font-bold text-text-main">
               No Orders Yet
             </h2>
             <p className="text-text-muted text-xs sm:text-sm max-w-md mx-auto mt-2 leading-relaxed">
@@ -149,7 +149,7 @@ export default async function AccountOrdersPage() {
                         <Calendar className="w-3.5 h-3.5 text-primary" />
                         {formatDate(order.createdAt)}
                       </span>
-                      <span>•</span>
+                      <span>â€¢</span>
                       <span className="flex items-center gap-1">
                         <CreditCard className="w-3.5 h-3.5 text-text-muted" />
                         {order.paymentMethod}
@@ -205,11 +205,11 @@ export default async function AccountOrdersPage() {
                           <div className="text-xs text-text-muted mt-0.5 space-x-2">
                             {item.variantName && <span>Variant: {item.variantName}</span>}
                             <span>Qty: {item.quantity}</span>
-                            <span>•</span>
+                            <span>â€¢</span>
                             <span>{formatINR(item.unitPrice)} each</span>
                           </div>
                           {item.personalizationText && (
-                            <p className="text-[11px] text-primary/90 italic mt-1 font-serif">
+                            <p className="text-[11px] text-primary/90 mt-1 italic">
                               &ldquo;{item.personalizationText}&rdquo;
                             </p>
                           )}
@@ -242,7 +242,7 @@ export default async function AccountOrdersPage() {
                   <div className="flex items-center gap-6">
                     <div className="text-right">
                       <span className="text-xs text-text-muted">Total Paid / Due</span>
-                      <p className="font-display text-lg sm:text-xl font-bold text-primary">
+                      <p className="font-sans text-lg sm:text-xl font-bold text-primary">
                         {formatINR(order.totalAmount)}
                       </p>
                     </div>

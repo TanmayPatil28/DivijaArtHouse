@@ -18,7 +18,7 @@ export function CatalogEmptyState({
         <Sparkles className="w-8 h-8 stroke-[1.5]" />
       </div>
 
-      <h3 className="font-display font-bold text-xl sm:text-2xl text-text-main mb-2">
+      <h3 className="font-semibold tracking-tight text-xl sm:text-2xl text-text-main mb-2">
         No Blooms Found Matching Your Criteria
       </h3>
 

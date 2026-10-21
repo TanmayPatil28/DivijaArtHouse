@@ -57,7 +57,7 @@ export function ValueProps() {
 
               {/* Text */}
               <div className="space-y-1.5">
-                <h3 className="font-display font-bold text-base sm:text-lg text-text-main">
+                <h3 className="font-semibold tracking-tight text-base sm:text-lg text-text-main">
                   {prop.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-text-muted leading-relaxed">

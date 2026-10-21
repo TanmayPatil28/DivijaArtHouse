@@ -61,10 +61,10 @@ export function Header() {
                 href="/"
                 className="group flex flex-col items-center md:items-start select-none"
               >
-                <span className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-text-main group-hover:text-primary transition-colors">
+                <span className="text-2xl sm:text-[26px] font-semibold tracking-tight text-text-main group-hover:text-primary transition-colors">
                   DivijaArtHouse
                 </span>
-                <span className="hidden sm:block text-[10px] uppercase font-sans tracking-widest text-text-muted font-medium">
+                <span className="hidden sm:block text-[10px] uppercase tracking-widest text-text-muted font-medium">
                   Handcrafted Everlasting Florals
                 </span>
               </Link>

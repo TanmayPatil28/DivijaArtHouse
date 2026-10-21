@@ -1,18 +1,12 @@
 import type { Metadata, Viewport } from 'next';
-import { Playfair_Display, Poppins } from 'next/font/google';
+import { Manrope } from 'next/font/google';
 import './globals.css';
 
-const playfair = Playfair_Display({
+const manrope = Manrope({
   subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
   display: 'swap',
-  variable: '--font-playfair',
-});
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  display: 'swap',
-  variable: '--font-poppins',
+  variable: '--font-manrope',
 });
 
 export const metadata: Metadata = {
@@ -49,8 +43,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${poppins.variable}`}>
-      <body className="min-h-screen bg-canvas text-text-main flex flex-col antialiased">
+    <html lang="en" className={manrope.variable}>
+      <body className="min-h-screen bg-canvas text-text-main font-sans flex flex-col antialiased">
         <WishlistProvider>
           <CartProvider>
             <AnnouncementBar />

@@ -68,7 +68,7 @@ export function CatalogFilterSidebar({
       <div className="flex items-center justify-between pb-3 border-b border-border-subtle">
         <div className="flex items-center gap-2">
           <Filter className="w-4 h-4 text-primary" />
-          <h2 className="font-display font-bold text-lg text-text-main">Filters</h2>
+          <h2 className="font-semibold tracking-tight text-lg text-text-main">Filters</h2>
         </div>
         {hasActiveFilters && (
           <button

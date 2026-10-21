@@ -61,14 +61,14 @@ export default function AboutPage() {
             <span>The Heart Behind the Yarn</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-text-main tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-text-main tracking-tight leading-tight">
             Flowers That Never Wilt,{' '}
-            <span className="italic font-serif text-primary block sm:inline">
+            <span className="text-primary block sm:inline">
               Feelings That Never Fade
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl font-serif italic text-primary max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl font-medium text-primary max-w-2xl mx-auto">
             &ldquo;Little Blooms, Lasting Feelings.&rdquo;
           </p>
 
@@ -122,7 +122,7 @@ export default function AboutPage() {
                 <span>Our Craft Heritage</span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-text-main leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-text-main leading-tight">
                 Slow Artistry in a World of Instant Everything
               </h2>
 
@@ -171,7 +171,7 @@ export default function AboutPage() {
             <span className="text-xs font-semibold uppercase tracking-wider text-primary">
               Our Core Pillars
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-text-main">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-text-main">
               The Values Stitched Into Every Stem
             </h2>
             <p className="text-sm sm:text-base text-text-muted">
@@ -186,7 +186,7 @@ export default function AboutPage() {
               <div className="w-12 h-12 rounded-xl bg-blush-soft text-primary flex items-center justify-center">
                 <Heart className="w-6 h-6 fill-primary" />
               </div>
-              <h3 className="text-lg font-bold font-display text-text-main">
+              <h3 className="text-lg font-bold font-sans text-text-main">
                 Handcrafted with Unhurried Love
               </h3>
               <p className="text-sm text-text-muted leading-relaxed flex-1">
@@ -205,7 +205,7 @@ export default function AboutPage() {
               <div className="w-12 h-12 rounded-xl bg-green-50 text-green-700 flex items-center justify-center">
                 <Recycle className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold font-display text-text-main">
+              <h3 className="text-lg font-bold font-sans text-text-main">
                 Sustainable, Everlasting Blooms
               </h3>
               <p className="text-sm text-text-muted leading-relaxed flex-1">
@@ -224,7 +224,7 @@ export default function AboutPage() {
               <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center">
                 <Gift className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold font-display text-text-main">
+              <h3 className="text-lg font-bold font-sans text-text-main">
                 Thoughtful, Personalized Gifting
               </h3>
               <p className="text-sm text-text-muted leading-relaxed flex-1">
@@ -248,7 +248,7 @@ export default function AboutPage() {
             <span className="text-xs font-semibold uppercase tracking-wider text-primary">
               Behind the Scenes
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-text-main">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-text-main">
               The 4 Stages of a Hand-Crocheted Bloom
             </h2>
             <p className="text-sm sm:text-base text-text-muted">
@@ -333,25 +333,25 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="space-y-1">
-              <p className="text-2xl sm:text-3xl font-bold font-display text-primary">
+              <p className="text-2xl sm:text-3xl font-bold font-sans text-primary">
                 100%
               </p>
               <p className="text-xs sm:text-sm text-text-muted">Handcrafted in India</p>
             </div>
             <div className="space-y-1">
-              <p className="text-2xl sm:text-3xl font-bold font-display text-primary">
+              <p className="text-2xl sm:text-3xl font-bold font-sans text-primary">
                 5-Ply
               </p>
               <p className="text-xs sm:text-sm text-text-muted">Combed Milk Cotton Yarn</p>
             </div>
             <div className="space-y-1">
-              <p className="text-2xl sm:text-3xl font-bold font-display text-primary">
+              <p className="text-2xl sm:text-3xl font-bold font-sans text-primary">
                 Forever
               </p>
               <p className="text-xs sm:text-sm text-text-muted">No Wilting or Water Needed</p>
             </div>
             <div className="space-y-1">
-              <p className="text-2xl sm:text-3xl font-bold font-display text-primary">
+              <p className="text-2xl sm:text-3xl font-bold font-sans text-primary">
                 PAN-India
               </p>
               <p className="text-xs sm:text-sm text-text-muted">Safe Doorstep Delivery</p>
@@ -363,7 +363,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-text-main">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-text-main">
             Ready to Bring Lasting Blooms into Your Life?
           </h2>
           <p className="text-sm sm:text-base text-text-muted max-w-xl mx-auto leading-relaxed">

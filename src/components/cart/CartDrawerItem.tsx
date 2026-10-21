@@ -49,7 +49,7 @@ export function CartDrawerItem({ item, onItemClick }: CartDrawerItemProps) {
             <Link
               href={`/products/${item.slug}`}
               onClick={onItemClick}
-              className="font-display font-medium text-sm text-text-main hover:text-primary transition-colors line-clamp-1"
+              className="font-medium text-sm sm:text-[15px] tracking-tight text-text-main hover:text-primary transition-colors line-clamp-1"
               title={item.name}
             >
               {item.name}

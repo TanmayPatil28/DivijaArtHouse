@@ -74,7 +74,7 @@ export function OccasionSection() {
             <Heart className="w-3.5 h-3.5 fill-primary" />
             <span>Memorable Gifting</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-text-main">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-text-main">
             Shop by Occasion
           </h2>
           <p className="text-sm sm:text-base text-text-muted mt-2">
@@ -101,7 +101,7 @@ export function OccasionSection() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-display font-bold text-lg sm:text-xl text-text-main group-hover:text-primary transition-colors mb-1.5">
+                  <h3 className="font-semibold tracking-tight text-lg sm:text-xl text-text-main group-hover:text-primary transition-colors mb-1.5">
                     {occasion.title}
                   </h3>
 

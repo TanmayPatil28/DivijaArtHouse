@@ -87,7 +87,7 @@ export default function PrivacyPolicyPage() {
                 <Shield className="w-3.5 h-3.5" />
                 <span>SPDI Rules & IT Act Compliant</span>
               </div>
-              <h1 className="text-2xl sm:text-3xl font-display font-bold text-text-main">
+              <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-text-main">
                 Privacy Policy
               </h1>
               <p className="text-xs text-text-muted">
@@ -101,7 +101,7 @@ export default function PrivacyPolicyPage() {
 
             {/* Section 1 */}
             <section className="space-y-3 text-sm text-text-muted leading-relaxed">
-              <h2 className="text-lg font-bold font-display text-text-main flex items-center gap-2">
+              <h2 className="text-lg font-bold font-sans text-text-main flex items-center gap-2">
                 <Database className="w-4 h-4 text-primary" />
                 1. Information We Collect
               </h2>
@@ -124,7 +124,7 @@ export default function PrivacyPolicyPage() {
 
             {/* Section 2 */}
             <section className="space-y-3 text-sm text-text-muted leading-relaxed">
-              <h2 className="text-lg font-bold font-display text-text-main flex items-center gap-2">
+              <h2 className="text-lg font-bold font-sans text-text-main flex items-center gap-2">
                 <Lock className="w-4 h-4 text-green-700" />
                 2. Zero Storage of Payment Card & Banking Data
               </h2>
@@ -140,7 +140,7 @@ export default function PrivacyPolicyPage() {
 
             {/* Section 3 */}
             <section className="space-y-3 text-sm text-text-muted leading-relaxed">
-              <h2 className="text-lg font-bold font-display text-text-main flex items-center gap-2">
+              <h2 className="text-lg font-bold font-sans text-text-main flex items-center gap-2">
                 <EyeOff className="w-4 h-4 text-primary" />
                 3. No Sale or Commercial Rental of Your Data
               </h2>
@@ -159,7 +159,7 @@ export default function PrivacyPolicyPage() {
 
             {/* Section 4 */}
             <section className="space-y-3 text-sm text-text-muted leading-relaxed">
-              <h2 className="text-lg font-bold font-display text-text-main flex items-center gap-2">
+              <h2 className="text-lg font-bold font-sans text-text-main flex items-center gap-2">
                 <FileText className="w-4 h-4 text-primary" />
                 4. Cookies & Local Storage
               </h2>
@@ -170,7 +170,7 @@ export default function PrivacyPolicyPage() {
 
             {/* Section 5 */}
             <section className="space-y-3 text-sm text-text-muted leading-relaxed">
-              <h2 className="text-lg font-bold font-display text-text-main flex items-center gap-2">
+              <h2 className="text-lg font-bold font-sans text-text-main flex items-center gap-2">
                 <UserCheck className="w-4 h-4 text-primary" />
                 5. Statutory Grievance Redressal Officer
               </h2>
@@ -190,3 +190,4 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
+

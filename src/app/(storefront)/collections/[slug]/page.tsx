@@ -147,7 +147,7 @@ export default async function CollectionPage({
                 <Sparkles className="w-3 h-3" />
                 <span>Handcrafted Collection</span>
               </div>
-              <h1 className="font-display font-bold text-3xl sm:text-4xl text-text-main">
+              <h1 className="font-semibold text-3xl sm:text-4xl tracking-tight text-text-main">
                 {category.name}
               </h1>
               {category.description && (
@@ -181,3 +181,4 @@ export default async function CollectionPage({
     </div>
   );
 }
+

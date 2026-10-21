@@ -58,7 +58,7 @@ export function ContactForm() {
   return (
     <div className="bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-border-subtle shadow-sm">
       <div className="space-y-2 mb-8">
-        <h2 className="text-xl sm:text-2xl font-display font-bold text-text-main">
+        <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-text-main">
           Send Us a Note
         </h2>
         <p className="text-sm text-text-muted">
@@ -72,7 +72,7 @@ export function ContactForm() {
           <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto text-green-700">
             <CheckCircle2 className="w-8 h-8" />
           </div>
-          <h3 className="text-lg font-bold text-green-900 font-display">
+          <h3 className="text-lg font-semibold text-green-900 tracking-tight">
             Message Sent Successfully!
           </h3>
           <p className="text-sm text-green-800 max-w-md mx-auto leading-relaxed">

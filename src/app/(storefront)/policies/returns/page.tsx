@@ -87,7 +87,7 @@ export default function ReturnsPolicyPage() {
                 <RotateCcw className="w-3.5 h-3.5" />
                 <span>Handcrafted Guarantee</span>
               </div>
-              <h1 className="text-2xl sm:text-3xl font-display font-bold text-text-main">
+              <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-text-main">
                 Returns & Replacement Policy
               </h1>
               <p className="text-xs text-text-muted">
@@ -112,7 +112,7 @@ export default function ReturnsPolicyPage() {
 
             {/* Section 1 */}
             <section className="space-y-3 text-sm text-text-muted leading-relaxed">
-              <h2 className="text-lg font-bold font-display text-text-main flex items-center gap-2">
+              <h2 className="text-lg font-bold font-sans text-text-main flex items-center gap-2">
                 1. Transit Damage & Free Replacement Policy
               </h2>
               <p>
@@ -141,7 +141,7 @@ export default function ReturnsPolicyPage() {
 
             {/* Section 2 */}
             <section className="space-y-3 text-sm text-text-muted leading-relaxed">
-              <h2 className="text-lg font-bold font-display text-text-main flex items-center gap-2">
+              <h2 className="text-lg font-bold font-sans text-text-main flex items-center gap-2">
                 2. Non-Returnable Items
               </h2>
               <p>Due to the bespoke and hygienic nature of our handcrafted gifting collections, the following items are non-returnable and non-exchangeable once delivered in sound condition:</p>
@@ -160,7 +160,7 @@ export default function ReturnsPolicyPage() {
 
             {/* Section 3 */}
             <section className="space-y-3 text-sm text-text-muted leading-relaxed">
-              <h2 className="text-lg font-bold font-display text-text-main flex items-center gap-2">
+              <h2 className="text-lg font-bold font-sans text-text-main flex items-center gap-2">
                 3. Order Cancellation Policy
               </h2>
               <p>
@@ -184,7 +184,7 @@ export default function ReturnsPolicyPage() {
 
             {/* Section 4 */}
             <section className="space-y-3 text-sm text-text-muted leading-relaxed">
-              <h2 className="text-lg font-bold font-display text-text-main flex items-center gap-2">
+              <h2 className="text-lg font-bold font-sans text-text-main flex items-center gap-2">
                 4. Refund Processing & Mode of Payment
               </h2>
               <p>
@@ -205,3 +205,4 @@ export default function ReturnsPolicyPage() {
     </div>
   );
 }
+

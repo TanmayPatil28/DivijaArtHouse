@@ -41,8 +41,22 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ['var(--font-playfair)', 'serif'],
-        sans: ['var(--font-poppins)', 'var(--font-inter)', 'sans-serif'],
+        sans: [
+          'var(--font-manrope)',
+          'Manrope',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'sans-serif',
+        ],
+        display: [
+          'var(--font-manrope)',
+          'Manrope',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'sans-serif',
+        ],
       },
       screens: {
         sm: '375px', // mobile-first breakpoint
