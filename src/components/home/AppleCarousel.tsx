@@ -167,7 +167,9 @@ export function AppleCarousel({
                             className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                             priority={idx === 0}
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20" />
+                          {(slide.headline || slide.subheadline) && (
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20" />
+                          )}
                         </div>
                       )}
 
