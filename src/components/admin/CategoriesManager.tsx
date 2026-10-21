@@ -212,6 +212,7 @@ export function CategoriesManager({ initialCategories }: CategoriesManagerProps)
                             src={cat.image}
                             alt={cat.name}
                             fill
+                            unoptimized={cat.image.endsWith('.svg')}
                             className="object-cover"
                           />
                         ) : (
@@ -365,6 +366,7 @@ export function CategoriesManager({ initialCategories }: CategoriesManagerProps)
                       src={formData.image}
                       alt="Category image"
                       fill
+                      unoptimized={formData.image.endsWith('.svg')}
                       className="object-cover"
                     />
                   </div>
@@ -385,7 +387,7 @@ export function CategoriesManager({ initialCategories }: CategoriesManagerProps)
                         formData.image === preset ? 'border-primary ring-2 ring-primary/20' : 'border-stone-200'
                       }`}
                     >
-                      <Image src={preset} alt="preset" fill className="object-cover" />
+                      <Image src={preset} alt="preset" fill unoptimized={preset.endsWith('.svg')} className="object-cover" />
                     </button>
                   ))}
                 </div>

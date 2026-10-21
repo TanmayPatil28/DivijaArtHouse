@@ -871,6 +871,7 @@ export default function CheckoutPage() {
                         src={item.image || '/images/products/blushing-peony-rose-1.svg'}
                         alt={item.name}
                         fill
+                        unoptimized={Boolean(item.image?.endsWith('.svg'))}
                         className="object-cover"
                         sizes="64px"
                       />

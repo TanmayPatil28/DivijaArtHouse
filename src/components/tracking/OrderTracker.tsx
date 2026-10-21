@@ -368,6 +368,7 @@ export function OrderTracker({ initialOrderNumber = '' }: OrderTrackerProps) {
                           src={item.image}
                           alt={item.productName}
                           fill
+                          unoptimized={item.image.endsWith('.svg')}
                           className="object-contain p-1"
                         />
                       ) : (

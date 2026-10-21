@@ -163,6 +163,7 @@ export function AppleCarousel({
                             src={slide.imageUrl}
                             alt={slide.imageAlt || "Slide image"}
                             fill
+                            unoptimized={slide.imageUrl.endsWith('.svg')}
                             sizes="(max-width: 1200px) 100vw, 1200px"
                             className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                             priority={idx === 0}

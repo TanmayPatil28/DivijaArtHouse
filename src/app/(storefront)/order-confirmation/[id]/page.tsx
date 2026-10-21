@@ -283,6 +283,7 @@ export default async function OrderConfirmationPage({
                       src={item.image || '/images/products/blushing-peony-rose-1.svg'}
                       alt={item.productName}
                       fill
+                      unoptimized={Boolean(item.image?.endsWith('.svg'))}
                       className="object-cover"
                       sizes="64px"
                     />

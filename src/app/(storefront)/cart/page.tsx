@@ -129,6 +129,7 @@ export default function CartPage() {
                             src={item.image || FALLBACK_IMAGE}
                             alt={item.name}
                             fill
+                            unoptimized={typeof item.image === 'string' && item.image.endsWith('.svg')}
                             sizes="80px"
                             className="object-contain p-1.5"
                           />

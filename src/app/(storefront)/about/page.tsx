@@ -94,6 +94,7 @@ export default function AboutPage() {
                     src="/images/products/blushing-peony-rose-1.svg"
                     alt="Handcrafted Everlasting Crochet Bloom by DivijaArtHouse"
                     fill
+                    unoptimized
                     className="object-contain"
                     priority
                   />

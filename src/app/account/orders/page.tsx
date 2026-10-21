@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
@@ -190,6 +190,7 @@ export default async function AccountOrdersPage() {
                               src={item.image}
                               alt={item.productName}
                               fill
+                              unoptimized={item.image.endsWith('.svg')}
                               className="object-cover"
                             />
                           ) : (

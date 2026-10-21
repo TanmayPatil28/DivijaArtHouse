@@ -51,6 +51,7 @@ export function ValueProps() {
                   src={prop.icon}
                   alt={prop.alt}
                   fill
+                  unoptimized={prop.icon.endsWith('.svg')}
                   className="object-contain"
                 />
               </div>

@@ -101,6 +101,7 @@ export function CollectionReel({ categories }: CollectionReelProps) {
                     src={item.image}
                     alt={item.name}
                     fill
+                    unoptimized={typeof item.image === 'string' && item.image.endsWith('.svg')}
                     className="object-contain p-2"
                   />
                 </div>

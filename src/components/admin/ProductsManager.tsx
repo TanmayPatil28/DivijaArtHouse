@@ -339,6 +339,7 @@ export function ProductsManager({ initialProducts, categories }: ProductsManager
                               src={primaryImg}
                               alt={p.name}
                               fill
+                              unoptimized={primaryImg.endsWith('.svg')}
                               className="object-cover"
                             />
                           </div>
@@ -586,6 +587,7 @@ export function ProductsManager({ initialProducts, categories }: ProductsManager
                       src={formData.image}
                       alt="Selected asset"
                       fill
+                      unoptimized={formData.image.endsWith('.svg')}
                       className="object-cover"
                     />
                   </div>
@@ -606,7 +608,7 @@ export function ProductsManager({ initialProducts, categories }: ProductsManager
                         formData.image === preset ? 'border-primary ring-2 ring-primary/20' : 'border-stone-200'
                       }`}
                     >
-                      <Image src={preset} alt="preset" fill className="object-cover" />
+                      <Image src={preset} alt="preset" fill unoptimized={preset.endsWith('.svg')} className="object-cover" />
                     </button>
                   ))}
                 </div>

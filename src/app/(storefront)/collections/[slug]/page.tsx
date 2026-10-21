@@ -138,6 +138,7 @@ export default async function CollectionPage({
                   alt={category.name}
                   fill
                   priority
+                  unoptimized={category.image.endsWith('.svg')}
                   className="object-contain p-2"
                 />
               </div>

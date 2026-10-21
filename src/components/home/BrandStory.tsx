@@ -19,6 +19,7 @@ export function BrandStory() {
                   src="/images/products/blushing-peony-rose-1.svg"
                   alt="Artisanal Handcrafted Crochet Peony Bloom"
                   fill
+                  unoptimized
                   className="object-contain"
                 />
               </div>

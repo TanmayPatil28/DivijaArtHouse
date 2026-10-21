@@ -71,6 +71,7 @@ export function Hero() {
                   alt="Royal Sovereign Jumbo Handcrafted Crochet Bouquet"
                   fill
                   priority
+                  unoptimized
                   className="object-contain"
                 />
               </div>

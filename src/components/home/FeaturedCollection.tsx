@@ -20,6 +20,7 @@ export function FeaturedCollection() {
                   src="/images/products/celestial-twilight-jumbo-1.svg"
                   alt="Celestial Twilight Jumbo Handcrafted Crochet Bouquet"
                   fill
+                  unoptimized
                   className="object-contain"
                 />
               </div>

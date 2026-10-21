@@ -36,6 +36,7 @@ export function CartDrawerItem({ item, onItemClick }: CartDrawerItemProps) {
           src={imgSrc}
           alt={item.name}
           fill
+          unoptimized={typeof imgSrc === 'string' && imgSrc.endsWith('.svg')}
           sizes="88px"
           className="object-contain p-1.5 transition-transform duration-300 group-hover:scale-105"
           onError={() => setImgSrc(FALLBACK_IMAGE)}

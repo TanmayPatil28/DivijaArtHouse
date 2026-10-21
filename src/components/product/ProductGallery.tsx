@@ -29,6 +29,7 @@ export function ProductGallery({ product }: ProductGalleryProps) {
             alt={`${product.name} - View ${activeIndex + 1}`}
             fill
             priority
+            unoptimized={activeImage.endsWith('.svg')}
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-contain p-4"
           />
@@ -86,6 +87,7 @@ export function ProductGallery({ product }: ProductGalleryProps) {
                   src={img}
                   alt={`${product.name} thumbnail ${idx + 1}`}
                   fill
+                  unoptimized={img.endsWith('.svg')}
                   sizes="96px"
                   className="object-contain p-1"
                 />

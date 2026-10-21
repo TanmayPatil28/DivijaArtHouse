@@ -315,6 +315,7 @@ export function Footer() {
                 src="/images/badges/razorpay.svg"
                 alt="Razorpay"
                 fill
+                unoptimized
                 className="object-contain p-0.5"
               />
             </div>
@@ -325,6 +326,7 @@ export function Footer() {
                 src="/images/badges/upi.svg"
                 alt="UPI"
                 fill
+                unoptimized
                 className="object-contain p-0.5"
               />
             </div>
@@ -335,6 +337,7 @@ export function Footer() {
                 src="/images/badges/cod.svg"
                 alt="Cash on Delivery"
                 fill
+                unoptimized
                 className="object-contain p-0.5"
               />
             </div>
@@ -345,6 +348,7 @@ export function Footer() {
                 src="/images/badges/secure.svg"
                 alt="SSL Encrypted"
                 fill
+                unoptimized
                 className="object-contain p-0.5"
               />
             </div>

@@ -177,6 +177,7 @@ export default function WishlistPage() {
                         src={mainImage}
                         alt={product.name}
                         fill
+                        unoptimized={mainImage.endsWith('.svg')}
                         sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                         className="object-contain p-2"
                       />
