@@ -44,67 +44,62 @@ export function BrandStory() {
           <div className="lg:col-span-7 order-1 lg:order-2 space-y-6">
             <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>The DivijaArtHouse Ethos</span>
+              <span>A LITTLE ABOUT US</span>
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-text-main leading-tight tracking-tight">
-              Crafted with Intention,{' '}
-              <span className="text-primary font-semibold">
-                Cherished for a Lifetime
-              </span>
+              Made by hand. Chosen with heart.
             </h2>
 
-            <p className="text-base sm:text-lg font-medium text-primary">
-              &ldquo;Little Blooms, Lasting Feelings.&rdquo;
-            </p>
-
             <div className="space-y-4 text-sm sm:text-base text-text-muted leading-relaxed">
-              <p>
-                DivijaArtHouse was founded on a simple observation: the flowers we
-                give to mark our happiest moments usually wilt within days, but the
-                sentiments behind them deserve to be preserved forever.
+              <p className="text-text-main font-medium">
+                Some gifts are beautiful in the moment. Others become part of the story you keep telling.
               </p>
               <p>
-                Starting from a quiet sunlit worktable with spools of soft combed
-                cotton yarn and crochet hooks, we set out to reimagine floral
-                gifting in India. Every delicate petal, winding vine, and whimsical
-                desk pot is patiently brought to life stitch-by-stitch by skilled
-                women artisans.
+                DivijaArtHouse is built around a simple idea: a thoughtful gift should mean something long after the occasion has passed.
               </p>
               <p>
-                When you share a Divija creation, you are not simply gifting
-                flowers — you are gifting hours of human devotion, sustainable
-                artistry, and memories that stay vibrant season after season.
+                We love the feeling of giving flowers—the surprise, the smile, the little pause when someone realises you&apos;ve thought of them. We wanted to create a different kind of floral gift: one that could sit on a desk, brighten a shelf, or bring back a memory every time someone looked at it.
               </p>
+              <p>
+                That&apos;s where crochet florals come in. With yarn, hooks, patience, and an eye for the little details, each design takes shape one stitch at a time. From delicate bouquets to cheerful potted blooms and playful keepsakes, our collection is made for people who believe the smallest gestures can carry the biggest feelings.
+              </p>
+              <p>
+                Whether you&apos;re celebrating someone you love or treating yourself to something lovely, we hope you find a piece that feels just right. Because sometimes, the most meaningful gifts aren&apos;t about how much you spend. They&apos;re about how well you know someone.
+              </p>
+            </div>
+
+            <div className="pt-1 border-l-2 border-primary/40 pl-4 italic text-sm text-text-main font-medium">
+              &ldquo;Little Blooms, Lasting Feelings.&rdquo; — DivijaArtHouse
             </div>
 
             {/* Ethos Checklist */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-sm text-text-main">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0" />
-                <span>Zero waste & 100% biodegradable cotton</span>
+                <span>Thoughtful by design — made to be kept</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0" />
-                <span>Fair-wage artisan community support</span>
+                <span>Handmade character in every stitch</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0" />
-                <span>Custom gift packaging & handwritten cards</span>
+                <span>Personal gifting & keepsake message cards</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0" />
-                <span>No wilting, shedding, or seasonal allergy pollen</span>
+                <span>No water needed — enjoyed again and again</span>
               </div>
             </div>
 
             {/* CTA */}
             <div className="pt-3">
               <Link
-                href="/about"
+                href="/shop"
                 className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-primary hover:bg-primary-hover text-white text-sm font-semibold transition-all shadow-sm active:scale-[0.98]"
               >
-                <span>Read Our Full Story</span>
+                <span>Discover Our Collections</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

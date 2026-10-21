@@ -3,30 +3,30 @@ import Image from 'next/image';
 
 const VALUE_PROPS = [
   {
-    title: 'Thoughtfully Handcrafted',
+    title: 'Made slowly, with care.',
     description:
-      'Every petal and stitch is lovingly crocheted by skilled Indian artisans using 100% fine cotton yarn.',
+      'Every crochet flower is shaped stitch by stitch, giving each piece its own texture and character.',
     icon: '/images/badges/handcrafted.svg',
     alt: 'Handcrafted crochet art',
   },
   {
-    title: 'Made for Meaningful Gifting',
+    title: 'For the people who matter.',
     description:
-      'Perfect for birthdays, anniversaries, graduations, and heartfelt “thinking of you” surprises.',
+      'From a birthday surprise to an unexpected little thank-you, find a gift that feels personal.',
     icon: '/images/badges/gifting.svg',
     alt: 'Meaningful gifting',
   },
   {
-    title: 'Beautifully Presented',
+    title: "Ready to make someone's day.",
     description:
-      'Arrives in elegant gift-ready packaging with custom handwritten message cards upon request.',
+      'Choose a thoughtful floral gift, with gift packaging and a personal message option where available.',
     icon: '/images/badges/presentation.svg',
     alt: 'Beautiful gift presentation',
   },
   {
-    title: 'Blooms That Last',
+    title: 'Beauty that stays.',
     description:
-      'Everlasting floral beauty that never wilts, fades, or requires water — preserving moments forever.',
+      "Unlike fresh flowers, crochet blooms don't need water and won't wilt after a few days. Keep them on a desk, bedside table, or shelf as a lasting reminder of a special moment.",
     icon: '/images/badges/everlasting.svg',
     alt: 'Everlasting floral blooms',
   },

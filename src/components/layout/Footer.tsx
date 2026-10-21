@@ -55,27 +55,25 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="inline-block">
               <span className="text-2xl font-semibold tracking-tight text-white hover:text-blush transition-colors">
-                Divija Art House
+                DivijaArtHouse
               </span>
             </Link>
             <p className="text-xs font-medium text-blush">
-              &ldquo;Little Blooms, Lasting Feelings.&rdquo;
+              Little Blooms, Lasting Feelings.
             </p>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Every petal, stem, and charming pot is lovingly hand-crocheted
-              using fine cotton yarn. Everlasting floral art designed to preserve
-              cherished moments without ever withering.
+              Thoughtful floral gifts, handcrafted with care. From little desk blooms to statement bouquets, discover pieces made to celebrate the people and moments that matter to you.
             </p>
             <div className="pt-2 text-xs text-gray-400 flex items-center gap-1.5">
               <Heart className="w-4 h-4 text-primary fill-primary flex-shrink-0" />
-              <span>Handcrafted with pride in India</span>
+              <span>Handcrafted with care in India.</span>
             </div>
           </div>
 
           {/* Column 2: Quick Links */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
-              Explore Collections
+              Explore
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
@@ -91,7 +89,7 @@ export function Footer() {
                   href="/collections/bouquets"
                   className="hover:text-white transition-colors"
                 >
-                  Everlasting Bouquets
+                  Crochet Bouquets
                 </Link>
               </li>
               <li>
@@ -99,7 +97,7 @@ export function Footer() {
                   href="/collections/jumbo-bouquets"
                   className="hover:text-white transition-colors"
                 >
-                  Jumbo Grand Bouquets
+                  Jumbo Bouquets
                 </Link>
               </li>
               <li>
@@ -107,7 +105,7 @@ export function Footer() {
                   href="/collections/flower-pots"
                   className="hover:text-white transition-colors"
                 >
-                  Desk Flower Pots
+                  Flower Pots
                 </Link>
               </li>
               <li>
@@ -115,7 +113,7 @@ export function Footer() {
                   href="/collections/gift-boxes"
                   className="hover:text-white transition-colors"
                 >
-                  Curated Gift Boxes
+                  Gift Boxes
                 </Link>
               </li>
               <li>
@@ -123,7 +121,7 @@ export function Footer() {
                   href="/collections/hair-accessories"
                   className="hover:text-white transition-colors"
                 >
-                  Floral Hair Accessories
+                  Hair Accessories
                 </Link>
               </li>
               <li>
@@ -131,7 +129,7 @@ export function Footer() {
                   href="/collections/character-gifts"
                   className="hover:text-white transition-colors"
                 >
-                  Amigurumi & Mascot Gifts
+                  Character Gifts
                 </Link>
               </li>
             </ul>
@@ -148,7 +146,7 @@ export function Footer() {
                   href="/about"
                   className="hover:text-white transition-colors"
                 >
-                  Our Artisan Story
+                  Our Story
                 </Link>
               </li>
               <li>
@@ -156,7 +154,7 @@ export function Footer() {
                   href="/contact"
                   className="hover:text-white transition-colors"
                 >
-                  Contact & Support
+                  Contact Us
                 </Link>
               </li>
               <li>
@@ -172,7 +170,7 @@ export function Footer() {
                   href="/policies/shipping"
                   className="hover:text-white transition-colors"
                 >
-                  Shipping & Delivery Policy
+                  Shipping & Delivery
                 </Link>
               </li>
               <li>
@@ -181,6 +179,14 @@ export function Footer() {
                   className="hover:text-white transition-colors"
                 >
                   Returns & Replacements
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact#faq"
+                  className="hover:text-white transition-colors"
+                >
+                  Frequently Asked Questions
                 </Link>
               </li>
               <li>
@@ -196,7 +202,7 @@ export function Footer() {
                   href="/policies/terms"
                   className="hover:text-white transition-colors"
                 >
-                  Terms of Service
+                  Terms & Conditions
                 </Link>
               </li>
             </ul>
@@ -208,8 +214,7 @@ export function Footer() {
               Stay in Bloom
             </h3>
             <p className="text-sm text-gray-400">
-              Receive artisan updates, new crochet bloom drops, and festive
-              gifting ideas directly in your inbox.
+              New creations, thoughtful gifting ideas, and little notes from our world of crochet florals.
             </p>
 
             {/* Newsletter mini form */}
@@ -226,10 +231,10 @@ export function Footer() {
                 <button
                   type="submit"
                   disabled={status.type === 'loading'}
-                  className="absolute right-1 top-1 bottom-1 px-2.5 rounded-md bg-primary hover:bg-primary-hover text-white transition-colors flex items-center justify-center disabled:opacity-50"
-                  aria-label="Subscribe to newsletter"
+                  className="absolute right-1 top-1 bottom-1 px-3 rounded-md bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-colors flex items-center justify-center disabled:opacity-50"
+                  aria-label="Join the Bloom Club"
                 >
-                  <ArrowRight className="w-4 h-4" />
+                  <span>Join</span>
                 </button>
               </div>
 

@@ -65,7 +65,7 @@ export function Header() {
                   Divija Art House
                 </span>
                 <span className="hidden sm:block text-[10px] uppercase tracking-widest text-text-muted font-medium">
-                  Handcrafted Everlasting Florals
+                  Handcrafted Floral Gifts
                 </span>
               </Link>
             </div>

@@ -14,16 +14,16 @@ interface AnnouncementBarProps {
 
 const DEFAULT_MESSAGES = [
   {
-    text: 'Handcrafted with love • 100% Fine Cotton Yarn',
+    text: 'Handcrafted crochet flowers, made with care.',
     icon: 'sparkles' as const,
   },
   {
-    text: 'Thoughtful gifts for every occasion • Little Blooms, Lasting Feelings',
+    text: 'A little something for someone special.',
     icon: 'gift' as const,
     link: '/shop',
   },
   {
-    text: 'Free delivery on orders over ₹999 across India',
+    text: 'Free delivery on orders over ₹999 across India.',
     icon: 'truck' as const,
     link: '/shop',
   },

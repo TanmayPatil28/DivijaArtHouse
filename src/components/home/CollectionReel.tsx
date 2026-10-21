@@ -50,13 +50,13 @@ export function CollectionReel({ categories }: CollectionReelProps) {
           <div>
             <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-primary mb-1.5">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Curated Floral Categories</span>
+              <span>FIND YOUR KIND OF BLOOM</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-text-main">
-              Shop by Collection
+              A little something for every kind of love.
             </h2>
-            <p className="text-sm text-text-muted mt-1">
-              Explore everlasting crochet florals, desktop potted blooms, and keepsake gift boxes.
+            <p className="text-sm text-text-muted mt-1 max-w-2xl">
+              Some gifts make people smile. Others become part of their everyday lives. Explore handcrafted pieces for every personality, occasion, and little corner worth brightening.
             </p>
           </div>
 
@@ -112,7 +112,7 @@ export function CollectionReel({ categories }: CollectionReelProps) {
               </span>
               {item.count > 0 && (
                 <span className="text-[11px] text-text-muted mt-0.5">
-                  {item.count} {item.count === 1 ? 'bloom' : 'blooms'}
+                  {item.count} {item.count === 1 ? 'design' : 'designs'}
                 </span>
               )}
             </Link>

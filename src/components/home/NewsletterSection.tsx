@@ -53,17 +53,17 @@ export function NewsletterSection() {
 
           <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-primary mb-2">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Join the Divija Bloom Club</span>
+            <span>A LITTLE NOTE FROM US</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-text-main">
-            Little Blooms, Straight to Your Inbox
+            Good things are growing.
           </h2>
 
           <p className="text-sm sm:text-base text-text-muted max-w-lg mx-auto mt-2 mb-8 leading-relaxed">
-            Subscribe to receive gentle reminders for upcoming milestones,
-            artisan behind-the-scenes, and ₹100 off your very first handcrafted
-            bouquet.
+            Be the first to hear about new crochet creations, thoughtful gifting ideas, and the people and process behind our designs.
+            <br />
+            <span className="text-primary font-medium">Sign up and receive ₹100 off your first order, subject to the offer&apos;s terms.</span>
           </p>
 
           {/* Form */}
@@ -79,7 +79,7 @@ export function NewsletterSection() {
                   setEmail(e.target.value);
                   if (result) setResult(null);
                 }}
-                placeholder="Enter your email address"
+                placeholder="Your email address"
                 required
                 disabled={isLoading}
                 className="w-full px-4 py-3 rounded-full border border-border-subtle bg-surface-warm/50 text-sm text-text-main placeholder-text-muted focus:outline-none focus:border-primary focus:bg-white transition-colors"
@@ -99,7 +99,7 @@ export function NewsletterSection() {
               ) : (
                 <>
                   <Send className="w-4 h-4" />
-                  <span>Subscribe</span>
+                  <span>Join the Bloom Club</span>
                 </>
               )}
             </button>
@@ -124,7 +124,7 @@ export function NewsletterSection() {
           )}
 
           <p className="text-[11px] text-text-muted mt-4">
-            We value your inbox. No spam, ever. Unsubscribe at any time.
+            Just the occasional lovely thing in your inbox. Unsubscribe whenever you like.
           </p>
         </div>
       </div>

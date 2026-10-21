@@ -20,13 +20,13 @@ export function BestsellersGrid({ products }: BestsellersGridProps) {
           <div>
             <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-primary mb-1.5">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Customer Favorites</span>
+              <span>FAVOURITES WORTH SHARING</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-text-main">
-              Most Loved Bestsellers
+              The ones people fall for.
             </h2>
             <p className="text-sm text-text-muted mt-1 max-w-xl">
-              Everlasting bouquets, sunny desk pots, and curated gift hampers that bring enduring smiles across India.
+              From cheerful desk companions to bouquets made for the biggest moments, these are the pieces to explore when you want your gift to feel a little more personal.
             </p>
           </div>
 
@@ -34,7 +34,7 @@ export function BestsellersGrid({ products }: BestsellersGridProps) {
             href="/shop?sort=featured"
             className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-primary-hover group"
           >
-            <span>View All Bestsellers</span>
+            <span>Shop All Favourites</span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
@@ -56,7 +56,7 @@ export function BestsellersGrid({ products }: BestsellersGridProps) {
             href="/shop"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-white hover:bg-surface-warm border border-border-subtle text-text-main hover:text-primary text-sm font-semibold transition-all shadow-sm hover:border-blush"
           >
-            <span>Explore All 16+ Handcrafted Blooms</span>
+            <span>Shop All Favourites</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
