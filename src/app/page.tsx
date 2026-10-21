@@ -2,6 +2,7 @@ import React from 'react';
 import { getFeaturedProducts } from '@/lib/products';
 import { getCategories } from '@/lib/categories';
 import { Hero } from '@/components/home/Hero';
+import { HeroCarouselShowcase } from '@/components/home/HeroCarouselShowcase';
 import { ValueProps } from '@/components/home/ValueProps';
 import { CollectionReel } from '@/components/home/CollectionReel';
 import { BestsellersGrid } from '@/components/home/BestsellersGrid';
@@ -24,6 +25,9 @@ export default async function HomePage() {
     <div className="w-full flex flex-col min-h-screen">
       {/* 4. Editorial Hero section */}
       <Hero />
+
+      {/* 4.5. Apple-style Featured Carousel Showcase */}
+      <HeroCarouselShowcase />
 
       {/* 5. Trust / Value props strip */}
       <ValueProps />
