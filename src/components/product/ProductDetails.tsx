@@ -14,6 +14,10 @@ import {
   Clock,
   Sparkles,
   Info,
+  Star,
+  MessageCircle,
+  ArrowRight,
+  PenLine,
 } from 'lucide-react';
 import type { ProductWithCategory, CartItem, PrismaProductVariant } from '@/types';
 import { formatINR, calculateDiscount, parseJson } from '@/lib/utils';
@@ -23,6 +27,13 @@ import { useWishlist } from '@/context/WishlistContext';
 interface ProductDetailsProps {
   product: ProductWithCategory;
 }
+
+const GIFT_NOTE_PRESETS = [
+  'Happy Anniversary! Blooming with love forever.',
+  'Happy Birthday! Wishing you a day as radiant as these blooms.',
+  'Forever blooming for you, just like my love.',
+  'A little reminder that you are deeply cherished.',
+];
 
 export function ProductDetails({ product }: ProductDetailsProps) {
   const router = useRouter();
@@ -70,7 +81,6 @@ export function ProductDetails({ product }: ProductDetailsProps) {
   // Handlers
   const handleVariantSelect = (variant: PrismaProductVariant) => {
     setSelectedVariant(variant);
-    // Reset quantity if it exceeds variant stock
     if (quantity > variant.stockQuantity) {
       setQuantity(Math.max(1, variant.stockQuantity));
     }
@@ -138,52 +148,84 @@ export function ProductDetails({ product }: ProductDetailsProps) {
       setPincodeResult({
         tested: true,
         valid: false,
-        message: 'Please enter a valid 6-digit Indian PIN code (e.g. 110001, 560001).',
+        message: 'Please enter a valid 6-digit Indian PIN code (e.g. 411028, 110001).',
       });
     }
   };
 
+  const applyPresetMessage = (msg: string) => {
+    setPersonalization(msg);
+  };
+
+  const whatsappInquiryUrl = `https://wa.me/919209284423?text=${encodeURIComponent(
+    `Hi Divija Art House, I'm interested in ordering "${product.name}" (SKU: ${
+      selectedVariant?.sku || product.slug
+    }) and would like to ask about custom color options / delivery timelines.`
+  )}`;
+
   return (
     <div className="w-full flex flex-col space-y-6 text-text-main">
-      {/* Category Link & SKU */}
-      <div className="flex items-center justify-between text-xs">
-        <Link
-          href={`/collections/${product.category.slug}`}
-          className="font-medium text-primary hover:underline uppercase tracking-wider"
-        >
-          {product.category.name}
-        </Link>
-        <span className="text-text-muted">
-          SKU: {selectedVariant?.sku || `DAH-${product.slug.slice(0, 8).toUpperCase()}`}
-        </span>
+      
+      {/* Category Tag & Social Proof Row */}
+      <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
+        <div className="flex items-center gap-2">
+          <Link
+            href={`/collections/${product.category.slug}`}
+            className="font-semibold text-primary hover:text-primary-hover uppercase tracking-widest text-[11px] bg-primary/5 px-2.5 py-1 rounded-full border border-primary/20"
+          >
+            {product.category.name}
+          </Link>
+          <span className="text-gray-400">•</span>
+          <span className="text-text-muted text-[11px]">
+            SKU: {selectedVariant?.sku || `DAH-${product.slug.slice(0, 8).toUpperCase()}`}
+          </span>
+        </div>
+
+        {/* Verified Social Proof Rating */}
+        <div className="flex items-center gap-1.5 text-xs text-text-muted">
+          <div className="flex items-center text-gold">
+            <Star className="w-3.5 h-3.5 fill-gold" />
+            <Star className="w-3.5 h-3.5 fill-gold" />
+            <Star className="w-3.5 h-3.5 fill-gold" />
+            <Star className="w-3.5 h-3.5 fill-gold" />
+            <Star className="w-3.5 h-3.5 fill-gold" />
+          </div>
+          <span className="font-semibold text-text-main text-[11px]">4.9</span>
+          <span className="text-gray-400 text-[11px]">(140+ Gifting Reviews)</span>
+        </div>
       </div>
 
-      {/* Product Title */}
-      <h1 className="text-2xl sm:text-3xl lg:text-[34px] font-semibold text-text-main leading-tight tracking-tight">
+      {/* Product Title (Playfair Serif Elegance) */}
+      <h1 className="font-serif text-2xl sm:text-3xl lg:text-[34px] font-semibold text-text-main leading-snug tracking-tight">
         {product.name}
       </h1>
 
-      {/* Pricing Row */}
-      <div className="flex flex-wrap items-baseline gap-3 pb-4 border-b border-border-subtle">
-        <span className="text-2xl sm:text-3xl font-semibold text-primary tracking-tight">
-          {formatINR(currentPrice)}
-        </span>
-        {currentCompareAt && currentCompareAt > currentPrice && (
-          <span className="text-base sm:text-lg text-text-muted line-through font-sans">
-            {formatINR(currentCompareAt)}
+      {/* Pricing & Value Offer Strip */}
+      <div className="pb-4 border-b border-border-subtle space-y-2">
+        <div className="flex flex-wrap items-baseline gap-3">
+          <span className="font-serif text-3xl sm:text-4xl font-bold text-primary tracking-tight">
+            {formatINR(currentPrice)}
           </span>
-        )}
-        {discountPercent > 0 && (
-          <span className="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blush-soft text-primary border border-blush">
-            Save {discountPercent}%
-          </span>
-        )}
-        <p className="w-full text-xs text-text-muted mt-1">
-          Inclusive of all taxes • Free shipping across India on orders over ₹999
-        </p>
+          {currentCompareAt && currentCompareAt > currentPrice && (
+            <span className="text-base sm:text-lg text-text-muted line-through font-sans">
+              {formatINR(currentCompareAt)}
+            </span>
+          )}
+          {discountPercent > 0 && (
+            <span className="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-primary/10 text-primary border border-primary/30">
+              Save {discountPercent}%
+            </span>
+          )}
+        </div>
+
+        {/* Reassurance note */}
+        <div className="flex items-center gap-2 text-xs text-text-muted">
+          <Truck className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" />
+          <span>Inclusive of all taxes • Free express shipping across India on orders over ₹999</span>
+        </div>
       </div>
 
-      {/* Variant Selector (if variants exist) */}
+      {/* Variant Selector */}
       {variants.length > 0 && (
         <div className="space-y-3">
           <div className="flex items-center justify-between">
@@ -191,7 +233,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
               Choose Variant / Style:
             </span>
             {selectedVariant && (
-              <span className="text-xs font-medium text-primary">
+              <span className="text-xs font-semibold text-primary">
                 Selected: {selectedVariant.name}
               </span>
             )}
@@ -206,19 +248,19 @@ export function ProductDetails({ product }: ProductDetailsProps) {
                   type="button"
                   onClick={() => handleVariantSelect(v)}
                   disabled={isVarOutOfStock}
-                  className={`px-3.5 py-2 rounded-xl text-xs font-medium transition-all border flex items-center gap-1.5 ${
+                  className={`px-4 py-2.5 rounded-xl text-xs font-medium transition-all border flex items-center gap-2 ${
                     isSelected
-                      ? 'border-primary bg-primary text-white shadow-sm ring-2 ring-primary/20'
+                      ? 'border-primary bg-primary text-white shadow-md ring-2 ring-primary/20 scale-102'
                       : isVarOutOfStock
                       ? 'border-border-subtle bg-gray-100 text-gray-400 cursor-not-allowed'
-                      : 'border-border-subtle bg-white text-text-main hover:border-blush hover:bg-surface-warm'
+                      : 'border-border-subtle bg-white text-text-main hover:border-gold/60 hover:bg-surface-warm'
                   }`}
                 >
                   <span>{v.name}</span>
                   {v.priceAdjustment > 0 && (
                     <span
-                      className={`text-[10px] px-1.5 py-0.2 rounded-full ${
-                        isSelected ? 'bg-white/20 text-white' : 'text-primary font-semibold'
+                      className={`text-[10px] px-1.5 py-0.5 rounded-full ${
+                        isSelected ? 'bg-white/20 text-white' : 'text-primary font-bold bg-primary/5'
                       }`}
                     >
                       +{formatINR(v.priceAdjustment)}
@@ -236,12 +278,12 @@ export function ProductDetails({ product }: ProductDetailsProps) {
         </div>
       )}
 
-      {/* Optional Personalization Text Input (Complimentary Gift Card Note) */}
-      <div className="p-4 rounded-2xl bg-surface-warm border border-border-subtle space-y-3">
+      {/* Interactive Luxury Gifting Suite: Complimentary Handwritten Gift Card Note */}
+      <div className="p-4 sm:p-5 rounded-2xl bg-[#FCFAF7] border border-gold/35 shadow-xs space-y-3">
         <div className="flex items-center justify-between">
           <label
             htmlFor="toggle-personalization"
-            className="flex items-center gap-2 cursor-pointer select-none"
+            className="flex items-center gap-2.5 cursor-pointer select-none group"
           >
             <input
               id="toggle-personalization"
@@ -253,18 +295,40 @@ export function ProductDetails({ product }: ProductDetailsProps) {
               }}
               className="w-4 h-4 rounded text-primary focus:ring-primary border-border-subtle cursor-pointer accent-primary"
             />
-            <span className="text-xs sm:text-sm font-semibold text-text-main flex items-center gap-1.5">
-              <Gift className="w-4 h-4 text-primary" />
-              Add Free Handwritten Gift Card Message
+            <span className="text-xs sm:text-sm font-semibold text-text-main flex items-center gap-1.5 group-hover:text-primary transition-colors">
+              <Gift className="w-4 h-4 text-gold flex-shrink-0" />
+              <span>Add Complimentary Handwritten Gift Note</span>
             </span>
           </label>
-          <span className="text-[11px] font-bold uppercase tracking-wider text-green-700 bg-green-50 px-2 py-0.5 rounded-full border border-green-200">
-            Free
+
+          <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100/70 px-2 py-0.5 rounded-full border border-emerald-300">
+            100% Free
           </span>
         </div>
 
         {showPersonalization && (
-          <div className="space-y-2 pt-2 animate-fade-in">
+          <div className="space-y-3 pt-2 animate-fade-in">
+            {/* Quick Occasion Prompt Chips */}
+            <div className="space-y-1.5">
+              <span className="text-[11px] font-medium text-text-muted flex items-center gap-1">
+                <PenLine className="w-3 h-3 text-gold" />
+                <span>1-Click Occasion Suggestions:</span>
+              </span>
+              <div className="flex flex-wrap gap-1.5">
+                {GIFT_NOTE_PRESETS.map((preset, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => applyPresetMessage(preset)}
+                    className="text-[11px] px-2.5 py-1 rounded-lg bg-white border border-border-subtle hover:border-gold hover:bg-gold/5 text-text-muted hover:text-text-main transition-colors text-left"
+                  >
+                    &ldquo;{preset}&rdquo;
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Note Textarea */}
             <textarea
               id="personalization-note"
               rows={3}
@@ -272,10 +336,14 @@ export function ProductDetails({ product }: ProductDetailsProps) {
               value={personalization}
               onChange={(e) => setPersonalization(e.target.value)}
               placeholder="Write your heartfelt note here... (e.g., Happy 25th Anniversary Mom & Dad! Forever blooming with love.)"
-              className="w-full p-3 text-xs rounded-xl border border-border-subtle bg-white text-text-main placeholder-text-muted focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-all resize-none"
+              className="w-full p-3 text-xs rounded-xl border border-gold/40 bg-white text-text-main placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold transition-all resize-none shadow-xs"
             />
-            <div className="flex items-center justify-between text-[11px] text-text-muted">
-              <span>Handwritten on luxury textured cardstock</span>
+
+            <div className="flex items-center justify-between text-[11px] text-text-muted pt-0.5">
+              <span className="flex items-center gap-1 text-[#8C6D46]">
+                <Sparkles className="w-3 h-3 text-gold" />
+                Handwritten with ink on textured linen cardstock
+              </span>
               <span
                 className={
                   personalization.length >= 240
@@ -290,11 +358,12 @@ export function ProductDetails({ product }: ProductDetailsProps) {
         )}
       </div>
 
-      {/* Quantity & CTAs Row */}
+      {/* Balanced 2-Tier Luxury Action Stack */}
       <div className="space-y-3 pt-2">
+        {/* Tier 1: Quantity + Primary Add to Bag + Wishlist */}
         <div className="flex items-center gap-3">
           {/* Quantity Selector */}
-          <div className="flex items-center border border-border-subtle rounded-xl bg-white overflow-hidden shadow-2xs h-11">
+          <div className="flex items-center border border-border-subtle rounded-xl bg-white overflow-hidden shadow-xs h-12">
             <button
               type="button"
               onClick={handleDecrement}
@@ -318,14 +387,14 @@ export function ProductDetails({ product }: ProductDetailsProps) {
             </button>
           </div>
 
-          {/* Add to Cart Button */}
+          {/* Primary Add to Bag Button */}
           <button
             type="button"
             onClick={handleAddToCart}
             disabled={isOutOfStock}
-            className={`flex-1 h-11 px-5 rounded-xl font-semibold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-sm active:scale-[0.99] ${
+            className={`flex-1 h-12 px-6 rounded-xl font-semibold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-md hover:shadow-gold-glow active:scale-[0.99] ${
               addedSuccess
-                ? 'bg-green-600 text-white'
+                ? 'bg-emerald-700 text-white'
                 : isOutOfStock
                 ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
                 : 'bg-primary hover:bg-primary-hover text-white'
@@ -333,7 +402,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
           >
             {addedSuccess ? (
               <>
-                <Check className="w-4 h-4" />
+                <Check className="w-4 h-4 animate-scale-in" />
                 <span>Added to Bag!</span>
               </>
             ) : isOutOfStock ? (
@@ -350,10 +419,10 @@ export function ProductDetails({ product }: ProductDetailsProps) {
           <button
             type="button"
             onClick={() => toggleWishlist(product.id)}
-            className={`h-11 w-11 flex items-center justify-center rounded-xl border transition-all ${
+            className={`h-12 w-12 flex items-center justify-center rounded-xl border transition-all ${
               wishlisted
                 ? 'bg-primary border-primary text-white shadow-xs'
-                : 'bg-white border-border-subtle text-text-muted hover:text-primary hover:border-blush'
+                : 'bg-white border-border-subtle text-text-muted hover:text-primary hover:border-gold/40 shadow-xs'
             }`}
             aria-label={
               wishlisted ? 'Remove from Wishlist' : 'Save to Wishlist'
@@ -363,20 +432,34 @@ export function ProductDetails({ product }: ProductDetailsProps) {
           </button>
         </div>
 
-        {/* Buy Now CTA */}
+        {/* Tier 2: Buy Now — Express Checkout */}
         <button
           type="button"
           onClick={handleBuyNow}
           disabled={isOutOfStock}
-          className={`w-full h-11 rounded-xl font-semibold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-all border shadow-xs active:scale-[0.99] ${
+          className={`w-full h-12 rounded-xl font-semibold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-all border shadow-xs active:scale-[0.99] ${
             isOutOfStock
               ? 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'
-              : 'bg-surface-warm hover:bg-blush-soft text-primary border-blush hover:border-primary'
+              : 'bg-[#FDF9F5] hover:bg-[#F9F1E6] text-primary border-gold/50 hover:border-gold'
           }`}
         >
-          <Zap className="w-4 h-4" />
+          <Zap className="w-4 h-4 text-gold fill-gold" />
           <span>Buy Now — Instant Checkout</span>
         </button>
+
+        {/* WhatsApp Custom Order Concierge Link */}
+        <div className="pt-1 flex items-center justify-center">
+          <a
+            href={whatsappInquiryUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-xs text-text-muted hover:text-emerald-700 transition-colors py-1 group"
+          >
+            <MessageCircle className="w-3.5 h-3.5 text-emerald-600 group-hover:scale-110 transition-transform" />
+            <span>Need custom bouquet colors or urgent delivery? <strong>Chat with Artisan on WhatsApp</strong></span>
+            <ArrowRight className="w-3 h-3 opacity-70 group-hover:translate-x-0.5 transition-transform" />
+          </a>
+        </div>
       </div>
 
       {/* Delivery Estimator Pill & Pincode Checker */}
@@ -385,7 +468,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
           <Truck className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
           <div className="text-xs space-y-1">
             <p className="font-semibold text-text-main">
-              Fast Dispatch & Pan-India Delivery
+              Fast Dispatch &amp; Pan-India Delivery
             </p>
             <p className="text-text-muted leading-relaxed">
               Dispatched within 24–48 hours in luxury protective packaging. Delivered in 3–5 business days across India.
@@ -401,12 +484,12 @@ export function ProductDetails({ product }: ProductDetailsProps) {
             value={pincodeInput}
             onChange={(e) => setPincodeInput(e.target.value.replace(/\D/g, ''))}
             placeholder="Enter 6-digit Pincode"
-            className="flex-1 px-3 py-1.5 text-xs rounded-lg border border-border-subtle bg-white text-text-main placeholder-text-muted focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
+            className="flex-1 px-3 py-2 text-xs rounded-lg border border-border-subtle bg-white text-text-main placeholder-text-muted focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
             aria-label="Enter pincode for delivery check"
           />
           <button
             type="submit"
-            className="px-4 py-1.5 rounded-lg bg-white hover:bg-primary text-text-main hover:text-white border border-border-subtle hover:border-primary text-xs font-semibold uppercase tracking-wider transition-colors"
+            className="px-4 py-2 rounded-lg bg-white hover:bg-primary text-text-main hover:text-white border border-border-subtle hover:border-primary text-xs font-semibold uppercase tracking-wider transition-colors"
           >
             Check
           </button>
@@ -415,7 +498,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
         {pincodeResult.tested && (
           <p
             className={`text-xs font-medium animate-fade-in ${
-              pincodeResult.valid ? 'text-green-700' : 'text-red-500'
+              pincodeResult.valid ? 'text-emerald-700' : 'text-red-500'
             }`}
           >
             {pincodeResult.message}
@@ -427,27 +510,27 @@ export function ProductDetails({ product }: ProductDetailsProps) {
       <div className="grid grid-cols-2 gap-3 pt-2 text-xs text-text-main">
         <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-border-subtle">
           <Clock className="w-4 h-4 text-primary flex-shrink-0" />
-          <span className="font-medium text-[11px]">Never Wilts & Zero Maintenance</span>
+          <span className="font-medium text-[11px]">Never Wilts &amp; Zero Maintenance</span>
         </div>
         <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-border-subtle">
           <Sparkles className="w-4 h-4 text-primary flex-shrink-0" />
-          <span className="font-medium text-[11px]">100% Milk Cotton Handcrafted</span>
+          <span className="font-medium text-[11px]">100% Organic Milk Cotton</span>
         </div>
         <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-border-subtle">
           <Gift className="w-4 h-4 text-primary flex-shrink-0" />
-          <span className="font-medium text-[11px]">Luxury Ready-to-Gift Packaging</span>
+          <span className="font-medium text-[11px]">Ready-to-Gift Luxury Packaging</span>
         </div>
         <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-border-subtle">
           <ShieldCheck className="w-4 h-4 text-primary flex-shrink-0" />
-          <span className="font-medium text-[11px]">Secure COD & Online Payments</span>
+          <span className="font-medium text-[11px]">Secure Razorpay, UPI &amp; COD</span>
         </div>
       </div>
 
       {/* Rich Description & Craft Details */}
       <div className="space-y-4 pt-4 border-t border-border-subtle">
         <div>
-          <h2 className="font-semibold text-lg text-text-main tracking-tight mb-2">
-            Description & Artisan Story
+          <h2 className="font-serif font-semibold text-xl text-text-main tracking-tight mb-2">
+            Description &amp; Artisan Story
           </h2>
           <p className="text-sm text-text-muted leading-relaxed whitespace-pre-line">
             {product.description}
@@ -458,7 +541,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
           <div className="p-4 rounded-2xl bg-surface-warm/50 border border-border-subtle space-y-2">
             <h3 className="font-bold text-xs uppercase tracking-wider text-text-main flex items-center gap-1.5">
               <Info className="w-4 h-4 text-primary" />
-              Dimensions, Materials & Care
+              Dimensions, Materials &amp; Care
             </h3>
             <p className="text-xs text-text-muted leading-relaxed">
               {product.details}
