@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Sparkles, ArrowRight } from 'lucide-react';
 import type { ProductWithCategory } from '@/types';
 import { ProductCard } from './ProductCard';
+import { SectionHeader } from '@/components/ui/SectionHeader';
 
 interface RelatedProductsShelfProps {
   products: ProductWithCategory[];
@@ -30,20 +31,14 @@ export function RelatedProductsShelf({ products }: RelatedProductsShelfProps) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Editorial Section Header */}
-        <div className="flex flex-col items-center text-center mb-10 sm:mb-12">
-          <span className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-primary mb-2.5 bg-white/90 border border-primary/25 px-3.5 py-1 rounded-full shadow-2xs">
-            <Sparkles className="w-3.5 h-3.5 text-gold" />
-            <span>Complementary Blooms</span>
-          </span>
-
-          <h2 className="font-serif font-semibold text-2xl sm:text-3xl md:text-4xl tracking-tight text-text-main">
-            You May Also Cherish
-          </h2>
-
-          <p className="text-xs sm:text-sm text-text-muted mt-2 max-w-lg leading-relaxed">
-            Discover more artisan creations hand-crocheted with everlasting love to pair with your gift.
-          </p>
-        </div>
+        <SectionHeader
+          eyebrow="Complementary Blooms"
+          titleLead="You May Also"
+          titleAccent="Cherish."
+          description="Discover more artisan creations hand-crocheted with everlasting love to pair with your gift."
+          align="center"
+          size="lg"
+        />
 
         {/* 4 Recommended Product Cards Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">

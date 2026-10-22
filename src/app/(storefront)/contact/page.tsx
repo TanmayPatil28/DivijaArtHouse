@@ -13,6 +13,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { ContactForm } from '@/components/contact/ContactForm';
+import { SectionHeader } from '@/components/ui/SectionHeader';
 
 export const metadata: Metadata = {
   title: 'Contact Us — DivijaArtHouse Handcrafted Blooms & Support',
@@ -68,17 +69,17 @@ export default function ContactPage() {
 
       {/* Hero Header */}
       <div className="bg-gradient-to-b from-surface-warm via-canvas to-canvas border-b border-border-subtle py-12 md:py-16 text-center px-4">
-        <div className="max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-gold/40 text-primary text-xs font-semibold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5 text-gold" />
-            <span>WE ARE HERE TO HELP</span>
-          </div>
-          <h1 className="font-semibold text-3xl sm:text-4xl md:text-5xl text-text-main tracking-tight">
-            Get in Touch With Our Studio
-          </h1>
-          <p className="text-sm sm:text-base text-text-muted max-w-xl mx-auto leading-relaxed">
-            Have a question about a handcrafted bouquet, bespoke color customization, or an existing order? We&apos;d love to hear from you.
-          </p>
+        <div className="max-w-3xl mx-auto">
+          <SectionHeader
+            eyebrow="We Are Here To Help"
+            eyebrowSuffix="Pune Atelier"
+            titleLead="Get in touch with"
+            titleAccent="our studio."
+            description="Have a question about a handcrafted bouquet, bespoke color customization, or an existing order? We'd love to hear from you."
+            align="center"
+            headingTag="h1"
+            size="xl"
+          />
         </div>
       </div>
 
@@ -209,18 +210,14 @@ export default function ContactPage() {
 
         {/* Frequently Asked Questions Section */}
         <div className="mt-16 md:mt-24 pt-12 border-t border-border-subtle">
-          <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
-            <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
-              <HelpCircle className="w-3.5 h-3.5 text-gold" />
-              <span>FREQUENT QUESTIONS</span>
-            </div>
-            <h2 className="font-semibold text-2xl sm:text-3xl text-text-main tracking-tight">
-              Before You Reach Out
-            </h2>
-            <p className="text-xs sm:text-sm text-text-muted leading-relaxed">
-              Here are answers to the questions we receive most often about ordering, custom stems, and deliveries across India.
-            </p>
-          </div>
+          <SectionHeader
+            eyebrow="Frequent Questions"
+            titleLead="Answers Before You"
+            titleAccent="Reach Out."
+            description="Here are answers to the questions we receive most often about ordering, custom stems, and deliveries across India."
+            align="center"
+            size="lg"
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {FAQS.map((faq, idx) => (

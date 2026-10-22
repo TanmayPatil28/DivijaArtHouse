@@ -5,6 +5,7 @@ import { ChevronRight, Home } from 'lucide-react';
 import { getProducts } from '@/lib/products';
 import { getCategories } from '@/lib/categories';
 import { CatalogContainer } from '@/components/catalog/CatalogContainer';
+import { SectionHeader } from '@/components/ui/SectionHeader';
 
 export const dynamic = 'force-dynamic';
 
@@ -98,13 +99,16 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
       </div>
 
       {/* Catalog Title Banner */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
-        <h1 className="font-semibold text-3xl sm:text-4xl tracking-tight text-text-main">
-          Handcrafted Everlasting Bloom Catalog
-        </h1>
-        <p className="text-sm sm:text-base text-text-muted mt-2 max-w-2xl leading-relaxed">
-          Every petal, bud, and stem is individually hand-stitched by skilled artisans using premium milk cotton yarn. Discover everlasting florals designed to preserve your most treasured moments.
-        </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4">
+        <SectionHeader
+          eyebrow="The Boutique Catalogue"
+          eyebrowSuffix="Pune Studio"
+          titleLead="Every petal shaped"
+          titleAccent="to stay forever."
+          description="Every petal, bud, and stem is individually hand-stitched by skilled artisans using premium milk cotton yarn. Discover everlasting florals designed to preserve your most treasured moments."
+          headingTag="h1"
+          size="xl"
+        />
       </div>
 
       {/* Interactive Catalog Container */}
