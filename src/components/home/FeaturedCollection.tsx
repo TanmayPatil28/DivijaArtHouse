@@ -82,18 +82,18 @@ export function FeaturedCollection() {
                 </div>
               </div>
 
-              {/* CTAs */}
+              {/* CTAs with Gold Hover Glow */}
               <div className="flex flex-col sm:flex-row items-center gap-3 pt-2">
                 <Link
                   href="/collections/jumbo-bouquets"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary hover:bg-primary-hover text-white text-sm font-semibold transition-colors shadow-sm"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary hover:bg-primary-hover text-white text-sm font-semibold transition-all duration-300 shadow-sm hover:shadow-gold-glow hover:-translate-y-0.5 active:translate-y-0"
                 >
                   <span>Explore Jumbo Bouquets</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/collections/bouquets"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-surface-warm border border-border-subtle text-text-main hover:text-primary text-sm font-semibold transition-colors shadow-xs hover:border-gold/40"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-surface-warm border border-border-subtle text-text-main hover:text-primary text-sm font-semibold transition-all duration-300 shadow-xs hover:border-gold/60 hover:shadow-gold-soft hover:-translate-y-0.5 active:translate-y-0"
                 >
                   <span>Find Your Perfect Bouquet</span>
                 </Link>

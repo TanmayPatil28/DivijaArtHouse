@@ -36,11 +36,11 @@ export function Hero() {
               </p>
             </div>
 
-            {/* Dual CTAs */}
+            {/* Dual CTAs with Gold Ambient Hover Glow */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2">
               <Link
                 href="/shop"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-primary hover:bg-primary-hover text-white text-sm font-semibold tracking-wide transition-all duration-200 shadow-md hover:shadow-lg active:scale-[0.98]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-primary hover:bg-primary-hover text-white text-sm font-semibold tracking-wide transition-all duration-300 shadow-md hover:shadow-gold-glow hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
               >
                 <ShoppingBag className="w-4 h-4" />
                 <span>Find Your Flowers</span>
@@ -49,7 +49,7 @@ export function Hero() {
 
               <Link
                 href="/about"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white hover:bg-surface-warm border border-border-subtle text-text-main hover:text-primary text-sm font-semibold tracking-wide transition-all duration-200 shadow-sm hover:border-gold/40 active:scale-[0.98]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white hover:bg-surface-warm border border-border-subtle text-text-main hover:text-primary text-sm font-semibold tracking-wide transition-all duration-300 shadow-sm hover:border-gold/60 hover:shadow-gold-soft hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
               >
                 <span>Explore Our Story</span>
               </Link>

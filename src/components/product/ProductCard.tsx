@@ -150,17 +150,17 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
             )}
           </div>
 
-          {/* Quick Add CTA */}
+          {/* Quick Add CTA with Wine Glow */}
           <button
             type="button"
             onClick={handleQuickAdd}
             disabled={product.stockQuantity <= 0}
-            className={`w-full py-2.5 px-3 rounded-full text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1.5 transition-all shadow-sm ${
+            className={`w-full py-2.5 px-3 rounded-full text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1.5 transition-all duration-300 shadow-xs ${
               justAdded
                 ? 'bg-[#386B3E] text-white'
                 : product.stockQuantity <= 0
                 ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
-                : 'bg-surface-warm hover:bg-primary text-text-main hover:text-white border border-border-subtle hover:border-primary active:scale-[0.98]'
+                : 'bg-surface-warm hover:bg-primary text-text-main hover:text-white border border-border-subtle hover:border-primary hover:shadow-wine-glow hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]'
             }`}
           >
             {justAdded ? (

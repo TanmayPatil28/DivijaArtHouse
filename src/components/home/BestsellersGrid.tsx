@@ -19,7 +19,7 @@ export function BestsellersGrid({ products }: BestsellersGridProps) {
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-8 sm:mb-12 gap-4">
           <div>
             <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-primary mb-1.5">
-              <Sparkles className="w-3.5 h-3.5" />
+              <Sparkles className="w-3.5 h-3.5 text-gold" />
               <span>FAVOURITES WORTH SHARING</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-text-main">
@@ -50,11 +50,11 @@ export function BestsellersGrid({ products }: BestsellersGridProps) {
           ))}
         </div>
 
-        {/* Bottom Banner Prompt */}
+        {/* Bottom Banner Prompt with Gold Ambient Glow */}
         <div className="mt-12 text-center">
           <Link
             href="/shop"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-white hover:bg-surface-warm border border-border-subtle text-text-main hover:text-primary text-sm font-semibold transition-all shadow-sm hover:border-blush"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-white hover:bg-surface-warm border border-border-subtle text-text-main hover:text-primary text-sm font-semibold transition-all duration-300 shadow-sm hover:border-gold/60 hover:shadow-gold-soft hover:-translate-y-0.5 active:translate-y-0"
           >
             <span>Shop All Favourites</span>
             <ArrowRight className="w-4 h-4" />

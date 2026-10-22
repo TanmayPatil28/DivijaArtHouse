@@ -54,6 +54,11 @@ const config: Config = {
           DEFAULT: '#241514', // Deep velvet espresso footer
         },
       },
+      boxShadow: {
+        'gold-glow': '0 4px 20px rgba(197, 154, 90, 0.35)',
+        'gold-soft': '0 4px 16px rgba(197, 154, 90, 0.18)',
+        'wine-glow': '0 4px 20px rgba(120, 29, 44, 0.28)',
+      },
       fontFamily: {
         sans: [
           'var(--font-manrope)',

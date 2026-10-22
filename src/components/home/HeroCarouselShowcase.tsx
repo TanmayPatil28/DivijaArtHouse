@@ -35,7 +35,7 @@ export function HeroCarouselShowcase() {
         autoPlayInterval={6500}
         leftControls={
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-white/95 text-primary border border-border-subtle shadow-sm backdrop-blur-md">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-white/95 text-primary border border-gold/40 shadow-sm backdrop-blur-md">
               <Sparkles className="w-3.5 h-3.5 text-gold" />
               Limited Edition Hampers
             </span>
@@ -44,7 +44,7 @@ export function HeroCarouselShowcase() {
         rightControls={
           <Link
             href="/shop"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold text-white bg-primary hover:bg-primary-hover transition-colors shadow-md group"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold text-white bg-primary hover:bg-primary-hover transition-all duration-300 shadow-md hover:shadow-gold-glow hover:-translate-y-0.5 active:translate-y-0 group"
           >
             <span>Claim Your Hamper</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />

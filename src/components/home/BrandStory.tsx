@@ -94,11 +94,11 @@ export function BrandStory() {
               </div>
             </div>
 
-            {/* CTA */}
+            {/* CTA with Gold Glow */}
             <div className="pt-3">
               <Link
                 href="/shop"
-                className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-primary hover:bg-primary-hover text-white text-sm font-semibold transition-all shadow-sm active:scale-[0.98]"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-primary hover:bg-primary-hover text-white text-sm font-semibold transition-all duration-300 shadow-md hover:shadow-gold-glow hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
               >
                 <span>Discover Our Collections</span>
                 <ArrowRight className="w-4 h-4" />
