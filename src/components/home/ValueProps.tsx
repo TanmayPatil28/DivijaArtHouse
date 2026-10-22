@@ -1,8 +1,9 @@
 import React from 'react';
-import Image from 'next/image';
 
 const VALUE_PROPS = [
   {
+    number: '01',
+    subtitle: 'HANDCRAFTED ART',
     title: 'Made slowly, with care.',
     description:
       'Every crochet flower is shaped stitch by stitch, giving each piece its own texture and character.',
@@ -10,6 +11,8 @@ const VALUE_PROPS = [
     alt: 'Handcrafted crochet art',
   },
   {
+    number: '02',
+    subtitle: 'HEARTFELT MOMENTS',
     title: 'For the people who matter.',
     description:
       'From a birthday surprise to an unexpected little thank-you, find a gift that feels personal.',
@@ -17,6 +20,8 @@ const VALUE_PROPS = [
     alt: 'Meaningful gifting',
   },
   {
+    number: '03',
+    subtitle: 'GIFT-READY PRESENTATION',
     title: "Ready to make someone's day.",
     description:
       'Choose a thoughtful floral gift, with gift packaging and a personal message option where available.',
@@ -24,6 +29,8 @@ const VALUE_PROPS = [
     alt: 'Beautiful gift presentation',
   },
   {
+    number: '04',
+    subtitle: 'EVERLASTING MEMORY',
     title: 'Beauty that stays.',
     description:
       "Unlike fresh flowers, crochet blooms don't need water and won't wilt after a few days. Keep them on a desk, bedside table, or shelf as a lasting reminder of a special moment.",
@@ -36,37 +43,56 @@ export function ValueProps() {
   return (
     <section
       aria-label="Brand Value Propositions"
-      className="bg-surface-warm border-b border-border-subtle py-10 md:py-14"
+      className="relative bg-gradient-to-r from-[#5A1420] via-[#781D2C] to-[#5A1420] border-y border-gold/30 shadow-md overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {VALUE_PROPS.map((prop, idx) => (
-            <div
-              key={idx}
-              className="flex items-start sm:flex-col sm:items-center text-left sm:text-center p-5 rounded-2xl bg-white border border-border-subtle shadow-sm hover:border-blush transition-all duration-200 gap-4"
-            >
-              {/* Badge Icon */}
-              <div className="relative w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0">
-                <Image
-                  src={prop.icon}
-                  alt={prop.alt}
-                  fill
-                  unoptimized={prop.icon.endsWith('.svg')}
-                  className="object-contain"
-                />
-              </div>
+      {/* Subtle Velvet Sheen & Champagne Ambient Glow */}
+      <div 
+        className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_50%,rgba(197,154,90,0.14),transparent_75%)] pointer-events-none" 
+        aria-hidden="true"
+      />
 
-              {/* Text */}
-              <div className="space-y-1.5">
-                <h3 className="font-semibold tracking-tight text-base sm:text-lg text-text-main">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Horizontal Strip: 2x2 grid on mobile/tablet, sleek 4-column row on desktop */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-y divide-gold/15 lg:divide-y-0">
+          {VALUE_PROPS.map((prop, idx) => {
+            // Apply right border on odd mobile items (first column) and on items 1-3 on desktop
+            const isLeftColMobile = idx % 2 === 0;
+            const isNotLastDesktop = idx < 3;
+
+            return (
+              <div
+                key={idx}
+                className={`group flex flex-col items-center text-center py-6 px-3 sm:py-8 sm:px-6 transition-all duration-300 ${
+                  isLeftColMobile ? 'border-r border-gold/15' : ''
+                } ${isNotLastDesktop ? 'lg:border-r lg:border-gold/20' : 'lg:border-r-0'}`}
+              >
+                {/* Champagne Gold & Velvet Wine Medallion with Hover Glow */}
+                <div className="relative w-14 h-14 sm:w-16 sm:h-16 mb-3 sm:mb-4 flex-shrink-0 transition-transform duration-500 ease-out group-hover:scale-110 drop-shadow-[0_4px_12px_rgba(0,0,0,0.25)] group-hover:drop-shadow-[0_0_16px_rgba(197,154,90,0.45)]">
+                  <img
+                    src={prop.icon}
+                    alt={prop.alt}
+                    className="w-full h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Atelier Micro Subtitle */}
+                <span className="text-[9px] sm:text-[10px] font-semibold tracking-[0.18em] uppercase text-gold/90 mb-1">
+                  {prop.subtitle}
+                </span>
+
+                {/* Main Headline */}
+                <h3 className="font-semibold tracking-tight text-[14px] sm:text-base text-white mb-1.5 leading-snug group-hover:text-gold-light transition-colors duration-200">
                   {prop.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-text-muted leading-relaxed">
+
+                {/* Descriptive Copy */}
+                <p className="text-[11px] sm:text-xs text-[#F7ECEE]/80 leading-relaxed max-w-[240px] mx-auto">
                   {prop.description}
                 </p>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
