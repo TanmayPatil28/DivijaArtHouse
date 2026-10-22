@@ -10,34 +10,48 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#A32D3B',
-          hover: '#872430',
+          DEFAULT: '#781D2C', // Deep velvet wine from visiting card ribbons
+          hover: '#5C131F',
+          light: '#F9EBEF',
         },
-        'soft-pink': '#FCEEEF',
+        gold: {
+          DEFAULT: '#C59A5A', // Elegant gold contour ribbon accent
+          hover: '#B38847',
+          light: '#FBF6EE',
+          border: '#E8D5B7',
+        },
+        sage: {
+          DEFAULT: '#657350', // Olive sage foliage from wreath
+          light: '#F1F5EB',
+        },
+        'soft-pink': '#F7ECEE',
         blush: {
-          DEFAULT: '#F5D6D9',
-          soft: '#FCEEEF',
+          DEFAULT: '#E8B8BC', // Soft dusty rose from category icon discs
+          soft: '#F7ECEE',
         },
         surface: {
-          canvas: '#FFFFFF',
-          warm: '#FFFDF9',
-          banner: '#F6EBE5',
+          canvas: '#FAF5F0', // Warm artisanal ivory card canvas
+          warm: '#FAF5F0',
+          banner: '#F4EAE1', // Soft bisque secondary panels
+          card: '#FFFFFF',
         },
-        canvas: '#FFFFFF',
-        'warm-surface': '#FFFDF9',
-        'banner-surface': '#F6EBE5',
+        canvas: '#FAF5F0',
+        'warm-surface': '#FAF5F0',
+        'banner-surface': '#F4EAE1',
         text: {
-          main: '#1A1A1A',
-          muted: '#666666',
+          main: '#2E1715', // Rich espresso mahogany from 'Divija' logo
+          muted: '#6B5653', // Warm mocha secondary text
+          subtle: '#917B77',
         },
-        'text-main': '#1A1A1A',
-        'text-muted': '#666666',
+        'text-main': '#2E1715',
+        'text-muted': '#6B5653',
         border: {
-          subtle: '#ECE7E1',
+          subtle: '#EDE2D8', // Warm artisanal border
+          gold: '#E8D5B7',
         },
-        'border-subtle': '#ECE7E1',
+        'border-subtle': '#EDE2D8',
         footer: {
-          DEFAULT: '#222222',
+          DEFAULT: '#241514', // Deep velvet espresso footer
         },
       },
       fontFamily: {

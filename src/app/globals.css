@@ -5,20 +5,23 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #A32D3B;
-  --color-primary-hover: #872430;
-  --color-soft-pink: #FCEEEF;
-  --color-blush: #F5D6D9;
-  --color-canvas: #FFFFFF;
-  --color-surface-warm: #FFFDF9;
-  --color-surface-banner: #F6EBE5;
-  --color-text-main: #1A1A1A;
-  --color-text-muted: #666666;
-  --color-border-subtle: #ECE7E1;
-  --color-footer-bg: #222222;
-  --color-status-success: #2E7D32;
-  --color-status-warning: #ED6C02;
-  --color-status-error: #D32F2F;
+  --color-primary: #781D2C;
+  --color-primary-hover: #5C131F;
+  --color-gold: #C59A5A;
+  --color-gold-light: #FBF6EE;
+  --color-sage: #657350;
+  --color-soft-pink: #F7ECEE;
+  --color-blush: #E8B8BC;
+  --color-canvas: #FAF5F0;
+  --color-surface-warm: #FAF5F0;
+  --color-surface-banner: #F4EAE1;
+  --color-text-main: #2E1715;
+  --color-text-muted: #6B5653;
+  --color-border-subtle: #EDE2D8;
+  --color-footer-bg: #241514;
+  --color-status-success: #386B3E;
+  --color-status-warning: #B86E12;
+  --color-status-error: #9E2632;
 }
 
 html {
@@ -46,16 +49,16 @@ h1, h2, h3, h4, h5, h6, .font-display {
 }
 
 ::-webkit-scrollbar-track {
-  background: #FFFDF9;
+  background: #FAF5F0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ECE7E1;
+  background: #EDE2D8;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #F5D6D9;
+  background: #E8B8BC;
 }
 
 /* Lenis smooth scrolling rules & isolation */
@@ -80,7 +83,7 @@ html.lenis body {
   pointer-events: none;
 }
 
-/* Apple-inspired subtle micro-interactions & focus states */
+/* Subtle micro-interactions & focus states */
 a, button {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform;
   transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
