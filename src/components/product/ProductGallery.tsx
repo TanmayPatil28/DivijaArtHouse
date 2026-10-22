@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import {
   Sparkles,
@@ -10,6 +11,7 @@ import {
   ChevronRight,
   ZoomIn,
   ZoomOut,
+  ArrowLeft,
 } from 'lucide-react';
 import { parseJson, calculateDiscount } from '@/lib/utils';
 import type { ProductWithCategory } from '@/types';
@@ -23,6 +25,7 @@ export function ProductGallery({ product }: ProductGalleryProps) {
     '/images/products/blushing-peony-rose-1.svg',
   ]);
 
+  const [mounted, setMounted] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 50, y: 50 });
@@ -34,7 +37,23 @@ export function ProductGallery({ product }: ProductGalleryProps) {
   const discountPercent = calculateDiscount(product.price, product.compareAtPrice);
   const isSvg = (src: string) => src.endsWith('.svg');
 
-  // Mouse Move for Smooth Pan-Zoom
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Body scroll locking when lightbox is active
+  useEffect(() => {
+    if (isLightboxOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isLightboxOpen]);
+
+  // Mouse Move for Smooth Pan-Zoom on product card
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
@@ -199,38 +218,66 @@ export function ProductGallery({ product }: ProductGalleryProps) {
         </div>
       )}
 
-      {/* ── Fullscreen Artisan Lightbox Modal ── */}
-      {isLightboxOpen && (
+      {/* ── Fullscreen Artisan Lightbox Modal Portaled to Document Body ── */}
+      {mounted && isLightboxOpen && createPortal(
         <div 
-          className="fixed inset-0 z-[500] bg-black/85 backdrop-blur-lg flex flex-col justify-between p-4 sm:p-6 animate-fade-in"
+          className="fixed inset-0 z-[99999] bg-black/90 backdrop-blur-xl flex flex-col justify-between p-4 sm:p-6 animate-fade-in"
           role="dialog"
           aria-modal="true"
           aria-label="Artisan stitch inspection view"
+          onClick={(e) => {
+            // Clicking backdrop directly closes the modal
+            if (e.target === e.currentTarget) {
+              setIsLightboxOpen(false);
+              setLightboxZoom(1);
+            }
+          }}
         >
-          {/* Lightbox Top Bar */}
-          <div className="w-full flex items-center justify-between z-10 max-w-6xl mx-auto">
-            <div className="flex items-center gap-2">
-              <span className="font-serif text-lg text-white font-medium">
+          {/* Lightbox Top Bar: Guaranteed on top of everything */}
+          <div className="w-full flex items-center justify-between z-10 max-w-6xl mx-auto py-2">
+            
+            {/* Prominent Back to Product Button */}
+            <button
+              type="button"
+              onClick={() => {
+                setIsLightboxOpen(false);
+                setLightboxZoom(1);
+              }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 hover:bg-white text-white hover:text-neutral-900 border border-white/25 text-xs font-semibold shadow-lg backdrop-blur-md transition-all active:scale-95 cursor-pointer"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to Product</span>
+            </button>
+
+            {/* Title & View Indicator */}
+            <div className="hidden sm:flex items-center gap-2">
+              <span className="font-serif text-base text-white font-medium max-w-md truncate">
                 {product.name}
               </span>
-              <span className="text-xs text-gold/80 px-2 py-0.5 rounded-full bg-gold/10 border border-gold/30">
-                View {activeIndex + 1} of {images.length}
+              <span className="text-xs text-gold px-2.5 py-0.5 rounded-full bg-gold/15 border border-gold/30">
+                {activeIndex + 1} of {images.length}
               </span>
             </div>
 
-            {/* Actions: Zoom & Close */}
+            {/* Actions: Zoom & Close Buttons */}
             <div className="flex items-center gap-2">
               <button
                 type="button"
                 onClick={() => setLightboxZoom((z) => (z === 1 ? 1.8 : 1))}
-                className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors focus:outline-none"
+                className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full bg-white/15 hover:bg-white text-white hover:text-neutral-900 border border-white/25 text-xs font-semibold shadow-lg backdrop-blur-md transition-all active:scale-95 cursor-pointer"
                 title={lightboxZoom === 1 ? 'Zoom In' : 'Zoom Out'}
                 aria-label={lightboxZoom === 1 ? 'Zoom In' : 'Zoom Out'}
               >
                 {lightboxZoom === 1 ? (
-                  <ZoomIn className="w-5 h-5 text-gold" />
+                  <>
+                    <ZoomIn className="w-4 h-4 text-gold" />
+                    <span className="hidden md:inline">Zoom In</span>
+                  </>
                 ) : (
-                  <ZoomOut className="w-5 h-5 text-gold" />
+                  <>
+                    <ZoomOut className="w-4 h-4 text-gold" />
+                    <span className="hidden md:inline">Reset</span>
+                  </>
                 )}
               </button>
 
@@ -240,23 +287,35 @@ export function ProductGallery({ product }: ProductGalleryProps) {
                   setIsLightboxOpen(false);
                   setLightboxZoom(1);
                 }}
-                className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors focus:outline-none"
-                title="Close Lightbox (Esc)"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-primary hover:bg-primary-hover text-white text-xs font-semibold shadow-lg border border-gold/40 transition-all active:scale-95 cursor-pointer"
+                title="Close (Esc)"
                 aria-label="Close Lightbox"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4" />
+                <span>Close</span>
               </button>
             </div>
           </div>
 
           {/* Lightbox Center Image View */}
-          <div className="relative flex-1 flex items-center justify-center my-4 overflow-hidden">
+          <div 
+            className="relative flex-1 flex items-center justify-center my-2 overflow-hidden cursor-pointer"
+            onClick={(e) => {
+              if (e.target === e.currentTarget) {
+                setIsLightboxOpen(false);
+                setLightboxZoom(1);
+              }
+            }}
+          >
             {/* Prev Slide Button */}
             {images.length > 1 && (
               <button
                 type="button"
-                onClick={() => setActiveIndex((prev) => (prev - 1 + images.length) % images.length)}
-                className="absolute left-2 sm:left-4 z-20 p-3 rounded-full bg-black/50 hover:bg-black/75 text-white/80 hover:text-white border border-white/15 transition-all focus:outline-none active:scale-95"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveIndex((prev) => (prev - 1 + images.length) % images.length);
+                }}
+                className="absolute left-2 sm:left-6 z-20 p-3 rounded-full bg-black/60 hover:bg-black/85 text-white border border-white/20 transition-all focus:outline-none active:scale-95 cursor-pointer shadow-xl"
                 aria-label="Previous image"
               >
                 <ChevronLeft className="w-6 h-6" />
@@ -265,8 +324,13 @@ export function ProductGallery({ product }: ProductGalleryProps) {
 
             {/* Active Magnified Canvas */}
             <div 
-              className="relative w-full max-w-2xl aspect-square flex items-center justify-center transition-transform duration-300"
+              className="relative w-full max-w-2xl aspect-square flex items-center justify-center transition-transform duration-300 pointer-events-auto"
               style={{ transform: `scale(${lightboxZoom})` }}
+              onClick={(e) => {
+                // Clicking image toggles zoom
+                e.stopPropagation();
+                setLightboxZoom((z) => (z === 1 ? 1.8 : 1));
+              }}
             >
               {isSvg(activeImage) ? (
                 <img
@@ -289,8 +353,11 @@ export function ProductGallery({ product }: ProductGalleryProps) {
             {images.length > 1 && (
               <button
                 type="button"
-                onClick={() => setActiveIndex((prev) => (prev + 1) % images.length)}
-                className="absolute right-2 sm:right-4 z-20 p-3 rounded-full bg-black/50 hover:bg-black/75 text-white/80 hover:text-white border border-white/15 transition-all focus:outline-none active:scale-95"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveIndex((prev) => (prev + 1) % images.length);
+                }}
+                className="absolute right-2 sm:right-6 z-20 p-3 rounded-full bg-black/60 hover:bg-black/85 text-white border border-white/20 transition-all focus:outline-none active:scale-95 cursor-pointer shadow-xl"
                 aria-label="Next image"
               >
                 <ChevronRight className="w-6 h-6" />
@@ -307,11 +374,14 @@ export function ProductGallery({ product }: ProductGalleryProps) {
                   <button
                     key={`modal-${img}-${idx}`}
                     type="button"
-                    onClick={() => setActiveIndex(idx)}
-                    className={`relative w-14 h-14 rounded-xl overflow-hidden border-2 transition-all p-1 bg-white/5 ${
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setActiveIndex(idx);
+                    }}
+                    className={`relative w-14 h-14 rounded-xl overflow-hidden border-2 transition-all p-1 bg-white/5 cursor-pointer ${
                       isSelected
-                        ? 'border-gold ring-2 ring-gold/50 scale-105'
-                        : 'border-white/20 opacity-60 hover:opacity-100'
+                        ? 'border-gold ring-2 ring-gold/60 scale-105'
+                        : 'border-white/25 opacity-60 hover:opacity-100'
                     }`}
                     aria-label={`Switch to image ${idx + 1}`}
                   >
@@ -325,7 +395,8 @@ export function ProductGallery({ product }: ProductGalleryProps) {
               })}
             </div>
           )}
-        </div>
+        </div>,
+        document.body
       )}
 
     </div>
