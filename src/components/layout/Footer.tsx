@@ -1,312 +1,364 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
   Heart,
   Mail,
-  ArrowRight,
+  MapPin,
+  Phone,
+  MessageCircle,
+  Clock,
+  Sparkles,
+  ArrowUpRight,
   ShieldCheck,
   Instagram,
-  Facebook,
-  MessageCircle,
-  Phone,
-  MapPin,
+  PackageSearch,
 } from 'lucide-react';
-import { subscribeNewsletter } from '@/actions/newsletter';
 
 export function Footer() {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<{
-    type: 'idle' | 'loading' | 'success' | 'error';
-    message: string;
-  }>({ type: 'idle', message: '' });
-
-  const handleMiniSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email.trim()) return;
-
-    setStatus({ type: 'loading', message: '' });
-    const formData = new FormData();
-    formData.append('email', email);
-    formData.append('source', 'footer');
-
-    try {
-      const res = await subscribeNewsletter(null, formData);
-      if (res.success) {
-        setStatus({ type: 'success', message: res.message });
-        setEmail('');
-      } else {
-        setStatus({ type: 'error', message: res.message });
-      }
-    } catch {
-      setStatus({
-        type: 'error',
-        message: 'Subscription failed. Please try again.',
-      });
-    }
-  };
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-footer text-gray-300 border-t border-neutral-800">
-      {/* Upper Main Footer Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Column 1: Brand Summary */}
-          <div className="space-y-4">
+    <footer className="bg-footer text-gray-300 border-t border-gold/25 relative overflow-hidden">
+      {/* Subtle Atelier Ambient Glow */}
+      <div
+        className="absolute top-0 right-1/4 w-96 h-96 bg-[radial-gradient(circle,rgba(197,154,90,0.06),transparent_70%)] pointer-events-none"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute bottom-0 left-10 w-80 h-80 bg-[radial-gradient(circle,rgba(120,29,44,0.08),transparent_70%)] pointer-events-none"
+        aria-hidden="true"
+      />
+
+      {/* Main 4-Column Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-12 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
+          
+          {/* Column 1: Atelier Heritage & Brand Anchor (Span 4) */}
+          <div className="lg:col-span-4 space-y-4">
             <Link href="/" className="inline-block group">
-              <div className="flex items-center gap-1.5">
-                <span className="text-2xl font-semibold tracking-tight text-white group-hover:text-blush transition-colors">
+              <div className="flex items-center gap-2">
+                <span className="font-serif text-2xl font-semibold tracking-tight text-white group-hover:text-gold transition-colors">
                   Divija Art House
                 </span>
-                <Heart className="w-4 h-4 text-primary fill-primary" />
+                <Heart className="w-4 h-4 text-primary fill-primary flex-shrink-0 animate-pulse" />
               </div>
             </Link>
-            <p className="text-xs font-medium text-gold">
+
+            <p className="font-serif italic text-xs tracking-wider text-gold font-medium">
               Little Blooms, Lasting Feelings.
             </p>
-            <p className="text-sm text-gray-400 leading-relaxed">
-              Thoughtful floral gifts, handcrafted with care. From cheerful desk blooms to statement bouquets, discover pieces made to celebrate the people and moments that matter.
+
+            <p className="text-sm text-gray-400 leading-relaxed pr-2">
+              Thoughtful botanical keepsakes, hand-crocheted stitch-by-stitch by skilled women artisans in Pune. Designed to bloom forever and celebrate life&apos;s most cherished moments.
             </p>
-            <div className="pt-1 space-y-1.5 text-xs text-gray-400">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-gold flex-shrink-0" />
-                <span>Hadapsar, Pune, Maharashtra, India</span>
+
+            {/* Artisan Pride Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-gold/20 text-[11px] text-[#E8D5B7]">
+              <Sparkles className="w-3 h-3 text-gold" />
+              <span>100% Handcrafted by Women Artisans</span>
+            </div>
+
+            {/* Direct Studio Location & Phone */}
+            <div className="pt-2 space-y-2 text-xs text-gray-400">
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-3.5 h-3.5 text-gold flex-shrink-0 mt-0.5" />
+                <span>Hadapsar, Pune, Maharashtra 411028, India</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2.5">
                 <Phone className="w-3.5 h-3.5 text-gold flex-shrink-0" />
-                <a href="tel:+919209284423" className="hover:text-white transition-colors">
+                <a
+                  href="tel:+919209284423"
+                  className="hover:text-gold transition-colors font-medium text-gray-300"
+                >
                   +91 92092 84423
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Column 2: Quick Links */}
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
-              Explore
+          {/* Column 2: Boutique Catalogue (Span 3) */}
+          <div className="lg:col-span-3">
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-gold mb-4 flex items-center gap-2">
+              <span>Boutique Catalogue</span>
+              <span className="h-px flex-1 bg-gold/20"></span>
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link
-                  href="/shop"
-                  className="hover:text-white transition-colors"
-                >
-                  Shop All Products
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/collections/bouquets"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
                 >
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold/40"></span>
                   Crochet Bouquets
                 </Link>
               </li>
               <li>
                 <Link
                   href="/collections/jumbo-bouquets"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
                 >
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold/40"></span>
                   Jumbo Bouquets
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-primary/30 text-blush border border-primary/40 font-medium ml-1">
+                    Signature
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link
                   href="/collections/flower-pots"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
                 >
-                  Flower Pots
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold/40"></span>
+                  Everlasting Flower Pots
                 </Link>
               </li>
               <li>
                 <Link
                   href="/collections/gift-boxes"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
                 >
-                  Gift Boxes
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold/40"></span>
+                  Curated Gift Boxes
                 </Link>
               </li>
               <li>
                 <Link
                   href="/collections/hair-accessories"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
                 >
-                  Hair Accessories
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold/40"></span>
+                  Floral Hair Accessories
                 </Link>
               </li>
               <li>
                 <Link
                   href="/collections/character-gifts"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
                 >
-                  Character Gifts
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold/40"></span>
+                  Amigurumi Keepsakes
+                </Link>
+              </li>
+              <li className="pt-1.5">
+                <Link
+                  href="/shop"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-gold hover:text-white transition-colors uppercase tracking-wider"
+                >
+                  <span>Explore All Creations</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Customer Care & Policies */}
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
-              Customer Care
+          {/* Column 3: Client Care & Assurance (Span 2) */}
+          <div className="lg:col-span-2">
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-gold mb-4 flex items-center gap-2">
+              <span>Client Care</span>
+              <span className="h-px flex-1 bg-gold/20"></span>
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link
-                  href="/about"
-                  className="hover:text-white transition-colors"
-                >
-                  Our Story
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="hover:text-white transition-colors"
-                >
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/track-order"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
                 >
-                  Track Your Order
+                  <PackageSearch className="w-3.5 h-3.5 text-gold/80" />
+                  Track Order
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
+                >
+                  Our Atelier Story
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about#care"
+                  className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
+                >
+                  Floral Care Guide
                 </Link>
               </li>
               <li>
                 <Link
                   href="/policies/shipping"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
                 >
-                  Shipping & Delivery
+                  Shipping & Dispatch
                 </Link>
               </li>
               <li>
                 <Link
                   href="/policies/returns"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
                 >
-                  Returns & Replacements
+                  Returns & Guarantee
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/policies/privacy"
-                  className="hover:text-white transition-colors"
+                  href="/contact"
+                  className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
                 >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/policies/terms"
-                  className="hover:text-white transition-colors"
-                >
-                  Terms & Conditions
+                  Contact Atelier
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 4: Newsletter Access & Social */}
-          <div className="space-y-4">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-              Stay in Bloom
-            </h3>
-            <p className="text-sm text-gray-400">
-              New creations, thoughtful gifting ideas, and little notes from our world of crochet florals.
-            </p>
+          {/* Column 4: Elevated Concierge & WhatsApp Assistance Card (Span 3) */}
+          <div className="lg:col-span-3">
+            <div className="bg-[#2E1A19]/90 border border-gold/35 rounded-2xl p-5 shadow-xl backdrop-blur-md relative overflow-hidden group">
+              {/* Corner Gold Ambient Accent */}
+              <div
+                className="absolute -top-10 -right-10 w-24 h-24 bg-gold/15 rounded-full blur-xl pointer-events-none"
+                aria-hidden="true"
+              />
 
-            {/* Newsletter mini form */}
-            <form onSubmit={handleMiniSubscribe} className="space-y-2">
-              <div className="relative">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your email address"
-                  required
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-neutral-850 border border-neutral-700 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-gold pr-10"
-                />
-                <button
-                  type="submit"
-                  disabled={status.type === 'loading'}
-                  className="absolute right-1 top-1 bottom-1 px-3 rounded-md bg-primary hover:bg-primary-hover text-white text-xs font-semibold transition-colors flex items-center justify-center disabled:opacity-50"
-                  aria-label="Join the Bloom Club"
-                >
-                  <span>Join</span>
-                </button>
+              {/* Status Header */}
+              <div className="flex items-center justify-between gap-2 mb-3">
+                <span className="text-xs font-semibold uppercase tracking-wider text-white">
+                  Gifting Concierge
+                </span>
+                <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-2 py-0.5 rounded-full">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  Replies in ~15m
+                </span>
               </div>
 
-              {status.message && (
-                <p
-                  className={`text-xs ${
-                    status.type === 'success' ? 'text-green-400' : 'text-red-400'
-                  }`}
-                >
-                  {status.message}
-                </p>
-              )}
-            </form>
-
-            {/* Social Links */}
-            <div className="pt-2">
-              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">
-                Connect With Us
+              <p className="text-xs text-gray-300 leading-relaxed mb-4">
+                Need a bespoke bouquet, custom colorway, or express Pune dispatch? Chat directly with our head artisan.
               </p>
-              <div className="flex items-center gap-3">
-                <a
-                  href="https://instagram.com/divijaarthouse"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-neutral-800 hover:bg-primary text-gray-300 hover:text-white transition-colors"
-                  aria-label="DivijaArtHouse Instagram (@divijaarthouse)"
-                >
-                  <Instagram className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://wa.me/919209284423"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-neutral-800 hover:bg-[#386B3E] text-gray-300 hover:text-white transition-colors"
-                  aria-label="Contact via WhatsApp (+91 92092 84423)"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                </a>
-                <a
-                  href="mailto:care@divijaarthouse.com"
-                  className="p-2 rounded-lg bg-neutral-800 hover:bg-primary text-gray-300 hover:text-white transition-colors"
-                  aria-label="Email Customer Support"
-                >
-                  <Mail className="w-4 h-4" />
-                </a>
+
+              {/* 1-Click WhatsApp Button */}
+              <a
+                href="https://wa.me/919209284423?text=Hi%20Divija%20Art%20House%2C%20I%20would%20like%20to%20inquire%20about%20a%20handcrafted%20bouquet"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-medium text-xs tracking-wide shadow-md transition-all duration-200 active:scale-95 group/wa"
+                aria-label="Chat with Head Artisan on WhatsApp (+91 92092 84423)"
+              >
+                <MessageCircle className="w-4 h-4 fill-white text-[#25D366] group-hover/wa:scale-110 transition-transform" />
+                <span>Chat on WhatsApp</span>
+                <ArrowUpRight className="w-3.5 h-3.5 opacity-80" />
+              </a>
+
+              {/* Operating Hours */}
+              <div className="flex items-center gap-2 text-[11px] text-gray-400 mt-3 pt-3 border-t border-gold/15">
+                <Clock className="w-3 h-3 text-gold/80 flex-shrink-0" />
+                <span>Mon – Sat: 10:00 AM – 8:00 PM IST</span>
+              </div>
+
+              {/* Direct Social Channels */}
+              <div className="mt-3 pt-3 border-t border-gold/15 flex items-center justify-between">
+                <span className="text-[11px] font-medium text-gray-400">
+                  Follow Our Craft:
+                </span>
+                <div className="flex items-center gap-2">
+                  <a
+                    href="https://instagram.com/divijaarthouse"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-1.5 rounded-lg bg-white/5 hover:bg-primary border border-white/10 text-gray-300 hover:text-white transition-all"
+                    aria-label="Divija Art House Instagram (@divijaarthouse)"
+                    title="Instagram @divijaarthouse"
+                  >
+                    <Instagram className="w-3.5 h-3.5" />
+                  </a>
+                  <a
+                    href="https://wa.me/919209284423"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-1.5 rounded-lg bg-white/5 hover:bg-[#25D366] border border-white/10 text-gray-300 hover:text-white transition-all"
+                    aria-label="Direct WhatsApp Message"
+                    title="WhatsApp Helpline"
+                  >
+                    <MessageCircle className="w-3.5 h-3.5" />
+                  </a>
+                  <a
+                    href="mailto:care@divijaarthouse.com"
+                    className="p-1.5 rounded-lg bg-white/5 hover:bg-gold border border-white/10 text-gray-300 hover:text-neutral-900 transition-all"
+                    aria-label="Email Studio Care"
+                    title="Email care@divijaarthouse.com"
+                  >
+                    <Mail className="w-3.5 h-3.5" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Legal Policies Strip */}
+      <div className="border-t border-[#3A2220] bg-[#1F1110] py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center md:justify-between gap-3 text-xs text-gray-400">
+          <div className="flex flex-wrap items-center justify-center gap-y-1 gap-x-4">
+            <span className="text-[11px] uppercase tracking-wider text-gold/80 font-medium mr-1">
+              Policies:
+            </span>
+            <Link
+              href="/policies/privacy"
+              className="hover:text-gold transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <span className="text-gray-600">•</span>
+            <Link
+              href="/policies/terms"
+              className="hover:text-gold transition-colors"
+            >
+              Terms of Service
+            </Link>
+            <span className="text-gray-600">•</span>
+            <Link
+              href="/policies/shipping"
+              className="hover:text-gold transition-colors"
+            >
+              Shipping & Delivery Policy
+            </Link>
+            <span className="text-gray-600">•</span>
+            <Link
+              href="/policies/returns"
+              className="hover:text-gold transition-colors"
+            >
+              Cancellation & Refund Policy
+            </Link>
+          </div>
+
+          <div className="text-[11px] text-gray-400">
+            <span>Bespoke orders & corporate gifting welcome</span>
+          </div>
+        </div>
+      </div>
+
       {/* Bottom Payment Badges & Copyright Strip */}
-      <div className="border-t border-neutral-800 bg-[#1A0E0D] py-6">
+      <div className="border-t border-[#2E1817] bg-[#160B0A] py-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-500 text-center md:text-left">
-            © {new Date().getFullYear()} DivijaArtHouse. All rights reserved. Handcrafted with care in Hadapsar, Pune.
+          <p className="text-xs text-gray-400 text-center md:text-left">
+            © {currentYear} Divija Art House. All rights reserved. Handcrafted with heart in Hadapsar, Pune.
           </p>
 
-          {/* Payment method icons */}
-          <div className="flex flex-wrap items-center justify-center gap-2.5">
-            <span className="text-[11px] text-gray-400 mr-1 flex items-center gap-1">
-              <ShieldCheck className="w-3.5 h-3.5 text-green-500" />
+          {/* Payment Method Icons & Trust */}
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <span className="text-[11px] text-gray-400 mr-1.5 flex items-center gap-1 font-medium">
+              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
               100% Secure Checkout:
             </span>
 
             {/* Razorpay Badge */}
-            <div className="h-6 w-20 relative bg-neutral-800 rounded px-1 flex items-center justify-center border border-neutral-700 overflow-hidden" title="Razorpay">
+            <div
+              className="h-6 w-20 relative bg-neutral-900 rounded px-1.5 flex items-center justify-center border border-neutral-800 shadow-sm overflow-hidden"
+              title="Razorpay Secure"
+            >
               <Image
                 src="/images/badges/razorpay.svg"
                 alt="Razorpay"
@@ -317,7 +369,10 @@ export function Footer() {
             </div>
 
             {/* UPI Badge */}
-            <div className="h-6 w-14 relative bg-neutral-800 rounded px-1 flex items-center justify-center border border-neutral-700 overflow-hidden" title="UPI">
+            <div
+              className="h-6 w-14 relative bg-neutral-900 rounded px-1.5 flex items-center justify-center border border-neutral-800 shadow-sm overflow-hidden"
+              title="UPI (Google Pay, PhonePe, Paytm)"
+            >
               <Image
                 src="/images/badges/upi.svg"
                 alt="UPI"
@@ -328,7 +383,10 @@ export function Footer() {
             </div>
 
             {/* COD Badge */}
-            <div className="h-6 w-14 relative bg-neutral-800 rounded px-1 flex items-center justify-center border border-neutral-700 overflow-hidden" title="Cash on Delivery">
+            <div
+              className="h-6 w-14 relative bg-neutral-900 rounded px-1.5 flex items-center justify-center border border-neutral-800 shadow-sm overflow-hidden"
+              title="Cash on Delivery Available"
+            >
               <Image
                 src="/images/badges/cod.svg"
                 alt="Cash on Delivery"
@@ -338,11 +396,14 @@ export function Footer() {
               />
             </div>
 
-            {/* Secure Badge */}
-            <div className="h-6 w-16 relative bg-neutral-800 rounded px-1 flex items-center justify-center border border-neutral-700 overflow-hidden" title="SSL Encrypted">
+            {/* Secure SSL Badge */}
+            <div
+              className="h-6 w-16 relative bg-neutral-900 rounded px-1.5 flex items-center justify-center border border-neutral-800 shadow-sm overflow-hidden"
+              title="256-Bit SSL Encrypted"
+            >
               <Image
                 src="/images/badges/secure.svg"
-                alt="SSL Encrypted"
+                alt="256-Bit SSL Encrypted"
                 fill
                 unoptimized
                 className="object-contain p-0.5"
