@@ -19,6 +19,7 @@ import {
   Scissors,
   PackageCheck,
 } from 'lucide-react';
+import { SectionHeader } from '@/components/ui/SectionHeader';
 
 export const metadata: Metadata = {
   title: 'Our Story — Handcrafted Everlasting Blooms | DivijaArtHouse',
@@ -55,30 +56,21 @@ export default function AboutPage() {
 
       {/* Hero Narrative Section */}
       <section className="py-12 md:py-20 bg-gradient-to-b from-surface-warm via-canvas to-canvas border-b border-border-subtle">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blush-soft text-primary text-xs font-semibold tracking-wider uppercase">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>The Heart Behind the Yarn</span>
-          </div>
-
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-text-main tracking-tight leading-tight">
-            Flowers That Never Wilt,{' '}
-            <span className="text-primary block sm:inline">
-              Feelings That Never Fade
-            </span>
-          </h1>
-
-          <p className="text-lg sm:text-xl font-medium text-primary max-w-2xl mx-auto">
-            &ldquo;Little Blooms, Lasting Feelings.&rdquo;
-          </p>
-
-          <p className="text-base sm:text-lg text-text-muted max-w-3xl mx-auto leading-relaxed">
-            DivijaArtHouse was born out of a tender reverence for life&apos;s quiet,
-            profound moments. We watched fresh floral bouquets brighten a room for
-            three short days, only to wither and be discarded. We asked ourselves:
-            why shouldn&apos;t the token of your love, gratitude, or milestone stay
-            as vibrant and alive as the feeling behind it?
-          </p>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            eyebrow="The Heart Behind the Yarn"
+            eyebrowSuffix="Our Atelier Journey"
+            titleLead="Flowers That Never Wilt,"
+            titleAccent="Feelings That Never Fade."
+            description="DivijaArtHouse was born out of a tender reverence for life's quiet, profound moments. We watched fresh floral bouquets brighten a room for three short days, only to wither and be discarded. We asked ourselves: why shouldn't the token of your love, gratitude, or milestone stay as vibrant and alive as the feeling behind it?"
+            align="center"
+            headingTag="h1"
+            size="xl"
+          >
+            <p className="text-base sm:text-lg font-serif italic text-primary pt-1">
+              &ldquo;Little Blooms, Lasting Feelings.&rdquo;
+            </p>
+          </SectionHeader>
         </div>
       </section>
 
@@ -118,13 +110,16 @@ export default function AboutPage() {
 
             {/* Narrative Content */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-primary">
-                <Feather className="w-4 h-4" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/90 border border-gold/40 text-primary text-xs font-semibold uppercase tracking-widest shadow-2xs backdrop-blur-sm">
+                <Feather className="w-3.5 h-3.5 text-gold shrink-0" />
                 <span>Our Craft Heritage</span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-text-main leading-tight">
-                Slow Artistry in a World of Instant Everything
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-text-main leading-tight tracking-tight">
+                Slow Artistry in a World of{' '}
+                <span className="font-serif italic font-normal text-primary inline-block">
+                  Instant Everything.
+                </span>
               </h2>
 
               <div className="space-y-4 text-text-muted text-base leading-relaxed">
@@ -168,18 +163,14 @@ export default function AboutPage() {
       {/* Core Values Section */}
       <section className="py-16 md:py-24 bg-surface-warm border-b border-border-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-            <span className="text-xs font-semibold uppercase tracking-wider text-primary">
-              Our Core Pillars
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-text-main">
-              The Values Stitched Into Every Stem
-            </h2>
-            <p className="text-sm sm:text-base text-text-muted">
-              We hold every piece to an uncompromising standard of conscience,
-              craftsmanship, and aesthetic grace.
-            </p>
-          </div>
+          <SectionHeader
+            eyebrow="Our Core Pillars"
+            titleLead="The Values Stitched Into"
+            titleAccent="Every Stem."
+            description="We hold every piece to an uncompromising standard of conscience, craftsmanship, and aesthetic grace."
+            align="center"
+            size="lg"
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Value Card 1 */}
@@ -245,17 +236,14 @@ export default function AboutPage() {
       {/* 4-Stage Artisan Craft Process */}
       <section className="py-16 md:py-24 bg-white border-b border-border-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-            <span className="text-xs font-semibold uppercase tracking-wider text-primary">
-              Behind the Scenes
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-text-main">
-              The 4 Stages of a Hand-Crocheted Bloom
-            </h2>
-            <p className="text-sm sm:text-base text-text-muted">
-              Discover how a humble spool of yarn transforms into an heirloom botanical sculpture.
-            </p>
-          </div>
+          <SectionHeader
+            eyebrow="Behind the Scenes"
+            titleLead="The 4 Stages of a"
+            titleAccent="Handcrafted Bloom."
+            description="Discover how a humble spool of yarn transforms into an heirloom botanical sculpture."
+            align="center"
+            size="lg"
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Stage 1 */}
@@ -364,13 +352,14 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-text-main">
-            Ready to Bring Lasting Blooms into Your Life?
-          </h2>
-          <p className="text-sm sm:text-base text-text-muted max-w-xl mx-auto leading-relaxed">
-            Whether for someone you treasure or a charming accent for your own space,
-            find the arrangement that speaks to your heart.
-          </p>
+          <SectionHeader
+            eyebrow="Send A Little Something"
+            titleLead="Ready to Bring Lasting Blooms"
+            titleAccent="into Your Life?"
+            description="Whether for someone you treasure or a charming accent for your own space, find the arrangement that speaks to your heart."
+            align="center"
+            size="lg"
+          />
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/shop"

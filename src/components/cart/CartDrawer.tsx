@@ -112,8 +112,11 @@ export function CartDrawer() {
             <div className="w-8 h-8 rounded-full bg-gold/15 flex items-center justify-center border border-gold/30">
               <ShoppingBag className="w-4 h-4 text-primary" />
             </div>
-            <h2 className="font-serif font-semibold tracking-tight text-xl text-text-main">
-              Your Floral Bag
+            <h2 className="font-semibold tracking-tight text-xl text-text-main">
+              Your Floral{' '}
+              <span className="font-serif italic font-normal text-primary">
+                Bag
+              </span>
             </h2>
             <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-gold/15 text-[#8A5A20] border border-gold/30">
               {summary.itemCount} {summary.itemCount === 1 ? 'item' : 'items'}
@@ -151,8 +154,11 @@ export function CartDrawer() {
             </div>
 
             <div className="max-w-xs space-y-2">
-              <h3 className="font-serif font-semibold text-2xl text-text-main tracking-tight">
-                Your floral bag is empty
+              <h3 className="font-semibold text-2xl text-text-main tracking-tight">
+                Your floral bag is{' '}
+                <span className="font-serif italic font-normal text-primary">
+                  empty.
+                </span>
               </h3>
               <p className="text-xs sm:text-sm text-text-muted leading-relaxed">
                 Explore our handcrafted bouquets and everlasting botanical keepsakes designed to bloom forever.

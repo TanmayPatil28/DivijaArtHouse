@@ -110,3 +110,54 @@ textarea:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+/* Editorial Atelier Typography Locking System */
+@layer utilities {
+  .eyebrow-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.875rem;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(197, 154, 90, 0.4);
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(4px);
+  }
+
+  .eyebrow-pill-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.875rem;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(197, 154, 90, 0.4);
+    color: var(--color-gold-light);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(4px);
+  }
+
+  .editorial-accent {
+    font-family: var(--font-playfair), 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--color-primary);
+  }
+
+  .editorial-accent-dark {
+    font-family: var(--font-playfair), 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--color-gold);
+  }
+}

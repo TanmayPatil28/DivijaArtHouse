@@ -32,8 +32,11 @@ const SHOWCASE_SLIDES: CarouselSlide[] = [
           </div>
 
           {/* Headline */}
-          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-semibold text-white tracking-tight leading-[1.15] mb-2 sm:mb-3">
-            The Art of Thoughtful Gifting
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-semibold text-white tracking-tight leading-[1.15] mb-2 sm:mb-3">
+            The Art of{' '}
+            <span className="font-serif italic font-normal text-gold">
+              Thoughtful Gifting.
+            </span>
           </h2>
 
           {/* Subtitle */}
@@ -94,8 +97,11 @@ const SHOWCASE_SLIDES: CarouselSlide[] = [
           </div>
 
           {/* Headline */}
-          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-semibold text-white tracking-tight leading-[1.15] mb-2 sm:mb-3">
-            Forever Blooms for Cherished Moments
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-semibold text-white tracking-tight leading-[1.15] mb-2 sm:mb-3">
+            Forever Blooms for{' '}
+            <span className="font-serif italic font-normal text-gold">
+              Cherished Moments.
+            </span>
           </h2>
 
           {/* Subtitle */}
@@ -156,8 +162,11 @@ const SHOWCASE_SLIDES: CarouselSlide[] = [
           </div>
 
           {/* Headline */}
-          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-semibold text-white tracking-tight leading-[1.15] mb-2 sm:mb-3">
-            The Royal Sovereign Keepsake
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-semibold text-white tracking-tight leading-[1.15] mb-2 sm:mb-3">
+            The Royal Sovereign{' '}
+            <span className="font-serif italic font-normal text-gold">
+              Keepsake Box.
+            </span>
           </h2>
 
           {/* Subtitle */}

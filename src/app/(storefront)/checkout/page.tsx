@@ -413,12 +413,19 @@ export default function CheckoutPage() {
 
         {/* Page Title & Reassurance Banner */}
         <div className="mb-8 text-center sm:text-left">
-          <h1 className="font-serif font-semibold text-3xl sm:text-4xl lg:text-[40px] tracking-tight text-text-main leading-tight">
-            Secure Atelier Checkout
+          <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/90 border border-gold/40 text-primary text-xs font-semibold uppercase tracking-widest shadow-2xs mb-2 backdrop-blur-sm">
+            <Lock className="w-3.5 h-3.5 text-gold shrink-0" />
+            <span>256-Bit SSL Encrypted</span>
+          </div>
+          <h1 className="font-semibold text-3xl sm:text-4xl lg:text-[40px] tracking-tight text-text-main leading-tight">
+            Secure Atelier{' '}
+            <span className="font-serif italic font-normal text-primary">
+              Checkout.
+            </span>
           </h1>
           <p className="text-xs sm:text-sm text-text-muted mt-1.5 flex items-center justify-center sm:justify-start gap-2">
-            <Lock className="w-3.5 h-3.5 text-emerald-600" />
-            <span>256-bit SSL encrypted checkout. Handcrafted with love in Pune, India.</span>
+            <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+            <span>Direct studio dispatch. Handcrafted with love in Pune, India.</span>
           </p>
         </div>
 

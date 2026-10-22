@@ -92,10 +92,17 @@ export default function WishlistPage() {
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-6 border-b border-border-subtle">
             <div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/90 border border-gold/40 text-primary text-xs font-semibold uppercase tracking-widest shadow-2xs mb-2 backdrop-blur-sm">
+                <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
+                <span>Saved For Later</span>
+              </div>
               <h1 className="font-semibold text-3xl sm:text-4xl tracking-tight text-text-main">
-                My Saved Blooms
+                My Saved{' '}
+                <span className="font-serif italic font-normal text-primary">
+                  Everlasting Blooms.
+                </span>
               </h1>
-              <p className="text-xs sm:text-sm text-text-muted mt-1">
+              <p className="text-xs sm:text-sm text-text-muted mt-1.5">
                 Your personal sanctuary of handcrafted everlasting florals.
               </p>
             </div>
@@ -134,7 +141,10 @@ export default function WishlistPage() {
             </div>
 
             <h2 className="font-semibold text-2xl text-text-main tracking-tight mb-2">
-              Your Wishlist is Empty
+              Your wishlist is{' '}
+              <span className="font-serif italic font-normal text-primary">
+                currently empty.
+              </span>
             </h2>
             <p className="text-xs sm:text-sm text-text-muted leading-relaxed mb-6">
               Explore our handcrafted bouquets, everlasting floral pots, and thoughtful gift boxes. Save your favorite pieces to revisit them anytime.

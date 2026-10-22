@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Home, ChevronRight, PackageSearch } from 'lucide-react';
 import { OrderTracker } from '@/components/tracking/OrderTracker';
+import { SectionHeader } from '@/components/ui/SectionHeader';
 
 export const dynamic = 'force-dynamic';
 
@@ -49,20 +50,18 @@ export default function TrackOrderPage({ searchParams }: TrackOrderPageProps) {
 
       {/* Hero Header */}
       <section className="py-10 md:py-14 bg-gradient-to-b from-surface-warm via-canvas to-canvas border-b border-border-subtle mb-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blush-soft text-primary text-xs font-semibold uppercase tracking-wider">
-            <PackageSearch className="w-3.5 h-3.5" />
-            <span>Real-Time Order Tracking</span>
-          </div>
-
-          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-text-main tracking-tight">
-            Follow Your Everlasting Blooms
-          </h1>
-
-          <p className="text-sm sm:text-base text-text-muted max-w-xl mx-auto leading-relaxed">
-            Enter your order number below to check the real-time crafting,
-            packaging, and express courier status of your parcel.
-          </p>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            eyebrow="Real-Time Parcel Tracking"
+            eyebrowIcon={<PackageSearch className="w-3.5 h-3.5 text-gold shrink-0" />}
+            eyebrowSuffix="Pan-India Express"
+            titleLead="Follow Your Everlasting"
+            titleAccent="Blooms Journey."
+            description="Enter your order number below to check the real-time crafting, packaging, and express courier status of your parcel."
+            align="center"
+            headingTag="h1"
+            size="xl"
+          />
         </div>
       </section>
 
