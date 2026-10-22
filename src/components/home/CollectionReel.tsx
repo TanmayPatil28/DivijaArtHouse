@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight, Sparkles, ArrowRight } from 'lucide-react';
 import type { CategoryWithProducts } from '@/types';
@@ -51,11 +51,11 @@ export function CollectionReel({ categories }: CollectionReelProps) {
   return (
     <section
       aria-label="Shop by Collection"
-      className="py-12 md:py-16 bg-surface-canvas border-b border-border-subtle relative overflow-hidden"
+      className="py-14 md:py-20 bg-white border-b border-gold/30 relative overflow-hidden shadow-[0_4px_24px_-10px_rgba(46,23,21,0.06)] z-10"
     >
       {/* Ambient Silk Atmosphere Glow */}
       <div 
-        className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[500px] h-[300px] bg-[radial-gradient(ellipse,rgba(197,154,90,0.08),transparent_70%)] pointer-events-none -z-10" 
+        className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[500px] h-[300px] bg-[radial-gradient(ellipse,rgba(197,154,90,0.06),transparent_70%)] pointer-events-none -z-10" 
         aria-hidden="true" 
       />
 
@@ -63,7 +63,7 @@ export function CollectionReel({ categories }: CollectionReelProps) {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-8 sm:mb-10 gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/90 border border-gold/40 text-primary text-xs font-semibold uppercase tracking-widest shadow-2xs mb-2 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-canvas border border-gold/40 text-primary text-xs font-semibold uppercase tracking-widest shadow-2xs mb-2 backdrop-blur-sm">
               <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
               <span>FIND YOUR KIND OF BLOOM</span>
             </div>
@@ -114,7 +114,7 @@ export function CollectionReel({ categories }: CollectionReelProps) {
               className="group flex-shrink-0 flex flex-col items-center text-center w-28 sm:w-36 md:w-40 snap-start focus:outline-none"
             >
               {/* Luxury Gold-Halo Medallion Container */}
-              <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full p-1 bg-white/80 backdrop-blur-sm border border-gold/40 shadow-sm group-hover:border-gold group-hover:shadow-[0_8px_30px_rgba(197,154,90,0.35)] group-hover:scale-105 transition-all duration-500 ease-out flex items-center justify-center">
+              <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full p-1 bg-surface-canvas/90 backdrop-blur-sm border border-gold/40 shadow-sm group-hover:border-gold group-hover:shadow-[0_8px_30px_rgba(197,154,90,0.35)] group-hover:scale-105 transition-all duration-500 ease-out flex items-center justify-center">
                 {/* Concentric Golden Ring & Blush Medallion Disc */}
                 <div className="relative w-full h-full rounded-full overflow-hidden p-1.5 bg-gradient-to-br from-white via-[#FCF3F5] to-[#F5E3E6]">
                   <img
