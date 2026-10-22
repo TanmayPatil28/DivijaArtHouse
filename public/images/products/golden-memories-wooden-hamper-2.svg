@@ -16,25 +16,17 @@
   <!-- Canvas Surface -->
   <rect width="800" height="800" fill="url(#golden-memories-keepsake-wooden-gift-hamper-v2-bg)"/>
   <circle cx="400" cy="400" r="350" fill="url(#golden-memories-keepsake-wooden-gift-hamper-v2-glow)"/>
-  <rect x="25" y="25" width="750" height="750" rx="20" fill="none" stroke="#C94252" stroke-width="1.5" stroke-dasharray="8,8" opacity="0.6"/>
+  
 
-  <!-- Brand Label Watermark -->
-  <g transform="translate(60, 70)">
-    <text x="0" y="0" font-family="'Playfair Display', Georgia, serif" font-size="20" font-weight="bold" fill="#A32D3B" letter-spacing="1.5">DIVIJA ART HOUSE</text>
-    <text x="0" y="24" font-family="'Poppins', sans-serif" font-size="12" fill="#666666" letter-spacing="0.5">Handcrafted Everlasting Blooms</text>
-  </g>
+  
 
-  <!-- Product Title &amp; View Note -->
-  <g transform="translate(60, 740)">
-    <text x="0" y="0" font-family="'Poppins', sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">Golden Memories Keepsake Wooden Gift Hamper</text>
-    <text x="0" y="20" font-family="'Poppins', sans-serif" font-size="12" fill="#872430">Bespoke Floral Assortment Inside</text>
-  </g>
+  
 
   <!-- Authentic Handcrafted Vector Artwork -->
   <g filter="url(#golden-memories-keepsake-wooden-gift-hamper-v2-shadow)">
     
       <!-- Keepsake Gift Box Composition -->
-      <g transform="translate(400, 480)">
+      <g transform="translate(400, 400) scale(1.25)">
         <!-- Box Base (Isometric 3D) -->
         <polygon points="-200,-50 0,25 200,-50 0,-125" fill="#E8D5BF"/>
         <!-- Straw filling -->

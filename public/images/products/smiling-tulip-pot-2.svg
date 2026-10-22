@@ -16,26 +16,18 @@
   <!-- Canvas Surface -->
   <rect width="800" height="800" fill="url(#smiling-tulip-garden-pot-v2-bg)"/>
   <circle cx="400" cy="400" r="350" fill="url(#smiling-tulip-garden-pot-v2-glow)"/>
-  <rect x="25" y="25" width="750" height="750" rx="20" fill="none" stroke="#E0D0C0" stroke-width="1.5" stroke-dasharray="8,8" opacity="0.6"/>
+  
 
-  <!-- Brand Label Watermark -->
-  <g transform="translate(60, 70)">
-    <text x="0" y="0" font-family="'Playfair Display', Georgia, serif" font-size="20" font-weight="bold" fill="#A32D3B" letter-spacing="1.5">DIVIJA ART HOUSE</text>
-    <text x="0" y="24" font-family="'Poppins', sans-serif" font-size="12" fill="#666666" letter-spacing="0.5">Handcrafted Everlasting Blooms</text>
-  </g>
+  
 
-  <!-- Product Title &amp; View Note -->
-  <g transform="translate(60, 740)">
-    <text x="0" y="0" font-family="'Poppins', sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">Smiling Tulip Garden Pot</text>
-    <text x="0" y="20" font-family="'Poppins', sans-serif" font-size="12" fill="#872430">Spring Bloom Angle</text>
-  </g>
+  
 
   <!-- Authentic Handcrafted Vector Artwork -->
   <g filter="url(#smiling-tulip-garden-pot-v2-shadow)">
     
       <!-- Potted Bloom Composition -->
       <!-- Ceramic Pot -->
-      <g transform="translate(400, 520)">
+      <g transform="translate(400, 400) scale(1.25)">
         <path d="M-130 -100 L-95 140 C-90 155 -75 165 -60 165 L60 165 C75 165 90 155 95 140 L130 -100 Z" fill="#E8D7C5"/>
         <ellipse cx="0" cy="-100" rx="140" ry="24" fill="#F4EAE0" stroke="#BA9E84" stroke-width="3"/>
         <ellipse cx="0" cy="-100" rx="125" ry="18" fill="#52392B"/>
@@ -60,7 +52,7 @@
       <path d="M460 370 C530 360 550 310 520 295 C490 295 470 340 460 370 Z" fill="#7FA968"/>
 
       <!-- Primary Pot Bloom -->
-      <g transform="translate(400, 200)">
+      <g transform="translate(400, 400) scale(1.25)">
         <g fill="#D84315" stroke="#FF8A65" stroke-width="2.5">
           <ellipse cx="0" cy="-60" rx="22" ry="34"/>
           <ellipse cx="42" cy="-42" rx="22" ry="34" transform="rotate(45 42 -42)"/>
