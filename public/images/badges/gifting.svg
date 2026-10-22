@@ -1,12 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
-  <circle cx="50" cy="50" r="46" fill="#FCEEEF" stroke="#F5D6D9" stroke-width="2"/>
-  <!-- Gift Box with Ribbon &amp; Heart -->
-  <rect x="30" y="44" width="40" height="32" rx="4" fill="#A32D3B"/>
-  <rect x="26" y="38" width="48" height="8" rx="3" fill="#872430"/>
-  <!-- Gold Ribbon -->
-  <rect x="47" y="38" width="6" height="38" fill="#DFBD8B"/>
-  <path d="M50 38 C44 30 36 34 44 38 Z" fill="#DFBD8B"/>
-  <path d="M50 38 C56 30 64 34 56 38 Z" fill="#DFBD8B"/>
-  <!-- Heart Accent -->
-  <circle cx="50" cy="58" r="4" fill="#FCEEEF"/>
+  <defs>
+    <radialGradient id="gift-disc-glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F7ECEE"/>
+    </radialGradient>
+  </defs>
+  <!-- Outer Gold Rim Medallion -->
+  <circle cx="50" cy="50" r="46" fill="url(#gift-disc-glow)" stroke="#C59A5A" stroke-width="2.5"/>
+  <circle cx="50" cy="50" r="42" fill="none" stroke="#C59A5A" stroke-width="0.75" stroke-dasharray="3,2" opacity="0.6"/>
+  <!-- Velvet Wine Gift Box -->
+  <rect x="30" y="44" width="40" height="32" rx="4" fill="#781D2C"/>
+  <rect x="26" y="38" width="48" height="8" rx="3" fill="#5E1420"/>
+  <!-- Champagne Gold Silk Ribbon -->
+  <rect x="47" y="38" width="6" height="38" fill="#C59A5A"/>
+  <path d="M50 38 C44 28 34 32 44 38 Z" fill="#C59A5A"/>
+  <path d="M50 38 C56 28 66 32 56 38 Z" fill="#C59A5A"/>
+  <!-- Artisan Heart Clasp Accent -->
+  <circle cx="50" cy="56" r="3.5" fill="#FAF5F0"/>
+  <circle cx="50" cy="56" r="1.5" fill="#781D2C"/>
 </svg>
