@@ -16,19 +16,11 @@
   <!-- Canvas Surface -->
   <rect width="800" height="800" fill="url(#dainty-cherry-blossom-floral-hairpins-set-of-3-v2-bg)"/>
   <circle cx="400" cy="400" r="350" fill="url(#dainty-cherry-blossom-floral-hairpins-set-of-3-v2-glow)"/>
-  <rect x="25" y="25" width="750" height="750" rx="20" fill="none" stroke="#DFBD8B" stroke-width="1.5" stroke-dasharray="8,8" opacity="0.6"/>
+  
 
-  <!-- Brand Label Watermark -->
-  <g transform="translate(60, 70)">
-    <text x="0" y="0" font-family="'Playfair Display', Georgia, serif" font-size="20" font-weight="bold" fill="#A32D3B" letter-spacing="1.5">DIVIJA ART HOUSE</text>
-    <text x="0" y="24" font-family="'Poppins', sans-serif" font-size="12" fill="#666666" letter-spacing="0.5">Handcrafted Everlasting Blooms</text>
-  </g>
+  
 
-  <!-- Product Title &amp; View Note -->
-  <g transform="translate(60, 740)">
-    <text x="0" y="0" font-family="'Poppins', sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">Dainty Cherry Blossom Floral Hairpins (Set of 3)</text>
-    <text x="0" y="20" font-family="'Poppins', sans-serif" font-size="12" fill="#872430">Delicate Petal &amp; Pearl Accents</text>
-  </g>
+  
 
   <!-- Authentic Handcrafted Vector Artwork -->
   <g filter="url(#dainty-cherry-blossom-floral-hairpins-set-of-3-v2-shadow)">
@@ -46,7 +38,7 @@
       </g>
 
       <!-- Pin 2 -->
-      <g transform="translate(400, 390)">
+      <g transform="translate(400, 400) scale(1.25)">
         <rect x="-140" y="-5" width="280" height="10" rx="5" fill="#DFBD8B" stroke="#BA9452" stroke-width="1.5"/>
         <g transform="translate(140, 0)">
           <circle cx="0" cy="0" r="32" fill="#FFB7B2"/>
