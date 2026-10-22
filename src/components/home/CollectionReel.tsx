@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import type { CategoryWithProducts } from '@/types';
 
 interface CollectionReelProps {
@@ -11,25 +11,10 @@ interface CollectionReelProps {
 
 export function CollectionReel({ categories }: CollectionReelProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
-
-  const checkScroll = () => {
-    if (!scrollContainerRef.current) return;
-    const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-    setCanScrollLeft(scrollLeft > 10);
-    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
-  };
-
-  useEffect(() => {
-    checkScroll();
-    window.addEventListener('resize', checkScroll);
-    return () => window.removeEventListener('resize', checkScroll);
-  }, [categories]);
 
   const scroll = (direction: 'left' | 'right') => {
     if (!scrollContainerRef.current) return;
-    const scrollAmount = direction === 'left' ? -300 : 300;
+    const scrollAmount = direction === 'left' ? -320 : 320;
     scrollContainerRef.current.scrollBy({
       left: scrollAmount,
       behavior: 'smooth',
@@ -56,39 +41,53 @@ export function CollectionReel({ categories }: CollectionReelProps) {
   return (
     <section
       aria-label="Shop by Collection"
-      className="relative bg-white border-b border-gold/30 shadow-[0_2px_12px_rgba(46,23,21,0.04)] z-10 py-4 sm:py-5"
+      className="py-8 sm:py-10 md:py-12 bg-white border-b border-gold/30 relative overflow-hidden shadow-[0_4px_24px_-10px_rgba(46,23,21,0.06)] z-10"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        {/* Floating Left Chevron */}
-        {canScrollLeft && (
-          <button
-            type="button"
-            onClick={() => scroll('left')}
-            className="hidden sm:flex absolute left-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/95 border border-gold/40 items-center justify-center text-text-main shadow-md transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary active:scale-95"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft className="w-4 h-4" />
-          </button>
-        )}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-6 sm:mb-8 gap-4">
+          <div>
+            <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-surface-canvas border border-gold/40 text-primary text-xs font-semibold uppercase tracking-widest shadow-2xs mb-2 backdrop-blur-sm">
+              <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
+              <span>FIND YOUR KIND OF BLOOM</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-text-main">
+              A little something{' '}
+              <span className="font-serif italic font-normal text-primary">
+                for every kind of love.
+              </span>
+            </h2>
+            <p className="text-sm text-text-muted mt-1.5 max-w-2xl leading-relaxed">
+              Some gifts make people smile. Others become part of their everyday lives. Explore handcrafted pieces for every personality, occasion, and little corner worth brightening.
+            </p>
+          </div>
 
-        {/* Floating Right Chevron */}
-        {canScrollRight && (
-          <button
-            type="button"
-            onClick={() => scroll('right')}
-            className="hidden sm:flex absolute right-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/95 border border-gold/40 items-center justify-center text-text-main shadow-md transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary active:scale-95"
-            aria-label="Scroll right"
-          >
-            <ChevronRight className="w-4 h-4" />
-          </button>
-        )}
+          {/* Desktop Arrow Controls */}
+          <div className="hidden sm:flex items-center gap-2 shrink-0">
+            <button
+              type="button"
+              onClick={() => scroll('left')}
+              className="p-2.5 rounded-full border border-gold/40 bg-white hover:bg-primary hover:text-white hover:border-primary text-text-main transition-all duration-300 shadow-sm hover:shadow-wine-glow active:scale-95"
+              aria-label="Scroll collections left"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              type="button"
+              onClick={() => scroll('right')}
+              className="p-2.5 rounded-full border border-gold/40 bg-white hover:bg-primary hover:text-white hover:border-primary text-text-main transition-all duration-300 shadow-sm hover:shadow-wine-glow active:scale-95"
+              aria-label="Scroll collections right"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
 
-        {/* Horizontally Scrollable Full-Width Track */}
+        {/* Category Medallions Rail */}
         <div
           ref={scrollContainerRef}
-          onScroll={checkScroll}
           data-lenis-prevent
-          className="flex items-center justify-start md:justify-around lg:justify-between gap-5 sm:gap-6 md:gap-4 overflow-x-auto py-1 scrollbar-none snap-x snap-mandatory scroll-smooth px-1"
+          className="flex items-center justify-start md:justify-around lg:justify-between gap-5 sm:gap-6 md:gap-4 overflow-x-auto pb-2 scrollbar-none snap-x snap-mandatory scroll-smooth px-1"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {allItems.map((item, idx) => (
@@ -98,8 +97,8 @@ export function CollectionReel({ categories }: CollectionReelProps) {
               className="group flex-shrink-0 flex flex-col items-center text-center w-20 sm:w-24 md:w-28 snap-start focus:outline-none"
             >
               {/* Compact Gold-Halo Medallion */}
-              <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-[84px] md:h-[84px] rounded-full p-1 bg-surface-canvas/90 border border-gold/40 shadow-2xs group-hover:border-gold group-hover:shadow-[0_4px_16px_rgba(197,154,90,0.3)] group-hover:scale-105 transition-all duration-300 ease-out flex items-center justify-center">
-                <div className="relative w-full h-full rounded-full overflow-hidden p-1 bg-gradient-to-br from-white via-[#FCF3F5] to-[#F5E3E6]">
+              <div className="relative w-18 h-18 sm:w-20 sm:h-20 md:w-[88px] md:h-[88px] rounded-full p-1 bg-surface-canvas/90 border border-gold/40 shadow-2xs group-hover:border-gold group-hover:shadow-[0_6px_20px_rgba(197,154,90,0.35)] group-hover:scale-105 transition-all duration-300 ease-out flex items-center justify-center">
+                <div className="relative w-full h-full rounded-full overflow-hidden p-1.5 bg-gradient-to-br from-white via-[#FCF3F5] to-[#F5E3E6]">
                   <img
                     src={item.image}
                     alt={item.name}
@@ -110,14 +109,14 @@ export function CollectionReel({ categories }: CollectionReelProps) {
               </div>
 
               {/* Title */}
-              <span className="mt-2 text-[11px] sm:text-xs font-semibold text-text-main group-hover:text-primary transition-colors line-clamp-1 leading-tight">
+              <span className="mt-2 text-xs sm:text-sm font-semibold text-text-main group-hover:text-primary transition-colors line-clamp-1 leading-tight">
                 {item.name}
               </span>
 
               {/* Design Count */}
               {item.count > 0 && (
-                <span className="text-[10px] text-text-muted mt-0.5 leading-none">
-                  {item.count} {item.count === 1 ? 'item' : 'items'}
+                <span className="text-[11px] text-text-muted mt-0.5 leading-none">
+                  {item.count} {item.count === 1 ? 'design' : 'designs'}
                 </span>
               )}
             </Link>
