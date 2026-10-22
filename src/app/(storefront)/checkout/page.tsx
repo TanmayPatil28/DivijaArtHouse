@@ -29,44 +29,7 @@ import { formatINR } from '@/lib/utils';
 import { createOrder } from '@/actions/checkout';
 import { verifyPayment } from '@/actions/payment';
 
-const INDIAN_STATES = [
-  'Andhra Pradesh',
-  'Arunachal Pradesh',
-  'Assam',
-  'Bihar',
-  'Chhattisgarh',
-  'Goa',
-  'Gujarat',
-  'Haryana',
-  'Himachal Pradesh',
-  'Jharkhand',
-  'Karnataka',
-  'Kerala',
-  'Madhya Pradesh',
-  'Maharashtra',
-  'Manipur',
-  'Meghalaya',
-  'Mizoram',
-  'Nagaland',
-  'Odisha',
-  'Punjab',
-  'Rajasthan',
-  'Sikkim',
-  'Tamil Nadu',
-  'Telangana',
-  'Tripura',
-  'Uttar Pradesh',
-  'Uttarakhand',
-  'West Bengal',
-  'Andaman and Nicobar Islands',
-  'Chandigarh',
-  'Dadra and Nagar Haveli and Daman and Diu',
-  'Delhi',
-  'Jammu and Kashmir',
-  'Ladakh',
-  'Lakshadweep',
-  'Puducherry',
-];
+import { StateSelector, getStateFromPincode } from '@/components/checkout/StateSelector';
 
 interface FormErrors {
   customerName?: string;
@@ -101,6 +64,7 @@ export default function CheckoutPage() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [generalError, setGeneralError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [autoDetectedState, setAutoDetectedState] = useState<string | null>(null);
 
   // Client-side validation
   const validate = (): boolean => {
@@ -142,11 +106,42 @@ export default function CheckoutPage() {
     return Object.keys(newErrors).length === 0;
   };
 
+  const handleStateChange = (selectedState: string) => {
+    setForm((prev) => ({ ...prev, state: selectedState }));
+    setAutoDetectedState(null);
+    if (errors.state) {
+      setErrors((prev) => ({ ...prev, state: undefined }));
+    }
+    if (generalError) {
+      setGeneralError(null);
+    }
+  };
+
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+    setForm((prev) => {
+      const next = { ...prev, [name]: value };
+
+      // Smart PIN code auto-fill for Indian postal circles
+      if (name === 'pincode') {
+        const cleanPin = value.replace(/\D/g, '');
+        if (cleanPin.length === 6) {
+          const detected = getStateFromPincode(cleanPin);
+          if (detected) {
+            next.state = detected;
+            setAutoDetectedState(detected);
+            if (errors.state) {
+              setErrors((errs) => ({ ...errs, state: undefined }));
+            }
+          }
+        }
+      }
+
+      return next;
+    });
+
     if (errors[name as keyof FormErrors]) {
       setErrors((prev) => ({ ...prev, [name]: undefined }));
     }
@@ -651,29 +646,26 @@ export default function CheckoutPage() {
 
                 {/* State */}
                 <div className="space-y-1.5">
-                  <label
-                    htmlFor="state"
-                    className="block text-xs font-semibold text-text-main"
-                  >
-                    State / UT <span className="text-primary">*</span>
-                  </label>
-                  <select
+                  <div className="flex items-center justify-between">
+                    <label
+                      htmlFor="state-trigger"
+                      className="block text-xs font-semibold text-text-main"
+                    >
+                      State / UT <span className="text-primary">*</span>
+                    </label>
+                    {autoDetectedState && autoDetectedState === form.state && (
+                      <span className="text-[10px] font-medium text-emerald-800 bg-emerald-50 border border-emerald-200/70 px-2 py-0.5 rounded-full flex items-center gap-1 shadow-xs animate-in fade-in duration-200">
+                        <Sparkles className="w-2.5 h-2.5 text-gold shrink-0" /> Auto-matched
+                      </span>
+                    )}
+                  </div>
+                  <StateSelector
+                    value={form.state}
+                    onChange={handleStateChange}
+                    error={errors.state}
                     id="state"
                     name="state"
-                    value={form.state}
-                    onChange={handleInputChange}
-                    className={`w-full px-4 py-2.5 rounded-xl border text-sm text-text-main bg-white focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold transition-all ${
-                      errors.state
-                        ? 'border-red-400 bg-red-50/20'
-                        : 'border-border-subtle hover:border-gold/40'
-                    }`}
-                  >
-                    {INDIAN_STATES.map((st) => (
-                      <option key={st} value={st}>
-                        {st}
-                      </option>
-                    ))}
-                  </select>
+                  />
                   {errors.state && (
                     <p className="text-xs text-red-600 font-medium">
                       {errors.state}
