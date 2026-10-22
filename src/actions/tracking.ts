@@ -74,20 +74,21 @@ function calculateDeliveryEstimate(createdAt: Date, orderStatus: OrderStatus): s
 }
 
 /**
- * Maps database OrderStatus to the 4-step tracking stepper index (1 to 4)
+ * Maps database OrderStatus to the 5-step tracking stepper index (1 to 5)
  */
 function mapStatusToStep(status: OrderStatus): number {
   switch (status) {
     case 'PENDING':
     case 'PENDING_COD':
-    case 'CONFIRMED':
       return 1;
-    case 'PROCESSING':
+    case 'CONFIRMED':
       return 2;
-    case 'SHIPPED':
+    case 'PROCESSING':
       return 3;
-    case 'DELIVERED':
+    case 'SHIPPED':
       return 4;
+    case 'DELIVERED':
+      return 5;
     case 'CANCELLED':
       return 0;
     default:
@@ -105,6 +106,49 @@ export async function trackOrder(rawOrderNumber: string): Promise<TrackOrderResu
     return {
       success: false,
       error: 'Please enter a valid order number (e.g. DAH-2026-123456).',
+    };
+  }
+
+  // Quick demonstration sample for prospective buyers and testing
+  if (normalized === 'DAH-SAMPLE' || normalized === 'SAMPLE') {
+    const sampleDate = new Date();
+    sampleDate.setDate(sampleDate.getDate() - 2);
+
+    const sampleOrder: SanitizedOrderTracking = {
+      orderNumber: 'DAH-SAMPLE',
+      createdAt: sampleDate.toISOString(),
+      orderStatus: 'SHIPPED',
+      paymentStatus: 'PAID',
+      paymentMethod: 'RAZORPAY',
+      shippingCity: 'Bengaluru',
+      shippingState: 'Karnataka',
+      trackingCourier: 'BlueDart Express',
+      trackingNumber: 'BD-849201938IN',
+      estimatedDelivery: 'Oct 25 – Oct 27',
+      subtotal: 349900,
+      shippingFee: 0,
+      totalAmount: 349900,
+      itemCount: 1,
+      items: [
+        {
+          id: 'sample-item-1',
+          productName: 'The Royal Sovereign 24-Stem Jumbo Bouquet',
+          productSlug: 'royal-sovereign-24-stem-jumbo-bouquet',
+          variantName: 'Velvet Wine & Gold Ribbon Edition',
+          unitPrice: 349900,
+          quantity: 1,
+          lineSubtotal: 349900,
+          image: '/images/products/royal-sovereign-jumbo-1.svg',
+          personalizationText: 'Handcrafted with love for our anniversary',
+        },
+      ],
+      currentStep: 4,
+      isCancelled: false,
+    };
+
+    return {
+      success: true,
+      order: sampleOrder,
     };
   }
 
