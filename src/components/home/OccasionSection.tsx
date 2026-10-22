@@ -59,17 +59,20 @@ export function OccasionSection() {
   return (
     <section
       aria-label="Shop by Occasion"
-      className="py-12 md:py-20 bg-canvas border-b border-border-subtle"
+      className="py-16 md:py-24 bg-white border-b border-gold/30 relative overflow-hidden shadow-[0_4px_24px_-10px_rgba(46,23,21,0.06)]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
-          <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-primary mb-2">
-            <Sparkles className="w-3.5 h-3.5 text-gold" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-canvas border border-gold/40 text-primary text-xs font-semibold uppercase tracking-widest shadow-2xs mb-2.5 backdrop-blur-sm">
+            <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
             <span>FOR THE MOMENTS THAT MATTER</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-text-main">
-            What are we celebrating?
+            What are we{' '}
+            <span className="font-serif italic font-normal text-primary">
+              celebrating?
+            </span>
           </h2>
           <p className="text-sm sm:text-base text-text-muted mt-2 leading-relaxed">
             A gift doesn&apos;t have to be grand to mean something. Sometimes, it&apos;s the thought behind it that stays with us.
@@ -84,7 +87,7 @@ export function OccasionSection() {
               <Link
                 key={idx}
                 href={occasion.href}
-                className="group relative p-6 rounded-2xl bg-white border border-border-subtle transition-all duration-300 hover:border-gold/60 hover:shadow-gold-soft hover:-translate-y-1 flex flex-col justify-between"
+                className="group relative p-6 rounded-2xl bg-surface-canvas/70 border border-gold/25 transition-all duration-300 hover:border-gold hover:bg-white hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
               >
                 <div>
                   {/* Unified Signature Medallion */}
