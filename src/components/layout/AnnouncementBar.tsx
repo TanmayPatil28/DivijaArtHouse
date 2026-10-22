@@ -35,11 +35,11 @@ export function AnnouncementBar({ messages = DEFAULT_MESSAGES }: AnnouncementBar
   const renderIcon = (type?: string) => {
     switch (type) {
       case 'sparkles':
-        return <Sparkles className="w-3.5 h-3.5 text-soft-pink inline-block mr-1.5 flex-shrink-0" />;
+        return <Sparkles className="w-3.5 h-3.5 text-gold inline-block mr-1.5 flex-shrink-0" />;
       case 'gift':
-        return <Gift className="w-3.5 h-3.5 text-soft-pink inline-block mr-1.5 flex-shrink-0" />;
+        return <Gift className="w-3.5 h-3.5 text-gold inline-block mr-1.5 flex-shrink-0" />;
       case 'truck':
-        return <Truck className="w-3.5 h-3.5 text-soft-pink inline-block mr-1.5 flex-shrink-0" />;
+        return <Truck className="w-3.5 h-3.5 text-gold inline-block mr-1.5 flex-shrink-0" />;
       default:
         return null;
     }
@@ -48,7 +48,7 @@ export function AnnouncementBar({ messages = DEFAULT_MESSAGES }: AnnouncementBar
   return (
     <aside
       aria-label="Announcements"
-      className="relative z-50 w-full overflow-hidden bg-primary text-white py-2 text-xs font-medium tracking-wide shadow-inner select-none"
+      className="relative z-50 w-full overflow-hidden bg-primary text-white py-2.5 text-xs font-medium tracking-wide border-b border-[#C59A5A]/35 shadow-sm select-none"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={() => setIsPaused(true)}
@@ -80,7 +80,7 @@ export function AnnouncementBar({ messages = DEFAULT_MESSAGES }: AnnouncementBar
               ) : (
                 <span>{item.text}</span>
               )}
-              <span className="text-blush/60 mx-2 select-none" aria-hidden="true">
+              <span className="text-gold/70 mx-2 select-none text-[11px]" aria-hidden="true">
                 ✦
               </span>
             </div>

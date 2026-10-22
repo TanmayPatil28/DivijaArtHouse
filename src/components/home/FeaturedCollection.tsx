@@ -23,21 +23,21 @@ export function FeaturedCollection() {
               </div>
 
               {/* Artisan Seal Badge */}
-              <div className="absolute top-4 left-4 sm:top-6 sm:left-6 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-border-subtle shadow-sm flex items-center gap-1.5 text-xs font-semibold text-text-main">
-                <Award className="w-4 h-4 text-primary" />
+              <div className="absolute top-4 left-4 sm:top-6 sm:left-6 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-gold/40 shadow-sm flex items-center gap-1.5 text-xs font-semibold text-text-main">
+                <Award className="w-4 h-4 text-gold" />
                 <span>Master Artisan Series</span>
               </div>
 
               {/* Stem Count Pill */}
-              <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 px-3 py-1 rounded-full bg-primary text-white text-xs font-bold shadow-md">
+              <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 px-3.5 py-1.5 rounded-full bg-primary text-white text-xs font-bold border border-gold/40 shadow-md">
                 24 Everlasting Stems
               </div>
             </div>
 
             {/* Editorial Content Column */}
             <div className="lg:col-span-6 p-6 sm:p-10 lg:p-12 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blush-soft text-primary text-xs font-semibold uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider">
+                <Sparkles className="w-3.5 h-3.5 text-gold" />
                 <span>MADE FOR THE BIG MOMENTS</span>
               </div>
 
@@ -69,13 +69,13 @@ export function FeaturedCollection() {
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <Award className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <Award className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
                   <span className="text-xs text-text-main">
                     A keepsake presentation box, where included with the product.
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <Sparkles className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <Sparkles className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
                   <span className="text-xs text-text-main">
                     An artisan certificate, where included with the product.
                   </span>
@@ -93,7 +93,7 @@ export function FeaturedCollection() {
                 </Link>
                 <Link
                   href="/collections/bouquets"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-surface-warm border border-border-subtle text-text-main hover:text-primary text-sm font-semibold transition-colors"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-surface-warm border border-border-subtle text-text-main hover:text-primary text-sm font-semibold transition-colors shadow-xs hover:border-gold/40"
                 >
                   <span>Find Your Perfect Bouquet</span>
                 </Link>

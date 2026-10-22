@@ -13,8 +13,8 @@ export function Hero() {
           {/* Left Column: Editorial Copy & CTAs */}
           <div className="lg:col-span-7 text-center lg:text-left space-y-6">
             {/* Brand Direction Eyebrow */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blush-soft border border-blush text-primary text-xs font-semibold uppercase tracking-wider shadow-sm">
-              <Sparkles className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-gold/40 text-primary text-xs font-semibold uppercase tracking-wider shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-gold" />
               <span>HANDCRAFTED CROCHET FLORALS</span>
             </div>
 
@@ -49,7 +49,7 @@ export function Hero() {
 
               <Link
                 href="/about"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white hover:bg-surface-warm border border-border-subtle text-text-main hover:text-primary text-sm font-semibold tracking-wide transition-all duration-200 shadow-sm hover:border-blush active:scale-[0.98]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white hover:bg-surface-warm border border-border-subtle text-text-main hover:text-primary text-sm font-semibold tracking-wide transition-all duration-200 shadow-sm hover:border-gold/40 active:scale-[0.98]"
               >
                 <span>Explore Our Story</span>
               </Link>
@@ -77,14 +77,14 @@ export function Hero() {
               </div>
 
               {/* Floating Badge 1: Artisan Note */}
-              <div className="absolute top-4 left-4 sm:top-6 sm:left-6 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full border border-border-subtle shadow-sm flex items-center gap-1.5 text-[11px] font-medium text-text-main">
+              <div className="absolute top-4 left-4 sm:top-6 sm:left-6 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-gold/40 shadow-sm flex items-center gap-1.5 text-[11px] font-medium text-text-main">
                 <Heart className="w-3.5 h-3.5 text-primary fill-primary" />
                 <span>Pure Cotton Yarn</span>
               </div>
 
               {/* Floating Badge 2: Everlasting Guarantee */}
-              <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-border-subtle shadow-sm flex items-center gap-1.5 text-[11px] font-medium text-primary">
-                <Sparkles className="w-3.5 h-3.5" />
+              <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-gold/40 shadow-sm flex items-center gap-1.5 text-[11px] font-medium text-primary">
+                <Sparkles className="w-3.5 h-3.5 text-gold" />
                 <span className="font-semibold">Lasts a Lifetime</span>
               </div>
             </div>

@@ -64,7 +64,7 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
   const isSvg = mainImage.endsWith('.svg');
 
   return (
-    <div className="group relative flex flex-col bg-white rounded-2xl border border-border-subtle overflow-hidden hover:shadow-lg hover:border-blush transition-all duration-300">
+    <div className="group relative flex flex-col bg-white rounded-2xl border border-border-subtle overflow-hidden hover:shadow-xl hover:border-gold/50 transition-all duration-300">
       {/* Product Image Area */}
       <Link
         href={`/products/${product.slug}`}
@@ -92,7 +92,7 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
 
         {/* Discount Badge */}
         {discountPercent > 0 && (
-          <span className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-primary text-white shadow-sm">
+          <span className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-primary text-white border border-gold/40 shadow-sm">
             {discountPercent}% OFF
           </span>
         )}
@@ -103,8 +103,8 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
           onClick={handleWishlistToggle}
           className={`absolute top-2.5 right-2.5 p-2 rounded-full backdrop-blur-md transition-all shadow-sm ${
             wishlisted
-              ? 'bg-primary text-white'
-              : 'bg-white/90 text-text-muted hover:text-primary hover:bg-white'
+              ? 'bg-primary text-white border border-gold/40'
+              : 'bg-white/90 text-text-muted hover:text-primary hover:bg-white border border-border-subtle'
           }`}
           aria-label={
             wishlisted
@@ -155,9 +155,9 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
             type="button"
             onClick={handleQuickAdd}
             disabled={product.stockQuantity <= 0}
-            className={`w-full py-2 px-3 rounded-full text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1.5 transition-all shadow-sm ${
+            className={`w-full py-2.5 px-3 rounded-full text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1.5 transition-all shadow-sm ${
               justAdded
-                ? 'bg-green-600 text-white'
+                ? 'bg-[#386B3E] text-white'
                 : product.stockQuantity <= 0
                 ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
                 : 'bg-surface-warm hover:bg-primary text-text-main hover:text-white border border-border-subtle hover:border-primary active:scale-[0.98]'
