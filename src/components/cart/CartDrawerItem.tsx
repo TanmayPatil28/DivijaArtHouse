@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Trash2, Gift } from 'lucide-react';
+import { Trash2, Gift, PenLine } from 'lucide-react';
 import type { CartItem } from '@/types';
 import { formatINR } from '@/lib/utils';
 import { useCart } from '@/context/CartContext';
@@ -25,12 +25,12 @@ export function CartDrawerItem({ item, onItemClick }: CartDrawerItemProps) {
   const isAtMax = maxStock !== undefined && maxStock !== null && item.quantity >= maxStock;
 
   return (
-    <div className="flex gap-3.5 py-4 border-b border-border-subtle group">
-      {/* Thumbnail */}
+    <div className="flex gap-3.5 py-4 border-b border-gold/15 group">
+      {/* Thumbnail with Luxury Contour Frame */}
       <Link
         href={`/products/${item.slug}`}
         onClick={onItemClick}
-        className="relative w-20 h-20 sm:w-22 sm:h-22 rounded-xl bg-surface-warm border border-border-subtle overflow-hidden flex-shrink-0"
+        className="relative w-20 h-20 sm:w-22 sm:h-22 rounded-2xl bg-gradient-to-b from-[#FAF6F0] to-[#F5EFE6] border border-gold/25 ring-1 ring-gold/15 overflow-hidden flex-shrink-0 shadow-xs"
       >
         <Image
           src={imgSrc}
@@ -38,12 +38,12 @@ export function CartDrawerItem({ item, onItemClick }: CartDrawerItemProps) {
           fill
           unoptimized={typeof imgSrc === 'string' && imgSrc.endsWith('.svg')}
           sizes="88px"
-          className="object-contain p-1.5 transition-transform duration-300 group-hover:scale-105"
+          className="object-contain p-2 transition-transform duration-500 group-hover:scale-108"
           onError={() => setImgSrc(FALLBACK_IMAGE)}
         />
       </Link>
 
-      {/* Details */}
+      {/* Details & Actions */}
       <div className="flex-1 flex flex-col justify-between min-w-0">
         <div>
           <div className="flex items-start justify-between gap-2">
@@ -60,7 +60,7 @@ export function CartDrawerItem({ item, onItemClick }: CartDrawerItemProps) {
             <button
               type="button"
               onClick={() => removeItem(item.id)}
-              className="text-text-muted hover:text-primary p-1 -mr-1 rounded transition-colors"
+              className="text-text-muted hover:text-primary hover:bg-primary/5 p-1 -mr-1 rounded-lg transition-colors cursor-pointer"
               aria-label={`Remove ${item.name} from bag`}
               title="Remove item"
             >
@@ -70,18 +70,18 @@ export function CartDrawerItem({ item, onItemClick }: CartDrawerItemProps) {
 
           {/* Variant Pill */}
           {item.variantName && (
-            <div className="mt-0.5">
-              <span className="inline-block px-2 py-0.5 rounded-full text-[11px] font-medium bg-surface-warm text-text-muted border border-border-subtle">
+            <div className="mt-1">
+              <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-[#FAF6F1] text-text-muted border border-gold/25">
                 Style: {item.variantName}
               </span>
             </div>
           )}
 
-          {/* Personalization Note Preview */}
+          {/* Complimentary Handwritten Gift Note Preview */}
           {item.personalization && (
-            <div className="mt-1 flex items-start gap-1 text-[11px] text-text-muted bg-blush-soft/50 rounded-md px-2 py-1 border border-blush/60">
-              <Gift className="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" />
-              <span className="line-clamp-1 italic">
+            <div className="mt-1.5 flex items-start gap-1.5 text-[11px] text-text-muted bg-[#FCFAF7] rounded-xl px-2.5 py-1.5 border border-gold/30 shadow-2xs">
+              <PenLine className="w-3.5 h-3.5 text-gold flex-shrink-0 mt-0.5" />
+              <span className="line-clamp-1 italic text-[#6B5653]">
                 Note: &ldquo;{item.personalization}&rdquo;
               </span>
             </div>
@@ -89,26 +89,26 @@ export function CartDrawerItem({ item, onItemClick }: CartDrawerItemProps) {
         </div>
 
         {/* Price and Stepper Row */}
-        <div className="flex items-center justify-between gap-2 pt-2">
+        <div className="flex items-center justify-between gap-2 pt-2.5">
           {/* Quantity Stepper */}
-          <div className="flex items-center border border-border-subtle rounded-lg bg-white overflow-hidden shadow-2xs h-8">
+          <div className="flex items-center border border-gold/30 rounded-xl bg-white overflow-hidden shadow-2xs h-8">
             <button
               type="button"
               onClick={() => updateQuantity(item.id, item.quantity - 1)}
               disabled={isAtMin}
-              className="w-7 h-full flex items-center justify-center text-text-main hover:bg-surface-warm disabled:opacity-30 disabled:cursor-not-allowed transition-colors font-bold text-sm select-none"
+              className="w-7 h-full flex items-center justify-center text-text-main hover:bg-[#FAF6F1] disabled:opacity-30 disabled:cursor-not-allowed transition-colors font-bold text-sm select-none"
               aria-label="Decrease quantity"
             >
               −
             </button>
-            <span className="w-8 text-center text-xs font-semibold select-none">
+            <span className="w-8 text-center text-xs font-semibold select-none text-text-main">
               {item.quantity}
             </span>
             <button
               type="button"
               onClick={() => updateQuantity(item.id, item.quantity + 1)}
               disabled={isAtMax}
-              className="w-7 h-full flex items-center justify-center text-text-main hover:bg-surface-warm disabled:opacity-30 disabled:cursor-not-allowed transition-colors font-bold text-sm select-none"
+              className="w-7 h-full flex items-center justify-center text-text-main hover:bg-[#FAF6F1] disabled:opacity-30 disabled:cursor-not-allowed transition-colors font-bold text-sm select-none"
               aria-label="Increase quantity"
               title={isAtMax ? 'Maximum available stock reached' : undefined}
             >
@@ -118,11 +118,11 @@ export function CartDrawerItem({ item, onItemClick }: CartDrawerItemProps) {
 
           {/* Pricing */}
           <div className="text-right">
-            <div className="font-semibold text-sm text-text-main">
+            <div className="font-serif font-bold text-sm sm:text-base text-primary tracking-tight">
               {formatINR(lineTotal)}
             </div>
             {item.quantity > 1 && (
-              <div className="text-[10px] text-text-muted">
+              <div className="text-[10px] text-text-muted font-sans">
                 {formatINR(item.unitPrice)} each
               </div>
             )}

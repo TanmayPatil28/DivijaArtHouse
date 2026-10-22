@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Truck, CheckCircle2 } from 'lucide-react';
+import { Truck, Sparkles, CheckCircle2 } from 'lucide-react';
 import { formatINR } from '@/lib/utils';
 import { FREE_SHIPPING_THRESHOLD } from '@/context/CartContext';
 
@@ -21,33 +21,33 @@ export function FreeShippingBar({
   );
 
   return (
-    <div className="w-full bg-surface-warm/90 border border-border-subtle rounded-xl p-3 sm:p-3.5 space-y-2">
+    <div className="w-full bg-[#FAF6F1] border border-gold/30 rounded-2xl p-3 sm:p-3.5 shadow-2xs space-y-2.5">
       <div className="flex items-center justify-between text-xs font-medium">
         {isQualified ? (
-          <span className="flex items-center gap-1.5 text-green-700 font-semibold">
-            <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0" />
-            <span>🎉 You have qualified for FREE delivery!</span>
+          <span className="flex items-center gap-1.5 text-emerald-800 font-semibold text-xs">
+            <Sparkles className="w-4 h-4 text-gold flex-shrink-0" />
+            <span>Complimentary Pan-India Delivery Unlocked!</span>
           </span>
         ) : (
-          <span className="flex items-center gap-1.5 text-text-main">
-            <Truck className="w-4 h-4 text-primary flex-shrink-0" />
+          <span className="flex items-center gap-1.5 text-text-main text-xs">
+            <Truck className="w-4 h-4 text-gold flex-shrink-0" />
             <span>
               Add{' '}
               <strong className="text-primary font-bold">
                 {formatINR(remainingForFreeShipping)}
               </strong>{' '}
-              more for FREE shipping!
+              more to unlock Complimentary Shipping
             </span>
           </span>
         )}
-        <span className="text-[11px] text-text-muted font-mono font-medium">
+        <span className="text-[11px] font-semibold text-primary px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20">
           {progressPercent}%
         </span>
       </div>
 
-      {/* Progress Track */}
+      {/* Luxury Progress Track with Gold Accent */}
       <div
-        className="w-full h-2 bg-gray-200/80 rounded-full overflow-hidden"
+        className="w-full h-2 bg-black/5 rounded-full overflow-hidden border border-black/5"
         role="progressbar"
         aria-valuenow={progressPercent}
         aria-valuemin={0}
@@ -55,8 +55,10 @@ export function FreeShippingBar({
         aria-label="Free shipping qualification progress"
       >
         <div
-          className={`h-full transition-all duration-500 ease-out rounded-full ${
-            isQualified ? 'bg-green-600' : 'bg-primary'
+          className={`h-full transition-all duration-600 ease-out rounded-full ${
+            isQualified
+              ? 'bg-gradient-to-r from-emerald-600 to-teal-500 shadow-sm'
+              : 'bg-gradient-to-r from-primary via-[#8A2435] to-gold shadow-sm'
           }`}
           style={{ width: `${progressPercent}%` }}
         />
