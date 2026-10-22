@@ -118,7 +118,7 @@ export function CartDrawer() {
                 Bag
               </span>
             </h2>
-            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-gold/15 text-[#8A5A20] border border-gold/30">
+            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold font-sans not-italic tabular-nums bg-gold/15 text-[#8A5A20] border border-gold/30">
               {summary.itemCount} {summary.itemCount === 1 ? 'item' : 'items'}
             </span>
           </div>
@@ -194,7 +194,7 @@ export function CartDrawer() {
             <div className="space-y-1.5 text-xs sm:text-sm">
               <div className="flex items-center justify-between text-text-muted">
                 <span>Subtotal</span>
-                <span className="font-medium text-text-main">
+                <span className="font-sans not-italic font-semibold tabular-nums text-text-main">
                   {formatINR(summary.subtotal)}
                 </span>
               </div>
@@ -205,7 +205,7 @@ export function CartDrawer() {
                   className={
                     summary.shippingFee === 0
                       ? 'text-emerald-700 font-semibold uppercase tracking-wider'
-                      : 'font-medium text-text-main'
+                      : 'font-sans not-italic font-semibold tabular-nums text-text-main'
                   }
                 >
                   {summary.shippingFee === 0
@@ -223,7 +223,7 @@ export function CartDrawer() {
                     Inclusive of all taxes
                   </p>
                 </div>
-                <span className="font-serif font-bold text-2xl text-primary tracking-tight">
+                <span className="font-sans not-italic font-bold tabular-nums text-2xl text-primary tracking-tight">
                   {formatINR(summary.totalAmount)}
                 </span>
               </div>

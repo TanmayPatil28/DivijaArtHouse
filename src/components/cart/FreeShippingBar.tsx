@@ -33,14 +33,14 @@ export function FreeShippingBar({
             <Truck className="w-4 h-4 text-gold flex-shrink-0" />
             <span>
               Add{' '}
-              <strong className="text-primary font-bold">
+              <strong className="text-primary font-bold font-sans not-italic tabular-nums">
                 {formatINR(remainingForFreeShipping)}
               </strong>{' '}
               more to unlock Complimentary Shipping
             </span>
           </span>
         )}
-        <span className="text-[11px] font-semibold text-primary px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20">
+        <span className="text-[11px] font-semibold font-sans not-italic tabular-nums text-primary px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20">
           {progressPercent}%
         </span>
       </div>

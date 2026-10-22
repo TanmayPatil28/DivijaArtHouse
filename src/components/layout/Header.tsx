@@ -119,7 +119,7 @@ export function Header() {
               >
                 <Heart className="w-5 h-5" />
                 {activeWishlistCount > 0 && (
-                  <span className="absolute top-1 right-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 text-[10px] font-bold text-white bg-primary rounded-full shadow-sm">
+                  <span className="absolute top-1 right-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 text-[10px] font-bold font-sans not-italic tabular-nums text-white bg-primary rounded-full shadow-sm">
                     {activeWishlistCount}
                   </span>
                 )}
@@ -143,7 +143,7 @@ export function Header() {
               >
                 <ShoppingBag className="w-5 h-5" />
                 {activeCartCount > 0 && (
-                  <span className="absolute top-1 right-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 text-[10px] font-bold text-white bg-primary rounded-full shadow-sm animate-scale-in">
+                  <span className="absolute top-1 right-1 flex items-center justify-center min-w-[18px] h-[18px] px-1 text-[10px] font-bold font-sans not-italic tabular-nums text-white bg-primary rounded-full shadow-sm animate-scale-in">
                     {activeCartCount}
                   </span>
                 )}

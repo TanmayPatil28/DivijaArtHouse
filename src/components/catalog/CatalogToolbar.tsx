@@ -58,7 +58,7 @@ export function CatalogToolbar({
       <div className="flex items-center justify-between md:justify-start gap-3">
         <p className="text-sm text-text-muted">
           Showing{' '}
-          <span className="font-semibold text-text-main">{totalCount}</span>{' '}
+          <span className="font-semibold text-text-main font-sans not-italic tabular-nums">{totalCount}</span>{' '}
           {totalCount === 1 ? 'creation' : 'creations'}
         </p>
 
@@ -72,7 +72,7 @@ export function CatalogToolbar({
           <SlidersHorizontal className="w-3.5 h-3.5 text-primary" />
           <span>Filters</span>
           {activeFilterCount > 0 && (
-            <span className="ml-1 w-5 h-5 rounded-full bg-primary text-white text-[10px] flex items-center justify-center font-bold">
+            <span className="ml-1 w-5 h-5 rounded-full bg-primary text-white text-[10px] flex items-center justify-center font-bold font-sans not-italic tabular-nums">
               {activeFilterCount}
             </span>
           )}

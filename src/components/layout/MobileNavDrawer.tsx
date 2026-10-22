@@ -189,7 +189,7 @@ export function MobileNavDrawer({
               <span>My Wishlist</span>
             </div>
             {wishlistCount > 0 && (
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-primary text-white">
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-bold font-sans not-italic tabular-nums bg-primary text-white">
                 {wishlistCount}
               </span>
             )}
@@ -224,7 +224,7 @@ export function MobileNavDrawer({
               <span>Shopping Bag</span>
             </div>
             {cartCount > 0 && (
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-primary text-white">
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-bold font-sans not-italic tabular-nums bg-primary text-white">
                 {cartCount}
               </span>
             )}

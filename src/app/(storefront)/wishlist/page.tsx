@@ -195,7 +195,7 @@ export default function WishlistPage() {
 
                     {/* Discount Badge */}
                     {discountPercent > 0 && (
-                      <span className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-primary text-white shadow-sm">
+                      <span className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-primary text-white shadow-sm font-sans not-italic tabular-nums">
                         {discountPercent}% OFF
                       </span>
                     )}
@@ -235,12 +235,12 @@ export default function WishlistPage() {
                       {/* Price & Stock */}
                       <div className="flex items-baseline justify-between gap-2 mb-3">
                         <div className="flex items-baseline gap-2">
-                          <span className="font-bold text-base sm:text-lg text-primary">
+                          <span className="font-bold text-base sm:text-lg text-primary font-sans not-italic tabular-nums">
                             {formatINR(product.price)}
                           </span>
                           {product.compareAtPrice &&
                             product.compareAtPrice > product.price && (
-                              <span className="text-xs text-text-muted line-through">
+                              <span className="text-xs text-text-muted line-through font-sans not-italic tabular-nums">
                                 {formatINR(product.compareAtPrice)}
                               </span>
                             )}
