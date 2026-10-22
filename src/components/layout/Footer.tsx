@@ -205,6 +205,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/contact?subject=bespoke-corporate-gifting"
+                  className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
+                >
+                  Bespoke & Bulk Gifting
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/contact"
                   className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
                 >
@@ -298,117 +306,114 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Legal Policies Strip */}
-      <div className="border-t border-[#3A2220] bg-[#1F1110] py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center md:justify-between gap-3 text-xs text-gray-400">
-          <div className="flex flex-wrap items-center justify-center gap-y-1 gap-x-4">
-            <span className="text-[11px] uppercase tracking-wider text-gold/80 font-medium mr-1">
-              Policies:
-            </span>
-            <Link
-              href="/policies/privacy"
-              className="hover:text-gold transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <span className="text-gray-600">•</span>
-            <Link
-              href="/policies/terms"
-              className="hover:text-gold transition-colors"
-            >
-              Terms of Service
-            </Link>
-            <span className="text-gray-600">•</span>
-            <Link
-              href="/policies/shipping"
-              className="hover:text-gold transition-colors"
-            >
-              Shipping & Delivery Policy
-            </Link>
-            <span className="text-gray-600">•</span>
-            <Link
-              href="/policies/returns"
-              className="hover:text-gold transition-colors"
-            >
-              Cancellation & Refund Policy
-            </Link>
-          </div>
-
-          <div className="text-[11px] text-gray-400">
-            <span>Bespoke orders & corporate gifting welcome</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Payment Badges & Copyright Strip */}
-      <div className="border-t border-[#2E1817] bg-[#160B0A] py-5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-400 text-center md:text-left">
-            © {currentYear} Divija Art House. All rights reserved. Handcrafted with heart in Hadapsar, Pune.
-          </p>
-
-          {/* Payment Method Icons & Trust */}
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            <span className="text-[11px] text-gray-400 mr-1.5 flex items-center gap-1 font-medium">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-              100% Secure Checkout:
-            </span>
-
-            {/* Razorpay Badge */}
-            <div
-              className="h-6 w-20 relative bg-neutral-900 rounded px-1.5 flex items-center justify-center border border-neutral-800 shadow-sm overflow-hidden"
-              title="Razorpay Secure"
-            >
-              <Image
-                src="/images/badges/razorpay.svg"
-                alt="Razorpay"
-                fill
-                unoptimized
-                className="object-contain p-0.5"
-              />
+      {/* Single Consolidated Luxury Sub-Footer Bar */}
+      <div className="border-t border-gold/15 bg-[#160B0A] py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-5 text-center lg:text-left">
+            
+            {/* Left: Studio Copyright & Artisan Origin */}
+            <div className="text-xs text-gray-400 order-3 lg:order-1">
+              <span>© {currentYear} Divija Art House. All rights reserved. Handcrafted with heart in Hadapsar, Pune.</span>
             </div>
 
-            {/* UPI Badge */}
-            <div
-              className="h-6 w-14 relative bg-neutral-900 rounded px-1.5 flex items-center justify-center border border-neutral-800 shadow-sm overflow-hidden"
-              title="UPI (Google Pay, PhonePe, Paytm)"
+            {/* Center: Quiet Inline Legal Policies */}
+            <nav
+              aria-label="Legal & Policies"
+              className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-gray-400 order-1 lg:order-2"
             >
-              <Image
-                src="/images/badges/upi.svg"
-                alt="UPI"
-                fill
-                unoptimized
-                className="object-contain p-0.5"
-              />
+              <Link
+                href="/policies/privacy"
+                className="hover:text-gold transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <span className="text-gray-600 text-[10px]" aria-hidden="true">•</span>
+              <Link
+                href="/policies/terms"
+                className="hover:text-gold transition-colors"
+              >
+                Terms of Service
+              </Link>
+              <span className="text-gray-600 text-[10px]" aria-hidden="true">•</span>
+              <Link
+                href="/policies/shipping"
+                className="hover:text-gold transition-colors"
+              >
+                Shipping & Delivery
+              </Link>
+              <span className="text-gray-600 text-[10px]" aria-hidden="true">•</span>
+              <Link
+                href="/policies/returns"
+                className="hover:text-gold transition-colors"
+              >
+                Returns & Refunds
+              </Link>
+            </nav>
+
+            {/* Right: Refined Payment Trust Seals */}
+            <div className="flex flex-wrap items-center justify-center gap-2 order-2 lg:order-3">
+              <span className="text-[11px] text-gray-400 mr-1 flex items-center gap-1.5 font-medium">
+                <ShieldCheck className="w-3.5 h-3.5 text-gold" />
+                <span>100% Secure Checkout:</span>
+              </span>
+
+              {/* Razorpay Badge */}
+              <div
+                className="h-6 w-20 relative bg-neutral-900/90 rounded px-1.5 flex items-center justify-center border border-white/10 shadow-sm overflow-hidden"
+                title="Razorpay Secure"
+              >
+                <Image
+                  src="/images/badges/razorpay.svg"
+                  alt="Razorpay"
+                  fill
+                  unoptimized
+                  className="object-contain p-0.5"
+                />
+              </div>
+
+              {/* UPI Badge */}
+              <div
+                className="h-6 w-14 relative bg-neutral-900/90 rounded px-1.5 flex items-center justify-center border border-white/10 shadow-sm overflow-hidden"
+                title="UPI (Google Pay, PhonePe, Paytm)"
+              >
+                <Image
+                  src="/images/badges/upi.svg"
+                  alt="UPI"
+                  fill
+                  unoptimized
+                  className="object-contain p-0.5"
+                />
+              </div>
+
+              {/* COD Badge */}
+              <div
+                className="h-6 w-14 relative bg-neutral-900/90 rounded px-1.5 flex items-center justify-center border border-white/10 shadow-sm overflow-hidden"
+                title="Cash on Delivery Available"
+              >
+                <Image
+                  src="/images/badges/cod.svg"
+                  alt="Cash on Delivery"
+                  fill
+                  unoptimized
+                  className="object-contain p-0.5"
+                />
+              </div>
+
+              {/* Secure SSL Badge */}
+              <div
+                className="h-6 w-16 relative bg-neutral-900/90 rounded px-1.5 flex items-center justify-center border border-white/10 shadow-sm overflow-hidden"
+                title="256-Bit SSL Encrypted"
+              >
+                <Image
+                  src="/images/badges/secure.svg"
+                  alt="256-Bit SSL Encrypted"
+                  fill
+                  unoptimized
+                  className="object-contain p-0.5"
+                />
+              </div>
             </div>
 
-            {/* COD Badge */}
-            <div
-              className="h-6 w-14 relative bg-neutral-900 rounded px-1.5 flex items-center justify-center border border-neutral-800 shadow-sm overflow-hidden"
-              title="Cash on Delivery Available"
-            >
-              <Image
-                src="/images/badges/cod.svg"
-                alt="Cash on Delivery"
-                fill
-                unoptimized
-                className="object-contain p-0.5"
-              />
-            </div>
-
-            {/* Secure SSL Badge */}
-            <div
-              className="h-6 w-16 relative bg-neutral-900 rounded px-1.5 flex items-center justify-center border border-neutral-800 shadow-sm overflow-hidden"
-              title="256-Bit SSL Encrypted"
-            >
-              <Image
-                src="/images/badges/secure.svg"
-                alt="256-Bit SSL Encrypted"
-                fill
-                unoptimized
-                className="object-contain p-0.5"
-              />
-            </div>
           </div>
         </div>
       </div>
