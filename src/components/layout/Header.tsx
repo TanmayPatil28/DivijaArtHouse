@@ -55,15 +55,18 @@ export function Header() {
               </button>
             </div>
 
-            {/* Brand Wordmark */}
+            {/* Brand Wordmark with Visiting Card Heart Accent */}
             <div className="flex-shrink-0 flex items-center">
               <Link
                 href="/"
                 className="group flex flex-col items-center md:items-start select-none"
               >
-                <span className="text-2xl sm:text-[26px] font-semibold tracking-tight text-text-main group-hover:text-primary transition-colors">
-                  Divija Art House
-                </span>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-2xl sm:text-[26px] font-semibold tracking-tight text-text-main group-hover:text-primary transition-colors">
+                    Divija Art House
+                  </span>
+                  <Heart className="w-4 h-4 text-primary fill-primary/80 transform group-hover:scale-110 transition-transform" />
+                </div>
                 <span className="hidden sm:block text-[10px] uppercase tracking-widest text-text-muted font-medium">
                   Handcrafted Floral Gifts
                 </span>

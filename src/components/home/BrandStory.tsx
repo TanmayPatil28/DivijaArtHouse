@@ -25,7 +25,7 @@ export function BrandStory() {
               </div>
 
               {/* Artisan Note Tag */}
-              <div className="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-border-subtle shadow-sm flex items-center gap-3">
+              <div className="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-gold/40 shadow-sm flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-blush-soft flex items-center justify-center flex-shrink-0 text-primary">
                   <Heart className="w-5 h-5 fill-primary" />
                 </div>
@@ -44,7 +44,7 @@ export function BrandStory() {
           {/* Text Narrative Side */}
           <div className="lg:col-span-7 order-1 lg:order-2 space-y-6">
             <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
-              <Sparkles className="w-3.5 h-3.5" />
+              <Sparkles className="w-3.5 h-3.5 text-gold" />
               <span>A LITTLE ABOUT US</span>
             </div>
 
@@ -70,26 +70,26 @@ export function BrandStory() {
               </p>
             </div>
 
-            <div className="pt-1 border-l-2 border-primary/40 pl-4 italic text-sm text-text-main font-medium">
+            <div className="pt-1 border-l-2 border-gold/70 pl-4 italic text-sm text-text-main font-medium">
               &ldquo;Little Blooms, Lasting Feelings.&rdquo; — DivijaArtHouse
             </div>
 
             {/* Ethos Checklist */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs sm:text-sm text-text-main">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#386B3E] flex-shrink-0" />
                 <span>Thoughtful by design — made to be kept</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#386B3E] flex-shrink-0" />
                 <span>Handmade character in every stitch</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#386B3E] flex-shrink-0" />
                 <span>Personal gifting & keepsake message cards</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#386B3E] flex-shrink-0" />
                 <span>No water needed — enjoyed again and again</span>
               </div>
             </div>
