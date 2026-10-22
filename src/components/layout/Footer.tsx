@@ -11,6 +11,8 @@ import {
   Instagram,
   Facebook,
   MessageCircle,
+  Phone,
+  MapPin,
 } from 'lucide-react';
 import { subscribeNewsletter } from '@/actions/newsletter';
 
@@ -53,20 +55,31 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Column 1: Brand Summary */}
           <div className="space-y-4">
-            <Link href="/" className="inline-block">
-              <span className="text-2xl font-semibold tracking-tight text-white hover:text-blush transition-colors">
-                DivijaArtHouse
-              </span>
+            <Link href="/" className="inline-block group">
+              <div className="flex items-center gap-1.5">
+                <span className="text-2xl font-semibold tracking-tight text-white group-hover:text-blush transition-colors">
+                  Divija Art House
+                </span>
+                <Heart className="w-4 h-4 text-primary fill-primary" />
+              </div>
             </Link>
-            <p className="text-xs font-medium text-blush">
+            <p className="text-xs font-medium text-gold">
               Little Blooms, Lasting Feelings.
             </p>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Thoughtful floral gifts, handcrafted with care. From little desk blooms to statement bouquets, discover pieces made to celebrate the people and moments that matter to you.
+              Thoughtful floral gifts, handcrafted with care. From cheerful desk blooms to statement bouquets, discover pieces made to celebrate the people and moments that matter.
             </p>
-            <div className="pt-2 text-xs text-gray-400 flex items-center gap-1.5">
-              <Heart className="w-4 h-4 text-primary fill-primary flex-shrink-0" />
-              <span>Handcrafted with care in India.</span>
+            <div className="pt-1 space-y-1.5 text-xs text-gray-400">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-3.5 h-3.5 text-gold flex-shrink-0" />
+                <span>Hadapsar, Pune, Maharashtra, India</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-gold flex-shrink-0" />
+                <a href="tel:+919209284423" className="hover:text-white transition-colors">
+                  +91 92092 84423
+                </a>
+              </div>
             </div>
           </div>
 
@@ -183,14 +196,6 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/contact#faq"
-                  className="hover:text-white transition-colors"
-                >
-                  Frequently Asked Questions
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/policies/privacy"
                   className="hover:text-white transition-colors"
                 >
@@ -226,7 +231,7 @@ export function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email address"
                   required
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-neutral-800 border border-neutral-700 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-blush pr-10"
+                  className="w-full px-3.5 py-2.5 rounded-lg bg-neutral-850 border border-neutral-700 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-gold pr-10"
                 />
                 <button
                   type="submit"
@@ -256,35 +261,26 @@ export function Footer() {
               </p>
               <div className="flex items-center gap-3">
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/divijaarthouse"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-gray-300 hover:text-white transition-colors"
-                  aria-label="DivijaArtHouse Instagram"
+                  className="p-2 rounded-lg bg-neutral-800 hover:bg-primary text-gray-300 hover:text-white transition-colors"
+                  aria-label="DivijaArtHouse Instagram (@divijaarthouse)"
                 >
                   <Instagram className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://wa.me"
+                  href="https://wa.me/919209284423"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-gray-300 hover:text-white transition-colors"
-                  aria-label="Contact via WhatsApp"
+                  className="p-2 rounded-lg bg-neutral-800 hover:bg-[#386B3E] text-gray-300 hover:text-white transition-colors"
+                  aria-label="Contact via WhatsApp (+91 92092 84423)"
                 >
                   <MessageCircle className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-gray-300 hover:text-white transition-colors"
-                  aria-label="DivijaArtHouse Facebook"
-                >
-                  <Facebook className="w-4 h-4" />
-                </a>
-                <a
                   href="mailto:care@divijaarthouse.com"
-                  className="p-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-gray-300 hover:text-white transition-colors"
+                  className="p-2 rounded-lg bg-neutral-800 hover:bg-primary text-gray-300 hover:text-white transition-colors"
                   aria-label="Email Customer Support"
                 >
                   <Mail className="w-4 h-4" />
@@ -296,10 +292,10 @@ export function Footer() {
       </div>
 
       {/* Bottom Payment Badges & Copyright Strip */}
-      <div className="border-t border-neutral-800 bg-neutral-950 py-6">
+      <div className="border-t border-neutral-800 bg-[#1A0E0D] py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-500 text-center md:text-left">
-            © {new Date().getFullYear()} DivijaArtHouse. All rights reserved. Handcrafted with care in India.
+            © {new Date().getFullYear()} DivijaArtHouse. All rights reserved. Handcrafted with care in Hadapsar, Pune.
           </p>
 
           {/* Payment method icons */}
