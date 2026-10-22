@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, type Transition } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -33,7 +33,7 @@ export function AppleCarousel({
   className, 
   slides = [], 
   autoPlay = true, 
-  autoPlayInterval = 8000, 
+  autoPlayInterval = 7000, 
   leftControls,
   rightControls,
   activeFeatureId = null,
@@ -45,8 +45,6 @@ export function AppleCarousel({
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [playKey, setPlayKey] = useState(0);
-
-  const appleSpring: Transition = { type: "spring", stiffness: 400, damping: 40, mass: 1 };
 
   const SLIDE_DURATION = autoPlayInterval;
 
@@ -96,17 +94,15 @@ export function AppleCarousel({
   if (!slides || slides.length === 0) return null;
 
   return (
-    <section className="relative w-full pb-6" aria-roledescription="carousel">
-      
-      <div className="relative w-full max-w-[1200px] mx-auto px-[max(1.5rem,calc((100vw-1200px)/2))] lg:px-0">
+    <section className="relative w-full" aria-roledescription="carousel">
+      <div className="relative w-full max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Unified Master Background Container */}
+        {/* Master Cinema Frame Container */}
         <div 
-          className="relative w-full rounded-[32px] overflow-hidden isolate shadow-2xl ring-1 ring-white/10 bg-[#222222]"
-          style={{ aspectRatio: '24/9', minHeight: '400px' }}
+          className="relative w-full rounded-2xl md:rounded-[28px] overflow-hidden isolate shadow-2xl ring-1 ring-gold/25 bg-[#201213] min-h-[460px] md:min-h-[440px] lg:aspect-[24/9]"
         >
-          {/* Static Gradient Overlay (Seamless background) */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-0 pointer-events-none" />
+          {/* Static Ambient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-0 pointer-events-none" />
 
           <AnimatePresence mode="wait">
             {activeFeatureId ? (
@@ -131,8 +127,8 @@ export function AppleCarousel({
               >
                 {/* Hardware-accelerated sliding track with drag physics */}
                 <motion.div 
-                  className="flex gap-[24px] cursor-grab active:cursor-grabbing relative h-full"
-                  animate={{ x: `calc(-${activeIndex * 100}% - ${activeIndex * 24}px)` }}
+                  className="flex gap-0 cursor-grab active:cursor-grabbing relative h-full w-full"
+                  animate={{ x: `-${activeIndex * 100}%` }}
                   transition={springTransition}
                   drag="x"
                   dragConstraints={{ left: 0, right: 0 }}
@@ -142,14 +138,9 @@ export function AppleCarousel({
                   {slides.map((slide, idx) => (
                     <div 
                       key={slide.id} 
-                      className="carousel-item relative shrink-0 w-full rounded-[32px] overflow-hidden group isolate bg-transparent"
-                      style={{
-                        // Match Apple's large cinematic aspect ratio
-                        aspectRatio: '24/9',
-                        minHeight: '400px'
-                      }}
+                      className="carousel-item relative shrink-0 w-full h-full rounded-2xl md:rounded-[28px] overflow-hidden group isolate bg-transparent min-h-[460px] md:min-h-[440px] lg:aspect-[24/9]"
                     >
-                      {/* Fluid gradient canvas or custom background colors if provided */}
+                      {/* Fluid gradient canvas if colors provided */}
                       {slide.colors && slide.colors.length > 0 ? (
                         <div className="absolute inset-0 z-0">
                           <FluidGradient colors={slide.colors} />
@@ -164,13 +155,10 @@ export function AppleCarousel({
                             alt={slide.imageAlt || "Slide image"}
                             fill
                             unoptimized={slide.imageUrl.endsWith('.svg')}
-                            sizes="(max-width: 1200px) 100vw, 1200px"
-                            className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                            sizes="(max-width: 1240px) 100vw, 1240px"
+                            className="object-cover object-center transition-transform duration-1000 group-hover:scale-105"
                             priority={idx === 0}
                           />
-                          {(slide.headline || slide.subheadline) && (
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20" />
-                          )}
                         </div>
                       )}
 
@@ -181,8 +169,8 @@ export function AppleCarousel({
                         </div>
                       )}
                       
-                      {/* Overlay Text */}
-                      {slide.headline && (
+                      {/* Fallback Overlay Text */}
+                      {!slide.content && slide.headline && (
                         <div 
                           className={cn(
                             "absolute z-20 max-w-[85%] md:max-w-[55%] pointer-events-none",
@@ -205,128 +193,105 @@ export function AppleCarousel({
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
-        
-        {/* ── Apple Style Floating Controls Dock ── */}
-        <div className="absolute bottom-4 left-4 right-4 md:bottom-[32px] md:left-[48px] md:right-[48px] z-[250] pointer-events-none">
-          <div className="flex items-center gap-3 md:gap-6 w-full overflow-x-auto md:overflow-visible no-scrollbar pointer-events-auto md:pointer-events-none pb-2 md:pb-0 scroll-smooth snap-x">
-            
-            {/* Left Controls */}
-            <div className="flex-shrink-0 snap-start pointer-events-auto max-w-full">
-              {leftControls}
-            </div>
 
-            {/* Center Dots (Immediately next to tabs) */}
-            <div className="hidden md:flex items-center shrink-0 snap-start pointer-events-auto">
-              <AnimatePresence>
-              {!hideCenterControls && !activeFeatureId && slides.length > 1 && (
-                <motion.div
-                  initial={{ opacity: 0, width: 0, paddingLeft: 0, paddingRight: 0 }}
-                  animate={{ opacity: 1, width: "auto", paddingLeft: 0, paddingRight: 0 }}
-                  exit={{ opacity: 0, width: 0, paddingLeft: 0, paddingRight: 0 }}
-                  transition={appleSpring}
-                  className="flex items-center gap-4 shrink-0 overflow-hidden"
-                >
-                  {centerControls ? (
-                    centerControls
-                  ) : (
-                    <>
-                      <div className="shrink-0 flex items-center gap-[20px] h-12 px-[20px] rounded-full"
-                        style={{
-                          backgroundColor: 'rgba(255, 255, 255, 0.12)',
-                          backdropFilter: 'blur(20px)',
-                          WebkitBackdropFilter: 'blur(20px)',
-                        }}
+          {/* ── Bottom Floating Controls: Optional Left / Right + Sleek Glass Dock ── */}
+          <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 md:bottom-8 md:left-8 md:right-8 z-30 pointer-events-none flex items-end justify-between gap-4">
+            {/* Optional Left Controls */}
+            {leftControls && (
+              <div className="pointer-events-auto">
+                {leftControls}
+              </div>
+            )}
+
+            {/* Optional Right Controls if explicitly passed */}
+            {rightControls && (
+              <div className="pointer-events-auto ml-auto">
+                {rightControls}
+              </div>
+            )}
+
+            {/* Sleek Bottom-Right Glass Dock (Progress Pills + Play/Pause) */}
+            {!hideCenterControls && !activeFeatureId && slides.length > 1 && !centerControls && (
+              <div className={cn(
+                "pointer-events-auto flex items-center gap-3 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-lg border border-white/20 bg-black/50 backdrop-blur-md",
+                !leftControls && !rightControls ? "ml-auto" : ""
+              )}>
+                {/* Slide Indicators */}
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  {slides.map((_, idx) => {
+                    const isActive = idx === activeIndex;
+                    return (
+                      <button
+                        key={idx}
+                        onClick={() => scrollToSlide(idx)}
+                        className="relative flex items-center justify-center focus:outline-none group/dot py-1"
+                        aria-label={`Go to slide ${idx + 1}`}
+                        aria-current={isActive ? "true" : "false"}
                       >
-                        {slides.map((_, idx) => {
-                          const isActive = idx === activeIndex;
-                          return (
-                          <button
-                            key={idx}
-                            onClick={() => scrollToSlide(idx)}
-                            className="relative flex items-center justify-center focus:outline-none group/dot h-12"
-                            aria-label={`Go to slide ${idx + 1}`}
-                            aria-current={isActive ? "true" : "false"}
-                          >
-                            <div 
-                              className="overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] relative h-2 rounded-[4px]"
-                              style={{
-                                width: isActive ? '40px' : '10px',
-                                backgroundColor: '#86868b', // Apple's exact dense grey
+                        <div 
+                          className="overflow-hidden transition-all duration-400 ease-[cubic-bezier(0.32,0.72,0,1)] relative h-1.5 sm:h-2 rounded-full"
+                          style={{
+                            width: isActive ? '32px' : '8px',
+                            backgroundColor: 'rgba(255, 255, 255, 0.35)',
+                          }}
+                        >
+                          {isActive && (
+                            <div
+                              key={`progress-${idx}-${playKey}`}
+                              className="absolute top-0 left-0 h-full bg-gold rounded-full"
+                              style={{ 
+                                width: '100%',
+                                animation: `progress-fill ${SLIDE_DURATION}ms linear forwards`,
+                                animationPlayState: isPaused ? 'paused' : 'running'
                               }}
-                            >
-                              {/* Active Progress Bar Fill - Pure CSS animation */}
-                              {isActive && (
-                                <div
-                                  key={`progress-${idx}-${playKey}`}
-                                  className="absolute top-0 left-0 h-full bg-[#ffffff] rounded-[4px]"
-                                  style={{ 
-                                    width: '100%',
-                                    animation: `progress-fill ${SLIDE_DURATION}ms linear forwards`,
-                                    animationPlayState: isPaused ? 'paused' : 'running'
-                                  }}
-                                />
-                              )}
-                            </div>
-                          </button>
-                        );
-                      })}
-                    </div>
+                            />
+                          )}
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
 
-                    {/* Play / Pause Button */}
-                    <button
-                      onClick={() => setIsPaused((p) => !p)}
-                      className="w-12 h-12 shrink-0 rounded-full flex items-center justify-center transition-all duration-300 focus:outline-none group/btn hover:bg-white/20 active:scale-[0.95]"
-                      style={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.12)',
-                        backdropFilter: 'blur(20px)',
-                        WebkitBackdropFilter: 'blur(20px)',
+                {/* Subtle Divider */}
+                <div className="w-px h-3.5 bg-white/20" />
+
+                {/* Play / Pause Button */}
+                <button
+                  onClick={() => setIsPaused((p) => !p)}
+                  className="w-5 h-5 sm:w-6 sm:h-6 shrink-0 rounded-full flex items-center justify-center text-white/80 hover:text-white transition-all focus:outline-none active:scale-95"
+                  aria-label={isPaused ? "Play slide rotation" : "Pause slide rotation"}
+                  title={isPaused ? "Play" : "Pause"}
+                >
+                  <svg width="10" height="12" viewBox="0 0 10 12" fill="none" className="text-white">
+                    <motion.path
+                      fill="currentColor"
+                      initial={false}
+                      animate={{
+                        d: isPaused 
+                          ? "M 1 2 L 9 6 L 9 6 L 1 6 Z"
+                          : "M 1 1 L 3.5 1 L 3.5 11 L 1 11 Z",
                       }}
-                      aria-label={isPaused ? "Play" : "Pause"}
-                    >
-                      <div className="opacity-100 group-hover/btn:opacity-80 transition-opacity flex items-center justify-center">
-                        <svg width="12" height="14" viewBox="0 0 10 12" fill="none" className="text-white">
-                          {/* Left Pause Bar <-> Top Play Triangle */}
-                          <motion.path
-                            fill="currentColor"
-                            initial={false}
-                            animate={{
-                              d: isPaused 
-                                ? "M 1 2 L 9 6 L 9 6 L 1 6 Z" // Play Top Half (shifted to center)
-                                : "M 1 1 L 3.5 1 L 3.5 11 L 1 11 Z", // Pause Left Bar
-                            }}
-                            transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                          />
-                          {/* Right Pause Bar <-> Bottom Play Triangle */}
-                          <motion.path
-                            fill="currentColor"
-                            initial={false}
-                            animate={{
-                              d: isPaused 
-                                ? "M 1 10 L 9 6 L 9 6 L 1 6 Z" // Play Bottom Half
-                                : "M 6.5 1 L 9 1 L 9 11 L 6.5 11 Z", // Pause Right Bar
-                            }}
-                            transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-                          />
-                        </svg>
-                      </div>
-                    </button>
-                  </>
-                )}
-                </motion.div>
-              )}
-              </AnimatePresence>
-            </div>
-
-            {/* Right Controls */}
-            <div className="md:ml-auto shrink-0 flex items-center snap-start pr-4 md:pr-0 pointer-events-auto max-w-full">
-              {rightControls}
-            </div>
+                      transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
+                    />
+                    <motion.path
+                      fill="currentColor"
+                      initial={false}
+                      animate={{
+                        d: isPaused 
+                          ? "M 1 10 L 9 6 L 9 6 L 1 6 Z"
+                          : "M 6.5 1 L 9 1 L 9 11 L 6.5 11 Z",
+                      }}
+                      transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
+                    />
+                  </svg>
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
 
-      {/* Pure CSS keyframes for the butter-smooth progress bar fill */}
+      {/* Butter-smooth Progress Fill Animation */}
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes progress-fill {
           0% { width: 0%; }
