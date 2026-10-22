@@ -101,7 +101,7 @@ export function CartDrawerItem({ item, onItemClick }: CartDrawerItemProps) {
             >
               −
             </button>
-            <span className="w-8 text-center text-xs font-semibold select-none text-text-main">
+            <span className="w-8 text-center text-xs font-semibold font-sans not-italic tabular-nums select-none text-text-main">
               {item.quantity}
             </span>
             <button
@@ -118,11 +118,11 @@ export function CartDrawerItem({ item, onItemClick }: CartDrawerItemProps) {
 
           {/* Pricing */}
           <div className="text-right">
-            <div className="font-serif font-bold text-sm sm:text-base text-primary tracking-tight">
+            <div className="font-sans not-italic font-bold tabular-nums text-sm sm:text-base text-primary tracking-tight">
               {formatINR(lineTotal)}
             </div>
             {item.quantity > 1 && (
-              <div className="text-[10px] text-text-muted font-sans">
+              <div className="text-[10px] text-text-muted font-sans not-italic tabular-nums font-medium">
                 {formatINR(item.unitPrice)} each
               </div>
             )}

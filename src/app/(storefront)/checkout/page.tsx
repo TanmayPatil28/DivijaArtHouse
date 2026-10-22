@@ -948,14 +948,14 @@ export default function CheckoutPage() {
                           <span>Note: &ldquo;{item.personalization}&rdquo;</span>
                         </p>
                       )}
-                      <p className="text-xs text-text-muted mt-1">
+                      <p className="text-xs text-text-muted mt-1 font-sans not-italic tabular-nums">
                         Qty: {item.quantity} × {formatINR(item.unitPrice)}
                       </p>
                     </div>
 
                     {/* Item Line Total */}
                     <div className="text-right flex-shrink-0">
-                      <p className="text-xs sm:text-sm font-serif font-bold text-text-main">
+                      <p className="text-xs sm:text-sm font-sans not-italic font-bold tabular-nums text-text-main">
                         {formatINR(item.unitPrice * item.quantity)}
                       </p>
                     </div>
@@ -967,7 +967,7 @@ export default function CheckoutPage() {
               <div className="pt-3.5 border-t border-gold/20 space-y-2.5 text-xs sm:text-sm">
                 <div className="flex justify-between text-text-muted">
                   <span>Bag Subtotal</span>
-                  <span className="text-text-main font-semibold">
+                  <span className="text-text-main font-semibold font-sans not-italic tabular-nums">
                     {formatINR(summary.subtotal)}
                   </span>
                 </div>
@@ -978,11 +978,11 @@ export default function CheckoutPage() {
                     <span>Shipping &amp; Handling</span>
                   </span>
                   {isFreeShipping ? (
-                    <span className="text-emerald-800 font-semibold bg-emerald-100/70 px-2.5 py-0.5 rounded-full border border-emerald-300 text-xs">
+                    <span className="text-emerald-800 font-semibold bg-emerald-100/70 px-2.5 py-0.5 rounded-full border border-emerald-300 text-xs font-sans not-italic">
                       FREE
                     </span>
                   ) : (
-                    <span className="text-text-main font-semibold">
+                    <span className="text-text-main font-semibold font-sans not-italic tabular-nums">
                       {formatINR(STANDARD_SHIPPING_FEE)}
                     </span>
                   )}
@@ -991,7 +991,7 @@ export default function CheckoutPage() {
                 {!isFreeShipping && (
                   <p className="text-[11px] text-primary bg-primary/5 p-2 rounded-lg border border-primary/20 leading-snug">
                     💡 Free shipping on all orders over ₹999. Add items worth{' '}
-                    <strong>{formatINR(summary.remainingForFreeShipping)}</strong> more to get free delivery!
+                    <strong className="font-sans not-italic tabular-nums">{formatINR(summary.remainingForFreeShipping)}</strong> more to get free delivery!
                   </p>
                 )}
 
@@ -999,7 +999,7 @@ export default function CheckoutPage() {
                   <span className="font-semibold text-text-main tracking-tight">
                     Total Payable
                   </span>
-                  <span className="font-serif font-bold text-primary text-xl sm:text-2xl tracking-tight">
+                  <span className="font-sans not-italic font-bold tabular-nums text-primary text-xl sm:text-2xl tracking-tight">
                     {formatINR(grandTotal)}
                   </span>
                 </div>

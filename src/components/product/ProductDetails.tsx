@@ -207,8 +207,8 @@ export function ProductDetails({ product }: ProductDetailsProps) {
             <Star className="w-3.5 h-3.5 fill-gold" />
             <Star className="w-3.5 h-3.5 fill-gold" />
           </div>
-          <span className="font-semibold text-text-main text-[11px]">4.9</span>
-          <span className="text-gray-400 text-[11px]">(140+ Gifting Reviews)</span>
+          <span className="font-semibold text-text-main text-[11px] font-sans not-italic tabular-nums">4.9</span>
+          <span className="text-gray-400 text-[11px] font-sans not-italic tabular-nums">(140+ Gifting Reviews)</span>
         </div>
       </div>
 
@@ -220,16 +220,16 @@ export function ProductDetails({ product }: ProductDetailsProps) {
       {/* Pricing & Value Offer Strip */}
       <div className="pb-4 border-b border-border-subtle space-y-2">
         <div className="flex flex-wrap items-baseline gap-3">
-          <span className="font-serif text-3xl sm:text-4xl font-bold text-primary tracking-tight">
+          <span className="font-sans not-italic text-3xl sm:text-4xl font-bold tabular-nums text-primary tracking-tight">
             {formatINR(currentPrice)}
           </span>
           {currentCompareAt && currentCompareAt > currentPrice && (
-            <span className="text-base sm:text-lg text-text-muted line-through font-sans">
+            <span className="text-base sm:text-lg text-text-muted line-through font-sans not-italic tabular-nums font-normal">
               {formatINR(currentCompareAt)}
             </span>
           )}
           {discountPercent > 0 && (
-            <span className="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-primary/10 text-primary border border-primary/30">
+            <span className="px-2.5 py-0.5 rounded-full text-xs font-bold font-sans not-italic tabular-nums uppercase tracking-wider bg-primary/10 text-primary border border-primary/30">
               Save {discountPercent}%
             </span>
           )}
@@ -390,7 +390,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
             >
               −
             </button>
-            <span className="w-10 text-center text-sm font-semibold select-none">
+            <span className="w-10 text-center text-sm font-semibold font-sans not-italic tabular-nums select-none">
               {quantity}
             </span>
             <button

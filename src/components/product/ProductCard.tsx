@@ -119,7 +119,7 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
 
         {/* Top-Left Discount Badge */}
         {discountPercent > 0 && (
-          <span className="absolute top-2.5 sm:top-3 left-2.5 sm:left-3 z-10 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-primary/95 text-white border border-gold/40 shadow-xs backdrop-blur-md">
+          <span className="absolute top-2.5 sm:top-3 left-2.5 sm:left-3 z-10 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-primary/95 text-white border border-gold/40 shadow-xs backdrop-blur-md font-sans not-italic tabular-nums">
             {discountPercent}% OFF
           </span>
         )}
@@ -194,7 +194,7 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
               title="Artisan quality rating based on verified customer feedback"
             >
               <Star className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-gold text-gold" />
-              <span>{rating}</span>
+              <span className="font-sans not-italic tabular-nums font-semibold">{rating}</span>
             </div>
           </div>
 
@@ -211,18 +211,18 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
           {/* Price & Savings Row */}
           <div className="flex items-baseline justify-between gap-1 flex-wrap">
             <div className="flex items-baseline gap-1.5">
-              <span className="font-bold text-base sm:text-lg text-primary tracking-tight">
+              <span className="font-bold text-base sm:text-lg text-primary tracking-tight font-sans not-italic tabular-nums">
                 {formatINR(product.price)}
               </span>
               {product.compareAtPrice && product.compareAtPrice > product.price && (
-                <span className="text-xs text-text-muted line-through">
+                <span className="text-xs text-text-muted line-through font-sans not-italic tabular-nums">
                   {formatINR(product.compareAtPrice)}
                 </span>
               )}
             </div>
 
             {discountPercent > 0 && (
-              <span className="hidden sm:inline-block text-[10px] font-semibold text-primary bg-blush-soft/60 px-1.5 py-0.5 rounded border border-primary/20">
+              <span className="hidden sm:inline-block text-[10px] font-semibold text-primary bg-blush-soft/60 px-1.5 py-0.5 rounded border border-primary/20 font-sans not-italic tabular-nums">
                 Save {discountPercent}%
               </span>
             )}

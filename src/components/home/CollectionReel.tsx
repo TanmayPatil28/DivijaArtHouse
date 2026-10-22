@@ -115,7 +115,7 @@ export function CollectionReel({ categories }: CollectionReelProps) {
 
               {/* Design Count */}
               {item.count > 0 && (
-                <span className="text-[11px] text-text-muted mt-0.5 leading-none">
+                <span className="text-[11px] text-text-muted mt-0.5 leading-none font-sans not-italic tabular-nums">
                   {item.count} {item.count === 1 ? 'design' : 'designs'}
                 </span>
               )}

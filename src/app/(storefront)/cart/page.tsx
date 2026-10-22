@@ -168,7 +168,7 @@ export default function CartPage() {
                             </div>
                           )}
 
-                          <div className="text-xs text-text-muted sm:hidden">
+                          <div className="text-xs text-text-muted sm:hidden font-sans not-italic tabular-nums">
                             {formatINR(item.unitPrice)} each
                           </div>
                         </div>
@@ -188,7 +188,7 @@ export default function CartPage() {
                           >
                             −
                           </button>
-                          <span className="w-8 text-center text-xs font-semibold select-none">
+                          <span className="w-8 text-center text-xs font-semibold font-sans not-italic tabular-nums select-none">
                             {item.quantity}
                           </span>
                           <button
@@ -206,10 +206,10 @@ export default function CartPage() {
 
                         {/* Line Total */}
                         <div className="text-right min-w-[80px]">
-                          <div className="font-bold text-sm sm:text-base text-text-main">
+                          <div className="font-bold text-sm sm:text-base text-text-main font-sans not-italic tabular-nums">
                             {formatINR(lineTotal)}
                           </div>
-                          <div className="hidden sm:block text-[11px] text-text-muted">
+                          <div className="hidden sm:block text-[11px] text-text-muted font-sans not-italic tabular-nums">
                             {formatINR(item.unitPrice)} each
                           </div>
                         </div>
@@ -251,7 +251,7 @@ export default function CartPage() {
                       Subtotal ({summary.itemCount}{' '}
                       {summary.itemCount === 1 ? 'item' : 'items'})
                     </span>
-                    <span className="font-medium text-text-main">
+                    <span className="font-semibold text-text-main font-sans not-italic tabular-nums">
                       {formatINR(summary.subtotal)}
                     </span>
                   </div>
@@ -261,8 +261,8 @@ export default function CartPage() {
                     <span
                       className={
                         summary.shippingFee === 0
-                          ? 'text-green-700 font-semibold'
-                          : 'font-medium text-text-main'
+                          ? 'text-green-700 font-semibold font-sans not-italic'
+                          : 'font-semibold text-text-main font-sans not-italic tabular-nums'
                       }
                     >
                       {summary.shippingFee === 0
@@ -280,7 +280,7 @@ export default function CartPage() {
                         Inclusive of all taxes
                       </p>
                     </div>
-                    <span className="font-semibold text-2xl text-primary tracking-tight">
+                    <span className="font-bold text-2xl text-primary tracking-tight font-sans not-italic tabular-nums">
                       {formatINR(summary.totalAmount)}
                     </span>
                   </div>

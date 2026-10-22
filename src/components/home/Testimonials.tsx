@@ -79,9 +79,9 @@ export function Testimonials() {
                 <Star key={i} className="w-3 h-3 fill-gold text-gold" />
               ))}
             </div>
-            <span className="font-semibold text-primary">4.9 / 5 Average Rating</span>
+            <span className="font-semibold text-primary font-sans not-italic tabular-nums">4.9 / 5 Average Rating</span>
             <span className="text-gold">•</span>
-            <span className="text-text-muted">1,200+ Handcrafted Blooms Delivered Across India</span>
+            <span className="text-text-muted font-sans not-italic tabular-nums">1,200+ Handcrafted Blooms Delivered Across India</span>
           </div>
         </div>
 
