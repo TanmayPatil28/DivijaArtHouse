@@ -18,6 +18,9 @@ import {
   MessageCircle,
   ArrowRight,
   PenLine,
+  ChevronDown,
+  Layers,
+  CheckCircle2,
 } from 'lucide-react';
 import type { ProductWithCategory, CartItem, PrismaProductVariant } from '@/types';
 import { formatINR, calculateDiscount, parseJson } from '@/lib/utils';
@@ -52,6 +55,20 @@ export function ProductDetails({ product }: ProductDetailsProps) {
   const [showPersonalization, setShowPersonalization] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
   const [addedSuccess, setAddedSuccess] = useState(false);
+
+  // Accordion Toggle States (Default open: story)
+  const [openAccordions, setOpenAccordions] = useState<Record<string, boolean>>({
+    story: true,
+    specs: false,
+    deliveryCare: false,
+  });
+
+  const toggleAccordion = (key: string) => {
+    setOpenAccordions((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
+  };
 
   // Delivery Pincode Estimator State
   const [pincodeInput, setPincodeInput] = useState('');
@@ -462,34 +479,43 @@ export function ProductDetails({ product }: ProductDetailsProps) {
         </div>
       </div>
 
-      {/* Delivery Estimator Pill & Pincode Checker */}
-      <div className="p-4 rounded-2xl bg-surface-warm/80 border border-border-subtle space-y-3">
-        <div className="flex items-start gap-2.5">
-          <Truck className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-          <div className="text-xs space-y-1">
-            <p className="font-semibold text-text-main">
-              Fast Dispatch &amp; Pan-India Delivery
-            </p>
-            <p className="text-text-muted leading-relaxed">
-              Dispatched within 24–48 hours in luxury protective packaging. Delivered in 3–5 business days across India.
+      {/* Integrated Luxury Delivery & Trust Suite */}
+      <div className="p-4 sm:p-5 rounded-2xl bg-[#FCFAF7] border border-gold/30 shadow-xs space-y-4">
+        {/* Header: Fast Dispatch & Delivery Promise */}
+        <div className="flex items-start gap-3">
+          <div className="w-8 h-8 rounded-full bg-gold/15 flex items-center justify-center flex-shrink-0 mt-0.5 border border-gold/30 text-gold">
+            <Truck className="w-4 h-4 text-gold" />
+          </div>
+          <div className="space-y-0.5 flex-1">
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-xs sm:text-sm text-text-main">
+                Pan-India Express Delivery &amp; Safe Dispatch
+              </span>
+              <span className="inline-flex items-center gap-1 text-[10px] font-medium text-emerald-700 bg-emerald-100/70 border border-emerald-300 px-2 py-0.2 rounded-full">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                24-48h Dispatch
+              </span>
+            </div>
+            <p className="text-xs text-text-muted leading-relaxed">
+              Dispatched with care in luxury protective packaging from our Pune atelier. Delivered in 3–5 business days.
             </p>
           </div>
         </div>
 
-        {/* Pincode Input */}
-        <form onSubmit={handleCheckPincode} className="flex gap-2 pt-1">
+        {/* Inline Pincode Checker */}
+        <form onSubmit={handleCheckPincode} className="flex gap-2">
           <input
             type="text"
             maxLength={6}
             value={pincodeInput}
             onChange={(e) => setPincodeInput(e.target.value.replace(/\D/g, ''))}
-            placeholder="Enter 6-digit Pincode"
-            className="flex-1 px-3 py-2 text-xs rounded-lg border border-border-subtle bg-white text-text-main placeholder-text-muted focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
+            placeholder="Enter 6-digit Pincode to check delivery"
+            className="flex-1 px-3.5 py-2 text-xs rounded-xl border border-gold/30 bg-white text-text-main placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold shadow-xs"
             aria-label="Enter pincode for delivery check"
           />
           <button
             type="submit"
-            className="px-4 py-2 rounded-lg bg-white hover:bg-primary text-text-main hover:text-white border border-border-subtle hover:border-primary text-xs font-semibold uppercase tracking-wider transition-colors"
+            className="px-5 py-2 rounded-xl bg-primary hover:bg-primary-hover text-white text-xs font-semibold uppercase tracking-wider transition-all shadow-xs active:scale-95"
           >
             Check
           </button>
@@ -504,51 +530,193 @@ export function ProductDetails({ product }: ProductDetailsProps) {
             {pincodeResult.message}
           </p>
         )}
-      </div>
 
-      {/* Trust & Artisan Guarantee Strips */}
-      <div className="grid grid-cols-2 gap-3 pt-2 text-xs text-text-main">
-        <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-border-subtle">
-          <Clock className="w-4 h-4 text-primary flex-shrink-0" />
-          <span className="font-medium text-[11px]">Never Wilts &amp; Zero Maintenance</span>
-        </div>
-        <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-border-subtle">
-          <Sparkles className="w-4 h-4 text-primary flex-shrink-0" />
-          <span className="font-medium text-[11px]">100% Organic Milk Cotton</span>
-        </div>
-        <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-border-subtle">
-          <Gift className="w-4 h-4 text-primary flex-shrink-0" />
-          <span className="font-medium text-[11px]">Ready-to-Gift Luxury Packaging</span>
-        </div>
-        <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-border-subtle">
-          <ShieldCheck className="w-4 h-4 text-primary flex-shrink-0" />
-          <span className="font-medium text-[11px]">Secure Razorpay, UPI &amp; COD</span>
-        </div>
-      </div>
-
-      {/* Rich Description & Craft Details */}
-      <div className="space-y-4 pt-4 border-t border-border-subtle">
-        <div>
-          <h2 className="font-serif font-semibold text-xl text-text-main tracking-tight mb-2">
-            Description &amp; Artisan Story
-          </h2>
-          <p className="text-sm text-text-muted leading-relaxed whitespace-pre-line">
-            {product.description}
-          </p>
-        </div>
-
-        {product.details && (
-          <div className="p-4 rounded-2xl bg-surface-warm/50 border border-border-subtle space-y-2">
-            <h3 className="font-bold text-xs uppercase tracking-wider text-text-main flex items-center gap-1.5">
-              <Info className="w-4 h-4 text-primary" />
-              Dimensions, Materials &amp; Care
-            </h3>
-            <p className="text-xs text-text-muted leading-relaxed">
-              {product.details}
-            </p>
+        {/* 4 Artisan Trust Medallions Ribbon */}
+        <div className="grid grid-cols-2 gap-2.5 pt-2 border-t border-gold/15">
+          <div className="flex items-center gap-2 p-2 rounded-xl bg-white border border-border-subtle shadow-2xs">
+            <Clock className="w-4 h-4 text-gold flex-shrink-0" />
+            <div className="leading-tight">
+              <span className="font-semibold text-[11px] block text-text-main">Never Wilts</span>
+              <span className="text-[10px] text-text-muted">Zero maintenance forever</span>
+            </div>
           </div>
-        )}
+
+          <div className="flex items-center gap-2 p-2 rounded-xl bg-white border border-border-subtle shadow-2xs">
+            <Sparkles className="w-4 h-4 text-gold flex-shrink-0" />
+            <div className="leading-tight">
+              <span className="font-semibold text-[11px] block text-text-main">100% Milk Cotton</span>
+              <span className="text-[10px] text-text-muted">Organic handcrafted yarn</span>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 p-2 rounded-xl bg-white border border-border-subtle shadow-2xs">
+            <Gift className="w-4 h-4 text-gold flex-shrink-0" />
+            <div className="leading-tight">
+              <span className="font-semibold text-[11px] block text-text-main">Luxury Ready-to-Gift</span>
+              <span className="text-[10px] text-text-muted">Ribboned rigid gift box</span>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 p-2 rounded-xl bg-white border border-border-subtle shadow-2xs">
+            <ShieldCheck className="w-4 h-4 text-gold flex-shrink-0" />
+            <div className="leading-tight">
+              <span className="font-semibold text-[11px] block text-text-main">100% Safe Checkout</span>
+              <span className="text-[10px] text-text-muted">COD, UPI &amp; Net Banking</span>
+            </div>
+          </div>
+        </div>
       </div>
+
+      {/* 3 Consolidated Luxury Accordions Suite */}
+      <div className="pt-2 border-t border-border-subtle space-y-3">
+        
+        {/* Accordion 1: Description & Artisan Story */}
+        <div className="rounded-2xl border border-gold/30 bg-[#FCFAF7] overflow-hidden shadow-xs transition-all">
+          <button
+            type="button"
+            onClick={() => toggleAccordion('story')}
+            className="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-gold/5 transition-colors focus:outline-none"
+            aria-expanded={openAccordions.story}
+          >
+            <div className="flex items-center gap-2.5">
+              <Sparkles className="w-4 h-4 text-gold flex-shrink-0" />
+              <span className="font-serif font-semibold text-base sm:text-lg text-text-main">
+                The Artisan Story &amp; Craftsmanship
+              </span>
+            </div>
+            <ChevronDown
+              className={`w-4 h-4 text-gold transition-transform duration-300 ${
+                openAccordions.story ? 'rotate-180' : ''
+              }`}
+            />
+          </button>
+
+          {openAccordions.story && (
+            <div className="px-5 pb-5 pt-1 text-sm text-text-muted leading-relaxed space-y-3 border-t border-gold/15 animate-fade-in">
+              <p className="whitespace-pre-line text-text-main/90">
+                {product.description}
+              </p>
+              <div className="p-3 rounded-xl bg-white border border-gold/20 text-xs text-text-muted space-y-1">
+                <span className="font-semibold text-text-main block">
+                  Crafted by Women Artisans in Hadapsar, Pune:
+                </span>
+                <p>
+                  Every flower and leaf is individually crocheted stitch-by-stitch with gentle tension and premium organic milk-cotton yarn. Because every bloom is handmade, no two pieces are identical — each holds its own quiet charm and heartfelt feeling.
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Accordion 2: Dimensions, Materials & Inclusions */}
+        <div className="rounded-2xl border border-gold/30 bg-[#FCFAF7] overflow-hidden shadow-xs transition-all">
+          <button
+            type="button"
+            onClick={() => toggleAccordion('specs')}
+            className="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-gold/5 transition-colors focus:outline-none"
+            aria-expanded={openAccordions.specs}
+          >
+            <div className="flex items-center gap-2.5">
+              <Layers className="w-4 h-4 text-gold flex-shrink-0" />
+              <span className="font-serif font-semibold text-base sm:text-lg text-text-main">
+                Dimensions, Materials &amp; Box Inclusions
+              </span>
+            </div>
+            <ChevronDown
+              className={`w-4 h-4 text-gold transition-transform duration-300 ${
+                openAccordions.specs ? 'rotate-180' : ''
+              }`}
+            />
+          </button>
+
+          {openAccordions.specs && (
+            <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-text-muted space-y-3 border-t border-gold/15 animate-fade-in">
+              {product.details ? (
+                <div className="p-3 rounded-xl bg-white border border-gold/20">
+                  <span className="font-semibold text-text-main block mb-1 text-xs uppercase tracking-wider">
+                    Specifications &amp; Inclusions:
+                  </span>
+                  <p className="text-xs sm:text-sm text-text-muted leading-relaxed">
+                    {product.details}
+                  </p>
+                </div>
+              ) : null}
+
+              {/* Atelier Material Badges */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                <div className="p-2.5 rounded-xl bg-white border border-border-subtle">
+                  <span className="font-semibold text-text-main block mb-0.5">Primary Material</span>
+                  <span className="text-text-muted">100% Organic Milk Cotton &amp; Floral Wire Core</span>
+                </div>
+                <div className="p-2.5 rounded-xl bg-white border border-border-subtle">
+                  <span className="font-semibold text-text-main block mb-0.5">Packaging</span>
+                  <span className="text-text-muted">Rigid luxury keepsake gift box with ribbon</span>
+                </div>
+                <div className="p-2.5 rounded-xl bg-white border border-border-subtle">
+                  <span className="font-semibold text-text-main block mb-0.5">Hypoallergenic</span>
+                  <span className="text-text-muted">Pollen-free, fragrance-safe &amp; pet-friendly</span>
+                </div>
+                <div className="p-2.5 rounded-xl bg-white border border-border-subtle">
+                  <span className="font-semibold text-text-main block mb-0.5">Longevity</span>
+                  <span className="text-text-muted">Everlasting blooms that never wither or fade</span>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Accordion 3: Delivery, Care & Guarantee */}
+        <div className="rounded-2xl border border-gold/30 bg-[#FCFAF7] overflow-hidden shadow-xs transition-all">
+          <button
+            type="button"
+            onClick={() => toggleAccordion('deliveryCare')}
+            className="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-gold/5 transition-colors focus:outline-none"
+            aria-expanded={openAccordions.deliveryCare}
+          >
+            <div className="flex items-center gap-2.5">
+              <ShieldCheck className="w-4 h-4 text-gold flex-shrink-0" />
+              <span className="font-serif font-semibold text-base sm:text-lg text-text-main">
+                Delivery, Floral Care &amp; Guarantee
+              </span>
+            </div>
+            <ChevronDown
+              className={`w-4 h-4 text-gold transition-transform duration-300 ${
+                openAccordions.deliveryCare ? 'rotate-180' : ''
+              }`}
+            />
+          </button>
+
+          {openAccordions.deliveryCare && (
+            <div className="px-5 pb-5 pt-1 text-xs text-text-muted space-y-3.5 border-t border-gold/15 animate-fade-in">
+              {/* Floral Care Guide */}
+              <div className="space-y-1.5 p-3 rounded-xl bg-white border border-gold/20">
+                <span className="font-semibold text-xs text-text-main flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-gold" />
+                  Everlasting Floral Care Guide:
+                </span>
+                <ul className="space-y-1 pl-4 list-disc text-text-muted">
+                  <li><strong>Zero Water Required:</strong> Never place your crochet blooms in water or damp vases.</li>
+                  <li><strong>Gentle Dusting:</strong> Dust gently every few months using a soft dry makeup brush or a cool hairdryer on low.</li>
+                  <li><strong>Sunlight:</strong> Keep away from continuous harsh direct sunlight to keep the vibrant cotton petal shades rich for years.</li>
+                </ul>
+              </div>
+
+              {/* Transit & Packaging Guarantee */}
+              <div className="space-y-1.5 p-3 rounded-xl bg-white border border-border-subtle">
+                <span className="font-semibold text-xs text-text-main flex items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                  Damage-Free Transit Guarantee:
+                </span>
+                <p className="text-text-muted leading-relaxed">
+                  Every creation is cushioned inside an individual protective box with multi-layer bubble wrap. In the rare event of transit damage, we provide a <strong>100% free replacement</strong> within 7 days of delivery.
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
+
+      </div>
+
     </div>
   );
 }
