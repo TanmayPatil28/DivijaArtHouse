@@ -1,102 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
   <defs>
-    <linearGradient id="bgPot" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FAF5EE"/>
-      <stop offset="100%" stop-color="#EFE6DA"/>
-    </linearGradient>
-    <radialGradient id="sunGlow" cx="50%" cy="45%" r="50%">
-      <stop offset="0%" stop-color="#FFFDF9" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#EFE6DA" stop-opacity="0"/>
+    <radialGradient id="discGradPots" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FCF3F5"/>
+      <stop offset="100%" stop-color="#F5E3E6"/>
     </radialGradient>
-    <linearGradient id="ceramicPot" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F2E6D8"/>
-      <stop offset="50%" stop-color="#DFC8B2"/>
-      <stop offset="100%" stop-color="#BA9E84"/>
-    </linearGradient>
-    <linearGradient id="daisyYellow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFDD55"/>
-      <stop offset="100%" stop-color="#E5A61E"/>
-    </linearGradient>
-    <linearGradient id="tulipPeach" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFAD8A"/>
-      <stop offset="100%" stop-color="#E06941"/>
-    </linearGradient>
-    <linearGradient id="stemGreen" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#91B87F"/>
-      <stop offset="100%" stop-color="#4C703B"/>
-    </linearGradient>
-    <filter id="potShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#5A4030" flood-opacity="0.14"/>
-    </filter>
   </defs>
 
-  <circle cx="250" cy="250" r="230" fill="url(#bgPot)"/>
-  <circle cx="250" cy="250" r="215" fill="none" stroke="#D1B89F" stroke-width="2" stroke-dasharray="6,6"/>
-  <circle cx="250" cy="230" r="170" fill="url(#sunGlow)"/>
+  <!-- Blush Medallion Disc -->
+  <circle cx="250" cy="250" r="236" fill="url(#discGradPots)"/>
+  <circle cx="250" cy="250" r="222" fill="none" stroke="#C59A5A" stroke-width="3" opacity="0.6"/>
+  <circle cx="250" cy="250" r="212" fill="none" stroke="#C59A5A" stroke-width="1.5" stroke-dasharray="6,5" opacity="0.45"/>
 
-  <!-- Potted Plant Group -->
-  <g filter="url(#potShadow)">
-    <!-- Soil mound inside rim -->
-    <ellipse cx="250" cy="275" rx="85" ry="25" fill="#4B3426"/>
-    <ellipse cx="250" cy="272" rx="78" ry="20" fill="#664634"/>
+  <!-- Potted Bloom Line-Art (Visiting Card 3rd Floret Style) -->
+  <g stroke="#781D2C" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Ceramic Terracotta Pot Silhouette -->
+    <path d="M185 275 L315 275 L295 380 C290 395 280 405 265 405 L235 405 C220 405 210 395 205 380 Z" fill="#F8E7E9"/>
+    <ellipse cx="250" cy="275" rx="68" ry="14" fill="#FCF3F5"/>
 
-    <!-- Stems &amp; Leaves -->
-    <path d="M250 270 Q250 190 250 160" fill="none" stroke="url(#stemGreen)" stroke-width="8" stroke-linecap="round"/>
-    <path d="M230 270 Q200 230 180 190" fill="none" stroke="url(#stemGreen)" stroke-width="7" stroke-linecap="round"/>
-    <path d="M270 270 Q300 230 320 200" fill="none" stroke="url(#stemGreen)" stroke-width="7" stroke-linecap="round"/>
+    <!-- Pot Accent Ribbon Groove -->
+    <path d="M200 325 Q250 340 300 325" stroke="#C59A5A" stroke-width="8"/>
+    <circle cx="250" cy="360" r="5" fill="#C59A5A" stroke="none"/>
 
-    <!-- Crochet Leaves with ribbed stitches -->
-    <path d="M210 240 C160 230 150 200 170 190 C190 190 205 220 210 240 Z" fill="#759C63"/>
-    <path d="M290 240 C340 230 350 200 330 190 C310 190 295 220 290 240 Z" fill="#759C63"/>
+    <!-- Central Floral Stem -->
+    <path d="M250 270 L250 190" stroke-width="13"/>
 
-    <!-- Main Daisy Bloom (Center) -->
-    <g transform="translate(250, 150)">
-      <!-- Daisy Petals in Circle -->
-      <g fill="#FFFDF9" stroke="#E3D7C9" stroke-width="1.5">
-        <ellipse cx="0" cy="-40" rx="14" ry="22"/>
-        <ellipse cx="28" cy="-28" rx="14" ry="22" transform="rotate(45 28 -28)"/>
-        <ellipse cx="40" cy="0" rx="22" ry="14"/>
-        <ellipse cx="28" cy="28" rx="14" ry="22" transform="rotate(-45 28 28)"/>
-        <ellipse cx="0" cy="40" rx="14" ry="22"/>
-        <ellipse cx="-28" cy="28" rx="14" ry="22" transform="rotate(45 -28 28)"/>
-        <ellipse cx="-40" cy="0" rx="22" ry="14"/>
-        <ellipse cx="-28" cy="-28" rx="14" ry="22" transform="rotate(-45 -28 -28)"/>
-      </g>
-      <!-- Center disc with crochet textured dots -->
-      <circle cx="0" cy="0" r="22" fill="url(#daisyYellow)"/>
-      <circle cx="0" cy="0" r="17" fill="none" stroke="#D18E0B" stroke-width="2" stroke-dasharray="3,3"/>
-      <!-- Cute Kawaii face -->
-      <ellipse cx="-6" cy="-2" rx="2.5" ry="3.5" fill="#3D2914"/>
-      <ellipse cx="6" cy="-2" rx="2.5" ry="3.5" fill="#3D2914"/>
-      <path d="M-4 6 Q0 10 4 6" fill="none" stroke="#3D2914" stroke-width="2" stroke-linecap="round"/>
-      <circle cx="-10" cy="4" r="3" fill="#F8A090" opacity="0.7"/>
-      <circle cx="10" cy="4" r="3" fill="#F8A090" opacity="0.7"/>
+    <!-- Botanical Leaves (Left &amp; Right) -->
+    <path d="M250 240 C210 230 190 200 205 185 C225 190 240 220 250 240 Z" fill="#FBF0F2"/>
+    <path d="M250 240 C290 230 310 200 295 185 C275 190 260 220 250 240 Z" fill="#FBF0F2"/>
+
+    <!-- Blooming Tulip/Floret Crown -->
+    <g transform="translate(250, 160)">
+      <!-- Center Petal -->
+      <path d="M0 -45 C-18 -15 -18 20 0 35 C18 20 18 -15 0 -45 Z" fill="#F7E2E6"/>
+      <!-- Left Petal -->
+      <path d="M0 35 C-35 30 -50 -10 -35 -35 C-20 -10 -10 15 0 35 Z"/>
+      <!-- Right Petal -->
+      <path d="M0 35 C35 30 50 -10 35 -35 C20 -10 10 15 0 35 Z"/>
+      <!-- Core Stamen Dot -->
+      <circle cx="0" cy="0" r="7" fill="#C59A5A" stroke="none"/>
     </g>
-
-    <!-- Side Tulip (Left) -->
-    <g transform="translate(180, 185)">
-      <path d="M-18 20 C-25 -5 -15 -25 0 -25 C15 -25 25 -5 18 20 Z" fill="url(#tulipPeach)"/>
-      <path d="M-5 -25 C0 -15 0 -5 0 20 C0 -5 0 -15 5 -25" fill="none" stroke="#C4512B" stroke-width="1.5"/>
-    </g>
-
-    <!-- Side Lavender Spike (Right) -->
-    <g transform="translate(320, 195)">
-      <circle cx="0" cy="-18" r="8" fill="#B794D6"/>
-      <circle cx="-5" cy="-8" r="8" fill="#9F73C7"/>
-      <circle cx="5" cy="-8" r="8" fill="#9F73C7"/>
-      <circle cx="-6" cy="2" r="8" fill="#B794D6"/>
-      <circle cx="6" cy="2" r="8" fill="#8B5BB5"/>
-      <circle cx="0" cy="12" r="8" fill="#7845A3"/>
-    </g>
-
-    <!-- Fluted Ceramic Pot Body -->
-    <path d="M165 270 L185 410 C187 420 195 425 205 425 L295 425 C305 425 313 420 315 410 L335 270 Z" fill="url(#ceramicPot)"/>
-    <!-- Pot Rim -->
-    <ellipse cx="250" cy="270" rx="90" ry="14" fill="#E8D7C5" stroke="#BA9E84" stroke-width="2"/>
-    <!-- Pot Embossed Wave Pattern / Stitches -->
-    <path d="M190 320 Q220 330 250 320 Q280 310 310 320" fill="none" stroke="#FFFDF9" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
-    <path d="M195 350 Q225 360 250 350 Q275 340 305 350" fill="none" stroke="#FFFDF9" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
-    <!-- Subtle pot bottom base shadow -->
-    <ellipse cx="250" cy="425" rx="55" ry="8" fill="#9E8166" opacity="0.5"/>
   </g>
 </svg>

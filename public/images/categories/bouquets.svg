@@ -1,93 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FDF8F5"/>
-      <stop offset="100%" stop-color="#FCEEEF"/>
-    </linearGradient>
-    <radialGradient id="bloomGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#F5D6D9" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#FCEEEF" stop-opacity="0"/>
+    <radialGradient id="discGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FCF3F5"/>
+      <stop offset="100%" stop-color="#F5E3E6"/>
     </radialGradient>
-    <linearGradient id="roseRed" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#C94252"/>
-      <stop offset="100%" stop-color="#872430"/>
-    </linearGradient>
-    <linearGradient id="pinkPetal" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F8B4BD"/>
-      <stop offset="100%" stop-color="#E27386"/>
-    </linearGradient>
-    <linearGradient id="creamPetal" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFDF9"/>
-      <stop offset="100%" stop-color="#F3E5D8"/>
-    </linearGradient>
-    <linearGradient id="kraftPaper" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#EBD5BE"/>
-      <stop offset="100%" stop-color="#CBB196"/>
-    </linearGradient>
-    <linearGradient id="leafGreen" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#88A078"/>
-      <stop offset="100%" stop-color="#557045"/>
-    </linearGradient>
-    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#872430" flood-opacity="0.12"/>
-    </filter>
   </defs>
 
-  <!-- Background Circle Canvas -->
-  <circle cx="250" cy="250" r="230" fill="url(#bgGrad)"/>
-  <circle cx="250" cy="250" r="215" fill="none" stroke="#F5D6D9" stroke-width="2" stroke-dasharray="6,6"/>
-  <circle cx="250" cy="230" r="170" fill="url(#bloomGlow)"/>
+  <!-- Blush Medallion Disc -->
+  <circle cx="250" cy="250" r="236" fill="url(#discGrad)"/>
+  <circle cx="250" cy="250" r="222" fill="none" stroke="#C59A5A" stroke-width="3" opacity="0.6"/>
+  <circle cx="250" cy="250" r="212" fill="none" stroke="#C59A5A" stroke-width="1.5" stroke-dasharray="6,5" opacity="0.45"/>
 
-  <!-- Wrapped Bouquet Graphic -->
-  <g filter="url(#softShadow)">
-    <!-- Leaves -->
-    <path d="M170 230 C130 190 140 140 190 160 C210 170 190 220 170 230 Z" fill="url(#leafGreen)"/>
-    <path d="M330 230 C370 190 360 140 310 160 C290 170 310 220 330 230 Z" fill="url(#leafGreen)"/>
-    <path d="M250 160 C250 110 210 120 220 165 Z" fill="url(#leafGreen)" opacity="0.9"/>
-    <path d="M250 160 C250 110 290 120 280 165 Z" fill="url(#leafGreen)" opacity="0.9"/>
+  <!-- Line-Art Lotus Blossom Medallion (Visiting Card Inspired) -->
+  <g stroke="#781D2C" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Center Teardrop Petal -->
+    <path d="M250 140 C220 200 220 270 250 310 C280 270 280 200 250 140 Z" fill="#FBF0F2"/>
+    <circle cx="250" cy="235" r="8" fill="#C59A5A" stroke="none"/>
 
-    <!-- Kraft Paper Wrapping Cone -->
-    <path d="M250 420 L150 260 C150 260 210 280 250 280 C290 280 350 260 350 260 Z" fill="url(#kraftPaper)"/>
-    <path d="M150 260 L250 420 L270 278 C230 282 180 275 150 260 Z" fill="#BF9F80" opacity="0.4"/>
+    <!-- Inner Left &amp; Right Petals -->
+    <path d="M250 310 C180 300 150 220 185 170 C215 220 235 270 250 310 Z" fill="#F8E6E9"/>
+    <path d="M250 310 C320 300 350 220 315 170 C285 220 265 270 250 310 Z" fill="#F8E6E9"/>
 
-    <!-- Crochet Stitches Detail on Wrap -->
-    <path d="M190 290 Q250 310 310 290" fill="none" stroke="#FFFDF9" stroke-width="2.5" stroke-dasharray="4,4"/>
-    <path d="M210 330 Q250 345 290 330" fill="none" stroke="#FFFDF9" stroke-width="2.5" stroke-dasharray="4,4"/>
+    <!-- Outer Flared Petals -->
+    <path d="M250 310 C140 310 110 240 130 205 C160 250 200 290 250 310 Z"/>
+    <path d="M250 310 C360 310 390 240 370 205 C340 250 300 290 250 310 Z"/>
 
-    <!-- Soft Peony (Center Left) -->
-    <g transform="translate(190, 210)">
-      <circle cx="0" cy="0" r="48" fill="url(#pinkPetal)"/>
-      <!-- Crochet Petal Layers -->
-      <path d="M-35 -10 C-45 -35 -15 -45 0 -35 C15 -45 45 -35 35 -10 C45 15 25 40 0 35 C-25 40 -45 15 -35 -10 Z" fill="#F8B4BD" stroke="#E27386" stroke-width="2"/>
-      <circle cx="0" cy="0" r="26" fill="#E27386"/>
-      <circle cx="0" cy="0" r="14" fill="#C94252"/>
-      <circle cx="0" cy="0" r="6" fill="#FCEEEF"/>
-    </g>
+    <!-- Calyx Base Arc &amp; Contour Stems -->
+    <path d="M190 325 Q250 365 310 325" stroke-width="13"/>
+    <path d="M250 345 L250 375" stroke="#C59A5A" stroke-width="10"/>
 
-    <!-- Deep Crimson Rose (Center Right) -->
-    <g transform="translate(290, 200)">
-      <circle cx="0" cy="0" r="45" fill="url(#roseRed)"/>
-      <path d="M-28 -20 C-10 -40 20 -40 32 -18 C42 5 25 35 -2 32 C-25 30 -38 0 -28 -20 Z" fill="none" stroke="#F5D6D9" stroke-width="3" stroke-linecap="round"/>
-      <path d="M-15 -10 C-5 -25 15 -20 20 -8 C25 8 10 20 -5 18 C-18 16 -20 0 -15 -10 Z" fill="none" stroke="#FCEEEF" stroke-width="2.5" stroke-linecap="round"/>
-      <circle cx="0" cy="2" r="8" fill="#5E1620"/>
-    </g>
-
-    <!-- Cream Blossom (Top Center) -->
-    <g transform="translate(245, 160)">
-      <circle cx="0" cy="0" r="38" fill="url(#creamPetal)"/>
-      <circle cx="-18" cy="-8" r="16" fill="url(#creamPetal)" stroke="#EBD5BE" stroke-width="1.5"/>
-      <circle cx="18" cy="-8" r="16" fill="url(#creamPetal)" stroke="#EBD5BE" stroke-width="1.5"/>
-      <circle cx="0" cy="-20" r="16" fill="url(#creamPetal)" stroke="#EBD5BE" stroke-width="1.5"/>
-      <circle cx="-12" cy="14" r="16" fill="url(#creamPetal)" stroke="#EBD5BE" stroke-width="1.5"/>
-      <circle cx="12" cy="14" r="16" fill="url(#creamPetal)" stroke="#EBD5BE" stroke-width="1.5"/>
-      <circle cx="0" cy="0" r="12" fill="#E8B86D"/>
-      <circle cx="0" cy="0" r="6" fill="#8C5E1E"/>
-    </g>
-
-    <!-- Ribbon &amp; Bow -->
-    <path d="M235 345 C215 330 200 355 220 370 C240 380 250 360 250 355 C250 360 260 380 280 370 C300 355 285 330 265 345 Z" fill="#A32D3B"/>
-    <circle cx="250" cy="355" r="9" fill="#872430"/>
-    <path d="M246 362 C240 395 225 415 215 425" fill="none" stroke="#A32D3B" stroke-width="5" stroke-linecap="round"/>
-    <path d="M254 362 C260 395 275 415 285 425" fill="none" stroke="#A32D3B" stroke-width="5" stroke-linecap="round"/>
+    <!-- Decorative Gold Accent Dots -->
+    <circle cx="185" cy="170" r="5" fill="#C59A5A" stroke="none"/>
+    <circle cx="315" cy="170" r="5" fill="#C59A5A" stroke="none"/>
+    <circle cx="250" cy="140" r="6" fill="#C59A5A" stroke="none"/>
   </g>
 </svg>

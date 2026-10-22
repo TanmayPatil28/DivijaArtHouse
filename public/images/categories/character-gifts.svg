@@ -1,101 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
   <defs>
-    <linearGradient id="bgChar" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFF8F0"/>
-      <stop offset="100%" stop-color="#FCEEE3"/>
-    </linearGradient>
-    <radialGradient id="bearGlow" cx="50%" cy="45%" r="55%">
-      <stop offset="0%" stop-color="#FFFDF9" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#FCEEE3" stop-opacity="0"/>
+    <radialGradient id="discGradMascot" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FCF3F5"/>
+      <stop offset="100%" stop-color="#F5E3E6"/>
     </radialGradient>
-    <linearGradient id="bearYarn" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D9A876"/>
-      <stop offset="100%" stop-color="#A67345"/>
-    </linearGradient>
-    <linearGradient id="snoutYarn" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFF7EE"/>
-      <stop offset="100%" stop-color="#E8D1BD"/>
-    </linearGradient>
-    <linearGradient id="flowerYellow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFDD55"/>
-      <stop offset="100%" stop-color="#E59B15"/>
-    </linearGradient>
-    <filter id="charShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#552B1E" flood-opacity="0.14"/>
-    </filter>
   </defs>
 
-  <circle cx="250" cy="250" r="230" fill="url(#bgChar)"/>
-  <circle cx="250" cy="250" r="215" fill="none" stroke="#E6C8B0" stroke-width="2" stroke-dasharray="6,6"/>
-  <circle cx="250" cy="220" r="170" fill="url(#bearGlow)"/>
+  <!-- Blush Medallion Disc -->
+  <circle cx="250" cy="250" r="236" fill="url(#discGradMascot)"/>
+  <circle cx="250" cy="250" r="222" fill="none" stroke="#C59A5A" stroke-width="3" opacity="0.6"/>
+  <circle cx="250" cy="250" r="212" fill="none" stroke="#C59A5A" stroke-width="1.5" stroke-dasharray="6,5" opacity="0.45"/>
 
-  <!-- Crochet Amigurumi Bear with Sunflower Mascot -->
-  <g filter="url(#charShadow)">
-    <!-- Bear Ears -->
-    <circle cx="175" cy="155" r="32" fill="url(#bearYarn)"/>
-    <circle cx="175" cy="155" r="18" fill="url(#snoutYarn)"/>
-    <circle cx="325" cy="155" r="32" fill="url(#bearYarn)"/>
-    <circle cx="325" cy="155" r="18" fill="url(#snoutYarn)"/>
-
-    <!-- Bear Body -->
-    <ellipse cx="250" cy="340" rx="90" ry="85" fill="url(#bearYarn)"/>
-    <!-- Bear Tummy Patch -->
-    <ellipse cx="250" cy="345" rx="55" ry="50" fill="url(#snoutYarn)"/>
-    <path d="M230 345 Q250 355 270 345" fill="none" stroke="#D1B297" stroke-width="2" stroke-dasharray="3,3"/>
-
-    <!-- Bear Paws (Feet) -->
-    <ellipse cx="180" cy="405" rx="30" ry="22" fill="url(#bearYarn)"/>
-    <circle cx="180" cy="405" r="12" fill="url(#snoutYarn)"/>
-    <ellipse cx="320" cy="405" rx="30" ry="22" fill="url(#bearYarn)"/>
-    <circle cx="320" cy="405" r="12" fill="url(#snoutYarn)"/>
-
+  <!-- Character Gift / Amigurumi Bear Mascot Line-Art -->
+  <g stroke="#781D2C" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none">
     <!-- Bear Head -->
-    <circle cx="250" cy="210" r="85" fill="url(#bearYarn)"/>
-    <!-- Crochet stitch texture rings on head -->
-    <circle cx="250" cy="210" r="75" fill="none" stroke="#8E5E35" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4"/>
-    <circle cx="250" cy="210" r="60" fill="none" stroke="#8E5E35" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.3"/>
+    <circle cx="250" cy="240" r="95" fill="#F8E7E9"/>
 
-    <!-- Bear Snout -->
-    <ellipse cx="250" cy="235" rx="38" ry="28" fill="url(#snoutYarn)"/>
-    <!-- Embroidered Nose &amp; Smile -->
-    <ellipse cx="250" cy="222" rx="12" ry="8" fill="#3D2412"/>
-    <path d="M250 230 L250 242 M240 242 Q250 250 260 242" fill="none" stroke="#3D2412" stroke-width="3" stroke-linecap="round"/>
-
-    <!-- Safety Bead Eyes with Sparkle -->
-    <ellipse cx="210" cy="205" rx="9" ry="11" fill="#1A110B"/>
-    <circle cx="207" cy="201" r="3.5" fill="#FFFFFF"/>
-    <ellipse cx="290" cy="205" rx="9" ry="11" fill="#1A110B"/>
-    <circle cx="287" cy="201" r="3.5" fill="#FFFFFF"/>
-
-    <!-- Blushing Cheeks -->
-    <ellipse cx="185" cy="230" rx="12" ry="7" fill="#F49E9E" opacity="0.7"/>
-    <ellipse cx="315" cy="230" rx="12" ry="7" fill="#F49E9E" opacity="0.7"/>
-
-    <!-- Left Arm holding Stem -->
-    <ellipse cx="180" cy="300" rx="22" ry="32" transform="rotate(25 180 300)" fill="url(#bearYarn)"/>
-    <!-- Right Arm hugging Sunflower -->
-    <ellipse cx="300" cy="310" rx="22" ry="32" transform="rotate(-30 300 310)" fill="url(#bearYarn)"/>
-
-    <!-- Crochet Sunflower Held by Bear -->
-    <g transform="translate(295, 305)">
-      <!-- Petals around -->
-      <g fill="url(#flowerYellow)" stroke="#D48B0E" stroke-width="1.5">
-        <circle cx="0" cy="-28" r="10"/>
-        <circle cx="20" cy="-20" r="10"/>
-        <circle cx="28" cy="0" r="10"/>
-        <circle cx="20" cy="20" r="10"/>
-        <circle cx="0" cy="28" r="10"/>
-        <circle cx="-20" cy="20" r="10"/>
-        <circle cx="-28" cy="0" r="10"/>
-        <circle cx="-20" cy="-20" r="10"/>
-      </g>
-      <!-- Center disc -->
-      <circle cx="0" cy="0" r="18" fill="#523218"/>
-      <circle cx="0" cy="0" r="14" fill="none" stroke="#A86E3C" stroke-width="2" stroke-dasharray="3,3"/>
+    <!-- Left &amp; Right Rounded Ears -->
+    <g>
+      <circle cx="170" cy="160" r="34" fill="#F8E7E9"/>
+      <circle cx="170" cy="160" r="16" fill="#C59A5A" stroke="none" opacity="0.7"/>
+      <circle cx="330" cy="160" r="34" fill="#F8E7E9"/>
+      <circle cx="330" cy="160" r="16" fill="#C59A5A" stroke="none" opacity="0.7"/>
     </g>
 
-    <!-- Cute Red Scarf / Ribbon around Bear's Neck -->
-    <path d="M195 280 Q250 300 305 280 Q250 290 195 280 Z" fill="#A32D3B"/>
-    <path d="M260 288 C265 315 275 330 280 340" fill="none" stroke="#A32D3B" stroke-width="8" stroke-linecap="round"/>
+    <!-- Snout Muzzle Oval -->
+    <ellipse cx="250" cy="265" rx="42" ry="32" fill="#FCF3F5" stroke-width="12"/>
+    <!-- Triangular Embroidered Nose -->
+    <path d="M238 252 Q250 246 262 252 Q250 264 238 252 Z" fill="#781D2C" stroke="none"/>
+    <!-- Cute Smile -->
+    <path d="M250 264 L250 278 M240 278 Q250 288 260 278" stroke-width="10"/>
+
+    <!-- Eyes (Cute Dots with Highlights) -->
+    <circle cx="210" cy="225" r="9" fill="#781D2C" stroke="none"/>
+    <circle cx="290" cy="225" r="9" fill="#781D2C" stroke="none"/>
+
+    <!-- Blush Cheeks -->
+    <ellipse cx="185" cy="255" rx="14" ry="8" fill="#E8B8BC" stroke="none"/>
+    <ellipse cx="315" cy="255" rx="14" ry="8" fill="#E8B8BC" stroke="none"/>
+
+    <!-- Sunflower / Floret in Ear or Paw Accent -->
+    <g transform="translate(325, 310)">
+      <circle cx="0" cy="0" r="22" stroke="#C59A5A" stroke-width="10" fill="#FCF3F5"/>
+      <circle cx="0" cy="0" r="9" fill="#781D2C" stroke="none"/>
+      <!-- Tiny Petal Scallops -->
+      <circle cx="0" cy="-22" r="5" fill="#C59A5A" stroke="none"/>
+      <circle cx="22" cy="0" r="5" fill="#C59A5A" stroke="none"/>
+      <circle cx="0" cy="22" r="5" fill="#C59A5A" stroke="none"/>
+      <circle cx="-22" cy="0" r="5" fill="#C59A5A" stroke="none"/>
+    </g>
   </g>
 </svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="discGradAll" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FCF3F5"/>
+      <stop offset="100%" stop-color="#F5E3E6"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Blush Medallion Disc -->
+  <circle cx="250" cy="250" r="236" fill="url(#discGradAll)"/>
+  <circle cx="250" cy="250" r="222" fill="none" stroke="#C59A5A" stroke-width="3" opacity="0.6"/>
+  <circle cx="250" cy="250" r="212" fill="none" stroke="#C59A5A" stroke-width="1.5" stroke-dasharray="6,5" opacity="0.45"/>
+
+  <!-- Botanical Twin Leaves &amp; Heart Medallion (Visiting Card 4th Icon) -->
+  <g stroke="#781D2C" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Center Heart Motif (From Visiting Card Logo) -->
+    <path d="M250 175 C238 150 210 155 210 180 C210 205 250 240 250 240 C250 240 290 205 290 180 C290 155 262 150 250 175 Z" fill="#781D2C" stroke="#781D2C" stroke-width="6"/>
+
+    <!-- Left Elegant Botanical Leaf Branch -->
+    <path d="M250 360 C235 320 200 270 170 230 C160 215 155 195 175 190 C195 195 215 240 250 310" stroke-width="13" fill="#F8E7E9"/>
+    <!-- Left Leaf Vein Accent -->
+    <path d="M190 230 C165 240 145 235 155 215 C170 220 185 225 190 230 Z" stroke="#C59A5A" stroke-width="8"/>
+
+    <!-- Right Elegant Botanical Leaf Branch -->
+    <path d="M250 360 C265 320 300 270 330 230 C340 215 345 195 325 190 C305 195 285 240 250 310" stroke-width="13" fill="#F8E7E9"/>
+    <!-- Right Leaf Vein Accent -->
+    <path d="M310 230 C335 240 355 235 345 215 C330 220 315 225 310 230 Z" stroke="#C59A5A" stroke-width="8"/>
+
+    <!-- Base Stem Tie &amp; Gold Sparkle -->
+    <path d="M250 330 L250 380" stroke="#C59A5A" stroke-width="11"/>
+    <circle cx="250" cy="385" r="6" fill="#C59A5A" stroke="none"/>
+    <circle cx="165" cy="180" r="5" fill="#C59A5A" stroke="none"/>
+    <circle cx="335" cy="180" r="5" fill="#C59A5A" stroke="none"/>
+  </g>
+</svg>
