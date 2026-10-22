@@ -69,7 +69,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   );
 
   return (
-    <div className="w-full bg-canvas min-h-screen pb-16">
+    <div className="w-full bg-canvas min-h-screen">
       {/* Breadcrumbs Navigation */}
       <div className="border-b border-border-subtle bg-surface-warm/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
@@ -111,22 +111,22 @@ export default async function ProductPage({ params }: ProductPageProps) {
       </div>
 
       {/* Main PDP Grid: Gallery on left, Details on right */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10 pb-12 sm:pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          {/* Left Column: Image Gallery (5 cols on lg) */}
+          {/* Left Column: Image Gallery (6 cols on lg) */}
           <div className="lg:col-span-6 w-full lg:sticky lg:top-24">
             <ProductGallery product={product} />
           </div>
 
-          {/* Right Column: Product Details, Options, & Actions (7 cols on lg) */}
+          {/* Right Column: Product Details, Options, & Actions (6 cols on lg) */}
           <div className="lg:col-span-6 w-full">
             <ProductDetails product={product} />
           </div>
         </div>
-
-        {/* Related Products Recommendation Shelf */}
-        <RelatedProductsShelf products={relatedProducts} />
       </div>
+
+      {/* Related Products Recommendation Shelf (Full-Width Soft Rose Blossom Panel) */}
+      <RelatedProductsShelf products={relatedProducts} />
     </div>
   );
 }
