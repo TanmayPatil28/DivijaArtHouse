@@ -68,13 +68,17 @@ const config: Config = {
           '"Segoe UI"',
           'sans-serif',
         ],
+        serif: [
+          'var(--font-playfair)',
+          'Playfair Display',
+          'Georgia',
+          'serif',
+        ],
         display: [
-          'var(--font-manrope)',
-          'Manrope',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          '"Segoe UI"',
-          'sans-serif',
+          'var(--font-playfair)',
+          'Playfair Display',
+          'Georgia',
+          'serif',
         ],
       },
       screens: {

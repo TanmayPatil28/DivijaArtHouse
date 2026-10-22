@@ -2,41 +2,60 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { ShoppingBag, ArrowRight, Sparkles, Heart } from 'lucide-react';
+import { ShoppingBag, ArrowRight, Sparkles, Heart, CheckCircle2 } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-warm-surface via-canvas to-canvas py-12 md:py-20 lg:py-24 border-b border-border-subtle">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#FBF8F5] via-[#FAF5F0] to-[#FAF5F0] py-12 md:py-20 lg:py-24 border-b border-border-subtle">
+      {/* Ambient Silk Atmosphere Glow */}
+      <div 
+        className="absolute top-10 right-1/4 w-96 h-96 bg-[radial-gradient(circle,rgba(197,154,90,0.12),transparent_70%)] pointer-events-none blur-3xl -z-10" 
+        aria-hidden="true" 
+      />
+      <div 
+        className="absolute bottom-10 left-10 w-80 h-80 bg-[radial-gradient(circle,rgba(232,184,188,0.15),transparent_70%)] pointer-events-none blur-3xl -z-10" 
+        aria-hidden="true" 
+      />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-          {/* Left Column: Editorial Copy & CTAs */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+          {/* Left Column: Atelier Editorial Storytelling & CTAs */}
           <div className="lg:col-span-7 text-center lg:text-left space-y-6">
-            {/* Brand Direction Eyebrow */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-gold/40 text-primary text-xs font-semibold uppercase tracking-wider shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-gold" />
-              <span>HANDCRAFTED CROCHET FLORALS</span>
+            {/* Atelier Eyebrow Ribbon */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-gold/40 text-primary text-xs font-semibold uppercase tracking-widest shadow-2xs backdrop-blur-sm">
+              <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
+              <span>Handcrafted Crochet Florals</span>
+              <span className="w-1 h-1 rounded-full bg-gold/70" />
+              <span className="text-[11px] text-text-muted font-medium lowercase">pune studio</span>
             </div>
 
-            {/* Headline */}
+            {/* Editorial Serif & Italic Headline */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[62px] font-semibold text-text-main leading-[1.12] tracking-tight">
-              Some feelings deserve to stay.
+              Some feelings{' '}
+              <span className="font-serif italic font-normal text-primary inline-block">
+                deserve to stay.
+              </span>
             </h1>
 
-            {/* Value description paragraphs */}
-            <div className="space-y-3 text-sm sm:text-base md:text-lg text-text-muted max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              <p>
-                Fresh flowers are beautiful. But sometimes, you wish the moment they represent could last a little longer.
-              </p>
-              <p>
-                Meet our handcrafted crochet flowers, thoughtful little keepsakes, and gift-ready creations—made to celebrate the people who make life special.
-              </p>
-              <p className="text-text-main font-medium">
-                For birthdays, anniversaries, quiet thank-yous, and all the little moments that deserve to be remembered.
-              </p>
+            {/* Emotional Lead Copy */}
+            <p className="text-base sm:text-lg md:text-xl text-text-main/80 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+              Fresh flowers are beautiful. But sometimes, you wish the moment they represent could last a little longer. Meet our handcrafted crochet blooms and gift-ready creations—shaped stitch by stitch to celebrate the people who make life special.
+            </p>
+
+            {/* Occasion Chips */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-white/90 border border-border-subtle text-text-main shadow-2xs">
+                <span className="text-gold">✦</span> Birthdays &amp; Anniversaries
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-white/90 border border-border-subtle text-text-main shadow-2xs">
+                <span className="text-gold">✦</span> Quiet Thank-Yous
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-white/90 border border-border-subtle text-text-main shadow-2xs">
+                <span className="text-gold">✦</span> Everlasting Keepsakes
+              </span>
             </div>
 
-            {/* Dual CTAs with Gold Ambient Hover Glow */}
+            {/* Dual CTAs with Gold Ambient Glow */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2">
               <Link
                 href="/shop"
@@ -55,37 +74,64 @@ export function Hero() {
               </Link>
             </div>
 
-            {/* Supporting Line */}
-            <p className="pt-2 text-xs sm:text-sm text-text-muted font-normal">
-              Handcrafted with care in India. Made to be kept, displayed, and cherished.
-            </p>
+            {/* Atelier Trust Stamp */}
+            <div className="pt-3 flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-3 text-xs sm:text-[13px] text-text-muted">
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                <span className="font-medium text-text-main">Handcrafted in Pune, India</span>
+              </div>
+              <span className="text-gold/60">•</span>
+              <span>Zero wilting</span>
+              <span className="text-gold/60">•</span>
+              <span>Gift packaging included</span>
+            </div>
           </div>
 
-          {/* Right Column: Visual Showcase */}
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-md sm:max-w-lg aspect-square rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-surface-warm via-white to-blush-soft border border-border-subtle shadow-xl flex flex-col items-center justify-center">
-              {/* Product Spotlight Image */}
-              <div className="relative w-full h-full max-h-72 sm:max-h-80 drop-shadow-md transition-transform duration-500 hover:scale-105">
-                <Image
+          {/* Right Column: Layered Atelier Visual Showcase */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end relative mt-4 lg:mt-0">
+            {/* Ambient Gold Back-Glow */}
+            <div className="absolute -inset-6 bg-gradient-to-tr from-gold/25 via-blush-soft/30 to-primary/15 rounded-[40px] blur-2xl -z-10 pointer-events-none" />
+
+            <div className="relative w-full max-w-[380px] sm:max-w-[430px] aspect-square">
+              {/* Flagship Edge-to-Edge Showcase Frame */}
+              <div className="relative w-full h-full rounded-[28px] sm:rounded-[36px] overflow-hidden border border-gold/40 shadow-[0_24px_50px_-12px_rgba(46,23,21,0.18)] bg-gradient-to-b from-[#FBF8F5] via-[#F8F1ED]/50 to-[#F2E8E4]/60 group">
+                <img
                   src="/images/products/royal-sovereign-jumbo-1.svg"
-                  alt="Royal Sovereign Jumbo Handcrafted Crochet Bouquet"
-                  fill
-                  priority
-                  unoptimized
-                  className="object-contain"
+                  alt="The Royal Sovereign 24-Stem Jumbo Bouquet"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  loading="eager"
                 />
+
+                {/* Subtle Edge Inset Border */}
+                <div className="absolute inset-0 rounded-[28px] sm:rounded-[36px] border border-white/40 pointer-events-none" />
               </div>
 
-              {/* Floating Badge 1: Artisan Note */}
-              <div className="absolute top-4 left-4 sm:top-6 sm:left-6 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-gold/40 shadow-sm flex items-center gap-1.5 text-[11px] font-medium text-text-main">
-                <Heart className="w-3.5 h-3.5 text-primary fill-primary" />
-                <span>Pure Cotton Yarn</span>
+              {/* Overlapping Offset Atelier Polaroid (Detail Stitching) */}
+              <div className="absolute -bottom-5 -left-4 sm:-bottom-7 sm:-left-6 w-36 sm:w-44 bg-white p-2 sm:p-2.5 rounded-2xl shadow-2xl border border-gold/35 rotate-[-4deg] hover:rotate-0 transition-transform duration-300 z-20 group">
+                <div className="relative aspect-square rounded-xl overflow-hidden bg-surface-warm border border-border-subtle/60">
+                  <img
+                    src="/images/products/royal-sovereign-jumbo-2.svg"
+                    alt="Detail Stitching Spread"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="pt-2 px-1 text-center">
+                  <p className="text-[11px] font-semibold text-text-main tracking-tight leading-tight">Detail Stitching</p>
+                  <p className="text-[9px] text-gold uppercase tracking-wider font-medium mt-0.5">Top Angle Spread</p>
+                </div>
+              </div>
+
+              {/* Floating Badge 1: 100% Milk Cotton Yarn */}
+              <div className="absolute -top-3 -right-2 sm:-top-4 sm:-right-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-gold/40 shadow-md flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-text-main z-20 hover:scale-105 transition-transform duration-200">
+                <Heart className="w-3.5 h-3.5 text-primary fill-primary shrink-0" />
+                <span>100% Milk Cotton Yarn</span>
               </div>
 
               {/* Floating Badge 2: Everlasting Guarantee */}
-              <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-gold/40 shadow-sm flex items-center gap-1.5 text-[11px] font-medium text-primary">
-                <Sparkles className="w-3.5 h-3.5 text-gold" />
-                <span className="font-semibold">Lasts a Lifetime</span>
+              <div className="absolute -bottom-3 -right-2 sm:-bottom-4 sm:-right-4 bg-primary text-white backdrop-blur-md px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full border border-gold/40 shadow-wine-glow flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold z-20 hover:scale-105 transition-transform duration-200">
+                <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
+                <span>Everlasting • Never Wilts</span>
               </div>
             </div>
           </div>

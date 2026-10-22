@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Manrope } from 'next/font/google';
+import { Manrope, Playfair_Display } from 'next/font/google';
 import './globals.css';
 
 const manrope = Manrope({
@@ -7,6 +7,14 @@ const manrope = Manrope({
   weight: ['400', '500', '600', '700', '800'],
   display: 'swap',
   variable: '--font-manrope',
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+  variable: '--font-playfair',
 });
 
 export const metadata: Metadata = {
@@ -25,7 +33,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#A32D3B',
+  themeColor: '#781D2C',
   width: 'device-width',
   initialScale: 1,
 };
@@ -44,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={manrope.variable}>
+    <html lang="en" className={`${manrope.variable} ${playfair.variable}`}>
       <body className="min-h-screen bg-canvas text-text-main font-sans flex flex-col antialiased">
         <SmoothScrollProvider>
           <WishlistProvider>
