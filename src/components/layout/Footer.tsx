@@ -17,8 +17,28 @@ import {
   PackageSearch,
 } from 'lucide-react';
 
-export function Footer() {
+interface FooterProps {
+  identity?: {
+    storeName?: string;
+    tagline?: string;
+    supportEmail?: string;
+    supportPhone?: string;
+    whatsappNumber?: string;
+    location?: string;
+    instagramUrl?: string;
+    facebookUrl?: string;
+    pinterestUrl?: string;
+  };
+}
+
+export function Footer({ identity }: FooterProps = {}) {
   const currentYear = new Date().getFullYear();
+  const phone = identity?.supportPhone || '+91 92092 84423';
+  const email = identity?.supportEmail || 'care@divijaarthouse.com';
+  const location = identity?.location || 'Hadapsar, Pune, Maharashtra 411028, India';
+  const whatsapp = identity?.whatsappNumber || '+91 92092 84423';
+  const cleanWaNumber = whatsapp.replace(/[^\d]/g, '');
+  const instagram = identity?.instagramUrl || 'https://instagram.com/divijaarthouse';
 
   return (
     <footer className="bg-footer text-gray-300 border-t border-gold/25 relative overflow-hidden">
@@ -65,15 +85,15 @@ export function Footer() {
             <div className="pt-2 space-y-2 text-xs text-gray-400">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-3.5 h-3.5 text-gold flex-shrink-0 mt-0.5" />
-                <span>Hadapsar, Pune, Maharashtra 411028, India</span>
+                <span>{location}</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-3.5 h-3.5 text-gold flex-shrink-0" />
                 <a
-                  href="tel:+919209284423"
+                  href={`tel:${phone.replace(/[^\d+]/g, '')}`}
                   className="hover:text-gold transition-colors font-medium text-gray-300"
                 >
-                  +91 92092 84423
+                  {phone}
                 </a>
               </div>
             </div>
@@ -248,11 +268,11 @@ export function Footer() {
 
               {/* 1-Click WhatsApp Button */}
               <a
-                href="https://wa.me/919209284423?text=Hi%20Divija%20Art%20House%2C%20I%20would%20like%20to%20inquire%20about%20a%20handcrafted%20bouquet"
+                href={`https://wa.me/${cleanWaNumber}?text=Hi%20Divija%20Art%20House%2C%20I%20would%20like%20to%20inquire%20about%20a%20handcrafted%20bouquet`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-medium text-xs tracking-wide shadow-md transition-all duration-200 active:scale-95 group/wa"
-                aria-label="Chat with Head Artisan on WhatsApp (+91 92092 84423)"
+                aria-label={`Chat with Head Artisan on WhatsApp (${whatsapp})`}
               >
                 <MessageCircle className="w-4 h-4 fill-white text-[#25D366] group-hover/wa:scale-110 transition-transform" />
                 <span>Chat on WhatsApp</span>
@@ -272,17 +292,17 @@ export function Footer() {
                 </span>
                 <div className="flex items-center gap-2">
                   <a
-                    href="https://instagram.com/divijaarthouse"
+                    href={instagram}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-1.5 rounded-lg bg-white/5 hover:bg-primary border border-white/10 text-gray-300 hover:text-white transition-all"
-                    aria-label="Divija Art House Instagram (@divijaarthouse)"
-                    title="Instagram @divijaarthouse"
+                    aria-label="Divija Art House Instagram"
+                    title="Instagram"
                   >
                     <Instagram className="w-3.5 h-3.5" />
                   </a>
                   <a
-                    href="https://wa.me/919209284423"
+                    href={`https://wa.me/${cleanWaNumber}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-1.5 rounded-lg bg-white/5 hover:bg-[#25D366] border border-white/10 text-gray-300 hover:text-white transition-all"
@@ -292,10 +312,10 @@ export function Footer() {
                     <MessageCircle className="w-3.5 h-3.5" />
                   </a>
                   <a
-                    href="mailto:care@divijaarthouse.com"
+                    href={`mailto:${email}`}
                     className="p-1.5 rounded-lg bg-white/5 hover:bg-gold border border-white/10 text-gray-300 hover:text-neutral-900 transition-all"
                     aria-label="Email Studio Care"
-                    title="Email care@divijaarthouse.com"
+                    title={`Email ${email}`}
                   >
                     <Mail className="w-3.5 h-3.5" />
                   </a>

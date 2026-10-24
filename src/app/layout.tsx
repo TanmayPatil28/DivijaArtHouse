@@ -45,22 +45,28 @@ import { CartDrawer } from '@/components/cart/CartDrawer';
 import { CartProvider } from '@/context/CartContext';
 import { WishlistProvider } from '@/context/WishlistContext';
 import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider';
+import { getSiteSettings } from '@/lib/site-settings';
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const siteSettings = getSiteSettings();
+
   return (
     <html lang="en" className={`${manrope.variable} ${playfair.variable}`}>
       <body className="min-h-screen bg-canvas text-text-main font-sans flex flex-col antialiased">
         <SmoothScrollProvider>
           <WishlistProvider>
             <CartProvider>
-              <AnnouncementBar />
-              <Header />
+              <AnnouncementBar
+                isEnabled={siteSettings.announcementBar.isEnabled}
+                messages={siteSettings.announcementBar.messages}
+              />
+              <Header navItems={siteSettings.navigation.items} />
               <main className="flex-1 w-full">{children}</main>
-              <Footer />
+              <Footer identity={siteSettings.identity} />
               <CartDrawer />
             </CartProvider>
           </WishlistProvider>

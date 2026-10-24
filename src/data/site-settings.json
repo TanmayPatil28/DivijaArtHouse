@@ -1,0 +1,97 @@
+{
+  "announcementBar": {
+    "isEnabled": true,
+    "messages": [
+      {
+        "id": "msg-1",
+        "text": "Handcrafted crochet flowers, made with care.",
+        "icon": "sparkles"
+      },
+      {
+        "id": "msg-2",
+        "text": "A little something for someone special.",
+        "link": "/shop",
+        "icon": "gift"
+      },
+      {
+        "id": "msg-3",
+        "text": "Free delivery on orders over ₹999 across India.",
+        "link": "/shop",
+        "icon": "truck"
+      }
+    ]
+  },
+  "navigation": {
+    "items": [
+      {
+        "id": "nav-home",
+        "name": "Home",
+        "href": "/",
+        "isEnabled": true,
+        "sortOrder": 1
+      },
+      {
+        "id": "nav-shop",
+        "name": "Shop All",
+        "href": "/shop",
+        "isEnabled": true,
+        "sortOrder": 2,
+        "badge": "Popular"
+      },
+      {
+        "id": "nav-bouquets",
+        "name": "Bouquets",
+        "href": "/collections/bouquets",
+        "isEnabled": true,
+        "sortOrder": 3
+      },
+      {
+        "id": "nav-flower-pots",
+        "name": "Flower Pots",
+        "href": "/collections/flower-pots",
+        "isEnabled": true,
+        "sortOrder": 4
+      },
+      {
+        "id": "nav-gift-boxes",
+        "name": "Gift Boxes",
+        "href": "/collections/gift-boxes",
+        "isEnabled": true,
+        "sortOrder": 5
+      },
+      {
+        "id": "nav-hair-acc",
+        "name": "Hair Accessories",
+        "href": "/collections/hair-accessories",
+        "isEnabled": true,
+        "sortOrder": 6
+      },
+      {
+        "id": "nav-story",
+        "name": "Our Story",
+        "href": "/about",
+        "isEnabled": true,
+        "sortOrder": 7
+      },
+      {
+        "id": "nav-contact",
+        "name": "Contact",
+        "href": "/contact",
+        "isEnabled": true,
+        "sortOrder": 8
+      }
+    ]
+  },
+  "identity": {
+    "storeName": "Divija Art House",
+    "tagline": "Little Blooms, Lasting Feelings.",
+    "supportEmail": "support@divijaarthouse.com",
+    "supportPhone": "+91 92092 84423",
+    "whatsappNumber": "+91 98765 43210",
+    "location": "Hadapsar, Pune, Maharashtra 411028, India",
+    "freeShippingThresholdINR": 999,
+    "instagramUrl": "https://instagram.com/divijaarthouse",
+    "facebookUrl": "https://facebook.com/divijaarthouse",
+    "pinterestUrl": "https://pinterest.com/divijaarthouse"
+  }
+}
