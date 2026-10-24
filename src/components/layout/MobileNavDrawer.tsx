@@ -25,6 +25,7 @@ interface MobileNavDrawerProps {
   wishlistCount?: number;
   cartCount?: number;
   onOpenCart?: () => void;
+  navItems?: Array<{ name: string; href: string; badge?: string }>;
 }
 
 const NAV_LINKS = [
@@ -44,10 +45,24 @@ export function MobileNavDrawer({
   wishlistCount = 0,
   cartCount = 0,
   onOpenCart,
+  navItems,
 }: MobileNavDrawerProps) {
   const pathname = usePathname();
   const drawerRef = useRef<HTMLDivElement>(null);
   const firstFocusableRef = useRef<HTMLButtonElement>(null);
+
+  const itemsToRender =
+    navItems && navItems.length > 0
+      ? navItems.map((item) => {
+          const match = NAV_LINKS.find((nl) => nl.href === item.href);
+          return {
+            name: item.name,
+            href: item.href,
+            icon: match ? match.icon : Flower2,
+            badge: item.badge,
+          };
+        })
+      : NAV_LINKS;
 
   // Close drawer automatically on route changes
   useEffect(() => {
@@ -149,7 +164,7 @@ export function MobileNavDrawer({
 
         {/* Navigation Links */}
         <nav className="flex-1 overflow-y-auto px-4 py-4 space-y-1" data-lenis-prevent>
-          {NAV_LINKS.map((link) => {
+          {itemsToRender.map((link) => {
             const Icon = link.icon;
             const isActive = pathname === link.href;
             return (

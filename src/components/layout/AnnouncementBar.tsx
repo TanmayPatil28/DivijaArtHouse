@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Sparkles, Gift, Truck } from 'lucide-react';
 
 interface AnnouncementBarProps {
+  isEnabled?: boolean;
   messages?: Array<{
     text: string;
     link?: string;
@@ -29,8 +30,15 @@ const DEFAULT_MESSAGES = [
   },
 ];
 
-export function AnnouncementBar({ messages = DEFAULT_MESSAGES }: AnnouncementBarProps) {
+export function AnnouncementBar({
+  isEnabled = true,
+  messages = DEFAULT_MESSAGES,
+}: AnnouncementBarProps) {
   const [isPaused, setIsPaused] = useState(false);
+
+  if (!isEnabled || !messages || messages.length === 0) {
+    return null;
+  }
 
   const renderIcon = (type?: string) => {
     switch (type) {

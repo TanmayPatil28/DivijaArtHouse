@@ -26,10 +26,19 @@ const MAIN_NAV_ITEMS = [
   { name: 'Contact', href: '/contact' },
 ];
 
-export function Header() {
+interface HeaderProps {
+  navItems?: Array<{ name: string; href: string; isEnabled?: boolean; badge?: string }>;
+}
+
+export function Header({ navItems }: HeaderProps = {}) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const pathname = usePathname();
+
+  const itemsToRender =
+    navItems && navItems.length > 0
+      ? navItems.filter((i) => i.isEnabled !== false)
+      : MAIN_NAV_ITEMS;
 
   const { summary, openCart, isHydrated: isCartHydrated } = useCart();
   const { wishlistCount, isHydrated: isWishlistHydrated } = useWishlist();
@@ -78,7 +87,7 @@ export function Header() {
               className="hidden lg:flex items-center space-x-6 xl:space-x-8"
               aria-label="Main Store Navigation"
             >
-              {MAIN_NAV_ITEMS.map((item) => {
+              {itemsToRender.map((item) => {
                 const isActive = pathname === item.href;
                 return (
                   <Link
@@ -154,7 +163,7 @@ export function Header() {
 
         {/* Tablet Navigation Bar (visible on md to lg screens) */}
         <div className="hidden md:flex lg:hidden border-t border-border-subtle bg-surface-warm/50 px-4 py-2 overflow-x-auto justify-center gap-5 text-xs font-medium">
-          {MAIN_NAV_ITEMS.map((item) => {
+          {itemsToRender.map((item) => {
             const isActive = pathname === item.href;
             return (
               <Link
@@ -180,6 +189,7 @@ export function Header() {
         wishlistCount={activeWishlistCount}
         cartCount={activeCartCount}
         onOpenCart={openCart}
+        navItems={itemsToRender}
       />
 
       {/* Search Modal */}
