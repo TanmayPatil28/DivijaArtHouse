@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
   LayoutDashboard,
+  SlidersHorizontal,
   Flower2,
   FolderTree,
   ShoppingBag,
@@ -16,6 +17,7 @@ import { handleSignOut } from '@/actions/auth';
 
 const NAV_ITEMS = [
   { name: 'Dashboard', href: '/admin', icon: LayoutDashboard },
+  { name: 'Homepage Studio', href: '/admin/homepage', icon: SlidersHorizontal },
   { name: 'Products', href: '/admin/products', icon: Flower2 },
   { name: 'Categories', href: '/admin/categories', icon: FolderTree },
   { name: 'Orders', href: '/admin/orders', icon: ShoppingBag },
