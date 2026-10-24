@@ -40,12 +40,12 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
   };
 
   const popularSearches = [
-    'Sunflower',
-    'Rose',
-    'Daisy Pot',
-    'Jumbo Bouquet',
-    'Hair Clips',
-    'Amigurumi',
+    'OHP Rangoli',
+    'Woolen Rangoli',
+    'Kundan Pooja Art',
+    'Pipe Cleaner Tulip',
+    'Festive Toran',
+    'Haldi Decor',
   ];
 
   return (
@@ -71,7 +71,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search crochet flowers, pots, bouquets, gifts..."
+            placeholder="Search OHP rangoli, woolen floor art, pipe cleaner florals, torans..."
             className="w-full px-3 py-1 text-base text-text-main placeholder-text-muted focus:outline-none"
           />
           {query && (

@@ -12,63 +12,63 @@ import {
 
 const FEATURED_OCCASIONS = [
   {
-    tag: 'Anniversary Milestone',
-    title: 'Anniversaries',
-    subtitle: 'Celebrate the little things that make your story yours, with blooms made to be kept.',
-    cta: 'Shop Anniversary Gifts',
-    href: '/shop?occasion=anniversaries',
-    image: '/images/products/blushing-peony-rose-1.svg',
-    alt: 'Blushing Peony and Rose Handcrafted Bouquet',
-    icon: Heart,
+    tag: 'Sacred Festive Rituals',
+    title: 'Diwali & Pooja Sanctum',
+    subtitle: 'Adorn home mandirs, entrances, and sacred poojas with reusable Kundan OHP rangolis and festive tealights.',
+    cta: 'Shop Diwali & Pooja Decor',
+    href: '/collections/ohp-sheets-rangoli',
+    image: '/images/categories/ohp-rangoli.svg',
+    alt: 'Kundan OHP Sheets Rangoli for Diwali and Pooja',
+    icon: Sparkles,
   },
   {
-    tag: 'Romantic Keepsake',
-    title: "Valentine's Day",
-    subtitle: 'For the person who makes ordinary days feel a little more special.',
-    cta: 'Find a Romantic Gift',
-    href: '/shop?occasion=valentines-day',
-    image: '/images/products/scarlet-romance-rose-lily-1.svg',
-    alt: 'Scarlet Romance Red Rose and Lily Bouquet',
-    icon: Flame,
+    tag: 'Grand Wedding Art',
+    title: 'Haldi, Mehendi & Sangeet',
+    subtitle: 'Vibrant yellow and red woolen floor mandalas hand-rolled for pre-wedding rituals and bridal entrances.',
+    cta: 'Shop Wedding Rangoli',
+    href: '/collections/woolen-rangoli',
+    image: '/images/categories/woolen-rangoli.svg',
+    alt: 'Plush Woolen Rangoli for Haldi and Wedding Ceremonies',
+    icon: Heart,
   },
 ];
 
 const COMPANION_OCCASIONS = [
   {
-    title: 'Birthdays',
-    subtitle: 'For another year of growth, laughter, and becoming more of who they are.',
-    cta: 'Find a Birthday Gift',
-    href: '/shop?occasion=birthdays',
-    image: '/images/products/barnaby-bear-amigurumi-1.svg',
-    alt: 'Barnaby the Bear with Sunflower Amigurumi',
-    icon: Cake,
+    title: 'Griha Pravesh & Mandir',
+    subtitle: 'Artisanal door torans with brass bells and mirror embellishments to bless every entrance.',
+    cta: 'Explore Door Torans',
+    href: '/collections/decore-crafts',
+    image: '/images/categories/decore-crafts.svg',
+    alt: 'Festive Door Torans and Mandir Decor',
+    icon: Flame,
   },
   {
-    title: 'Festivals & Celebrations',
-    subtitle: 'Bring something thoughtful to the festivities, from Rakhi to Diwali gifting.',
-    cta: 'Explore Festive Gifts',
-    href: '/shop?occasion=festivals',
-    image: '/images/products/sweet-serenade-gift-box-1.svg',
-    alt: 'Sweet Serenade Bloom and Scented Candle Box',
+    title: 'Desk & Living Spaces',
+    subtitle: 'Hand-sculpted pipe cleaner flower pots and everlasting tulip stems for cheer that never fades.',
+    cta: 'Explore Desk Florals',
+    href: '/collections/pipe-cleaner-crafts',
+    image: '/images/categories/pipe-cleaner.svg',
+    alt: 'Pipe Cleaner Sculpted Desk Pots and Florals',
+    icon: Smile,
+  },
+  {
+    title: 'Reusable Floor Art',
+    subtitle: 'Zero color-powder mess and instant 2-minute setup for daily or festive pooja spaces.',
+    cta: 'Shop Reusable Rangolis',
+    href: '/collections/ohp-sheets-rangoli',
+    image: '/images/categories/ohp-rangoli.svg',
+    alt: 'Reusable Acrylic OHP Rangoli Designs',
     icon: Sparkles,
   },
   {
-    title: 'Graduations',
-    subtitle: 'A thoughtful way to celebrate hard work, brave beginnings, and chapters ahead.',
-    cta: 'Celebrate Their Achievement',
-    href: '/shop?occasion=graduation',
-    image: '/images/products/eternal-sunshine-sunflower-1.svg',
-    alt: 'Eternal Sunshine Crochet Sunflower Bouquet',
-    icon: GraduationCap,
-  },
-  {
-    title: 'Just Because',
-    subtitle: 'No occasion needed. Just a little reminder that someone is on your mind.',
-    cta: 'Send a Little Something',
-    href: '/shop?occasion=just-because',
-    image: '/images/products/cozy-cottage-daisy-pot-1.svg',
-    alt: 'Cozy Cottage Daisy Ceramic Pot',
-    icon: Smile,
+    title: 'Festive Keepsake Gifting',
+    subtitle: 'Thoughtful artisanal gifts handcrafted by women artisans in Pune with customized blessings.',
+    cta: 'Explore Gift Crafts',
+    href: '/shop',
+    image: '/images/categories/decore-crafts.svg',
+    alt: 'Artisanal Festive Decor and Keepsake Crafts',
+    icon: Cake,
   },
 ];
 
@@ -89,7 +89,7 @@ export function OccasionSection() {
         <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-canvas border border-gold/40 text-primary text-xs font-semibold uppercase tracking-widest shadow-2xs mb-2.5 backdrop-blur-sm">
             <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
-            <span>FOR THE MOMENTS THAT MATTER</span>
+            <span>CRAFTED FOR SACRED &amp; JOYOUS MOMENTS</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-text-main">
             What are we{' '}
@@ -98,7 +98,7 @@ export function OccasionSection() {
             </span>
           </h2>
           <p className="text-sm sm:text-base text-text-muted mt-2 leading-relaxed">
-            A gift doesn&apos;t have to be grand to mean something. Sometimes, it&apos;s the thought behind it that stays with us.
+            From auspicious poojas and radiant Haldi ceremonies to housewarmings and serene living spaces, explore authentic handmade crafts.
           </p>
         </div>
 

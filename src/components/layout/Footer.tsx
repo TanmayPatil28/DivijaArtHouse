@@ -68,11 +68,11 @@ export function Footer({ identity }: FooterProps = {}) {
             </Link>
 
             <p className="font-serif italic text-xs tracking-wider text-gold font-medium">
-              Little Blooms, Lasting Feelings.
+              Festive traditions crafted to stay forever.
             </p>
 
             <p className="text-sm text-gray-400 leading-relaxed pr-2">
-              Thoughtful botanical keepsakes, hand-crocheted stitch-by-stitch by skilled women artisans in Pune. Designed to bloom forever and celebrate life&apos;s most cherished moments.
+              Artisanal Kundan OHP rangolis, plush woolen floor art, sculpted pipe cleaner florals, and keepsake decor. Handcrafted piece by piece by talented women artisans in Pune.
             </p>
 
             {/* Artisan Pride Badge */}
@@ -91,7 +91,7 @@ export function Footer({ identity }: FooterProps = {}) {
                 <Phone className="w-3.5 h-3.5 text-gold flex-shrink-0" />
                 <a
                   href={`tel:${phone.replace(/[^\d+]/g, '')}`}
-                  className="hover:text-gold transition-colors font-medium text-gray-300"
+                  className="hover:text-gold transition-colors font-medium text-gray-300 font-sans not-italic tabular-nums"
                 >
                   {phone}
                 </a>
@@ -102,26 +102,17 @@ export function Footer({ identity }: FooterProps = {}) {
           {/* Column 2: Boutique Catalogue (Span 3) */}
           <div className="lg:col-span-3">
             <h3 className="text-xs font-semibold uppercase tracking-widest text-gold mb-4 flex items-center gap-2">
-              <span>Boutique Catalogue</span>
+              <span>Artisan Catalogue</span>
               <span className="h-px flex-1 bg-gold/20"></span>
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link
-                  href="/collections/bouquets"
+                  href="/collections/ohp-sheets-rangoli"
                   className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-gold/40"></span>
-                  Crochet Bouquets
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/collections/jumbo-bouquets"
-                  className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold/40"></span>
-                  Jumbo Bouquets
+                  OHP Sheets Rangoli
                   <span className="text-[10px] px-1.5 py-0.5 rounded bg-primary/30 text-blush border border-primary/40 font-medium ml-1">
                     Signature
                   </span>
@@ -129,38 +120,29 @@ export function Footer({ identity }: FooterProps = {}) {
               </li>
               <li>
                 <Link
-                  href="/collections/flower-pots"
+                  href="/collections/woolen-rangoli"
                   className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-gold/40"></span>
-                  Everlasting Flower Pots
+                  Woolen Rangoli
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/collections/gift-boxes"
+                  href="/collections/pipe-cleaner-crafts"
                   className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-gold/40"></span>
-                  Curated Gift Boxes
+                  Pipe Cleaner Crafts
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/collections/hair-accessories"
+                  href="/collections/decore-crafts"
                   className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-gold/40"></span>
-                  Floral Hair Accessories
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/collections/character-gifts"
-                  className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold/40"></span>
-                  Amigurumi Keepsakes
+                  Decore Crafts
                 </Link>
               </li>
               <li className="pt-1.5">
@@ -168,7 +150,7 @@ export function Footer({ identity }: FooterProps = {}) {
                   href="/shop"
                   className="inline-flex items-center gap-1.5 text-xs font-semibold text-gold hover:text-white transition-colors uppercase tracking-wider"
                 >
-                  <span>Explore All Creations</span>
+                  <span>Explore All 4 Crafts</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </Link>
               </li>
@@ -204,7 +186,7 @@ export function Footer({ identity }: FooterProps = {}) {
                   href="/about#care"
                   className="hover:text-gold hover:translate-x-1 inline-flex items-center gap-1.5 transition-all text-gray-300"
                 >
-                  Floral Care Guide
+                  Rangoli &amp; Craft Care
                 </Link>
               </li>
               <li>

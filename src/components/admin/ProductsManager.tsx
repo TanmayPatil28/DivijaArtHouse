@@ -93,7 +93,7 @@ export function ProductsManager({ initialProducts, categories }: ProductsManager
     stockQuantity: 15,
     description: '',
     details: '',
-    tags: 'handcrafted, crochet, gift',
+    tags: 'handcrafted, rangoli, decor',
     image: PRESET_IMAGES[0],
     isActive: true,
     isFeatured: false,
@@ -109,7 +109,7 @@ export function ProductsManager({ initialProducts, categories }: ProductsManager
       stockQuantity: 15,
       description: '',
       details: '',
-      tags: 'handcrafted, crochet, gift',
+      tags: 'handcrafted, rangoli, decor',
       image: PRESET_IMAGES[0],
       isActive: true,
       isFeatured: false,
@@ -571,7 +571,7 @@ export function ProductsManager({ initialProducts, categories }: ProductsManager
                   rows={3}
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  placeholder="Artisanal description of the handcrafted crochet flowers..."
+                  placeholder="Artisanal description of the handcrafted rangolis & decor crafts..."
                   className="w-full px-3.5 py-2 rounded-xl border border-stone-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
                 />
               </div>

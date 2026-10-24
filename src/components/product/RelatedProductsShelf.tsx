@@ -32,10 +32,10 @@ export function RelatedProductsShelf({ products }: RelatedProductsShelfProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Editorial Section Header */}
         <SectionHeader
-          eyebrow="Complementary Blooms"
+          eyebrow="Complementary Crafts"
           titleLead="You May Also"
           titleAccent="Cherish."
-          description="Discover more artisan creations hand-crocheted with everlasting love to pair with your gift."
+          description="Discover more artisan creations handcrafted with devotion to pair with your celebrations."
           align="center"
           size="lg"
         />

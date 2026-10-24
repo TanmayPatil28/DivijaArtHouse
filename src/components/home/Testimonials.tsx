@@ -6,35 +6,35 @@ const COMMUNITY_TESTIMONIALS = [
   {
     name: 'Ananya S.',
     location: 'Pune, Maharashtra',
-    headline: 'She cried happy tears on our anniversary.',
+    headline: 'Our Diwali pooja looked celestial.',
     quote:
-      'Ordered the Blushing Peony bouquet for our first anniversary. Fresh flowers wilt in three days, but this is sitting beautifully on her bedside table a year later. The stitch detail in person is truly breathtaking.',
-    giftName: 'Blushing Peony & Rose Bouquet',
-    giftHref: '/products/blushing-peony-rose-handcrafted-bouquet',
-    giftImage: '/images/products/blushing-peony-rose-1.svg',
-    occasion: '1st Wedding Anniversary',
-  },
-  {
-    name: 'Rohan M.',
-    location: 'Mumbai, Maharashtra',
-    headline: 'The sweetest birthday surprise ever.',
-    quote:
-      'Sent Barnaby the Bear with Sunflower to my sister in Bangalore for her birthday. The packaging was so thoughtful and arrived in pristine condition. She keeps him right beside her laptop on her work desk!',
-    giftName: 'Barnaby the Bear with Sunflower',
-    giftHref: '/products/barnaby-the-bear-crochet-sunflower-gift',
-    giftImage: '/images/products/barnaby-bear-amigurumi-1.svg',
-    occasion: "Sister's Birthday",
+      'Ordered the Royal Peacock Kundan OHP Rangoli. We did not have to deal with colored powder mess or hours of drawing. It looks radiant beside our brass diyas and wipes clean into its keepsake box!',
+    giftName: 'Royal Peacock Kundan OHP Rangoli',
+    giftHref: '/products/royal-peacock-kundan-ohp-rangoli',
+    giftImage: '/images/categories/ohp-rangoli.svg',
+    occasion: 'Diwali Pooja & Laxmi Sanctum',
   },
   {
     name: 'Priya K.',
     location: 'Bengaluru, Karnataka',
-    headline: 'A monumental, jaw-dropping work of art.',
+    headline: "Stole the show at my sister's Haldi ceremony!",
     quote:
-      'The Royal Sovereign Jumbo is an absolute masterpiece. The luxury keepsake box, the wax-sealed certificate, and the sheer weight of 24 stems—everyone at the party was amazed that it was sculpted entirely by hand.',
-    giftName: 'The Royal Sovereign 24-Stem Jumbo',
-    giftHref: '/products/the-royal-sovereign-24-stem-jumbo-bouquet',
-    giftImage: '/images/products/royal-sovereign-jumbo-1.svg',
-    occasion: 'Milestone Celebration',
+      'The Shubh Vivaah Haldi Woolen Rangoli was the centerpiece of the wedding entrance. The pom-poms are so plush, vibrant yellow, and soft. The photographer framed bridal shots right around it.',
+    giftName: 'Shubh Vivaah Haldi Woolen Rangoli',
+    giftHref: '/products/shubh-vivaah-haldi-woolen-rangoli',
+    giftImage: '/images/categories/woolen-rangoli.svg',
+    occasion: "Sister's Haldi Ceremony",
+  },
+  {
+    name: 'Rohan M.',
+    location: 'Mumbai, Maharashtra',
+    headline: 'The pipe cleaner tulip pot brightens my desk every day.',
+    quote:
+      'Received the Pipe Cleaner Velvet Tulip Pot as a desk gift. The chenille velvet finish is amazingly soft, the colors are vivid, and it never needs watering or wilts. Truly wonderful craft.',
+    giftName: 'Velvet Pipe Cleaner Tulip Pot',
+    giftHref: '/products/velvet-blossom-pipe-cleaner-tulip-pot',
+    giftImage: '/images/categories/pipe-cleaner.svg',
+    occasion: 'Home Studio & Desk Decor',
   },
 ];
 
@@ -81,7 +81,7 @@ export function Testimonials() {
             </div>
             <span className="font-semibold text-primary font-sans not-italic tabular-nums">4.9 / 5 Average Rating</span>
             <span className="text-gold">•</span>
-            <span className="text-text-muted font-sans not-italic tabular-nums">1,200+ Handcrafted Blooms Delivered Across India</span>
+            <span className="text-text-muted font-sans not-italic tabular-nums">1,200+ Handcrafted Rangolis &amp; Crafts Delivered Across India</span>
           </div>
         </div>
 

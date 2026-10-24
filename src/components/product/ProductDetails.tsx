@@ -601,7 +601,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
                   Crafted by Women Artisans in Hadapsar, Pune:
                 </span>
                 <p>
-                  Every flower and leaf is individually crocheted stitch-by-stitch with gentle tension and premium organic milk-cotton yarn. Because every bloom is handmade, no two pieces are identical — each holds its own quiet charm and heartfelt feeling.
+                  Every creation is individually handcrafted by skilled women artisans in Hadapsar, Pune with authentic materials, patience, and devotion. Because every piece is handmade, subtle idiosyncrasies celebrate genuine Indian handicraft artistry.
                 </p>
               </div>
             </div>
@@ -692,12 +692,13 @@ export function ProductDetails({ product }: ProductDetailsProps) {
               <div className="space-y-1.5 p-3 rounded-xl bg-white border border-gold/20">
                 <span className="font-semibold text-xs text-text-main flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5 text-gold" />
-                  Everlasting Floral Care Guide:
+                  Artisan Rangoli &amp; Craft Care Guide:
                 </span>
                 <ul className="space-y-1 pl-4 list-disc text-text-muted">
-                  <li><strong>Zero Water Required:</strong> Never place your crochet blooms in water or damp vases.</li>
-                  <li><strong>Gentle Dusting:</strong> Dust gently every few months using a soft dry makeup brush or a cool hairdryer on low.</li>
-                  <li><strong>Sunlight:</strong> Keep away from continuous harsh direct sunlight to keep the vibrant cotton petal shades rich for years.</li>
+                  <li><strong>Zero Water for Kundan OHP:</strong> Never soak Kundan OHP sheets in water; wipe gently with a soft dry microfiber cloth.</li>
+                  <li><strong>Woolen Rangoli Care:</strong> Gentle hand wash in cold water if needed and flat air-dry in shade.</li>
+                  <li><strong>Pipe Cleaner &amp; Decor Care:</strong> Dust gently with a soft dry brush. Zero watering or wilting.</li>
+                  <li><strong>Keepsake Storage:</strong> Store flat inside the complimentary reusable storage box between festive celebrations.</li>
                 </ul>
               </div>
 

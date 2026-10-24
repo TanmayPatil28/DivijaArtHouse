@@ -31,10 +31,10 @@ interface MobileNavDrawerProps {
 const NAV_LINKS = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Shop All', href: '/shop', icon: ShoppingBag, badge: 'Popular' },
-  { name: 'Bouquets', href: '/collections/bouquets', icon: Flower2 },
-  { name: 'Flower Pots', href: '/collections/flower-pots', icon: Sparkles },
-  { name: 'Gift Boxes', href: '/collections/gift-boxes', icon: Gift },
-  { name: 'Hair Accessories', href: '/collections/hair-accessories', icon: Smile },
+  { name: 'OHP Rangoli', href: '/collections/ohp-sheets-rangoli', icon: Sparkles },
+  { name: 'Woolen Rangoli', href: '/collections/woolen-rangoli', icon: Flower2 },
+  { name: 'Pipe Cleaner Crafts', href: '/collections/pipe-cleaner-crafts', icon: Gift },
+  { name: 'Decore Crafts', href: '/collections/decore-crafts', icon: Smile },
   { name: 'Our Story', href: '/about', icon: BookOpen },
   { name: 'Contact', href: '/contact', icon: Phone },
 ];
@@ -254,7 +254,7 @@ export function MobileNavDrawer({
               <span>Handcrafted in India</span>
             </div>
             <p className="text-[11px] leading-relaxed">
-              Every petal is individually hand-crocheted with pure cotton yarn.
+              Every rangoli, woolen mandala, and craft piece is individually shaped by hand.
             </p>
           </div>
         </div>

@@ -16,10 +16,10 @@ const FAQS: FAQItem[] = [
   {
     id: 'custom-orders',
     category: 'Custom Craft',
-    question: 'Can I request a custom crochet bouquet or specific color palette?',
+    question: 'Can I request a custom rangoli size or personalized color palette?',
     answer: (
       <span>
-        Absolutely! Our skilled women artisans in Hadapsar, Pune love bringing custom concepts to life. You can request specific flowers (such as velvet roses, cheerful sunflowers, delicate daisies, or soothing lavender), bespoke wedding palettes, or personalized stem arrangements. Simply choose <strong>&ldquo;Custom Bouquet / Color Request&rdquo;</strong> in the form above or message our studio directly on WhatsApp.
+        Absolutely! Our skilled women artisans in Hadapsar, Pune love bringing custom festive concepts to life. You can request custom OHP sheet dimensions, specific Kundan stone palettes, grand wedding-sized woolen floor mandalas, or bespoke pipe cleaner floral stems. Simply choose <strong>&ldquo;Custom Order / Design Request&rdquo;</strong> in the form above or message our studio directly on WhatsApp.
       </span>
     ),
   },
@@ -29,7 +29,7 @@ const FAQS: FAQItem[] = [
     question: 'How long does handcrafted preparation and delivery take across India?',
     answer: (
       <span>
-        Ready-to-ship catalog bouquets and flower pots are dispatched within <strong>24–48 hours</strong>. Custom stem orders require 3–5 days of careful hand-crocheting. Express courier delivery takes <strong>4–7 business days</strong> across all pin codes in India. Live tracking information is sent to your email and phone as soon as your parcel is dispatched.
+        Ready-to-ship catalog rangolis, torans, and pipe cleaner pots are dispatched within <strong>24–48 hours</strong>. Custom wedding floor art orders require 3–5 days of careful hand assembly. Express courier delivery takes <strong>4–7 business days</strong> across all pin codes in India. Live tracking information is sent to your email and phone as soon as your parcel is dispatched.
       </span>
     ),
   },
@@ -39,27 +39,27 @@ const FAQS: FAQItem[] = [
     question: 'Can I include a complimentary handwritten greeting card with my gift?',
     answer: (
       <span>
-        Yes, every arrangement includes a <strong>complimentary premium textured linen notecard</strong>. You can enter your heartfelt message on any product page or in your shopping bag. Our florists handwrite your note in elegant ink and tuck it securely inside the gift box before finishing it with our signature velvet ribbon.
+        Yes, every arrangement includes a <strong>complimentary premium textured linen notecard</strong>. You can enter your heartfelt message on any product page or in your shopping bag. Our team handwrites your note in elegant ink and tucks it securely inside the keepsake box before finishing it with our signature satin ribbon.
       </span>
     ),
   },
   {
     id: 'bulk-weddings',
     category: 'Corporate & Bulk',
-    question: 'Do you accept wedding favors, baby shower gifts, or corporate bulk orders?',
+    question: 'Do you accept wedding favors, Haldi ceremony gifts, or corporate bulk orders?',
     answer: (
       <span>
-        Yes! Handcrafted everlasting florals are a zero-wilting, sustainable keepsake for weddings, corporate gifting, festive Diwali hampers, and baby showers. We provide tiered volume discounts and bespoke packaging. Select <strong>&ldquo;Bulk, Wedding, or Corporate Gifting&rdquo;</strong> above for our dedicated corporate brochure and quotation.
+        Yes! Handcrafted reusable rangolis, door torans, and pipe cleaner floral keepsakes make sustainable, zero-mess favors for Haldi, weddings, corporate gifting, and festive Diwali celebrations. We provide tiered volume discounts and bespoke packaging. Select <strong>&ldquo;Bulk, Wedding, or Corporate Gifting&rdquo;</strong> above for our dedicated brochure and quotation.
       </span>
     ),
   },
   {
     id: 'flower-care',
     category: 'Care & Longevity',
-    question: 'How do I care for my handcrafted crochet flowers?',
+    question: 'How do I care for and store my OHP and woolen rangolis?',
     answer: (
       <span>
-        Our flowers are crafted from premium 100% combed milk cotton yarn and require <strong>zero watering, zero pruning, and zero sunlight</strong>. If dust gathers over time, simply brush the petals gently with a soft dry makeup brush or use a hair dryer on the cool, low setting for 10 seconds.
+        For Kundan OHP rangolis, wipe gently with a soft dry microfiber cloth and store flat inside the complimentary keepsake box. For woolen rangolis, gentle hand wash in cold water if needed and flat-dry in shade. Pipe cleaner crafts can simply be dusted with a soft dry brush. Zero watering, zero wilting, and reusable for years!
       </span>
     ),
   },

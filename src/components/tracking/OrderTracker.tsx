@@ -35,7 +35,7 @@ interface OrderTrackerProps {
   initialOrderNumber?: string;
 }
 
-// 5 Artisanal Milestones for Handcrafted Crochet Flower Orders
+// 5 Artisanal Milestones for Handcrafted Rangolis & Keepsake Crafts
 const STEPS = [
   {
     step: 1,
@@ -48,21 +48,21 @@ const STEPS = [
     step: 2,
     title: 'Order Confirmed',
     stageLabel: 'Artisan Allocated',
-    description: 'Yarn palette selected & knitting queue prioritized',
+    description: 'Craft materials selected & artisan workshop queue prioritized',
     icon: CheckCircle2,
   },
   {
     step: 3,
     title: 'Crafting in Atelier',
-    stageLabel: 'Hand-Stitching',
-    description: 'Petals crocheted, stems wired & steamed to perfection',
+    stageLabel: 'Hand-Crafting',
+    description: 'Handcrafted with devotion, inspected & cured to perfection',
     icon: Sparkles,
   },
   {
     step: 4,
     title: 'Dispatched & In Transit',
     stageLabel: 'Courier Handover',
-    description: 'Nestled in reinforced bloom box with live AWB tracking',
+    description: 'Nestled in reinforced keepsake box with live AWB tracking',
     icon: Truck,
   },
   {
@@ -169,10 +169,10 @@ export function OrderTracker({ initialOrderNumber = '' }: OrderTrackerProps) {
               <span>Atelier Parcel Console</span>
             </span>
             <h2 className="text-xl sm:text-2xl font-serif font-bold text-text-main tracking-tight">
-              Track Your Handcrafted Blooms
+              Track Your Handcrafted Order
             </h2>
             <p className="text-xs sm:text-sm text-text-muted max-w-lg mx-auto">
-              Follow real-time atelier knitting, artisan steaming, and express courier transit.
+              Follow real-time artisan crafting, quality inspection, and express courier transit.
             </p>
           </div>
 

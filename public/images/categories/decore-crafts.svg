@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="decorDisc" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FCF6EE"/>
+      <stop offset="100%" stop-color="#F5E8D8"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Champagne Gold Medallion Disc -->
+  <circle cx="250" cy="250" r="236" fill="url(#decorDisc)"/>
+  <circle cx="250" cy="250" r="222" fill="none" stroke="#C59A5A" stroke-width="3" opacity="0.7"/>
+  <circle cx="250" cy="250" r="212" fill="none" stroke="#781D2C" stroke-width="1.5" stroke-dasharray="6,5" opacity="0.4"/>
+
+  <!-- Festive Toran, Hanging Bells & Decor Craft Motif -->
+  <g stroke="#781D2C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Top Decorative Toran Swag -->
+    <path d="M120 180 Q250 230 380 180" stroke="#781D2C" stroke-width="10"/>
+    <path d="M120 180 Q250 260 380 180" stroke="#C59A5A" stroke-width="6" stroke-dasharray="8,6"/>
+
+    <!-- Central Shubh Lotus Medallion -->
+    <circle cx="250" cy="250" r="34" fill="#F8E6E9" stroke="#781D2C" stroke-width="7"/>
+    <path d="M250 225 C235 245 235 260 250 268 C265 260 265 245 250 225 Z" fill="#C59A5A" stroke="none"/>
+
+    <!-- Side Wall Hanging Discs -->
+    <circle cx="170" cy="235" r="20" fill="#FCF3F5" stroke="#C59A5A" stroke-width="5"/>
+    <circle cx="330" cy="235" r="20" fill="#FCF3F5" stroke="#C59A5A" stroke-width="5"/>
+
+    <!-- Hanging Threads & Brass Bell Accents -->
+    <path d="M170 255 L170 320" stroke="#781D2C" stroke-width="5"/>
+    <path d="M250 284 L250 355" stroke="#781D2C" stroke-width="6"/>
+    <path d="M330 255 L330 320" stroke="#781D2C" stroke-width="5"/>
+
+    <!-- Brass Bells / Tassels -->
+    <path d="M158 340 L182 340 L178 320 L162 320 Z" fill="#C59A5A" stroke="#781D2C" stroke-width="4"/>
+    <circle cx="170" cy="346" r="3" fill="#781D2C" stroke="none"/>
+
+    <path d="M236 380 L264 380 L258 355 L242 355 Z" fill="#C59A5A" stroke="#781D2C" stroke-width="5"/>
+    <circle cx="250" cy="388" r="4" fill="#781D2C" stroke="none"/>
+
+    <path d="M318 340 L342 340 L338 320 L322 320 Z" fill="#C59A5A" stroke="#781D2C" stroke-width="4"/>
+    <circle cx="330" cy="346" r="3" fill="#781D2C" stroke="none"/>
+
+    <!-- Pearl Drops -->
+    <circle cx="120" cy="180" r="8" fill="#C59A5A" stroke="#781D2C" stroke-width="3"/>
+    <circle cx="380" cy="180" r="8" fill="#C59A5A" stroke="#781D2C" stroke-width="3"/>
+  </g>
+</svg>
