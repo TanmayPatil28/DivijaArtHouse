@@ -6,36 +6,36 @@ const VALUE_PROPS = [
     subtitle: 'HANDCRAFTED ART',
     title: 'Made slowly, with care.',
     description:
-      'Every crochet flower is shaped stitch by stitch, giving each piece its own texture and character.',
+      'Every rangoli piece, woolen mandala, and sculpted pipe cleaner stem is shaped by hand with love and dedication.',
     icon: '/images/badges/handcrafted.svg',
-    alt: 'Handcrafted crochet art',
+    alt: 'Handcrafted artisan crafts',
   },
   {
     number: '02',
-    subtitle: 'HEARTFELT MOMENTS',
-    title: 'For the people who matter.',
+    subtitle: 'SACRED & FESTIVE MOMENTS',
+    title: 'For joyous celebrations.',
     description:
-      'From a birthday surprise to an unexpected little thank-you, find a gift that feels personal.',
+      'From sacred Diwali poojas and radiant Haldi ceremonies to home living spaces and thoughtful festive gifts.',
     icon: '/images/badges/gifting.svg',
-    alt: 'Meaningful gifting',
+    alt: 'Meaningful festive gifting',
   },
   {
     number: '03',
     subtitle: 'GIFT-READY PRESENTATION',
-    title: "Ready to make someone's day.",
+    title: "Ready for celebrations.",
     description:
-      'Choose a thoughtful floral gift, with gift packaging and a personal message option where available.',
+      'Secure packaging with reusable storage boxes and personalized message notes for hassle-free gifting.',
     icon: '/images/badges/presentation.svg',
-    alt: 'Beautiful gift presentation',
+    alt: 'Beautiful festive presentation',
   },
   {
     number: '04',
-    subtitle: 'EVERLASTING MEMORY',
+    subtitle: 'REUSABLE FOREVER',
     title: 'Beauty that stays.',
     description:
-      "Unlike fresh flowers, crochet blooms don't need water and won't wilt after a few days. Keep them on a desk, bedside table, or shelf as a lasting reminder of a special moment.",
+      'Zero messy color powder cleanup. Reusable acrylic OHP rangolis, washable woolen floor art, and everlasting decor crafted to last for years.',
     icon: '/images/badges/everlasting.svg',
-    alt: 'Everlasting floral blooms',
+    alt: 'Reusable everlasting crafts',
   },
 ];
 

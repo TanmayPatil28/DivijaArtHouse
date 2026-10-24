@@ -49,16 +49,16 @@ export function CollectionReel({ categories }: CollectionReelProps) {
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-surface-canvas border border-gold/40 text-primary text-xs font-semibold uppercase tracking-widest shadow-2xs mb-2 backdrop-blur-sm">
               <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
-              <span>FIND YOUR KIND OF BLOOM</span>
+              <span>OUR 4 SIGNATURE CRAFTS</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-text-main">
-              A little something{' '}
+              Festive traditions{' '}
               <span className="font-serif italic font-normal text-primary">
-                for every kind of love.
+                crafted for every home.
               </span>
             </h2>
             <p className="text-sm text-text-muted mt-1.5 max-w-2xl leading-relaxed">
-              Some gifts make people smile. Others become part of their everyday lives. Explore handcrafted pieces for every personality, occasion, and little corner worth brightening.
+              Explore our authentic handcrafted catalog: reusable Kundan OHP rangolis, plush woolen floor art, everlasting pipe cleaner florals, and artisanal home decor.
             </p>
           </div>
 

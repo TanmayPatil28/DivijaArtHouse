@@ -24,34 +24,34 @@ export function Hero() {
             {/* Atelier Eyebrow Ribbon */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-gold/40 text-primary text-xs font-semibold uppercase tracking-widest shadow-2xs backdrop-blur-sm">
               <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
-              <span>Handcrafted Crochet Florals</span>
+              <span>Artisanal Rangolis &amp; Keepsake Crafts</span>
               <span className="w-1 h-1 rounded-full bg-gold/70" />
               <span className="text-[11px] text-text-muted font-medium lowercase">pune studio</span>
             </div>
 
             {/* Editorial Serif & Italic Headline */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[62px] font-semibold text-text-main leading-[1.12] tracking-tight">
-              Some feelings{' '}
+              Festive traditions{' '}
               <span className="font-serif italic font-normal text-primary inline-block">
-                deserve to stay.
+                crafted to stay forever.
               </span>
             </h1>
 
             {/* Emotional Lead Copy */}
             <p className="text-base sm:text-lg md:text-xl text-text-main/80 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
-              Fresh flowers are beautiful. But sometimes, you wish the moment they represent could last a little longer. Meet our handcrafted crochet blooms and gift-ready creations—shaped stitch by stitch to celebrate the people who make life special.
+              Celebrate life&apos;s sacred rituals and joyous gatherings. Explore reusable Kundan OHP rangolis, cozy woolen floor art, sculpted pipe cleaner blooms, and festive decor—handcrafted piece by piece by talented women artisans in Pune.
             </p>
 
             {/* Occasion Chips */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-white/90 border border-border-subtle text-text-main shadow-2xs">
-                <span className="text-gold">✦</span> Birthdays &amp; Anniversaries
+                <span className="text-gold">✦</span> Diwali &amp; Festive Pooja
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-white/90 border border-border-subtle text-text-main shadow-2xs">
-                <span className="text-gold">✦</span> Quiet Thank-Yous
+                <span className="text-gold">✦</span> Weddings &amp; Haldi Decor
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-white/90 border border-border-subtle text-text-main shadow-2xs">
-                <span className="text-gold">✦</span> Everlasting Keepsakes
+                <span className="text-gold">✦</span> Everlasting Home Keepsakes
               </span>
             </div>
 
@@ -62,7 +62,7 @@ export function Hero() {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-primary hover:bg-primary-hover text-white text-sm font-semibold tracking-wide transition-all duration-300 shadow-md hover:shadow-gold-glow hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
               >
                 <ShoppingBag className="w-4 h-4" />
-                <span>Find Your Flowers</span>
+                <span>Explore All Crafts</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
 
@@ -70,7 +70,7 @@ export function Hero() {
                 href="/about"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white hover:bg-surface-warm border border-border-subtle text-text-main hover:text-primary text-sm font-semibold tracking-wide transition-all duration-300 shadow-sm hover:border-gold/60 hover:shadow-gold-soft hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
               >
-                <span>Explore Our Story</span>
+                <span>Our Artisan Story</span>
               </Link>
             </div>
 
@@ -96,8 +96,8 @@ export function Hero() {
               {/* Flagship Edge-to-Edge Showcase Frame */}
               <div className="relative w-full h-full rounded-[28px] sm:rounded-[36px] overflow-hidden border border-gold/40 shadow-[0_24px_50px_-12px_rgba(46,23,21,0.18)] bg-gradient-to-b from-[#FBF8F5] via-[#F8F1ED]/50 to-[#F2E8E4]/60 group">
                 <img
-                  src="/images/products/royal-sovereign-jumbo-1.svg"
-                  alt="The Royal Sovereign 24-Stem Jumbo Bouquet"
+                  src="/images/categories/ohp-rangoli.svg"
+                  alt="Handcrafted Kundan OHP Rangoli Art"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="eager"
                 />
@@ -110,28 +110,28 @@ export function Hero() {
               <div className="absolute -bottom-5 -left-4 sm:-bottom-7 sm:-left-6 w-36 sm:w-44 bg-white p-2 sm:p-2.5 rounded-2xl shadow-2xl border border-gold/35 rotate-[-4deg] hover:rotate-0 transition-transform duration-300 z-20 group">
                 <div className="relative aspect-square rounded-xl overflow-hidden bg-surface-warm border border-border-subtle/60">
                   <img
-                    src="/images/products/royal-sovereign-jumbo-2.svg"
-                    alt="Detail Stitching Spread"
+                    src="/images/categories/woolen-rangoli.svg"
+                    alt="Woolen Floor Art Mandala"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
                   />
                 </div>
                 <div className="pt-2 px-1 text-center">
-                  <p className="text-[11px] font-semibold text-text-main tracking-tight leading-tight">Detail Stitching</p>
-                  <p className="text-[9px] text-gold uppercase tracking-wider font-medium mt-0.5">Top Angle Spread</p>
+                  <p className="text-[11px] font-semibold text-text-main tracking-tight leading-tight">Woolen Floor Art</p>
+                  <p className="text-[9px] text-gold uppercase tracking-wider font-medium mt-0.5">Handcrafted Mandala</p>
                 </div>
               </div>
 
-              {/* Floating Badge 1: 100% Milk Cotton Yarn */}
+              {/* Floating Badge 1: Reusable & Everlasting */}
               <div className="absolute -top-3 -right-2 sm:-top-4 sm:-right-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-gold/40 shadow-md flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-text-main z-20 hover:scale-105 transition-transform duration-200">
                 <Heart className="w-3.5 h-3.5 text-primary fill-primary shrink-0" />
-                <span>100% Milk Cotton Yarn</span>
+                <span>Reusable &amp; Mess-Free</span>
               </div>
 
-              {/* Floating Badge 2: Everlasting Guarantee */}
+              {/* Floating Badge 2: Handcrafted in Pune */}
               <div className="absolute -bottom-3 -right-2 sm:-bottom-4 sm:-right-4 bg-primary text-white backdrop-blur-md px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full border border-gold/40 shadow-wine-glow flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold z-20 hover:scale-105 transition-transform duration-200">
                 <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
-                <span>Everlasting • Never Wilts</span>
+                <span>100% Handcrafted • Pune</span>
               </div>
             </div>
           </div>

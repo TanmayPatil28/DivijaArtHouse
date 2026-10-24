@@ -15,11 +15,11 @@ interface AnnouncementBarProps {
 
 const DEFAULT_MESSAGES = [
   {
-    text: 'Handcrafted crochet flowers, made with care.',
+    text: 'Handcrafted Rangolis & Keepsake Crafts, made with devotion.',
     icon: 'sparkles' as const,
   },
   {
-    text: 'A little something for someone special.',
+    text: 'Festive OHP & Woolen Rangolis for Diwali, Weddings & Pooja.',
     icon: 'gift' as const,
     link: '/shop',
   },

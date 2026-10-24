@@ -5,20 +5,20 @@ import { Heart, ArrowRight, Sparkles, MapPin, Feather, Gift, Clock } from 'lucid
 const CRAFT_PILLARS = [
   {
     number: '01',
-    title: 'Stitch by Stitch, Made Slowly',
-    desc: 'With yarn, hooks, patience, and an eye for the little details, each floral design is sculpted one stitch at a time. No machines, no shortcuts.',
+    title: 'Crafted by Hand, One Piece at a Time',
+    desc: 'From hand-setting Kundan stones on OHP sheets to rolling woolen pom-poms and sculpting pipe cleaner blooms—no machines, only authentic human dedication.',
     icon: Feather,
   },
   {
     number: '02',
-    title: 'Personal Gifting from the Heart',
-    desc: 'From quiet thank-yous to golden milestone anniversaries, our pieces celebrate the people who make life special with thoughtful keepsake message cards.',
+    title: 'Festive Traditions & Keepsake Decor',
+    desc: 'Celebrate Diwali, Haldi ceremonies, and everyday moments with reusable floor mandalas, sacred door torans, and everlasting desk flora.',
     icon: Gift,
   },
   {
     number: '03',
-    title: 'Beauty That Stays Forever',
-    desc: 'Unlike fresh flowers, crochet blooms never wilt, need zero water, and stay blooming on bedside tables and desks as lasting reminders of love.',
+    title: 'Clean, Sustainable & Reusable Forever',
+    desc: 'Zero colored-powder cleanup, washable woolen floor art, and durable keepsake decor crafted to stay vibrant in your home for years.',
     icon: Clock,
   },
 ];
@@ -43,8 +43,8 @@ export function BrandStory() {
               {/* Arched Architectural Craft Frame */}
               <div className="relative w-full h-full rounded-t-[36px] sm:rounded-t-[44px] rounded-b-2xl overflow-hidden border border-gold/40 shadow-2xl bg-gradient-to-b from-[#FAF5F0] via-white to-[#F7ECEE] group">
                 <img
-                  src="/images/products/blushing-peony-rose-1.svg"
-                  alt="Blushing Peony and Rose Handcrafted Artisan Bouquet"
+                  src="/images/categories/decore-crafts.svg"
+                  alt="Handcrafted Festive Toran and Decore Crafts by DivijaArtHouse"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="lazy"
                 />
@@ -69,7 +69,7 @@ export function BrandStory() {
                     100% Handcrafted by Women Artisans
                   </p>
                   <p className="text-[11px] text-text-muted mt-0.5 leading-snug">
-                    Shaping dignified creative livelihoods with authentic crochet heritage in India.
+                    Shaping dignified creative livelihoods through traditional Indian handicraft heritage.
                   </p>
                 </div>
               </div>
@@ -130,7 +130,7 @@ export function BrandStory() {
             {/* Signature Brand Quote Pill */}
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-blush-soft/50 border border-gold/30 text-xs sm:text-sm text-text-main font-medium italic">
               <span className="text-primary font-serif not-italic">“</span>
-              <span>Little Blooms, Lasting Feelings.</span>
+              <span>Festive traditions crafted to stay forever.</span>
               <span className="text-primary font-serif not-italic">”</span>
               <span className="text-gold not-italic">•</span>
               <span className="not-italic text-[11px] font-semibold text-primary uppercase tracking-wider">

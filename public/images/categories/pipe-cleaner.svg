@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="pipeDisc" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FCF3F5"/>
+      <stop offset="100%" stop-color="#F5E3E6"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Blush Medallion Disc -->
+  <circle cx="250" cy="250" r="236" fill="url(#pipeDisc)"/>
+  <circle cx="250" cy="250" r="222" fill="none" stroke="#C59A5A" stroke-width="3" opacity="0.6"/>
+  <circle cx="250" cy="250" r="212" fill="none" stroke="#C59A5A" stroke-width="1.5" stroke-dasharray="6,5" opacity="0.45"/>
+
+  <!-- Velvet Chenille / Pipe Cleaner Tulip & Stem Art -->
+  <g stroke="#781D2C" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Flexible Chenille Curved Stems -->
+    <path d="M250 370 Q240 280 250 220" stroke="#657350" stroke-width="10"/>
+    <path d="M245 290 Q200 280 180 240" stroke="#657350" stroke-width="8"/>
+    <path d="M250 270 Q300 260 320 220" stroke="#657350" stroke-width="8"/>
+
+    <!-- Chenille Leaves -->
+    <path d="M180 240 C170 210 200 230 245 290" fill="#F1F5EB" stroke="#657350" stroke-width="6"/>
+    <path d="M320 220 C330 190 300 210 250 270" fill="#F1F5EB" stroke="#657350" stroke-width="6"/>
+
+    <!-- Sculpted Velvet Pipe Cleaner Tulip Bloom -->
+    <path d="M250 220 C210 200 200 130 250 120 C300 130 290 200 250 220 Z" fill="#F8E6E9" stroke="#781D2C" stroke-width="10"/>
+    
+    <!-- Central Tulip Petal Fold -->
+    <path d="M250 125 C230 155 230 195 250 220 C270 195 270 155 250 125 Z" fill="#FCF3F5" stroke="#C59A5A" stroke-width="6"/>
+
+    <!-- Flared Left & Right Petal Caps -->
+    <path d="M205 155 Q250 190 250 220" stroke="#781D2C" stroke-width="7"/>
+    <path d="M295 155 Q250 190 250 220" stroke="#781D2C" stroke-width="7"/>
+
+    <!-- Gold Accent Starlets -->
+    <circle cx="250" cy="115" r="5" fill="#C59A5A" stroke="none"/>
+    <circle cx="205" cy="150" r="4" fill="#C59A5A" stroke="none"/>
+    <circle cx="295" cy="150" r="4" fill="#C59A5A" stroke="none"/>
+  </g>
+</svg>

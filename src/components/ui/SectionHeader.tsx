@@ -3,7 +3,7 @@ import { Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export interface SectionHeaderProps {
-  /** Optional eyebrow pill label, e.g. "HANDCRAFTED CROCHET FLORALS" */
+  /** Optional eyebrow pill label, e.g. "HANDCRAFTED ARTISAN CRAFTS" */
   eyebrow?: string;
   /** Optional custom icon in eyebrow, defaults to Gold Sparkles */
   eyebrowIcon?: React.ReactNode;

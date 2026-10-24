@@ -6,66 +6,66 @@ import { Sparkles, ArrowRight, Award, ShieldCheck, Heart, Plus } from 'lucide-re
 
 const JUMBO_MASTERPIECES = [
   {
-    id: 'royal-sovereign',
-    shortName: 'The Royal Sovereign',
-    name: 'The Royal Sovereign 24-Stem Jumbo Bouquet',
-    price: '₹3,499',
-    originalPrice: '₹4,499',
-    image: '/images/products/royal-sovereign-jumbo-1.svg',
-    slug: 'the-royal-sovereign-24-stem-jumbo-bouquet',
-    tag: 'Flagship Crown',
+    id: 'royal-peacock-rangoli',
+    shortName: 'Royal Peacock Rangoli',
+    name: 'Royal Peacock Kundan OHP Rangoli',
+    price: '₹1,299',
+    originalPrice: '₹1,699',
+    image: '/images/categories/ohp-rangoli.svg',
+    slug: 'royal-peacock-kundan-ohp-rangoli',
+    tag: 'Pooja Masterwork',
     hotspots: [
       {
         id: 1,
-        title: '24 Hand-Tied Stems',
-        desc: 'Over 36 hours of master crochet forming an opulent 24-stem dome.',
+        title: 'Reusable OHP Base',
+        desc: 'Sturdy transparent sheet that wipes clean and reuses for years.',
         x: '50%',
         y: '28%',
       },
       {
         id: 2,
-        title: '100% Fine Combed Cotton',
-        desc: 'Artisan stitch definition with velvet-soft tactile petal texture.',
+        title: 'Hand-Set Kundan Stones',
+        desc: 'Faceted jewel-cut stones and luminous pearls catching diya light.',
         x: '34%',
         y: '48%',
       },
       {
         id: 3,
-        title: 'Keepsake Box & Certificate',
-        desc: 'Luxury presentation case with wax-sealed authenticity certificate.',
+        title: '2-Minute Pooja Setup',
+        desc: 'Zero powder mess. Place instantly at entrance, mandir, or living space.',
         x: '62%',
         y: '72%',
       },
     ],
   },
   {
-    id: 'celestial-twilight',
-    shortName: 'Celestial Twilight',
-    name: 'Celestial Twilight 24-Stem Jumbo Bouquet',
-    price: '₹3,499',
-    originalPrice: '₹4,499',
-    image: '/images/products/celestial-twilight-jumbo-1.svg',
-    slug: 'celestial-twilight-blossom-jumbo-bouquet',
-    tag: 'Masterpiece Edition',
+    id: 'haldi-woolen-mandala',
+    shortName: 'Haldi Woolen Mandala',
+    name: 'Shubh Vivaah Haldi Woolen Rangoli',
+    price: '₹1,499',
+    originalPrice: '₹1,899',
+    image: '/images/categories/woolen-rangoli.svg',
+    slug: 'shubh-vivaah-haldi-woolen-rangoli',
+    tag: 'Wedding & Haldi Crown',
     hotspots: [
       {
         id: 1,
-        title: '24 Sculpted Stems',
-        desc: 'Multi-layer rosette blooms evoking starry twilight evenings.',
+        title: '28-Inch Grand Mandala',
+        desc: 'Expansive plush floor art designed for ritual ceremonies & photos.',
         x: '50%',
         y: '30%',
       },
       {
         id: 2,
-        title: 'Tactile Petal Relief',
-        desc: 'Handcrafted yarn loops that never wilt, fade, or lose shape.',
+        title: 'Plush Hand-Rolled Pom-Poms',
+        desc: 'Crafted with premium woolen yarn in radiant turmeric and marigold tones.',
         x: '64%',
         y: '46%',
       },
       {
         id: 3,
-        title: 'Artisan Master Wrap',
-        desc: 'Sculpted kraft wrap tied with a hand-stitched velvet ribbon.',
+        title: 'Washable & Long-Lasting',
+        desc: 'Gentle hand wash, easy to pack away and reuse for all family celebrations.',
         x: '38%',
         y: '74%',
       },
@@ -74,7 +74,7 @@ const JUMBO_MASTERPIECES = [
 ];
 
 export function FeaturedCollection() {
-  const [activeId, setActiveId] = useState('royal-sovereign');
+  const [activeId, setActiveId] = useState('royal-peacock-rangoli');
   const [activeHotspot, setActiveHotspot] = useState<number | null>(null);
 
   const current = JUMBO_MASTERPIECES.find((m) => m.id === activeId) || JUMBO_MASTERPIECES[0];
@@ -137,9 +137,9 @@ export function FeaturedCollection() {
                   </div>
 
                   {/* Floating Price Tag */}
-                  <div className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-gold text-[#2E1715] text-[11px] font-bold border border-white/40 shadow-gold-soft flex items-center gap-1">
+                  <div className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-gold text-[#2E1715] text-[11px] font-bold border border-white/40 shadow-gold-soft flex items-center gap-1 font-sans not-italic tabular-nums">
                     <span>{current.price}</span>
-                    <span className="text-[9px] line-through opacity-70 font-normal">{current.originalPrice}</span>
+                    <span className="text-[9px] line-through opacity-70 font-normal font-sans not-italic tabular-nums">{current.originalPrice}</span>
                   </div>
                 </div>
 
@@ -198,31 +198,31 @@ export function FeaturedCollection() {
               {/* Eyebrow */}
               <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/10 border border-gold/40 text-gold-light text-xs font-semibold uppercase tracking-widest shadow-2xs backdrop-blur-sm">
                 <Sparkles className="w-3 h-3 text-gold shrink-0" />
-                <span>MADE FOR THE BIG MOMENTS</span>
+                <span>ARTISANAL MASTERWORKS</span>
               </div>
 
               {/* Headline */}
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white leading-tight">
-                When a little bouquet{' '}
+                Sacred floor art{' '}
                 <span className="font-serif italic font-normal text-gold inline-block">
-                  isn&apos;t enough.
+                  crafted to stay forever.
                 </span>
               </h2>
 
               {/* Story Copy */}
               <p className="text-xs sm:text-sm text-[#FAF5F0]/85 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Our jumbo crochet bouquets bring together 24 individual statement-making stems, intricate hand-crochet details, and rich floral textures—made for milestone celebrations and the people you want to make feel truly seen.
+                Our flagship festive rangolis bring together centuries of Indian floor art traditions with reusable, modern craftsmanship. Hand-embellished by women artisans in Pune so your celebrations stay radiant without the mess of synthetic powders.
               </p>
 
               {/* 4 Compact Frosted Feature Badges (2x2 Grid) */}
               <div className="grid grid-cols-2 gap-2.5 max-w-lg mx-auto lg:mx-0 py-1">
                 <div className="flex items-center gap-2 p-2 rounded-lg bg-white/5 border border-gold/25 backdrop-blur-xs text-xs text-[#FAF5F0]">
                   <ShieldCheck className="w-3.5 h-3.5 text-gold shrink-0" />
-                  <span className="font-medium text-[11px] sm:text-xs">24 Stems Arrangement</span>
+                  <span className="font-medium text-[11px] sm:text-xs">Reusable Acrylic &amp; Wool</span>
                 </div>
                 <div className="flex items-center gap-2 p-2 rounded-lg bg-white/5 border border-gold/25 backdrop-blur-xs text-xs text-[#FAF5F0]">
                   <Heart className="w-3.5 h-3.5 text-gold shrink-0" />
-                  <span className="font-medium text-[11px] sm:text-xs">Fine Combed Cotton</span>
+                  <span className="font-medium text-[11px] sm:text-xs">Hand-Set Kundan &amp; Pearls</span>
                 </div>
                 <div className="flex items-center gap-2 p-2 rounded-lg bg-white/5 border border-gold/25 backdrop-blur-xs text-xs text-[#FAF5F0]">
                   <Award className="w-3.5 h-3.5 text-gold shrink-0" />
@@ -230,7 +230,7 @@ export function FeaturedCollection() {
                 </div>
                 <div className="flex items-center gap-2 p-2 rounded-lg bg-white/5 border border-gold/25 backdrop-blur-xs text-xs text-[#FAF5F0]">
                   <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
-                  <span className="font-medium text-[11px] sm:text-xs">Artisan Certificate</span>
+                  <span className="font-medium text-[11px] sm:text-xs">Pune Artisan Atelier</span>
                 </div>
               </div>
 
@@ -244,10 +244,10 @@ export function FeaturedCollection() {
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
                 <Link
-                  href="/collections/jumbo-bouquets"
+                  href="/collections/ohp-sheets-rangoli"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-gold/40 text-white text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 hover:border-gold hover:-translate-y-0.5 active:translate-y-0"
                 >
-                  <span>Explore Jumbo Bouquets</span>
+                  <span>Explore All Rangolis</span>
                 </Link>
               </div>
             </div>

@@ -57,27 +57,27 @@ export function NewsletterSection() {
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/10 border border-gold/30 text-gold-light text-xs font-semibold uppercase tracking-widest shadow-2xs backdrop-blur-sm">
               <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
-              <span>A LITTLE NOTE FROM US • THE BLOOM CLUB</span>
+              <span>A LITTLE NOTE FROM US • THE ARTISAN CIRCLE</span>
             </div>
 
             {/* Headline */}
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-white leading-tight">
-              Good things are{' '}
+              Handcrafted beauty{' '}
               <span className="font-serif italic font-normal text-gold inline-block">
-                growing.
+                for every celebration.
               </span>
             </h2>
 
             {/* Description */}
             <p className="text-xs sm:text-sm text-[#FAF5F0]/85 max-w-lg mx-auto lg:mx-0 leading-relaxed font-normal">
-              Be the first to hear about new handcrafted crochet creations, thoughtful gifting ideas, and behind-the-scenes craft stories.
+              Be the first to hear about new handcrafted rangoli collections, festive decor drops, and behind-the-scenes artisan craft stories.
             </p>
 
             {/* Welcome Voucher Badge */}
             <div className="pt-1">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold/20 border border-gold/50 text-gold-light text-xs font-semibold tracking-wide shadow-gold-soft backdrop-blur-xs">
                 <Gift className="w-3.5 h-3.5 text-gold shrink-0" />
-                <span>Receive ₹100 off your first order upon joining</span>
+                <span>Receive <span className="font-sans not-italic tabular-nums font-bold">₹100</span> off your first order upon joining</span>
                 <Sparkles className="w-3 h-3 text-gold shrink-0" />
               </div>
             </div>

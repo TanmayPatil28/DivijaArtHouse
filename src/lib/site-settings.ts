@@ -48,12 +48,12 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
     messages: [
       {
         id: 'msg-1',
-        text: 'Handcrafted crochet flowers, made with care.',
+        text: 'Handcrafted Rangolis & Keepsake Crafts, made with devotion.',
         icon: 'sparkles',
       },
       {
         id: 'msg-2',
-        text: 'A little something for someone special.',
+        text: 'Festive OHP & Woolen Rangolis for Diwali, Weddings & Pooja.',
         link: '/shop',
         icon: 'gift',
       },
@@ -69,17 +69,17 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
     items: [
       { id: 'nav-home', name: 'Home', href: '/', isEnabled: true, sortOrder: 1 },
       { id: 'nav-shop', name: 'Shop All', href: '/shop', isEnabled: true, sortOrder: 2, badge: 'Popular' },
-      { id: 'nav-bouquets', name: 'Bouquets', href: '/collections/bouquets', isEnabled: true, sortOrder: 3 },
-      { id: 'nav-flower-pots', name: 'Flower Pots', href: '/collections/flower-pots', isEnabled: true, sortOrder: 4 },
-      { id: 'nav-gift-boxes', name: 'Gift Boxes', href: '/collections/gift-boxes', isEnabled: true, sortOrder: 5 },
-      { id: 'nav-hair-acc', name: 'Hair Accessories', href: '/collections/hair-accessories', isEnabled: true, sortOrder: 6 },
+      { id: 'nav-ohp', name: 'OHP Rangoli', href: '/collections/ohp-sheets-rangoli', isEnabled: true, sortOrder: 3 },
+      { id: 'nav-woolen', name: 'Woolen Rangoli', href: '/collections/woolen-rangoli', isEnabled: true, sortOrder: 4 },
+      { id: 'nav-pipe', name: 'Pipe Cleaner Crafts', href: '/collections/pipe-cleaner-crafts', isEnabled: true, sortOrder: 5 },
+      { id: 'nav-decore', name: 'Decore Crafts', href: '/collections/decore-crafts', isEnabled: true, sortOrder: 6 },
       { id: 'nav-story', name: 'Our Story', href: '/about', isEnabled: true, sortOrder: 7 },
       { id: 'nav-contact', name: 'Contact', href: '/contact', isEnabled: true, sortOrder: 8 },
     ],
   },
   identity: {
     storeName: 'Divija Art House',
-    tagline: 'Little Blooms, Lasting Feelings.',
+    tagline: 'Artisanal Rangolis & Keepsake Home Decor.',
     supportEmail: 'support@divijaarthouse.com',
     supportPhone: '+91 92092 84423',
     whatsappNumber: '+91 98765 43210',

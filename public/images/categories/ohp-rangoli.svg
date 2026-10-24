@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="ohpDisc" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FCF6EE"/>
+      <stop offset="100%" stop-color="#F5E8D8"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Champagne Gold Medallion Disc -->
+  <circle cx="250" cy="250" r="236" fill="url(#ohpDisc)"/>
+  <circle cx="250" cy="250" r="222" fill="none" stroke="#C59A5A" stroke-width="3" opacity="0.7"/>
+  <circle cx="250" cy="250" r="212" fill="none" stroke="#781D2C" stroke-width="1.5" stroke-dasharray="6,5" opacity="0.4"/>
+
+  <!-- OHP Sheet Kundan & Stone Rangoli Art -->
+  <g stroke="#781D2C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Central Crystal Star / Diya -->
+    <circle cx="250" cy="250" r="32" fill="#FBF0F2" stroke="#C59A5A" stroke-width="6"/>
+    <circle cx="250" cy="250" r="14" fill="#781D2C" stroke="none"/>
+
+    <!-- 8 Kundan Teardrop Petals (Acrylic / OHP Sheet cutouts) -->
+    <path d="M250 180 C230 205 230 225 250 225 C270 225 270 205 250 180 Z" fill="#F8E6E9" stroke="#C59A5A" stroke-width="5"/>
+    <path d="M250 320 C230 295 230 275 250 275 C270 275 270 295 250 320 Z" fill="#F8E6E9" stroke="#C59A5A" stroke-width="5"/>
+    <path d="M180 250 C205 230 225 230 225 250 C225 270 205 270 180 250 Z" fill="#F8E6E9" stroke="#C59A5A" stroke-width="5"/>
+    <path d="M320 250 C295 230 275 230 275 250 C275 270 295 270 320 250 Z" fill="#F8E6E9" stroke="#C59A5A" stroke-width="5"/>
+
+    <!-- Diagonal Kundan Leaf Petals -->
+    <path d="M200 200 C215 220 230 225 235 235 C225 230 220 215 200 200 Z" fill="#FBF3F5" stroke="#781D2C" stroke-width="4"/>
+    <path d="M300 200 C285 220 270 225 265 235 C275 230 280 215 300 200 Z" fill="#FBF3F5" stroke="#781D2C" stroke-width="4"/>
+    <path d="M200 300 C215 280 230 275 235 265 C225 270 220 285 200 300 Z" fill="#FBF3F5" stroke="#781D2C" stroke-width="4"/>
+    <path d="M300 300 C285 280 270 275 265 265 C275 270 280 285 300 300 Z" fill="#FBF3F5" stroke="#781D2C" stroke-width="4"/>
+
+    <!-- Outer Lotus Paisley / Mango Border Pieces -->
+    <circle cx="250" cy="135" r="12" fill="#C59A5A" stroke="#781D2C" stroke-width="4"/>
+    <circle cx="250" cy="365" r="12" fill="#C59A5A" stroke="#781D2C" stroke-width="4"/>
+    <circle cx="135" cy="250" r="12" fill="#C59A5A" stroke="#781D2C" stroke-width="4"/>
+    <circle cx="365" cy="250" r="12" fill="#C59A5A" stroke="#781D2C" stroke-width="4"/>
+
+    <!-- Pearl String Arcs connecting OHP segments -->
+    <path d="M190 145 Q250 110 310 145" stroke="#C59A5A" stroke-width="5" stroke-dasharray="8,6"/>
+    <path d="M190 355 Q250 390 310 355" stroke="#C59A5A" stroke-width="5" stroke-dasharray="8,6"/>
+    <path d="M145 190 Q110 250 145 310" stroke="#C59A5A" stroke-width="5" stroke-dasharray="8,6"/>
+    <path d="M355 190 Q390 250 355 310" stroke="#C59A5A" stroke-width="5" stroke-dasharray="8,6"/>
+  </g>
+</svg>

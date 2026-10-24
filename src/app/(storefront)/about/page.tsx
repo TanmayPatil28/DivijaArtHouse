@@ -18,17 +18,18 @@ import {
   Layers,
   Scissors,
   PackageCheck,
+  Award,
 } from 'lucide-react';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 
 export const metadata: Metadata = {
-  title: 'Our Story — Handcrafted Everlasting Blooms | DivijaArtHouse',
+  title: 'Our Story — Handcrafted Rangoli & Keepsake Decor | DivijaArtHouse',
   description:
-    'Discover the heart behind DivijaArtHouse. We craft everlasting crochet flowers using premium milk cotton yarn, empowering talented Indian women artisans while keeping your cherished memories in full bloom.',
+    'Discover the heart behind DivijaArtHouse. We craft reusable Kundan OHP rangolis, plush woolen floor mandalas, sculpted pipe cleaner flora, and artisanal home decor—handcrafted with love by women artisans in Pune.',
   openGraph: {
-    title: 'Our Story | DivijaArtHouse Handcrafted Everlasting Blooms',
+    title: 'Our Story | DivijaArtHouse Handcrafted Rangoli & Keepsake Decor',
     description:
-      'Little Blooms, Lasting Feelings. Learn how our artisan community weaves love, patience, and botanical poetry into every single crochet petal.',
+      'Festive traditions crafted to stay forever. Learn how our artisan community in Pune shapes sacred floor art, everlasting pipe cleaner florals, and keepsake home decor.',
     type: 'website',
   },
 };
@@ -58,17 +59,17 @@ export default function AboutPage() {
       <section className="py-12 md:py-20 bg-gradient-to-b from-surface-warm via-canvas to-canvas border-b border-border-subtle">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            eyebrow="The Heart Behind the Yarn"
+            eyebrow="Sacred Traditions • Living Art"
             eyebrowSuffix="Our Atelier Journey"
-            titleLead="Flowers That Never Wilt,"
-            titleAccent="Feelings That Never Fade."
-            description="DivijaArtHouse was born out of a tender reverence for life's quiet, profound moments. We watched fresh floral bouquets brighten a room for three short days, only to wither and be discarded. We asked ourselves: why shouldn't the token of your love, gratitude, or milestone stay as vibrant and alive as the feeling behind it?"
+            titleLead="Festive Traditions Crafted,"
+            titleAccent="To Stay Forever."
+            description="DivijaArtHouse was born out of deep reverence for Indian festive celebrations, sacred poojas, and joyous gatherings. Traditional powder rangolis wash away in minutes, and fresh flowers wither after a day. We asked ourselves: why shouldn't the beauty of your sacred rituals and heartfelt gatherings stay vibrant and alive season after season?"
             align="center"
             headingTag="h1"
             size="xl"
           >
             <p className="text-base sm:text-lg font-serif italic text-primary pt-1">
-              &ldquo;Little Blooms, Lasting Feelings.&rdquo;
+              &ldquo;Festive traditions crafted to stay forever.&rdquo;
             </p>
           </SectionHeader>
         </div>
@@ -83,8 +84,8 @@ export default function AboutPage() {
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-tr from-surface-warm via-blush-soft to-white border border-border-subtle shadow-md p-8 flex flex-col items-center justify-center">
                 <div className="relative w-full h-72 sm:h-80 transition-transform duration-700 hover:scale-105">
                   <Image
-                    src="/images/products/blushing-peony-rose-1.svg"
-                    alt="Handcrafted Everlasting Crochet Bloom by DivijaArtHouse"
+                    src="/images/categories/ohp-rangoli.svg"
+                    alt="Handcrafted Kundan OHP Rangoli by DivijaArtHouse"
                     fill
                     unoptimized
                     className="object-contain"
@@ -98,10 +99,10 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-text-main">
-                      100% Hand-Stitched by Artisans
+                      100% Handcrafted by Artisans
                     </p>
                     <p className="text-[11px] text-text-muted">
-                      Every single petal takes between 45 to 90 minutes of patient craft.
+                      Every jewel, pom-pom, and velvet stem is individually shaped by hand.
                     </p>
                   </div>
                 </div>
@@ -124,21 +125,26 @@ export default function AboutPage() {
 
               <div className="space-y-4 text-text-muted text-base leading-relaxed">
                 <p>
-                  From a small sunlit studio table strewn with skeins of combed milk-cotton
-                  yarn and polished bamboo crochet hooks, DivijaArtHouse grew from a personal
-                  passion project into a dedicated craft community across India.
+                  From a small sunlit studio table in Hadapsar, Pune, DivijaArtHouse grew from
+                  a personal devotion to Indian folk artistry into a flourishing home-craft
+                  collective. We focus exclusively on 4 traditional and contemporary craft lines:
                 </p>
+                <ul className="space-y-2 pl-4 list-disc text-sm sm:text-base">
+                  <li>
+                    <strong className="text-text-main">OHP Sheets Rangoli:</strong> Reusable transparent acrylic bases hand-studded with jewel-faceted Kundan stones, pearls, and radiant mirrors for mess-free 2-minute pooja setups.
+                  </li>
+                  <li>
+                    <strong className="text-text-main">Woolen Rangoli:</strong> Plush, washable floor mandalas hand-rolled with vibrant woolen pom-poms—crafted for grand Haldi, Mehendi, and wedding entrances.
+                  </li>
+                  <li>
+                    <strong className="text-text-main">Pipe Cleaner Crafts:</strong> Soft velvet chenille stems sculpted into everlasting floral pots, desk companions, and hair accessories that never wilt.
+                  </li>
+                  <li>
+                    <strong className="text-text-main">Decore Crafts:</strong> Artisanal door torans with sacred brass bells, embellished tealight holders, and home sanctum keepsakes.
+                  </li>
+                </ul>
                 <p>
-                  Unlike factory-made plastic replicas or mass-stamped artificial silk, crochet
-                  is an ancient handcraft that no modern industrial machine can replicate. Each
-                  loop, slip-stitch, and delicate petal curve requires genuine human touch,
-                  rhythmic breath, and undivided attention.
-                </p>
-                <p>
-                  We consciously chose <strong>5-ply combed milk cotton yarn</strong> for our
-                  creations. It offers an incomparably velvety, tactile softness, rich color
-                  saturation that resists sun fading, and gentle hypoallergenic qualities so
-                  even friends with seasonal pollen allergies can embrace bouquets with joy.
+                  Zero messy synthetic powders to breathe in or clean up. Zero wilted petals to throw away. Just heirloom-quality craft made to be packed away and cherished year after year.
                 </p>
               </div>
 
@@ -150,9 +156,8 @@ export default function AboutPage() {
                 </h3>
                 <p className="text-xs sm:text-sm text-text-muted leading-relaxed">
                   More than just an art house, Divija is a platform for socio-economic
-                  dignity. We partner with skilled women homemakers and traditional knitters
-                  across semi-urban Indian communities, providing flexible, home-based dignified
-                  employment, fair living wages, and continuous creative training.
+                  dignity. We partner with skilled women homemakers across Pune, providing
+                  flexible, home-based dignified employment, fair living wages, and continuous creative training in authentic Indian handicraft traditions.
                 </p>
               </div>
             </div>
@@ -165,8 +170,8 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="Our Core Pillars"
-            titleLead="The Values Stitched Into"
-            titleAccent="Every Stem."
+            titleLead="The Values Handcrafted Into"
+            titleAccent="Every Creation."
             description="We hold every piece to an uncompromising standard of conscience, craftsmanship, and aesthetic grace."
             align="center"
             size="lg"
@@ -179,12 +184,11 @@ export default function AboutPage() {
                 <Heart className="w-6 h-6 fill-primary" />
               </div>
               <h3 className="text-lg font-bold font-sans text-text-main">
-                Handcrafted with Unhurried Love
+                Unhurried Indian Handicraft
               </h3>
               <p className="text-sm text-text-muted leading-relaxed flex-1">
-                Zero machine shortcuts, zero cookie-cutter mass production. Every petal
-                carries subtle, beautiful idiosyncrasies that celebrate the authentic human
-                hand that crocheted it.
+                Zero machine shortcuts, zero cookie-cutter mass production. Every Kundan jewel,
+                woolen pom-pom, and chenille petal carries subtle idiosyncrasies that celebrate the authentic human hand that created it.
               </p>
               <div className="pt-2 text-xs font-medium text-primary flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
@@ -198,16 +202,14 @@ export default function AboutPage() {
                 <Recycle className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold font-sans text-text-main">
-                Sustainable, Everlasting Blooms
+                Reusable, Zero-Waste Floor Art
               </h3>
               <p className="text-sm text-text-muted leading-relaxed flex-1">
-                Say goodbye to water waste, chemical pesticides, refrigerated flight transit,
-                and landfill flower waste. Our botanical creations last indefinitely on desks,
-                bedside tables, and mantlepieces.
+                Say goodbye to synthetic dye powders, floor stains, and wasteful single-use decorations. Our rangolis wipe clean and store easily for years of sacred poojas and celebrations.
               </p>
               <div className="pt-2 text-xs font-medium text-green-700 flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-green-700" />
-                <span>Zero wilting & zero water upkeep</span>
+                <span>Zero powder mess &amp; reusable for years</span>
               </div>
             </div>
 
@@ -220,13 +222,11 @@ export default function AboutPage() {
                 Thoughtful, Personalized Gifting
               </h3>
               <p className="text-sm text-text-muted leading-relaxed flex-1">
-                From birthdays and graduations to anniversaries and self-love desk companions,
-                each parcel arrives with aesthetic gift wrapping, protective tissue, and
-                personalized handwritten greeting notes.
+                From Diwali and housewarming gifts to Haldi blessings and self-care desk accents, each parcel arrives in luxury keepsake packaging with personalized handwritten greeting cards.
               </p>
               <div className="pt-2 text-xs font-medium text-amber-700 flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-amber-700" />
-                <span>Ready-to-gift luxury packaging</span>
+                <span>Ready-to-gift festive packaging</span>
               </div>
             </div>
           </div>
@@ -238,9 +238,9 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="Behind the Scenes"
-            titleLead="The 4 Stages of a"
-            titleAccent="Handcrafted Bloom."
-            description="Discover how a humble spool of yarn transforms into an heirloom botanical sculpture."
+            titleLead="The 4 Stages of an"
+            titleAccent="Artisan Creation."
+            description="Discover how authentic raw materials transform into heirloom festive floor art and home keepsakes."
             align="center"
             size="lg"
           />
@@ -249,68 +249,64 @@ export default function AboutPage() {
             {/* Stage 1 */}
             <div className="relative bg-surface-warm/60 rounded-2xl p-6 border border-border-subtle flex flex-col space-y-4">
               <div className="flex items-center justify-between">
-                <div className="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm">
+                <div className="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm font-sans not-italic tabular-nums">
                   01
                 </div>
                 <Layers className="w-5 h-5 text-text-muted" />
               </div>
               <h3 className="font-bold text-base text-text-main">
-                Yarn Selection & Harmony
+                Material Selection &amp; Grading
               </h3>
               <p className="text-xs sm:text-sm text-text-muted leading-relaxed flex-1">
-                We hand-curate premium 5-ply milk cotton skeins, checking for silky texture,
-                resilience, and complementary pastel and botanical color palettes.
+                We curate high-transparency OHP acrylic sheets, faceted Kundan stones, rich woolen yarn, and soft chenille stems for vivid, enduring quality.
               </p>
             </div>
 
             {/* Stage 2 */}
             <div className="relative bg-surface-warm/60 rounded-2xl p-6 border border-border-subtle flex flex-col space-y-4">
               <div className="flex items-center justify-between">
-                <div className="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm">
+                <div className="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm font-sans not-italic tabular-nums">
                   02
                 </div>
                 <Scissors className="w-5 h-5 text-text-muted" />
               </div>
               <h3 className="font-bold text-base text-text-main">
-                Hand-Crocheting Petals
+                Precision Hand Embellishment
               </h3>
               <p className="text-xs sm:text-sm text-text-muted leading-relaxed flex-1">
-                Our women artisans patiently execute precise single, half-double, and treble
-                crochet stitches to create realistic ruffled petal contours and delicate calyxes.
+                Our women artisans patiently hand-set each Kundan stone, roll plush woolen pom-poms, or sculpt velvet chenille stems with meticulous symmetry.
               </p>
             </div>
 
             {/* Stage 3 */}
             <div className="relative bg-surface-warm/60 rounded-2xl p-6 border border-border-subtle flex flex-col space-y-4">
               <div className="flex items-center justify-between">
-                <div className="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm">
+                <div className="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm font-sans not-italic tabular-nums">
                   03
                 </div>
                 <Clock className="w-5 h-5 text-text-muted" />
               </div>
               <h3 className="font-bold text-base text-text-main">
-                Stem & Leaf Botanical Assembly
+                Structural Harmony &amp; Curing
               </h3>
               <p className="text-xs sm:text-sm text-text-muted leading-relaxed flex-1">
-                Flexible florist wire is enveloped in textured emerald yarn, securing lifelike
-                foliage, buds, and full blossoms with seamless structural strength.
+                Every stone bond, toran stitch, and wire stem is inspected, reinforced, and cured to ensure resilient multi-year festive reuse.
               </p>
             </div>
 
             {/* Stage 4 */}
             <div className="relative bg-surface-warm/60 rounded-2xl p-6 border border-border-subtle flex flex-col space-y-4">
               <div className="flex items-center justify-between">
-                <div className="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm">
+                <div className="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm font-sans not-italic tabular-nums">
                   04
                 </div>
                 <PackageCheck className="w-5 h-5 text-text-muted" />
               </div>
               <h3 className="font-bold text-base text-text-main">
-                Aesthetic Gift Presentation
+                Keepsake Presentation
               </h3>
               <p className="text-xs sm:text-sm text-text-muted leading-relaxed flex-1">
-                Finished arrangements are wrapped in matte translucent Korean wrappers, tied with
-                luxurious satin ribbons, and nestled in protective shipping cartons.
+                Finished creations are nestled in sturdy reusable storage cases with protective liners, care instructions, and satin ribbon accents.
               </p>
             </div>
           </div>
@@ -322,25 +318,25 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="space-y-1">
-              <p className="text-2xl sm:text-3xl font-bold font-sans text-primary">
+              <p className="text-2xl sm:text-3xl font-bold font-sans not-italic tabular-nums text-primary">
                 100%
               </p>
-              <p className="text-xs sm:text-sm text-text-muted">Handcrafted in India</p>
+              <p className="text-xs sm:text-sm text-text-muted">Handcrafted in Pune, India</p>
             </div>
             <div className="space-y-1">
-              <p className="text-2xl sm:text-3xl font-bold font-sans text-primary">
-                5-Ply
+              <p className="text-2xl sm:text-3xl font-bold font-sans not-italic tabular-nums text-primary">
+                4 Crafts
               </p>
-              <p className="text-xs sm:text-sm text-text-muted">Combed Milk Cotton Yarn</p>
+              <p className="text-xs sm:text-sm text-text-muted">Rangolis &amp; Keepsake Decor</p>
             </div>
             <div className="space-y-1">
-              <p className="text-2xl sm:text-3xl font-bold font-sans text-primary">
+              <p className="text-2xl sm:text-3xl font-bold font-sans not-italic tabular-nums text-primary">
                 Forever
               </p>
-              <p className="text-xs sm:text-sm text-text-muted">No Wilting or Water Needed</p>
+              <p className="text-xs sm:text-sm text-text-muted">Reusable &amp; Zero Mess</p>
             </div>
             <div className="space-y-1">
-              <p className="text-2xl sm:text-3xl font-bold font-sans text-primary">
+              <p className="text-2xl sm:text-3xl font-bold font-sans not-italic tabular-nums text-primary">
                 PAN-India
               </p>
               <p className="text-xs sm:text-sm text-text-muted">Safe Doorstep Delivery</p>
@@ -353,10 +349,10 @@ export default function AboutPage() {
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <SectionHeader
-            eyebrow="Send A Little Something"
-            titleLead="Ready to Bring Lasting Blooms"
+            eyebrow="Adorn Your Sacred Space"
+            titleLead="Ready to Bring Festive Art"
             titleAccent="into Your Life?"
-            description="Whether for someone you treasure or a charming accent for your own space, find the arrangement that speaks to your heart."
+            description="Whether for your home temple, an upcoming wedding celebration, or a thoughtful handmade keepsake, find the craft that speaks to your heart."
             align="center"
             size="lg"
           />
@@ -372,7 +368,7 @@ export default function AboutPage() {
               href="/contact"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-surface-warm hover:bg-gray-100 text-text-main text-sm font-semibold border border-border-subtle transition-all"
             >
-              <span>Custom Inquiries & Bespoke Orders</span>
+              <span>Custom Inquiries &amp; Bespoke Orders</span>
             </Link>
           </div>
         </div>

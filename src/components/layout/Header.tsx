@@ -18,10 +18,10 @@ import { useWishlist } from '@/context/WishlistContext';
 const MAIN_NAV_ITEMS = [
   { name: 'Home', href: '/' },
   { name: 'Shop All', href: '/shop' },
-  { name: 'Bouquets', href: '/collections/bouquets' },
-  { name: 'Flower Pots', href: '/collections/flower-pots' },
-  { name: 'Gift Boxes', href: '/collections/gift-boxes' },
-  { name: 'Hair Accessories', href: '/collections/hair-accessories' },
+  { name: 'OHP Rangoli', href: '/collections/ohp-sheets-rangoli' },
+  { name: 'Woolen Rangoli', href: '/collections/woolen-rangoli' },
+  { name: 'Pipe Cleaner Crafts', href: '/collections/pipe-cleaner-crafts' },
+  { name: 'Decore Crafts', href: '/collections/decore-crafts' },
   { name: 'Our Story', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ];

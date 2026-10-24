@@ -7,9 +7,9 @@ import { AppleCarousel, CarouselSlide } from "./AppleCarousel";
 
 const SHOWCASE_SLIDES: CarouselSlide[] = [
   {
-    id: "special-offer-gift-box",
+    id: "festive-ohp-rangoli",
     imageUrl: "/images/carousel/special-offer-gift-box.png",
-    imageAlt: "Special Offer Handcrafted Keepsake Gift Box and Luxury Crochet Bouquet",
+    imageAlt: "Handcrafted Reusable Kundan OHP Rangoli by DivijaArtHouse",
     colors: ["#781D2C", "#381817", "#1F0A0E"],
     content: (
       <div className="absolute inset-0 z-10 flex items-center">
@@ -28,35 +28,35 @@ const SHOWCASE_SLIDES: CarouselSlide[] = [
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold uppercase tracking-wider bg-gold/15 text-gold border border-gold/40 backdrop-blur-md w-fit mb-3 sm:mb-4 shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-gold" />
-            <span>Limited Edition Hampers</span>
+            <span>Reusable Festive Art</span>
           </div>
 
           {/* Headline */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-semibold text-white tracking-tight leading-[1.15] mb-2 sm:mb-3">
             The Art of{' '}
             <span className="font-serif italic font-normal text-gold">
-              Thoughtful Gifting.
+              Kundan Rangolis.
             </span>
           </h2>
 
           {/* Subtitle */}
           <p className="text-xs sm:text-sm md:text-base text-gray-200/95 leading-relaxed max-w-lg mb-4 sm:mb-5">
-            Handcrafted crochet floral keepsakes, artisan aroma candles, and personalized message cards presented in luxury velvet-ribboned gift boxes.
+            Hand-studded Kundan gems, radiant mirrors, and pearls set on transparent OHP acrylic sheets. Set up sacred pooja floor art in under 2 minutes—zero mess, reusable for years.
           </p>
 
           {/* Value Offer Tag */}
           <div className="flex items-center gap-2 text-[11px] sm:text-xs text-[#E8D5B7] font-medium mb-5 sm:mb-6">
             <CheckCircle2 className="w-3.5 h-3.5 text-gold flex-shrink-0" />
-            <span>Complimentary Pan-India Gift Wrapping &amp; Custom Handwritten Letter</span>
+            <span>Pan-India Safe Delivery • Reusable Box Packaging Included</span>
           </div>
 
           {/* Action Buttons */}
           <div className="flex flex-wrap items-center gap-3">
             <Link
-              href="/collections/gift-boxes"
+              href="/collections/ohp-sheets-rangoli"
               className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-primary hover:bg-primary-hover shadow-md hover:shadow-gold-glow hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group/btn"
             >
-              <span>Claim Your Hamper</span>
+              <span>Explore OHP Rangolis</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
             </Link>
 
@@ -64,7 +64,7 @@ const SHOWCASE_SLIDES: CarouselSlide[] = [
               href="/shop"
               className="inline-flex items-center gap-1.5 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium text-white/90 hover:text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm transition-all"
             >
-              <span>Explore All Boxes</span>
+              <span>Explore All Crafts</span>
             </Link>
           </div>
         </div>
@@ -72,9 +72,9 @@ const SHOWCASE_SLIDES: CarouselSlide[] = [
     ),
   },
   {
-    id: "handcrafted-moments",
+    id: "woolen-floor-art",
     imageUrl: "/images/carousel/handcrafted-moments.png",
-    imageAlt: "Handcrafted Crochet Floral Keepsakes and Warm Artisanal Moments",
+    imageAlt: "Artisanal Handcrafted Woolen Rangoli Floor Art",
     colors: ["#4A1D24", "#2D1418", "#140A0C"],
     content: (
       <div className="absolute inset-0 z-10 flex items-center">
@@ -93,35 +93,35 @@ const SHOWCASE_SLIDES: CarouselSlide[] = [
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold uppercase tracking-wider bg-gold/15 text-gold border border-gold/40 backdrop-blur-md w-fit mb-3 sm:mb-4 shadow-sm">
             <Heart className="w-3.5 h-3.5 text-gold fill-gold/20" />
-            <span>100% Artisan Handcrafted</span>
+            <span>Weddings &amp; Festive Pooja</span>
           </div>
 
           {/* Headline */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-semibold text-white tracking-tight leading-[1.15] mb-2 sm:mb-3">
-            Forever Blooms for{' '}
+            Hand-Rolled Woolen{' '}
             <span className="font-serif italic font-normal text-gold">
-              Cherished Moments.
+              Floor Mandalas.
             </span>
           </h2>
 
           {/* Subtitle */}
           <p className="text-xs sm:text-sm md:text-base text-gray-200/95 leading-relaxed max-w-lg mb-4 sm:mb-5">
-            Lovingly hand-crocheted stitch-by-stitch by skilled women artisans in Hadapsar, Pune. Botanical floral gifts that will never wilt or fade away.
+            Plush pom-pom and crochet woolen floor art made for Haldi, Mehendi, Diwali, and grand celebrations. Soft, washable, and shaped with love by women artisans in Pune.
           </p>
 
           {/* Value Offer Tag */}
           <div className="flex items-center gap-2 text-[11px] sm:text-xs text-[#E8D5B7] font-medium mb-5 sm:mb-6">
             <CheckCircle2 className="w-3.5 h-3.5 text-gold flex-shrink-0" />
-            <span>100% Organic Cotton Yarn • Everlasting Keepsakes</span>
+            <span>100% Handcrafted • Washable &amp; Reusable</span>
           </div>
 
           {/* Action Buttons */}
           <div className="flex flex-wrap items-center gap-3">
             <Link
-              href="/collections/bouquets"
+              href="/collections/woolen-rangoli"
               className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-primary hover:bg-primary-hover shadow-md hover:shadow-gold-glow hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group/btn"
             >
-              <span>Explore Bouquets</span>
+              <span>Explore Woolen Rangoli</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
             </Link>
 
@@ -129,7 +129,7 @@ const SHOWCASE_SLIDES: CarouselSlide[] = [
               href="/about"
               className="inline-flex items-center gap-1.5 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium text-white/90 hover:text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm transition-all"
             >
-              <span>Our Atelier Story</span>
+              <span>Our Artisan Story</span>
             </Link>
           </div>
         </div>
@@ -137,9 +137,9 @@ const SHOWCASE_SLIDES: CarouselSlide[] = [
     ),
   },
   {
-    id: "royal-crimson-keepsake",
+    id: "pipe-cleaner-decor",
     imageUrl: "/images/carousel/royal-crimson-keepsake.png",
-    imageAlt: "Signature Royal Crimson Keepsake Box and Forever Crochet Blooms",
+    imageAlt: "Sculpted Pipe Cleaner Crafts and Handcrafted Festive Decor",
     colors: ["#631622", "#380D15", "#190509"],
     content: (
       <div className="absolute inset-0 z-10 flex items-center">
@@ -158,43 +158,43 @@ const SHOWCASE_SLIDES: CarouselSlide[] = [
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold uppercase tracking-wider bg-gold/15 text-gold border border-gold/40 backdrop-blur-md w-fit mb-3 sm:mb-4 shadow-sm">
             <Award className="w-3.5 h-3.5 text-gold" />
-            <span>Atelier Signature Collection</span>
+            <span>Sculpted Florals &amp; Home Decor</span>
           </div>
 
           {/* Headline */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-semibold text-white tracking-tight leading-[1.15] mb-2 sm:mb-3">
-            The Royal Sovereign{' '}
+            Everlasting Pipe Cleaner{' '}
             <span className="font-serif italic font-normal text-gold">
-              Keepsake Box.
+              Florals &amp; Decor Crafts.
             </span>
           </h2>
 
           {/* Subtitle */}
           <p className="text-xs sm:text-sm md:text-base text-gray-200/95 leading-relaxed max-w-lg mb-4 sm:mb-5">
-            Velvet scarlet crochet roses adorned with fairy-lit accents and timeless keepsake domes. Our most coveted anniversary floral creation.
+            Velvet chenille stems sculpted into timeless botanical blossoms, handcrafted door torans, and festive home keepsakes that never wilt or fade.
           </p>
 
           {/* Value Offer Tag */}
           <div className="flex items-center gap-2 text-[11px] sm:text-xs text-[#E8D5B7] font-medium mb-5 sm:mb-6">
             <CheckCircle2 className="w-3.5 h-3.5 text-gold flex-shrink-0" />
-            <span>Limited Atelier Batch • Pre-Order for Special Milestones</span>
+            <span>Everlasting Keepsakes • Handcrafted with Devotion</span>
           </div>
 
           {/* Action Buttons */}
           <div className="flex flex-wrap items-center gap-3">
             <Link
-              href="/collections/jumbo-bouquets"
+              href="/collections/pipe-cleaner-crafts"
               className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-primary hover:bg-primary-hover shadow-md hover:shadow-gold-glow hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group/btn"
             >
-              <span>Discover Signature Box</span>
+              <span>Explore Pipe Cleaner Crafts</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
             </Link>
 
             <Link
-              href="/contact"
+              href="/collections/decore-crafts"
               className="inline-flex items-center gap-1.5 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium text-white/90 hover:text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm transition-all"
             >
-              <span>Bespoke Inquiries</span>
+              <span>Explore Decore Crafts</span>
             </Link>
           </div>
         </div>
