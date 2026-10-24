@@ -96,8 +96,8 @@ export function Hero() {
               {/* Flagship Edge-to-Edge Showcase Frame */}
               <div className="relative w-full h-full rounded-[28px] sm:rounded-[36px] overflow-hidden border border-gold/40 shadow-[0_24px_50px_-12px_rgba(46,23,21,0.18)] bg-gradient-to-b from-[#FBF8F5] via-[#F8F1ED]/50 to-[#F2E8E4]/60 group">
                 <img
-                  src="/images/categories/ohp-rangoli.svg"
-                  alt="Handcrafted Kundan OHP Rangoli Art"
+                  src="/images/products/royal-kundan-ohp-rangoli-hero.png"
+                  alt="Authentic Handcrafted Kundan &amp; Pearl OHP Rangoli by DivijaArtHouse"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="eager"
                 />
